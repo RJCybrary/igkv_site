@@ -1,0 +1,37 @@
+<section id="blog" class="blog gray-bg pt-3 pb-3" *ngIf="event_data_details?.length > 0">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="section-title1">Latest Events</h2>
+    <div class="row gy-4 posts-list ">
+      <ng-container *ngFor="let data of event_data_details">
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden banner1 image1" [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <img [src]="data.Column1" class="img-fluid" alt="office events image">
+              <div class="content1">
+        
+              </div>
+              
+              <span class="post-date">{{data.web_content_date2|date:'MMM d, y'}}</span>
+            </div>
+            <div class="post-content d-flex flex-column">
+              <h4>
+                {{data.Content_Title}}
+              </h4>
+            </div>
+            <hr>
+            <a (click)="setdetails()" [routerLink]="['/about/activities-details',data.Website_Content_ID]" class="readmore "><span>Read
+                More&nbsp;<i class="fa-solid fa-arrow-right"></i></span></a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div style="text-align: center !important;">
+      <div class="col-lg-12 col-sm-12 pt-3">
+        <a (click)="setdetails()" routerLink="events"  class="main-btn">{{'View more' | translate}}</a>
+      </div>
+    </div>
+
+
+  </div>
+</section>

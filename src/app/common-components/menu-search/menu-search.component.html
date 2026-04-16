@@ -1,0 +1,23 @@
+<div class="search-popup">
+    <div class="popup-content">
+      <!-- Search Input Field -->
+      <input 
+        type="text" 
+        [(ngModel)]="searchQuery" 
+        placeholder="Search menu..." 
+        (input)="onSearch()" />
+      
+      <!-- Autocomplete Results (Filtered Menu Items) -->
+      <ul *ngIf="filteredMenu.length > 0" id='style-4'>
+        <li *ngFor="let menu of filteredMenu" (click)="navigateTo(menu.route,menu.external)">
+          {{ menu.title }}
+        </li>
+      </ul>
+      
+      <!-- Message when no results are found -->
+      <p *ngIf="filteredMenu.length === 0">No results found.</p>
+          <button  mat-mini-fab class="close-btn" aria-label="Close Search" (click)="closeDialog()"><i class="fa-solid fa-xmark"></i></button>
+
+    </div>
+  </div>
+  

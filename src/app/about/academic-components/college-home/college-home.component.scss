@@ -1,0 +1,117 @@
+
+.gray-bg {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+}
+
+.counter {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: #ffffff;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 26%); /* WCAG-safe overlay */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.counter h3,
+.counter-value,
+.counter-icon {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.counter:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.counter h3 {
+  font-size: calc(17px * var(--font-scale));
+  margin: 0;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.counter-value {
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  font-size: calc(27px * var(--font-scale));
+  font-weight: bold;
+}
+
+.counter-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Unique Circular Gradients */
+.counter:nth-child(1) {
+  background: conic-gradient(#db34b7, #389fcf);
+}
+
+.counter:nth-child(2) {
+  background: conic-gradient(#e74c3c, #f1c40f);
+}
+
+.counter:nth-child(3) {
+  background: conic-gradient(#9b59b6, #8e44ad);
+}
+
+.counter:nth-child(4) {
+  background: conic-gradient(#34495e, #8265c5);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.counter {
+  animation: slideUp 0.6s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .counter {
+    width: 150px;
+    height: 150px;
+  }
+
+  .counter h3 {
+    font-size: calc(1rem * var(--font-scale));
+  }
+
+  .counter-value {
+    font-size: calc(2rem * var(--font-scale));
+  }
+
+  .counter-icon {
+    font-size: calc(2rem * var(--font-scale));
+  }
+}

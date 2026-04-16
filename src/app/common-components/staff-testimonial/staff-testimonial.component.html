@@ -1,0 +1,233 @@
+<section id="forBig" class="container-fluid pt-3 pb-5" *ngIf="Staff_List">
+  <div class="container">
+    <h2 class="section-title1">Officer/Staff</h2>
+
+    <ngb-carousel [interval]="5000" id="carouselStaffBig"
+      class="carousel slide carousel-dark text-center mt-3 pb-5">
+
+      <!-- Controls -->
+      <div class="d-flex justify-content-center mb-4">
+
+        <button class="carousel-control-prev position-relative"
+                type="button"
+                data-mdb-target="#carouselStaffBig"
+                data-mdb-slide="prev"
+                aria-label="Previous slide">
+
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+
+        </button>
+
+        <button class="carousel-control-next position-relative"
+                type="button"
+                data-mdb-target="#carouselStaffBig"
+                data-mdb-slide="next"
+                aria-label="Next slide">
+
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+
+        </button>
+
+      </div>
+
+      <!-- Slides -->
+      <ng-container *ngFor="let startIndex of getSliceIndices(Staff_List.length, 6)">
+        <ng-template ngbSlide>
+          <div class="container">
+            <div class="row">
+
+              <div class="col-sm-2"
+                   *ngFor="let item of Staff_List.slice(startIndex, startIndex + 6)">
+
+                <div class="card">
+
+                  <!-- Linked profile -->
+                  <a *ngIf="!isshowUnLink"
+                     [routerLink]="['/about/employeeProfile', item.empid_numeric]">
+
+                    <img class="card-img-top img-fluid"
+                         style="max-height:180px;min-height:180px;background-color:#5f5d5d;border-bottom:#ccc solid 1px;
+                         box-shadow: rgba(50,50,93,0.25) 0px 2px 5px -1px, rgba(0,0,0,0.3) 0px 1px 3px -1px;"
+                         [src]="item.img2"
+                         (error)="onErrorImage($event)"
+                         alt="{{ item.Employee_Name }}" />
+
+                    <div class="card-body" style="padding:5px;min-height:96px">
+
+                      <h3 class="card-title text-lenth-fix-line-1"
+                          style="margin-bottom:1px;font-size:calc(13px * var(--font-scale))">
+
+                        <b class="person-name">{{ item.Employee_Name }}</b>
+
+                      </h3>
+
+                      <p class="card-text text-lenth-fix-line-1 person-post"
+                         style="margin-bottom:1px">
+
+                        {{ item.Post_Name }}
+
+                      </p>
+
+                      <p class="card-text"
+                         style="font-size:calc(13px * var(--font-scale));
+                         font-weight:500;color:#16628f;margin-top:0.5em;line-height:15px">
+
+                        View Profile
+
+                      </p>
+
+                    </div>
+
+                  </a>
+
+                  <!-- Alternate link -->
+                  <a *ngIf="isshowUnLink"
+                     [routerLink]="['cont/employeeProfile', item.empid_numeric]">
+
+                    <img class="card-img-top img-fluid"
+                         style="max-height:180px;min-height:180px;background-color:#5f5d5d;border-bottom:#ccc solid 1px;
+                         box-shadow: rgba(50,50,93,0.25) 0px 0.5em 5px -1px, rgba(0,0,0,0.3) 0px 1px 3px -1px;"
+                         [src]="item.img2"
+                         (error)="onErrorImage($event)"
+                         alt="{{ item.Employee_Name }}" />
+
+                    <div class="card-body" style="padding:5px;min-height:96px">
+
+                      <h3 class="card-title text-lenth-fix-line-1"
+                          style="margin-bottom:1px;font-size:calc(13px * var(--font-scale))">
+
+                        <b class="person-name">{{ item.Employee_Name }}</b>
+
+                      </h3>
+
+                      <p class="card-text text-lenth-fix-line-1 person-post"
+                         style="margin-bottom:1px">
+
+                        {{ item.Post_Name }}
+
+                      </p>
+
+                      <p class="card-text"
+                         style="font-size:calc(13px * var(--font-scale));
+                         font-weight:500;color:#16628f;margin-top:0.5em;line-height:15px">
+
+                        View Profile
+
+                      </p>
+
+                    </div>
+
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+
+    </ngb-carousel>
+  </div>
+</section>
+
+
+
+<!-- SMALL SCREEN -->
+<section id="forSmall" class="container-fluid pt-3 pb-3" *ngIf="Staff_List">
+
+  <div class="container">
+
+    <h2 class="section-title1">Officer/Staff</h2>
+
+    <ngb-carousel [interval]="5000"
+                  id="carouselStaffSmall"
+                  class="carousel slide carousel-dark text-center mt-3">
+
+      <!-- Controls -->
+      <div class="d-flex justify-content-center mb-4">
+
+        <button class="carousel-control-prev position-relative"
+                type="button"
+                data-mdb-target="#carouselStaffSmall"
+                data-mdb-slide="prev"
+                aria-label="Previous slide">
+
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+
+        </button>
+
+        <button class="carousel-control-next position-relative"
+                type="button"
+                data-mdb-target="#carouselStaffSmall"
+                data-mdb-slide="next"
+                aria-label="Next slide">
+
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+
+        </button>
+
+      </div>
+
+
+      <!-- Slides -->
+      <ng-container *ngFor="let startIndex of getSliceIndices(Staff_List.length, 2)">
+
+        <ng-template ngbSlide>
+
+          <div class="container">
+            <div class="row justify-content-center">
+
+              <div class="col-6 col-sm-6 d-flex justify-content-center"
+                   *ngFor="let item of Staff_List.slice(startIndex, startIndex + 2)">
+
+                <div class="card employee-card">
+
+                  <a [routerLink]="['/about/employeeProfile', item.empid_numeric]">
+
+                    <img class="card-img-top img-fluid"
+                         style="max-height:100px;min-height:100px;background-color:#5f5d5d;border-bottom:#ccc solid 1px;
+                         box-shadow: rgba(50,50,93,0.25) 0px 0.5em 5px -1px, rgba(0,0,0,0.3) 0px 1px 3px -1px;"
+                         [src]="item.img2"
+                         (error)="onErrorImage($event)"
+                         alt="{{ item.Employee_Name }}" />
+
+                    <div class="card-body">
+
+                      <h3 class="card-title text-lenth-fix-line-1 person-name">
+                        <b>{{ item.Employee_Name }}</b>
+                      </h3>
+
+                      <p class="card-text text-lenth-fix-line-1 person-post">
+                        {{ item.Post_Name }}
+                      </p>
+
+                      <p class="card-text view-profile">
+                        View Profile
+                      </p>
+
+                    </div>
+
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </ng-template>
+
+      </ng-container>
+
+    </ngb-carousel>
+
+  </div>
+
+</section>

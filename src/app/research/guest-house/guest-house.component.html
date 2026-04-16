@@ -1,0 +1,415 @@
+<app-banner *ngIf="guest_house_img_url" [banner_heading]="office_name" [banner_img]="guest_house_img_url"></app-banner>
+
+<!-- Incharge Message  -->
+<section class="pt-3 pb-3 message_section">
+    <div class="container">
+        <div class="row">
+            <div class="profile col-md-3">
+                <img class="profile-picture" [src]="Incharge_image" style="min-height: 218px; min-width: 233px;"
+                    (error)="onErrorImage($event)" alt="staff image">
+                <p class="person-name">Dr. Prashant Kumar Pandey</p>
+                <p class="person-post">In-charge</p>
+            </div>
+            <div class="message col-md-9">
+                <p class="contents scrolitem pt-3" style="line-height: 29px; letter-spacing: inherit;">
+                    As the in-charge of the guest house, my primary responsibility is to ensure that all our guests have
+                    a comfortable and pleasant stay. We strive to maintain cleanliness, provide quality amenities, and
+                    ensure that all guest needs are met promptly. From managing reservations to coordinating with
+                    housekeeping and ensuring proper maintenance of the facilities, we focus on creating a welcoming
+                    atmosphere. Our team is dedicated to offering the best possible service, whether guests are here for
+                    a short visit or an extended stay. We value feedback and continuously work to enhance the guest
+                    experience.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Our Guest Houses -->
+<section id="Section2" class="pt-3 pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-title1">Our Guest Houses</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="Section6" class="pt-10">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="about-cont">
+                    <div class="container">
+                        <div class="boys_hostel">
+                            <div class="row first_row">
+                                <div class="col-md-5 ">
+                                    <div class="innerrow">
+                                        <div class="slider-container ">
+                                            <img class="slider-image" [src]="Guest_House_1[currentSlide].src"
+                                                alt="Image {{ currentSlide + 1 }}">
+                                            <!-- <div class="slider-description">{{ Guest_House_1[currentSlide].description
+                                                }}</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 ">
+                                    <h2>{{ Guest_House_1[currentSlide].description }}:</h2>
+                                    <div class="boys_hostel_List">
+                                        <hr>
+                                        <ul class="contents">
+                                            <li>Spacious and well-furnished rooms.</li>
+                                            <li>24/7 security and monitoring.</li>
+                                            <li>High-speed Wi-Fi access.</li>
+                                            <li>Daily housekeeping services.</li>
+                                            <li>Complimentary hygienic and nutritious meals.</li>
+                                            <li>Comfortable lounge and common areas for relaxation.</li>
+                                            <li>Business center and meeting rooms available.</li>
+                                            <li>On-call medical assistance and emergency support.</li>
+                                            <li>Access to fitness and wellness facilities.</li>
+                                            <li>Events and activities for guest engagement.</li>
+                                            <li>Professional staff for personalized service and assistance.</li>
+
+                                        </ul>
+
+                                        <!-- <div class="infrastructure-card row">
+                                            <div class="col-md-3 first_section"><i style="color:#ffc600;"
+                                                    class="fa-solid fa-wifi"></i> Free
+                                                Wifi</div>
+                                            <div class="col-md-3 second_section"><i style="color:#ffc600;"
+                                                    class="fa-solid fa-book"></i> Peacefull Environment </div>
+                                            <div class="col-md-3 first_section"><i style="color: #ffc600;"
+                                                    class="fa-solid fa-wheat"></i>Mess
+                                                Hall</div>
+                                            <div class="col-md-3 third_section"><i style="color:#ffc600;"
+                                                    class="fa fa-desktop" aria-hidden="true"></i> Study Area</div>
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!--====== Satyam PART End ======-->
+
+
+                            <!--====== Shivam Hostel PART STARTS ======-->
+
+                            <div class="row first_row">
+                                <div class="col-md-7 ">
+                                    <h2>{{ Guest_House_2[currentSlide].description }}:</h2>
+                                    <div class="boys_hostel_List">
+                                        <hr>
+                                        <ul class="contents">
+                                            <li>Spacious and well-furnished rooms.</li>
+                                            <li>24/7 security and monitoring.</li>
+                                            <li>High-speed Wi-Fi access.</li>
+                                            <li>Daily housekeeping services.</li>
+                                            <li>Complimentary hygienic and nutritious meals.</li>
+                                            <li>Comfortable lounge and common areas for relaxation.</li>
+                                            <li>Business center and meeting rooms available.</li>
+                                            <li>On-call medical assistance and emergency support.</li>
+                                            <li>Access to fitness and wellness facilities.</li>
+                                            <li>Events and activities for guest engagement.</li>
+                                            <li>Professional staff for personalized service and assistance.</li>
+
+                                        </ul>
+
+                                        <!-- <div class="infrastructure-card row">
+                                            <div class="col-md-3 first_section"><i style="color:#ffc600;"
+                                                    class="fa-solid fa-wifi"></i> Free
+                                                Wifi</div>
+                                            <div class="col-md-3 second_section"><i style="color:#ffc600;"
+                                                    class="fa-solid fa-book"></i> Peacefull Environment </div>
+                                            <div class="col-md-3 first_section"><i style="color: #ffc600;"
+                                                    class="fa-solid fa-wheat"></i>Mess
+                                                Hall</div>
+                                            <div class="col-md-3 third_section"><i style="color:#ffc600;"
+                                                    class="fa fa-desktop" aria-hidden="true"></i> Study Area</div>
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5 ">
+                                    <div class="innerrow">
+                                        <div class="slider-container ">
+                                            <img class="slider-image" [src]="Guest_House_2[currentSlide].src"
+                                                alt="Image {{ currentSlide + 1 }}">
+                                            <!-- <div class="slider-description">{{ Guest_House_2[currentSlide].description
+                                                }}</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--====== Shivam Hostel end ======-->
+
+                            <!--====== Sundaram Hostel PART STARTS ======-->
+                            <div class="row first_row">
+                                <div class="col-md-5 ">
+                                    <div class="innerrow">
+                                        <div class="slider-container ">
+                                            <img class="slider-image" [src]="Guest_House_3[currentSlide].src"
+                                                alt="Image {{ currentSlide + 1 }}">
+                                            <!-- <div class="slider-description">{{ Guest_House_3[currentSlide].description
+                                                }}</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 ">
+                                    <h2>{{ Guest_House_3[currentSlide].description }} :</h2>
+                                    <div class="boys_hostel_List">
+                                        <hr>
+                                        <ul class="contents">
+                                            <li>Spacious and well-furnished rooms.</li>
+                                            <li>24/7 security and monitoring.</li>
+                                            <li>High-speed Wi-Fi access.</li>
+                                            <li>Daily housekeeping services.</li>
+                                            <li>Complimentary hygienic and nutritious meals.</li>
+                                            <li>Comfortable lounge and common areas for relaxation.</li>
+                                            <li>Business center and meeting rooms available.</li>
+                                            <li>On-call medical assistance and emergency support.</li>
+                                            <li>Access to fitness and wellness facilities.</li>
+                                            <li>Events and activities for guest engagement.</li>
+                                            <li>Professional staff for personalized service and assistance.</li>
+
+                                        </ul>
+
+
+                                        <!-- <div class="infrastructure-card row">
+                                            <div class="col-md-3 first_section"><i style="color:#ffc600;"
+                                                    class="fa-solid fa-wifi"></i> Free
+                                                Wifi</div>
+                                            <div class="col-md-3 second_section"><i style="color:#ffc600;"
+                                                    class="fa-solid fa-book"></i> Peacefull Environment </div>
+                                            <div class="col-md-3 first_section"><i style="color: #ffc600;"
+                                                    class="fa-solid fa-wheat"></i>Mess
+                                                Hall</div>
+                                            <div class="col-md-3 third_section"><i style="color:#ffc600;"
+                                                    class="fa fa-desktop" aria-hidden="true"></i> Study Area</div>
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!--====== Sundaram Hostel PART ENDS ======-->
+
+                            <!--====== Maharshi Hostel PART STARTS ======-->
+                            <div class="row first_row">
+                                <div class="col-md-7 ">
+                                    <h2>{{ Guest_House_4[currentSlide].description }}:</h2>
+                                    <div class="boys_hostel_List">
+                                        <hr>
+                                        <ul class="contents">
+                                            <li>Open Access Facilities for Textual Documents.</li>
+                                            <li>Spacious and well-furnished rooms.</li>
+                                            <li>24/7 security and monitoring.</li>
+                                            <li>High-speed Wi-Fi access.</li>
+                                            <li>Daily housekeeping services.</li>
+                                            <li>Complimentary hygienic and nutritious meals.</li>
+                                            <li>Comfortable lounge and common areas for relaxation.</li>
+                                            <li>Business center and meeting rooms available.</li>
+                                            <li>On-call medical assistance and emergency support.</li>
+                                            <li>Access to fitness and wellness facilities.</li>
+                                            <li>Events and activities for guest engagement.</li>
+                                            <li>Professional staff for personalized service and assistance.</li>
+
+                                        </ul>
+
+                                        <!-- <div class="infrastructure-card row">
+
+                                            <div class="col-md-4 first_section"><i style="color:#ffc600;"
+                                                    class="fa-solid fa-wifi"></i> Free
+                                                Wifi</div>
+                                            <div class="col-md-4 second_section"><i style="color:#ffc600;"
+                                                    class="fa-solid fa-book"></i> Peacefull Environment </div>
+                                            <div class="col-md-4 third_section"><i style="color:#ffc600;"
+                                                    class="fa fa-desktop" aria-hidden="true"></i> Study Area</div>
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5 ">
+                                    <div class="innerrow">
+                                        <div class="slider-container ">
+                                            <img class="slider-image" [src]="Guest_House_4[currentSlide].src"
+                                                alt="Image {{ currentSlide + 1 }}">
+                                            <!-- <div class="slider-description">{{ Guest_House_4[currentSlide].description
+                                                }}</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--====== Maharshi Hostel end ======-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Gallery section start-->
+<section id="Section4" class="pt-3 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            <h2 class="section-title1">Gallery</h2>
+          <!-- section title -->
+  
+          <div class="about-cont">
+            <div class="gallery_section">
+              <div class="gallery-image">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="img-box">
+                      <a [href]="GalleryImg1" data-lightbox="models">
+                        <!-- Linking to the image with lightbox attributes -->
+                        <div class="gallery-section">
+                          <!-- Creating a container for the image -->
+                          <div class="gallery-image image banner" [style.background-image]="'url(' + 'GalleryImg1' + ')'">
+                            <!-- Styling the background image of the container -->
+                            <img [src]="GalleryImg1" alt="Gallery Image" />
+                            <!-- Displaying the image -->
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+  
+                  <div class="col-sm-4">
+                    <div class="img-box">
+                      <a [href]="GalleryImg2" data-lightbox="models">
+                        <!-- Linking to the image with lightbox attributes -->
+                        <div class="gallery-section">
+                          <!-- Creating a container for the image -->
+                          <div class="gallery-image image banner" [style.background-image]="'url(' + GalleryImg2 + ')'">
+                            <!-- Styling the background image of the container -->
+                            <img [src]="GalleryImg2" alt="Gallery Image" />
+                            <!-- Displaying the image -->
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+  
+  
+                  <div class="col-sm-4">
+                    <div class="img-box">
+                      <a [href]="GalleryImg3" data-lightbox="models">
+                        <!-- Linking to the image with lightbox attributes -->
+                        <div class="gallery-section">
+                          <!-- Creating a container for the image -->
+                          <div class="gallery-image image banner" [style.background-image]="'url(' + GalleryImg3 + ')'">
+                            <!-- Styling the background image of the container -->
+                            <img [src]="GalleryImg3" alt="Gallery Image" />
+                            <!-- Displaying the image -->
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="img-box">
+                      <a [href]="GalleryImg4" data-lightbox="models">
+                        <!-- Linking to the image with lightbox attributes -->
+                        <div class="gallery-section">
+                          <!-- Creating a container for the image -->
+                          <div class="gallery-image image banner" [style.background-image]="'url(' + GalleryImg4 + ')'">
+                            <!-- Styling the background image of the container -->
+                            <img [src]="GalleryImg4" alt="Gallery Image" />
+                            <!-- Displaying the image -->
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+  
+                  <div class="col-sm-4">
+                    <div class="img-box">
+                      <a [href]="GalleryImg5" data-lightbox="models">
+                        <!-- Linking to the image with lightbox attributes -->
+                        <div class="gallery-section">
+                          <!-- Creating a container for the image -->
+                          <div class="gallery-image image banner" [style.background-image]="'url(' + GalleryImg5 + ')'">
+                            <!-- Styling the background image of the container -->
+                            <img [src]="GalleryImg5" alt="Gallery Image" />
+                            <!-- Displaying the image -->
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+  
+  
+                  <div class="col-sm-4">
+                    <div class="img-box">
+                      <a [href]="GalleryImg8" data-lightbox="models">
+                        <!-- Linking to the image with lightbox attributes -->
+                        <div class="gallery-section">
+                          <!-- Creating a container for the image -->
+                          <div class="gallery-image image banner" [style.background-image]="'url(' + GalleryImg8 + ')'">
+                            <!-- Styling the background image of the container -->
+                            <img [src]="GalleryImg8" alt="Gallery Image" />
+                            <!-- Displaying the image -->
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- about cont -->
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+  </section>
+  <!-- Gallery section end-->
+  
+  <!-- Library Contact Us Page  -->
+  
+  <div class="container-fluid mb-5">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+      </div>
+  
+      <div class="row contact-us">
+        <div class="col-md-5 col-sm-12 indoor_img_part">
+          <div class="image">
+            <img [src]="ContactImg" alt="contact image">
+          </div>
+        </div>
+        <div class="col-md-7 col-sm-12 indoor_part">
+          <div class="content">
+            <h3>University Guest House</h3>
+            <div class="row indoor_overview_content">
+              <ul class="indoor_overview_list">
+                <li><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;<strong>:</strong> </li>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; <strong>:</strong></li>
+                <li><i class="fas fa-map-marker-alt"></i> &nbsp;<strong>:</strong> Indira Gandhi Krishi Vishwavidyalaya, Main Campus, Krishak Nagar 492012, Raipur C.G.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  

@@ -1,0 +1,299 @@
+
+/*=====================================================
+    Gallery css 
+======================================================*/
+
+.gallery{
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.5);
+
+}
+
+.gallery > .thum{
+    position: relative;
+}
+
+.gallery .thum .image{
+    overflow: hidden;
+    height: 12em;
+    text-align: center;
+    background-color: #000;
+}
+
+.gallery .thum .image img{
+    height: 12em;
+    width: auto;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+.gallery:hover .thum .image img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.gallery .thum .price{
+    position: absolute;
+    right: 60px;
+    bottom: -24px;
+}
+
+.gallery .thum .price span{
+    font-size: calc(14px * var(--font-scale));
+    color: #07294d;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    background-color: #ffc600;
+    text-align: center;
+}
+
+.gallery .cont{
+  padding: 0.5em ;
+}
+
+.gallery .cont span{
+    font-size: calc(13px * var(--font-scale));
+    color: #07294d;
+    font-weight: 500;
+    background-color: #ffffff; 
+}
+
+.gallery .cont h3{
+    font-weight: 600;
+    font-size: calc(14px * var(--font-scale));
+    color:#07294d;
+    transition: all 0.4s linear;
+    margin-bottom: 0;
+}
+
+.gallery .cont h3:hover{
+    color: #ffc600;
+}
+
+.gallery .cont .view-button{
+    justify-content: center;
+    display: flex;
+}
+
+.gallery .cont .view-button span{
+ font-size: medium;
+}
+
+.gallery .cont i {
+  margin-right: 0.3em;
+  color: #07294d;
+}
+
+
+
+/* background images blured css */
+.banner {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  // background-image: url('assets/images/bg_img.jpg'); /* Use the blurred image as the background */
+  background-size: cover;
+  filter: blur(8px);
+  /* Adjust the blur intensity as needed */
+}
+
+.banner img {
+  position: relative;
+  z-index: 1;
+  /* Ensure the image is above the blurred background */
+}
+
+.content {
+  z-index: 2;
+  /* Ensure the content is above the blurred background */
+  /* Add your content styles here */
+}
+
+/* Card css */
+/* Card styling */
+/* Container styling */
+.years-counts .row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Card styling */
+.counter {
+  background-color: #605EA1;
+  color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.counter:hover {
+  transform: translateY(-10px) scale(1.05);
+  background-color: #22177A; /* Blue color */
+  color: #ffffff;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Counter content */
+.counter-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-icon {
+  margin-bottom: 10px;
+}
+
+.counter-value {
+  font-size: calc(24px * var(--font-scale));
+  font-weight: bold;
+}
+
+/* Link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+  
+  /* no data container */
+  .no-data-container {
+    text-align: center;
+  }
+  .no-data-container h1 {
+    font-size: calc(2rem * var(--font-scale));
+    margin-bottom: 10px;
+  }
+
+  .no-data-container p {
+    font-size: calc(1rem * var(--font-scale));
+   color: #4a4a4a; 
+  }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .counter {
+      padding: 15px;
+  }
+  .counter-value {
+      font-size: calc(20px * var(--font-scale));
+  }
+}
+  
+.category-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  
+}
+
+.category-search-input {
+  flex: 1;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+   
+  .years-counts{
+    display: contents;
+    }
+
+      .gray-bg {
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .category-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .dropdown-label {
+      font-size: calc(1rem * var(--font-scale));
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      color: #333;
+    }
+    
+    .custom-dropdown {
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+    }
+    
+    .category-search-input {
+      width: 100%;
+      padding: 0.8em;
+      font-size: calc(1rem * var(--font-scale));
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      appearance: none; /* Removes default browser styles */
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1em top 50%;
+      background-size: 0.65em auto;
+      cursor: pointer;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    
+    .category-search-input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+      outline: none;
+    }
+    
+    .category-search-input option {
+      font-size: calc(1rem * var(--font-scale));
+      padding: 0.5em;
+    }
+}
+  
+@media screen and (min-width: 770px) {
+   
+  .year-list-smallscreen{
+  display: none;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+   
+  .yearslist{
+  display: none;
+    }
+
+}

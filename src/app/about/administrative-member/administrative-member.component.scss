@@ -1,0 +1,164 @@
+/* Common styles for all screen sizes */
+.who-is-who .office {
+    color: #07294d;
+}
+
+.who-is-who .emp_name {
+    color: #07294d;
+    font-weight: 800;
+    font-size: calc(24px * var(--font-scale)); /* Increase font size for larger screens */
+    text-align: center;
+}
+
+.who-is-who .post_name {
+    font-weight: 600;
+    font-size: calc(16px * var(--font-scale)); /* Adjust font size for better readability */
+    margin: 0.5em;
+    color: black;
+    text-align: center;
+    min-height: 40px;
+}
+
+.who-is-who .contact,
+.who-is-who .email {
+    font-weight: 600;
+    font-size: calc(14px * var(--font-scale)); /* Adjust font size for better readability */
+    text-align: center;
+}
+
+.who-is-who hr {
+    margin: 0.5rem;
+}
+
+.section-title{
+    height: 5.7em;
+}
+
+.singel-event-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.singel-event-list .event-thum img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.singel-event-list .event-cont {
+    width: 62%;
+    padding-left: 15px;
+}
+
+.singel-event-list .event-cont span {
+    font-size: calc(16px * var(--font-scale)); /* Adjust font size for better readability */
+    display: block;
+    color: #000;
+    margin-right: 20px;
+}
+
+.singel-event-list .event-cont span i {
+    color: #ffc600;
+    margin-right: 3px;
+}
+
+.singel-event-list .event-cont a {
+    display: block;
+}
+
+.singel-event-list .event-cont a h4 {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    color: #000;
+    font-size: calc(24px * var(--font-scale)); /* Increase font size for larger screens */
+    transition: all 0.4s linear;
+}
+
+.singel-event-list .event-cont a:hover h4 {
+    color: #ffc600;
+}
+
+.singel-event-list .event-thum img {
+    border-radius: 5px;
+    height: 150px;
+    width: 150px; /* Set fixed image dimensions for consistency */
+    margin: auto;
+}
+
+.who-is-who .view-more {
+    text-align: center; /* Center align view more link */
+}
+
+.who-is-who .view-more a {
+    text-decoration: none;
+    color: #9c3b22;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Media Query for Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .singel-event-list {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .who-is-who .emp_name {
+        font-size: calc(20px * var(--font-scale)); /* Decrease font size for medium screens */
+    }
+
+    .who-is-who .post_name {
+        font-size: calc(14px * var(--font-scale)); /* Decrease font size for medium screens */
+    }
+
+    .who-is-who .contact,
+    .who-is-who .email {
+        font-size: calc(12px * var(--font-scale)); /* Decrease font size for smaller screens */
+    }
+}
+
+// ------------ for news ----------------
+.news{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+.news-tab{
+    height: 350px;
+    overflow: scroll;
+    overflow-y: auto;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+.set{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+@media (max-width: 768px) {
+    .header {
+       font-size: calc(31px * var(--font-scale));
+     }
+     .breadcrumb-item{
+       font-size: calc(14px * var(--font-scale));
+     }
+     .heading{
+      display: none;
+     }
+     .singel-event-list .event-cont {
+        width: 100%;
+        text-align: center;
+    }
+    .singel-event-list {
+        display: block;
+    }
+    .singel-event-list .event-thum img {
+        border-radius: 50%;
+    }
+    .singel-event-list .event-cont span{
+        // display: flex;
+        font-size: calc(14px * var(--font-scale));
+        overflow-x: hidden !important;
+    }
+   }

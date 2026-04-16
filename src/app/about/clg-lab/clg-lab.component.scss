@@ -1,0 +1,44 @@
+.security .first_row .card {
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    margin: 5%;
+    height: 16em;
+    transition: all 0.5s ease;
+    text-align: center;
+    cursor:pointer;
+
+}
+
+.security {
+    background-color: white;
+}
+
+
+.security .first_row .card img {
+
+
+    max-height: 12em;
+    min-height: 12em;
+
+}
+
+
+.security .first_row .card h5 {
+    margin-top: 1em;
+}
+
+.security .first_row .card a {
+    text-decoration: none;
+}
+
+
+.security .first_row .card:hover {
+
+    transform: scale(1.07);
+    border-bottom: #07294d 4px solid;
+    overflow: hidden;
+
+}
+
+

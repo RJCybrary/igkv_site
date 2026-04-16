@@ -1,0 +1,651 @@
+#page-banner {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+/* wrapper acts as background layer */
+.video-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* video remains a normal element */
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(7,41,77,0.75);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* text */
+.page-banner-cont {
+  position: relative;
+  z-index: 2;
+  padding-top: 10em;
+}
+
+
+.page-banner-cont .header {
+  font-size: calc(3rem * var(--font-scale));
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds shadow for better text visibility */
+}
+
+/* Breadcrumb style */
+.breadcrumb {
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: #fff; /* White color for breadcrumb links */
+}
+
+.breadcrumb .breadcrumb-item a {
+  color: #fff;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  color: white;
+}
+
+.breadcrumb .breadcrumb-item.active {
+  color: #ffb700; /* Golden color for the active breadcrumb */
+}
+
+/* Responsive height for smaller screens */
+@media (max-width: 768px) {
+
+
+  #page-banner {
+  position: relative;
+  min-height: 200px;
+  overflow: hidden;
+  }
+
+  .page-banner-cont {
+  padding-top: 2em;
+}
+
+  .page-banner-cont .header {
+      font-size: calc(2rem * var(--font-scale)); /* Smaller font size for the header */
+  }
+}
+
+
+
+
+/* dean msg css start  */
+.ncc_overview {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #07294d;
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  filter: brightness(1);
+}
+
+
+.ncc_overview .first_section h2 {
+  color: white;
+}
+
+
+.ncc_overview .first_section p {
+  color: white;
+  height: 50vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 8px;
+}
+
+.ncc_overview .second_section {
+  text-align: left;
+  margin-top: 90px;
+}
+
+.ncc_overview .second_section ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  margin: 5px;
+  padding: 5px;
+}
+
+.ncc_overview .second_section ul li a img {
+  height: 30px;
+  width: 30px;
+}
+
+.about-section {
+  margin: 10px;
+  background-color: white;
+  margin-left: 30px;
+  text-align: center;
+}
+
+.ncc_gallery {
+  text-align: center;
+}
+
+
+.ncc-first-gallery img {
+  height:100%;
+  width: 100%;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.ncc-first-gallery img:hover {
+  transform: scale(0.9);
+}
+
+.ncc-second-gallery img {
+  height:100%;
+  width: 100%;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.ncc-second-gallery img:hover {
+  transform: scale(0.9);
+}
+
+.message_section {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #07294d;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  filter: brightness(1);
+}
+
+
+.message_section .message-text {
+  font-size: calc(17px * var(--font-scale));
+  line-height: 1;
+  text-align: justify;
+  // padding-bottom: 3%;
+}
+
+.message_section .message-title {
+  font-size: calc(25px * var(--font-scale));
+  font-weight: 600;
+}
+
+.message_section .message-text {
+  font-size: calc(17px * var(--font-scale));
+  line-height: 1.5;
+  text-align: justify;
+  font-weight: 400;
+  padding-bottom: 3%;
+}
+
+
+.how_to_apply {
+  margin-top: 5%;
+}
+
+
+.how_to_apply .first_section h2 {
+  font-size: calc(25px * var(--font-scale));
+  font-weight: 600;
+}
+
+.how_to_apply .second_section {
+  background-color: #07294B;
+  color: white;
+  padding: 0.5rem;
+}
+
+.how_to_apply .second_section h2 {
+  font-size: calc(25px * var(--font-scale));
+  font-weight: 600;
+  color: white;
+}
+
+
+// Services Part Starts Here 
+
+// Slider css
+
+.sports_details {
+  margin-bottom: 5%;
+  margin-top: 3%;
+  padding: 2%;
+  box-shadow: gray 0 0px 28px -18px;
+  background-color: #E0E8F2;
+
+}
+
+.sports_details h3 {
+  font-weight: 600;
+  font-size: calc(20px * var(--font-scale));
+}
+
+.sports_details p {
+  font-size: calc(15px * var(--font-scale));
+}
+
+.sports_details img {
+  height: auto !important;
+  width: 100% !important;
+}
+
+
+/* image-slider.component.css */
+.slider-container {
+  position: relative;
+  height: 20em !important;
+  width: 25em !important;
+  overflow: hidden;
+}
+
+.slider-image {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover; /* This property ensures that the image covers the container without stretching */
+}
+
+.slider-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+
+.slider-container {
+  position: relative;
+  width: 100%; /* Set width to 100% for responsiveness */
+  max-width: 100%; /* Set maximum width to 100% */
+  overflow: hidden; /* Hide overflow to prevent distortion */
+}
+
+.slider-image {
+  width: 100%; /* Set maximum width to 100% */
+  height: 15rem; /* Let the height adjust proportionally */
+  display: block; /* Ensure the image is displayed as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+img{
+  height: 15em;
+}
+
+.view-more{
+  text-align: -webkit-center;
+}
+
+.view-more button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  position: relative;
+  padding: 0 20px;
+  font-size: calc(18px * var(--font-scale));
+  text-align:center ;
+  border: 0;
+  // box-shadow: hsl(210deg 87% 36%) 0px 7px 0px 0px;
+  background-color: #FFC600;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 31ms cubic-bezier(.5, .7, .4, 1);
+ }
+ 
+ .view-more button:before {
+  content: attr(alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  font-size: calc(15px * var(--font-scale));
+  font-weight: bold;
+  color: #07294d;
+  letter-spacing: 4px;
+  opacity: 1;
+ }
+ 
+ .view-more button:active {
+  box-shadow: none;
+  transform: translateY(7px);
+  transition: 35ms cubic-bezier(.5, .7, .4, 1);
+ }
+ 
+ .view-more button:hover:before {
+  transition: all .0s;
+  transform: translateY(100%);
+  opacity: 0;
+ }
+
+
+ .view-more button i {
+  color: #07294d;
+  font-size: calc(15px * var(--font-scale));
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-style: normal;
+  transition: all 2s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+ }
+ 
+ .view-more button:hover i {
+  transition: all .2s ease;
+  transform: translateY(0px);
+  opacity: 1;
+ }
+ 
+ .view-more button:hover i:nth-child(1) {
+  transition-delay: 0.045s;
+ }
+ 
+ .view-more button:hover i:nth-child(2) {
+  transition-delay: calc(0.045s * 3);
+ }
+ 
+ .view-more button:hover i:nth-child(3) {
+  transition-delay: calc(0.045s * 4);
+ }
+ 
+ .view-more button:hover i:nth-child(4) {
+  transition-delay: calc(0.045s * 5);
+ }
+ 
+ .view-more button:hover i:nth-child(6) {
+  transition-delay: calc(0.045s * 6);
+ }
+ 
+ .view-more button:hover i:nth-child(7) {
+  transition-delay: calc(0.045s * 7);
+ }
+ 
+ .view-more button:hover i:nth-child(8) {
+  transition-delay: calc(0.045s * 8);
+ }
+ 
+ .view-more button:hover i:nth-child(9) {
+  transition-delay: calc(0.045s * 9);
+ }
+ 
+ .view-more button:hover i:nth-child(10) {
+  transition-delay: calc(0.045s * 10);
+ }
+
+
+
+//  Media Queries
+
+/* Add media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .ncc_overview {
+    padding: 20px;
+  }
+
+  .ncc_overview .first_section p {
+    height: auto;
+    overflow: auto;
+  }
+
+  .ncc_overview .second_section {
+    margin-top: 50px;
+  }
+
+  .ncc_gallery,
+  .message_section,
+  .how_to_apply {
+    margin-top: 3%;
+  }
+
+  .sports_details,
+  .slider-container {
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+  .sports_details img {
+    height: auto;
+    width: 100%;
+  }
+
+  .view-more button {
+    height: 40px;
+    padding: 0 15px;
+    font-size: calc(14px * var(--font-scale));
+  }
+}
+
+/* Add media query for even smaller screens */
+@media only screen and (max-width: 576px) {
+  .ncc_overview {
+    margin-top: 10%;
+    padding: 10px;
+  }
+
+  .ncc_overview .first_section h2 {
+    font-size: calc(20px * var(--font-scale));
+  }
+
+  .ncc_overview .first_section p {
+    font-size: calc(14px * var(--font-scale));
+  }
+
+  .ncc_overview .second_section {
+    margin-top: 50px;
+  }
+
+  .ncc_overview .second_section ul li a {
+    font-size: calc(14px * var(--font-scale));
+    margin: 3px;
+    padding: 3px;
+  }
+
+  .about-section {
+    margin-left: 10px;
+  }
+
+  .message_section .message-title {
+    font-size: calc(20px * var(--font-scale));
+  }
+
+  .message_section .message-text {
+    font-size: calc(14px * var(--font-scale));
+  }
+
+  .how_to_apply .first_section h2 {
+    font-size: calc(20px * var(--font-scale));
+    
+  }
+
+  .how_to_apply .second_section h2 {
+    font-size: calc(20px * var(--font-scale));
+    color: white;
+  }
+
+  .sports_details h3 {
+    font-size: calc(18px * var(--font-scale));
+  }
+
+  .sports_details p {
+    font-size: calc(14px * var(--font-scale));
+  }
+
+  .slider-container {
+    height: 15em !important;
+    width: 20em !important;
+  }
+}
+
+
+
+@media (max-width: 448px) {
+  .sports_details h3{
+    margin-top: 0.5em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sports_details.even .row {
+      flex-direction: column-reverse; /* Reverse the order of columns on smaller screens */
+      margin-top: 0.7em;
+  }
+
+  .sports_details.even .col-md-4 {
+      order: 2; /* Move the image column to the bottom */
+  }
+
+  .sports_details.even .col-md-8 {
+      order: 1; /* Move the content column to the top */
+  }
+
+  .sports_details h3{
+      text-align: center;
+  }
+
+}
+
+/* activity*/
+
+.Activities .thum .image{
+  overflow: hidden;
+  height: 12em;
+  text-align: center;
+  background-color: #000;
+}
+
+.Activities .thum .image img{
+  height: 12em;
+  width: auto;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+
+.Activities img{
+  transition: all 0.4s linear;
+
+}
+
+.Activities img:hover{
+  transform: scale(1.1);
+}
+
+.Activities .cont {
+  padding: 0.8em;
+}
+
+
+.Activities .cont .venue{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+}
+
+
+
+.Activities .cont h4 {
+  font-weight: 600;
+  font-size: calc(14px * var(--font-scale));
+  padding-top: 0.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-align: left;
+  
+}
+
+.Activities .cont span {
+  font-size: calc(13px * var(--font-scale));
+  color: #000;
+  display: flex;
+  padding-top: 0.3em;
+  font-weight: 500;
+}
+
+.Activities .cont i {
+  margin-right: 0.3em;
+  color: #07294d;
+}
+
+.Activities {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.Activities .image {
+  text-align: center;
+  background: #000;
+}
+
+.Activities .cont .view-button {
+  justify-content: center;
+  display: flex;
+}
+
+/* background images blured css */
+.banner {
+  display: flex;
+  // height: 14em;
+  justify-content: center;
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  // background-image: url('assets/images/bg_img.jpg'); /* Use the blurred image as the background */
+  background-size: cover;
+  filter: blur(8px);
+  /* Adjust the blur intensity as needed */
+}
+
+img {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  /* Ensure the image is above the blurred background */
+}
+
+.content {
+  z-index: 2;
+  /* Ensure the content is above the blurred background */
+  /* Add your content styles here */
+}

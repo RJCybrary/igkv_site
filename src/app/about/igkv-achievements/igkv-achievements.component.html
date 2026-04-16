@@ -1,0 +1,25 @@
+
+
+<app-banner *ngIf="imageUrl" [banner_heading]="bannerHeading" [banner_img]="imageUrl"></app-banner>
+
+<div class="container mt-4">
+  <div class="row">
+    <!-- Left Column: Image -->
+    <div class="col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0">
+      <img [src]="imageUrlside" alt="Achievements image" class="img-fluid rounded shadow" />
+    </div>
+
+    <!-- Right Column: PDF Link -->
+    <div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-center">
+      <a href="https://igkv.ac.in/_Attachment/web/UniversityContent/pdf/ssr_igkv_achievements.pdf" target="_blank" class="btn btn-outline-primary d-flex align-items-center">
+        
+      Click to  View Achievements
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+

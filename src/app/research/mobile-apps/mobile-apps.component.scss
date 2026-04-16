@@ -1,0 +1,177 @@
+/* Default styles */
+.mobile_apps {
+  text-align: center;
+}
+
+// .crop-image {
+//   width: 4em; /* Set the width as needed */
+//   height: 2em; /* Keep the height you already have */
+//   object-fit: cover; /* This will crop the image while keeping the aspect ratio */
+//   border-radius: 8px; /* Optional: Rounded corners if you want */
+// }
+
+.mobile_apps .image_part img {
+  height: 34em;
+  width: 17em;
+  border-radius: 42px;
+  margin-top: 8em;
+}
+
+.mobile_apps .image_part {
+  margin: 1em;
+  padding: 1em;
+  height: auto;
+  width: auto;
+}
+
+.mobile_apps .contents {
+  margin: 1em;
+  padding: 1em;
+}
+
+.mobile_apps .contents .heading {
+  text-align: left;
+  color: #07294d;
+  font-size: calc(40px * var(--font-scale));
+  font-weight: 800;
+  margin: 0.5em;
+}
+
+.mobile_apps .contents .sub-heading {
+  font-size: calc(25px * var(--font-scale));
+  font-weight: 600;
+  color: darkgreen;
+  text-align: left;
+  margin: 1em;
+  line-height: 1.2em;
+}
+
+.mobile_apps .contents .text {
+  font-size: calc(16px * var(--font-scale));
+  font-weight: 400;
+  color: #07294d;
+  text-align: justify;
+  margin: 1em;
+  line-height: 1.5;
+}
+
+.mobile_apps .contents .first_section {
+  margin-top: 2em;
+  margin: 0.5em;
+  padding: 0.5em;
+  text-align: left;
+  font-size: calc(18px * var(--font-scale));
+  color: #07294d;
+  font-weight: 600;
+}
+
+.mobile_apps .contents .buttons {
+  text-align: justify;
+  margin: 1em;
+}
+
+.mobile_apps .contents .buttons button {
+  border-radius: 10px;
+}
+
+.mobile_apps .contents .more-info {
+  color: white;
+  margin: 0.5em;
+  padding: 0.5em;
+  font-weight: 700;
+  background-color: #07294d;
+}
+
+.mobile_apps .contents .more-info:hover {
+  color: #07294d;
+  background-color: white;
+}
+
+.mobile_apps .contents .google-play {
+  color: white;
+  margin: 0.5em;
+  padding: 0.5em;
+  font-weight: 700;
+  background-color: #07294d;
+}
+
+.mobile_apps .contents .google-play:hover {
+  color: #07294d;
+  background-color: white;
+}
+
+.color-blue {
+  color: #07294d;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .mobile_apps .image_part img {
+      height: auto;
+      width: 100%;
+      margin-top: 1em; /* Adjust as needed */
+  }
+
+  .mobile_apps .image_part {
+      margin: 1em 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mobile_apps .contents .heading {
+      font-size: calc(17px * var(--font-scale));
+  }
+
+  .mobile_apps .contents .sub-heading {
+      font-size: calc(20px * var(--font-scale));
+      text-align: center;
+  }
+
+  .mobile_apps .contents .text {
+      font-size: calc(14px * var(--font-scale));
+  }
+
+  .mobile_apps .contents .first_section {
+      font-size: calc(18px * var(--font-scale));
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+
+  .mobile_apps .image_part {
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile_apps .contents {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .mobile_apps .contents .heading {
+      font-size: calc(20px * var(--font-scale));
+      margin-top: 10px;
+      padding: 0;
+      text-align: center;
+  }
+
+  .mobile_apps .contents .sub-heading {
+      font-size: calc(10px * var(--font-scale));
+      margin: 0;
+      padding: 0;
+      text-align: center;
+  }
+
+  .mobile_apps .contents .buttons button {
+    font-size: calc(10px * var(--font-scale));
+  }
+
+  .mobile_apps .contents .text {
+      font-size: 9px;
+  }
+
+  .mobile_apps .contents .first_section {
+      font-size: calc(10px * var(--font-scale));
+  }
+}

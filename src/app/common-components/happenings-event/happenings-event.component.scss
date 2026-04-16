@@ -1,0 +1,258 @@
+/* Ensure the content section takes up full height */
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 600px;
+  position: relative;
+}
+
+.content-wrapper {
+  display: flex;
+  // width: 100%;
+  // max-width: 1200px;
+  position: relative;
+  background-color: transparent;
+}
+
+.image-col {
+  position: relative;
+  padding-right: 0;
+  overflow: hidden;
+  // flex: 0 0 60%; /* Image container larger than content */
+}
+
+.image-element {
+  width: 879px;
+  // height: auto;
+  object-fit: cover;
+  display: block;
+  // border:groove 1px;
+  // background-color: azure ;
+  height: 515px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.content-col {
+  padding: 20px;
+  position: relative;
+  flex: 0 0 40%; /* Content container */
+  z-index: 2; /* Ensure the content overlaps */
+  right: -6%; /* Overlap the content over the image */
+  max-width: 80%; /* Content is 80% wide */
+  text-align: center;
+  align-items: center !important;
+  top: 60px;
+}
+
+.content-details {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding: 20px;
+  position: relative;
+  z-index: 3;
+  width: 527px;
+  height: 348px; /* Set a fixed height */
+  overflow: hidden; /* Hide any content that exceeds the container size */
+}
+
+.date {
+  color: rgba(11, 105, 198, 0.9607843137);
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
+  // font-size: calc(14px * var(--font-scale));
+  font-size: calc(14px * var(--font-scale)) ;
+}
+
+.title {
+  // font-size: calc(18px * var(--font-scale));
+  font-size: calc(18px * var(--font-scale)) ;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: justify;
+  text-decoration: none;
+  color: #000;
+}
+
+.content-details h2:hover{
+  color:rgba(0, 0, 255, 0.787);
+}
+
+.titles {
+  margin: 10 10 20 40px !important;
+}
+
+.description {
+  // font-size: calc(12px * var(--font-scale));
+  font-size: calc(12px * var(--font-scale));
+
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 9; 
+  max-height: 20.5em;   
+}
+
+/* Adjusting the size and position of the navigation buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 6px;
+  cursor: pointer;
+  left: 37%;
+  z-index: 4;
+}
+
+
+
+// .navigation-buttons button {
+//   outline: 2px solid red; /* Temporary for debugging */
+// }
+.containers{
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin: 0px 0px -763px 0px;
+}
+
+button {
+  background-color: #ffffff;
+  color: rgba(11, 105, 198, 0.9607843137);
+  border: none;
+  padding: 1px 10px; 
+  margin:  5px;
+  cursor: pointer;  
+  border-radius: 0;
+  // font-size: calc(18px * var(--font-scale));
+  font-size: calc(18px * var(--font-scale)) !important ;
+  border: groove 1px;
+  border-color: rgba(11, 105, 198, 0.9607843137);
+}
+
+button:hover {
+  border-color: #8bafe4;
+}
+
+.header{
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin: 0px 338px 475px -595px;
+}
+
+.header h2 {
+  margin: 30px 218px 0px;
+  // font-size: calc(33px * var(--font-scale));
+  font-size: calc(33px * var(--font-scale)) !important ;
+  color: rgba(11, 105, 198, 0.96);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  line-height: 125%;
+}
+
+a, u {
+  text-decoration: none !important;
+  border: none;
+}
+
+
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 1200px) {
+  .content-col {
+    max-width: 90%;
+    right: 0;
+    flex: 0 0 50%; /* Adjust content to take half width */
+  }
+
+  .image-col {
+    flex: 0 0 50%; /* Adjust image to take half width */
+  }
+
+  .content-details {
+    width: 100%; /* Full width on medium screens */
+  }
+
+  .navigation-buttons {
+    left: 37%; /* Center the navigation buttons */
+  }
+}
+
+@media (max-width: 992px) {
+  .content-col, .image-col {
+    flex: 0 0 100%; /* Full width for both content and image */
+  }
+
+  .content-col {
+    right: 0; /* Remove overlap */
+    max-width: 100%;
+  }
+
+  .content-details {
+    height: auto; /* Adjust height based on content */
+  }
+
+  .navigation-buttons {
+  
+    bottom: 0;
+    left: 50%;
+  }
+
+  .image-element {
+    height: auto; /* Allow image to adjust height */
+  }
+
+}
+
+@media (max-width: 768px) {
+  .content-col {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .image-element {
+    height: auto;
+    max-width: 100%; /* Make the image full width */
+    margin-top: 63px;
+    padding: 16px;
+  }
+
+  .content-details {
+    padding: 10px; /* Reduce padding on smaller screens */
+    height: auto;
+    width: 100%;
+    margin-top: -198px;
+    // margin-top: -54px;
+  }
+
+  button {
+    // font-size: calc(16px * var(--font-scale)); /* Adjust button size */
+    font-size: calc(16px * var(--font-scale)) ;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-col, .image-col {
+    flex: 0 0 100%; /* Stack content and image vertically */
+  }
+
+  .header h2 {
+    // font-size: calc(24px * var(--font-scale)); /* Reduce font size for smaller screens */
+    font-size: calc(24px * var(--font-scale)) ;
+
+  }
+
+  button {
+    // font-size: calc(14px * var(--font-scale)); /* Smaller button font for mobile */
+    font-size: calc(14px * var(--font-scale)) ;
+  }
+}
+

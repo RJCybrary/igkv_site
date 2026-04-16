@@ -1,0 +1,188 @@
+<app-loder *ngIf="loading"></app-loder>
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" [ngStyle]="{'background-image': 'url(' + imageUrl + ')'}" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-banner-cont">
+                    <h2 class="header" > Projects</h2> 
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a >Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Projects</li>
+                        </ol>
+                    </nav>
+                </div>  
+            </div>
+        </div> 
+    </div> 
+</section>
+
+<div class="container ">
+      <div class="section-title mt-3" style="display: flex; justify-content: space-between;">
+        <h2> Projects</h2>
+        <button class="mt-3" mat-stroked-button (click)="scrollToDiv()" style="background-color: rgba(16, 214, 214, 0.89); width: 200px;">Search Projects</button>
+      </div> 
+
+    <div class="row mb-3 mt-3 " >
+        <div class="col-md-10">
+          <div class="row">
+            <div class="col-6 col-sm-6 col-md-3 project-list"  *ngFor="let item of projectDash_Data; ">
+              <div class="counter blue">
+                   <!-- <div class="counter-icon">
+                       <i class="fa fa-rocket"></i>
+                   </div> -->
+                   <div class="counter-content" style="justify-content: center;">
+                       <span class="counter-name mt-1">{{item.Source_Name}}</span>
+                       <span class="counter-value ">{{item.Project_Count}}</span>
+                   </div>
+                   <!-- here added an static id to get project detail page -->
+                 <div class="mt-3"><a class="text-center link mt-3" [routerLink]="['ourProject/38/projectDetail',item.Source_Code]" >View Detail</a> </div>  
+               </div>
+             </div> 
+           </div>
+        </div>
+
+        <div class="col-md-2 subhead">
+            <!-- <p class="title">Click in Session to get Project Dashboard</p> -->
+             <mat-card style="padding: 10px; border-left: solid rgba(21, 56, 110, 0.952) 4px;">
+              <div class="sessionns" *ngFor="let data of session_data">
+                <button class="btn-set" [routerLink]="['ourProject',data.Financial_Year]" mat-stroked-button > {{data.financialYear}}</button>
+            </div>
+             </mat-card>
+           
+        </div>
+    </div  >
+</div>
+
+<div class="container" #targetDiv>
+  <div class="row">
+    <div class="col-md-10">
+      <div class="row" style="border-bottom: 1px;
+      border-bottom: 4px solid rgba(16, 47, 105, 0.89); background-color: aliceblue;
+      ">
+          <div class="col-md-4">
+              <div class="faculty-search-group pt-3">
+                <label for="session">Search by Year</label>
+                <select class="form-control" id="session" [(ngModel)]="selectedSession" (change)="onSessionChange()"  style="width: 214px;">
+                  <option value="" disabled>Search by Year</option>
+                  <option *ngFor="let session of session_data" [value]="session.Financial_Year">
+                    {{ session.financialYear }}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="faculty-search-group pt-3">
+                <!-- <label for="office">Search by Name </label> -->
+                <form [formGroup]="searchForm" (ngSubmit)="getdata()" style="display: flex; ">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Search by Name </mat-label>
+                    <input matInput formControlName="Scheme_Name" placeholder="Type Name">
+                  </mat-form-field>
+                  <button mat-mini-fab type="submit" aria-label="Search" style="padding: 5px; margin: 5px;" color="primary"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-3 mt-3" >
+              <button style="width: 90px;" class="btn btn-danger mt-3 " (click)="clearSelections()">Clear</button>
+
+            </div>
+            
+     
+          
+      </div>  
+
+  
+
+      <section id="specials" class="specials mt-3" *ngIf="projectBySearch">
+          <div class="container" data-aos="fade-up">
+      
+            <div  style="background-color: rgb(246, 250, 253);" class="row projectDetailRow" data-aos="fade-up" data-aos-delay="100" *ngFor="let item of projectBySearch; let i = index">
+                <div class="tab-content">
+                  <div class="tab-pane active show" [attr.id]="'tab-' + i">
+                   <!-- <h1> {{ i + 1 }}.</h1>  -->
+                      <div class="row">
+                          <div class="col-lg-12 details order-2 order-lg-1">
+                              <h3>{{item.Scheme_Name}}</h3>
+                            </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-lg-12 details order-2 order-lg-1 table-responsive">
+                              <table style="overflow-x:auto !important;">
+                                  <thead>
+                                    <tr>
+                                      <th>Schemes Year </th>
+                                      <th>Source Head </th>
+                                      <th>Major Head </th>
+                                      <th>Budget (Lakh)</th>
+                                      <th>PI Name</th>
+                                      <th>Document</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>{{item.financial_Year}}</td>
+                                      <td>{{item.Source_Name}}</td>
+                                      <td>{{item.MajorHead_Name}}</td>
+                                      <td>{{item.Budget_Amount}}</td>
+                                      <td>{{item.PI_Name}}</td>
+                                      <td><a href="#" target="_blank" aria-label="Download project document (PDF)"><i class="fa-solid fa-file-pdf" aria-hidden="true" style="color: rgb(45, 100, 172);"></i></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                          </div>
+                      </div>
+                    <div class="row">
+                      <div class="col-lg-7 details order-2 order-lg-1">
+                        <!-- <h5>{{item.Scheme_Name}}</h5> -->
+                        <p class="" style="text-align: justify;">{{item.project_overview}}</p>
+                      </div>
+                      <div class="col-lg-5 text-center order-1 order-lg-2">
+                        <img src="" width="300px" max-height="300px"  onerror="this.src=''" alt="project image" class="img-fluid">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             
+            </div>
+     
+      
+          </div>
+        </section>
+
+        <div class="container">
+          <div class="row">
+            <div class="pagination-controls pb-3">
+              <button  mat-flat-button color="primary" (click)="changePage('previous')" [disabled]="currentPages <= 1">Previous</button>
+              &nbsp; <span>Page {{ currentPages }}</span> &nbsp;
+              <button mat-flat-button color="primary" (click)="changePage('next')" [disabled]="currentPages * 10 >= totalRecords">Next</button>
+            </div>
+          </div>
+         </div>
+
+  </div>
+  </div>
+</div>
+
+
+
+<!-- <section class="pt-5 pb-5 custom-gray-bg">
+    <div class="container ">
+        <div class="row ">
+              <div class="col-md-2 col-sm-4 col-xs-6 mb-3" *ngFor="let data of session_data">
+                <a [routerLink]="['ourProject',data.Financial_Year]">
+                <div class="card">
+                    <div class="card-header"> </div>
+                    <div class="row card-body">
+                        <span class="icon"> <i class="fa-solid fa-book-atlas"></i></span>
+                        <span class="number">{{data.financialYear}}</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div> 
+    </div>
+  </section>  -->
+
+ 
+

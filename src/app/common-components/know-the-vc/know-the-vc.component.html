@@ -1,0 +1,240 @@
+<app-vc-menubar></app-vc-menubar>
+
+<!-- Banner Starts Here  -->
+
+
+
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"  [ngStyle]="{'background-image': 'url(' + imageUrl + ')', 'height': '400px'}">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="page-banner-cont">
+                  <h2 class="header" >Know the VC</h2>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/home" >Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Know the VC</li>
+                      </ol>
+                  </nav>
+              </div>  
+          </div>
+      </div> 
+  </div> 
+</section>
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-9">
+      <h2 class="vc-head" style="font-size: calc(2rem * var(--font-scale));">Know Your &nbsp;<span class="vc-title">Vice Chancellor</span></h2>
+      <p class="contents" style="text-align: justify;">Prof. (Dr.) Girish Chandel, Presently serving as Vice-Chancellor, IGKV, Raipur, C.G. from 25.02.2022. He born on 26th September, 1966 at Raipur, which is capital of present day of Chhattisgarh State. He undergone his school studies from S.S. Kalibadi Higher Secondary School, Raipur, Later he completed his B.Sc Agriculture in the year 1989, M.Sc Plant Breeding and Genetics with specialization in Plant Tissue Culture in the year 1992 and PhD in Plant Breeding and Genetics with specialization in Genetic Engineering and Transformation in the year 2005 with IRRI’s Doctoral Fellowship from Indira Gandhi Krishi Vishwavidyalaya. <br> He served as Researcher at International Centre for Genetic Engineering and Biotechnology, New Delhi from October 1991 to January 1995, he was appointed as Assistant Professor at Indira Gandhi Krishi Vishwavidyalaya (IGKV) in January, 1995. Later promoted as Associate Professor, in July, 2005 and as Professor in 24th, July, 2011. </p>
+      <button class="scroll-button" (click)="scrollToDiv()">Read More</button>
+    </div>
+    <div class="col-md-3">
+      <div class="image-container">
+        <img src="https://igkv.ac.in/images/AngWeb/Photos/desk-of-vc-image.jpg" height="296px" alt="Vice Chancellor Image" >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-sm-6 col-xs-12 mb-3" *ngFor="let item of EmpDetail">
+ 
+        <div class="exp-timeline-container ">
+          <span><h2 class="text-center" style="color: rgb(94, 91, 91);">Responsibility</h2></span>
+          <ul class="exp-timeline">
+            <li *ngFor="let item of emp_Responsibility">
+              <div class="exp-timeline-left">
+                <div class="exp-timeline-date1">
+                  <p style="font-weight: 600;text-align: center;" >{{ item.From_Date }}
+                </div>
+              </div>
+              <div class="exp-timeline-right">
+                <!-- <span> <i class="fa-solid fa-arrows-to-dot"></i></span> -->
+                 {{ item.Post_Name }} in
+                {{ item.Office_Name}} from {{ item.From_Date }}
+              </div>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="section-time" style="margin-bottom: 10px;">
+        <div><h2 class="text-center" style="color: rgb(94, 91, 91);">Experience</h2></div>
+        <div class="timeline-container">
+          <ul class="timeline">
+            <li *ngFor="let item of emp_WorkExperience">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                 {{ item.Post_Name }} in
+                {{ item.Office_Name }} from {{ item.FromDate }} to
+                {{ item.enddate }}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid"  style="background-color: rgb(29, 59, 104);">
+  <div class="row">
+    <!-- Publications Section -->
+    <div class="col-md-6">
+      <div class=" mb-2 mt-3"><h3 class="social-media-heading">Publications</h3></div>
+      <div class="card p-2 mb-2">
+       
+        <div class="publication-project">
+          <table class="custom-table awards award-ach" style="margin: 0;">
+            <thead>
+              <tr>
+                <th>S.No.</th>
+                <th>Journal / Proceedings</th>
+                <th>Authors</th>
+                <th>Activity Performed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of paginatedContents_pub; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ item.JournalProceedings }}</td>
+                <td>{{ item.NoOfCoAuthors_MainAuthorOrMentor }}</td>
+                <td>{{ item.ActivityPerformed }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <mat-paginator *ngIf="publication_Data"
+          [length]="publication_Data.length"
+          [pageSize]="pageSize"
+          [pageSizeOptions]="[5, 10, 20]"
+          (page)="onPageChange_pub($event)"
+          aria-label="Select page"
+        >
+        </mat-paginator>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="col-md-6">
+      <div class=" mb-2 mt-3"><h3 class="social-media-heading" >Projects</h3></div>
+      <div class="card p-2 mb-2">
+        <div class="publication-project">
+          <table class="custom-table awards award-ach" style="margin: 0;">
+            <thead style="height: 53px;">
+              <tr>
+                <th>S.No.</th>
+                <th>Title</th>
+                <th>Funding agency</th>
+                <th>Activity Performed</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of paginatedContents_pro; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ item.NameOfProjectStudy }}</td>
+                <td>{{ item.FundingAgency }}</td>
+                <td>{{ item.ActivityPerformed }}</td>
+                <td>{{ item.DurationOfTheProjectStudy }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <mat-paginator *ngIf="Projects_Data"
+          [length]="Projects_Data.length"
+          [pageSize]="pageSize"
+          [pageSizeOptions]="[5, 10, 20]"
+          (page)="onPageChange_pro($event)"
+          aria-label="Select page"
+        >
+        </mat-paginator>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Know the VC Starts  -->
+<div class="container-fluid" class="target-div" #targetDiv>
+    <div class="container">
+        <div class="know-the-vc row">
+        <div class="col-md-12 contents" >
+            <div class="bio" style="background-color: rgb(235, 241, 245);">
+                <p class="text-center" style="font-size: calc(14px * var(--font-scale)); font-weight: 600; padding: 15px;     
+    font-family: Montserrat, Arial, Helvetica, sans-serif;"> BRIEF CURRICULUM VITAE </p>
+                <p class="message" style="text-align: justify;">The undersigned is a renowned Plant Breeder/Biotechnologist with a Ph.D. in Agriculture and 30 years of experience in agricultural education, research, and extension, including about 10 years of experience in Research Management. Before assuming the office of Vice Chancellor, he served as a Professor and Head at Indira Gandhi Krishi Vishwavidyalaya. Additionally, he currently holds the position of OSD in the Department of Agriculture and Biotechnology and CEO of the Biotech Promotion Society, which is a Nodal agency for Biotechnology in the state.
+
+                  Recently, under his leadership, an SC Bose Biotech Incubation Centre under CG Biotech Park is being established in the state of CG to provide a platform for innovation and entrepreneur development for the youth of CG. He also serves as Chairman of the Board of Studies, Member of the Board of Studies at Engineering College Raipur, Member of the formation of Board of Studies for Biotechnology at the Office of the Director General Sickle Cell Institute Chhattisgarh Raipur, Member of the Biomedical Ethicist Committee at Indira Gandhi Krishi Vishwavidyalaya (IGKV) Raipur, and engages in Foreign Engagement on Biosafety and Bio-security Matters. Additionally, he serves as a Member Subject Expert at Pt. Jawahar Lal Nehru Memorial Medical College Raipur, Member of the Institutional Stem cell committee, and a Member of the Academic Council. He also holds the position of HOD Plant Molecular Biology and Biotechnology at Indira Gandhi Krishi Vishwavidyalaya (IGKV) Raipur and serves on the Executive Council, among other committees.</p>
+                <p>He has supervised 15 Ph.D. scholars and 80 M.Sc. students to date, and to his satisfaction, the majority of his students are well-placed. He is a Task Force member of the DRD of DBT, Government of India, New Delhi, for biotechnology teaching and HRD development policies for Indian universities.
+
+                  He has successfully completed more than 15 national and international projects worth 20 crores, resulting in the development of India’s first Zn Rich rice, CGZR-1. Other popular varieties developed include CGZR-2, the “Sugar Balance White Rice” variety Madhuraj, CGAR-2, Zinco Rice–MS, and a protein-rich rice variety, Protezin. Recognizing the importance of these varieties, the Government of Chhattisgarh has announced incentives for their cultivation under the Rajeev Gandhi Kisan Nyaya Yojana.
+                  
+                  His contribution to rice genetic improvement led to the receipt of the Best AICRP Centre Award by IIRR, ICAR, in 2016. Additionally, he has published more than 80 high-impact research papers and 3 book chapters. He is the recipient of the prestigious “Doctoral fellowship” from IRRI, Philippines, and the “NE Borlaug fellowship” in 2006. He also received the Young Scientist Award in 1992, the “Kisan Samman Patra” of Chhattisgarh in 2013, the “Outstanding Achievement Award of IGKV” for 2015, and the “Samman Patra of CG” by Rotary International Chhattisgarh Chapter in 2015.
+                  Considering his expertise and contributions in the fields of Agriculture, Nutrition, and Climate Change, the Government of India has nominated him as an expert member of the Task Force for proposals submitted under the “Indo-German” and “Indo-Netherlands” cooperation programs to DBT, Government of India.</p>&nbsp;
+            </div>
+            <hr>
+        </div>
+
+      
+    </div>
+    </div>
+</div>
+
+<div class="container-fluid social-media-section">
+  <div class="social-media-heading">Social Media</div>
+  <div class="row justify-content-center">
+    <!-- Facebook -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <i class="fab fa-facebook"></i> Facebook
+        </div>
+        <div class="card-body">
+          <div class="iframe-container">
+            <iframe  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Figkvkisan%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" title="facebook Page"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <i class="fab fa-instagram"></i> Instagram
+        </div>
+        <div class="card-body">
+          <div class="iframe-container">
+            <iframe src="https://www.instagram.com/igkvraipurofficial/embed"  title="instagram Page"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Twitter -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <i class="fab fa-twitter"></i> X (Twitter)
+        </div>
+        <div class="card-body">
+          <div class="iframe-container">
+            <iframe src="https://syndication.twitter.com/srv/timeline-profile/screen-name/igkv_kisan?dnt=false&amp;embedId=twitter-widget-0&amp;theme=light&amp;showHeader=true&amp;showReplies=false"  title="twitter Page"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="col-md-3">
+  <iframe width="100%" height="400" src="https://www.youtube.com/embed/videoseries?list=UUkzs-8I9dPquYO_e4MEno9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div> -->
+
+

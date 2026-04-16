@@ -1,0 +1,60 @@
+
+<section id="Section1" class="pt-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title mt-50">
+                    <h5>Research Paper</h5>
+                    <h2>Latest</h2>
+                </div> <!-- section title -->
+                <div class="about-cont">
+                                <section id="Section2" class="pb-120 gray-bg">
+            <div class="container">
+                <div class="row align-items-end">
+                </div> <!-- row -->
+                <div class="row justify-content-center" >
+                    <div class="col-lg-3 col-md-6 col-sm-8" *ngFor="let item of publicationList_Data">
+                        <div class="singel-publication mt-30">
+                            <div class="image">
+                                <img [src]="item.Image_URL" alt="Publication" height="320px">
+                            </div>
+                            <div class="details">
+                                <span class="info">
+                                    <!-- <h4>Publication Category : <span>{{item.Publication_Category_Name_E}}</span></h4> -->
+                                    <p class="mt-2"> <span>Author Name</span>: <strong>{{item.Author_Name}}</strong></p>
+                                    <!-- <p> <span>Co Author Name</span>: <strong>{{item.Co_Auther_Name}}</strong></p> -->
+                                    <!-- <p> <span>Publisher_Name</span>: <strong>{{item.Publisher_Name}} </strong></p> -->
+                                    <p> <span>Publication_Title</span>: <strong>{{item.Publication_Title}} </strong></p>
+                                    <!-- <p> <span>Publication_Date</span>: <strong>{{item.Publication_Date}}</strong></p> -->
+                                    <p class="text-center new" ><a [href]="item.File_URL" target="_blank" class="text-center" style="cursor: pointer;"> View</a> </p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+                  
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div class="row View-all">
+                <div class="col-2">
+                    <div class="View-all-btn">
+                        <span>
+                            <button class="btn"><h6>View All</h6></button>
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+                </div>
+                
+            </div> <!-- about cont -->
+            
+        </div> <!-- row -->
+      
+    </div> <!-- container -->
+   
+</section>

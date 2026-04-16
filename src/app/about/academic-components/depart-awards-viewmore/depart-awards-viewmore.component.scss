@@ -1,0 +1,112 @@
+
+
+/*--------------------------------------------------------------
+# awards css
+--------------------------------------------------------------*/
+.awards .posts-list .post-item {
+    // box-shadow: 0 4px 40px -12px #5F8D4E;
+    box-shadow: 0 4px 40px -12px gray;
+    transition: 0.3s;
+    padding: 1em;
+  }
+  .awards .posts-list .post-img{
+    height: 15em;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .awards .posts-list .post-img img {
+    transition: 0.5s;
+    height: 100%;
+  }
+  
+  .awards .posts-list .post-date {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #d96846;
+    color: white;
+    text-transform: uppercase;
+    font-size: calc(13px * var(--font-scale));
+    padding: 6px 12px;
+    font-weight: 500;
+    z-index: 5;
+  }
+  
+  .awards .posts-list .post-content {
+    padding-top: 1em;
+    height: 5em;
+  }
+  
+  .awards .posts-list .post-content h4{
+    color: #000;
+    font-size: calc(14px * var(--font-scale));
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 24px;
+  }
+  
+  .awards .posts-list .post-title {
+    font-size: calc(24px * var(--font-scale));
+    color: var(--color-secondary);
+    font-weight: 700;
+    transition: 0.3s;
+    margin-bottom: 15px;
+  }
+  
+  .awards .posts-list .meta i {
+    font-size: calc(16px * var(--font-scale));
+    color: var(--color-primary);
+  }
+  
+  .awards .posts-list .meta span {
+    font-size: calc(15px * var(--font-scale));
+    color: #838893;
+  }
+  
+  .awards .posts-list p {
+    margin-top: 20px;
+  }
+  
+  .awards .posts-list hr {
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  .awards .posts-list .readmore {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    line-height: 1;
+    transition: 0.3s;
+    color: #d96846;
+    text-align: center;
+  }
+  
+  .awards .posts-list .readmore i {
+    line-height: 0;
+    margin-left: 6px;
+    font-size: calc(16px * var(--font-scale));
+    text-align: center;
+  }
+  
+  .awards .posts-list .post-item:hover .post-title,
+  .awards .posts-list .post-item:hover .readmore {
+    color: var(--color-primary);
+  }
+  
+  .awards .posts-list .post-item:hover .post-img img {
+    transform: scale(1.1);
+  }
+  
+  
+  .color-green{
+    color: #d96846;
+  
+  }
+  
+  

@@ -1,0 +1,169 @@
+<footer class="footer big-screen" *ngIf="showFooter">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-2 col-md-6 footer-contact">
+          <h3>
+          <div class="logo">
+              <a ><img [src]="FooterLogoIGKV"  width= 100px alt="Indira Gandhi Krishi Vishwavidyalaya Logo"></a>
+          </div>
+         </h3>
+          <p>
+              Indira Gandhi Krishi Vishwavidyalaya, <br>
+              Krishak Nagar, Raipur,<br>
+              Chhattisgarh 492012<br>
+            <strong>Site:</strong> https://igkv.ac.in <br>
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4 style="color: rgba(252, 169, 15, 0.973);">{{"Academic Resources" | translate}}</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/about-overview">{{'About' | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/college-home">{{'Colleges' | translate}} </a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/research/international-overview">{{'International' | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/program/1">{{"UG" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/program/2">{{"PG" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/program/3">{{"Ph.D"| translate}}</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-links" >
+          <h4 style="color: rgba(252, 169, 15, 0.973);">{{"Important Links" | translate}}</h4>
+          <ul  class="mt-3">
+            <li><i class="bx bx-chevron-right"></i> <a [routerLink]="['about/other-news',53]">{{"Rules Regulations" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://igkv.ac.in/site/#/UGC-HEI" target="_blank">{{"UGC HEI" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://nad.gov.in/" target="_blank">{{"National Academic Depository" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://icar.org.in/" target="_blank">{{"ICAR" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://naturalfarming.niti.gov.in/" target="_blank">{{"Natural Farming" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://igkv.ac.in/CropBreed/rice_search.aspx" target="_blank">{{"Plant Selection" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://igkv.ac.in/smartkisan/Auth/loginpage.aspx" target="_blank">{{"Smart Kisan" | translate}}</a></li>
+        </ul>
+        </div>  
+        <div class="col-lg-2 col-md-6 footer-links" >
+          <h4 style="color: rgba(252, 169, 15, 0.973);">{{"Quick Access" | translate}}</h4>
+          <ul  class="mt-3">
+            <li><i class="bx bx-chevron-right"></i> <a href="https://igkv.ac.in/web/AuthenticationStudent.aspx" target="_blank">{{"LMS Student" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://igkv.ac.in/web/AuthenticationEmloyee.aspx" target="_blank">{{"LMS Employee" | translate}}</a></li>
+            <li><a [routerLink]="['/about/other-news',34]"> {{"Anti-Ragging" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/sitemap">{{"Site Map"| translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/Policy">{{"Website Policy"| translate}}</a></li>
+        </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-links" >
+          <h4 style="color: rgba(252, 169, 15, 0.973);">{{'Our Social Networks'| translate}}</h4>
+          <p>Connecting our campus to the world, Follow us on social media!</p>
+          <div class="social-links mt-3" >
+            <a target="_blank" href="https://twitter.com/igkv_kisan" class="twitter"   aria-label="IGKV Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a target="_blank" href="https://www.facebook.com/igkvkisan" class="facebook" aria-label="IGKV Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a target="_blank" href="https://www.instagram.com/igkv_kisan/" class="instagram" aria-label="IGKV Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a target="_blank" href="https://www.youtube.com/@igkv1392/featured" class="youtube" aria-label="IGKV YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="visit-counter mt-3">
+            <p>Website Visits</p>
+            <div class="counter-box">{{ visitor_count }}</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <div class="copyright">
+       <strong><span></span></strong>Designed, Developed & Hosted By: National Informatics Centre Chhattisgarh State Centre, Raipur © 2013 The contents are owned by IGKV, Raipur
+    </div>
+    <div class="credits">
+     <a href="https://www.nic.in/statecontents/chhattisgarh/" target="_blank"><img [src]="FooterLogoNIC"  height="60px" width="130px" style="margin-top: -20px;" alt="NIC credits"> </a>  
+    </div>
+  </div>
+</footer>
+
+
+<footer class="footer small-screen" >
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="row mb-3">
+          <div class="col-6">
+              <div class="logo">
+                  <a ><img [src]="FooterLogoIGKV"  height="100px" alt="footer Logo"></a>
+              </div>
+          </div>
+          <div class="col-6">
+            <p style="font-size: calc(13px* var(--font-scale));">
+              Indira Gandhi Krishi Vishwavidyalaya, <br>  
+              Krishak Nagar, Raipur,<br>
+              Chhattisgarh 492012<br>
+        
+            <strong>Site:</strong> https://igkv.ac.in <br>
+          </p>
+          </div>
+        </div>
+       
+       <div class="row">
+        <div class="col-6 footer-links">
+          <h4>{{"Academic Resources" | translate}}</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/about-overview">{{'About' | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/college-home">{{'Colleges' | translate}} </a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/research/international-overview">{{'International' | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/program/1">{{"UG" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/program/2">{{"PG" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/program/3">{{"Ph.D"| translate}}</a></li>
+          </ul>
+        </div>
+        <div class="col-6 footer-links">
+            <h4>{{"Important Links" | translate}}</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a [routerLink]="['about/other-news',53]">{{"Rules Regulation" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://igkv.ac.in/site/#/UGC-HEI" target="_blank">{{"UGC HEI" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://nad.gov.in/" target="_blank">{{"National Academic Depository" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://icar.org.in/" target="_blank">{{"ICAR" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://naturalfarming.niti.gov.in/" target="_blank">{{"Natural Farming" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://igkv.ac.in/CropBreed/rice_search.aspx" target="_blank">{{"Plant Selection" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://igkv.ac.in/smartkisan/Auth/loginpage.aspx" target="_blank">{{"Smart Kisan" | translate}}</a></li>
+        </ul>
+        </div>
+       </div>
+
+       <div class="row">
+        <div class="col-6 footer-links">
+          <h4>{{"Quick Access" | translate}}</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="contact">{{"Contact US" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://igkv.ac.in/web/AuthenticationStudent.aspx" target="_blank">{{"LMS Student" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://igkv.ac.in/web/AuthenticationEmloyee.aspx" target="_blank">{{"LMS Employee" | translate}}</a></li>
+            <li><a [routerLink]="['/about/other-news',34]"> {{"Anti-Ragging" | translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/sitemap">{{"Site Map"| translate}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about/Policy">{{"Website Policy"| translate}}</a></li>
+        </ul>
+        </div>
+        <div class="col-6 footer-links">
+          <h4>{{'Our Social Networks'| translate}}</h4>
+          <p style="font-size: calc(13px* var(--font-scale));">Connecting our campus to the world, Follow us on social media!</p>
+          <div class="social-links mt-3" >
+            <a target="_blank" href="https://twitter.com/igkv_kisan" class="twitter"  aria-label="IGKV Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a target="_blank" href="https://www.facebook.com/igkvkisan" class="facebook" aria-label="IGKV Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a target="_blank" href="https://www.instagram.com/igkv_kisan/" class="instagram" aria-label="IGKV Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a target="_blank" href="https://www.youtube.com/@igkv1392/featured" class="youtube" aria-label="IGKV YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="visit-counter mt-3">
+            <p>Website Visits</p>
+            <div class="counter-box">{{ visitor_count }}</div>
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pt-2">
+    <div class="copyright">
+       <span>Designed, Developed & Hosted By: National Informatics Centre Chhattisgarh State Centre, Raipur © 2013 The contents are owned by IGKV, Raipur</span>
+    </div>
+    <div class="credits pt-2">
+     <a href="https://www.nic.in/statecontents/chhattisgarh/" target="_blank" aria-label="National Informatics Centre Chhattisgarh"><img [src]="FooterLogoNIC"  height="60px" width="130px" alt="National Informatics Centre Chhattisgarh Logo"> </a>  
+    </div>
+  </div>
+</footer>

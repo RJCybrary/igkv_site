@@ -1,0 +1,834 @@
+<section id="page-banner" class="mt-2">
+  <div class="video-wrapper">
+    <video
+      #bannerVideo
+      [src]="banner_video"
+      controls
+      loop
+      aria-label="Intro video">
+      <track kind="captions"
+             srclang="en"
+             src="assets/captions/intro-video.vtt"
+             label="English captions"
+             default>
+    </video>
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="container page-banner-cont">
+   <h2 class="header">{{banner_heading}}</h2>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href=".">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{banner_heading}}</li>
+            </ol>
+          </nav>
+  </div>
+</section>
+
+
+<!-- Overview -->
+<section class="message_section pt-3 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="profile col-md-3">
+        <img [src]="nssLogo" alt="NSS Image" />
+      </div>
+      <div class="message col-md-9">
+        <h2 class="message-title" style="color: white;">NSS Overview</h2>
+        <p class="message-text contents" style="color: white; ">
+
+          In May 1969, a conference of student representatives organized by the Ministry of Education and the
+          University Grants Commission also unanimously agreed that the National Service Scheme could be a
+          means for national integration. Details were soon prepared, and the Planning Commission approved the
+          expenditure. During the fourth and fifth plan periods, Rs. 5 crores were earmarked for NSS, with the
+          plan commission determining that NSS would be a pilot project in selected institutions and
+          universities. On September 14, 1969, the then Union Education Minister V.K.R.V. Rao inaugurated NSS
+          in 37 universities across all states. This scheme has been implemented in all states of the country,
+          as well as in many states in premier institutions.
+          <br /><br />
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Overview End -->
+
+<!-- History  -->
+<div class="container pt-3 pb-3">
+  <div class="section-title">
+    <br>
+    <h2>History</h2>
+    <p class="contents" style="text-align: justify; font-size: calc(16px * var(--font-scale)); line-height: 1.5;">
+      &emsp;The National Service Scheme (NSS) was
+      launched in 1969 during Mahatma Gandhi's birth centenary year, involving 40,000 students from 37
+      universities. NSS is an extension dimension of the higher education system that encourages students to be
+      oriented towards community service while studying in educational institutions. It is being implemented by
+      the Ministry of Youth Affairs and Sports, Government of India. Following independence, the University Grants
+      Commission, under the chairmanship of S. Radhakrishnan, recommended initiating voluntary national service in
+      educational institutions. The Central Advisory Board of Education (CABE) reconsidered this idea in January
+      1950. After examining the thoughts and experiences of other countries in this area, the board suggested that
+      students and teachers should devote voluntary manual time. In a draft plan adopted by the government in the
+      first five-year plan in 1952, Indian students were encouraged to contribute to social and labor services for
+      one year. In 1958, Jawaharlal Nehru, in a letter to the Chief Ministers, considered social service as a
+      prerequisite for undergraduate education. He directed the Ministry of Education to prepare a suitable plan
+      to initiate national service in educational institutions.</p>
+    <br>
+    <hr>
+  </div>
+</div>
+
+<!-- Aims Starts Here -->
+<div class="container-fluid pt-3 pb-3">
+  <div class="container">
+    <div class="row how_to_apply">
+      <div class="col-md-6 first_section">
+        <h2>Objective Of NSS</h2>
+        <span>
+          <ul class="contents">
+            <li>
+              <p style=" text-align: justify;">The objective of the program is to involve students in
+                social welfare and provide unbiased service to society.</p>
+            </li>
+
+            <li>
+              <p style=" text-align: justify;">NSS volunteers work to ensure that everyone in need
+                receives assistance to improve their quality of life and live with dignity.</p>
+            </li>
+
+            <li>
+              <p style=" text-align: justify;">In doing so, volunteers learn from the people in villages
+                how to lead a good life despite limited resources.</p>
+            </li>
+
+            <li>
+              <p style=" text-align: justify;">The program emphasizes the importance of selfless service
+                and fostering a sense of community among participants.</p>
+            </li>
+
+            <li>
+              <p style=" text-align: justify;">Through NSS activities, students gain practical experience
+                in social work and develop empathy towards the less fortunate.</p>
+            </li>
+
+            <li>
+              <p style=" text-align: justify;">NSS aims to instill in students a sense of responsibility
+                towards society and encourage them to actively contribute to its betterment.</p>
+            </li>
+
+          </ul>
+        </span>
+      </div>
+
+      <div class="col-md-6 second_section">
+        <h2>Aims Of NSS</h2>
+        <span>
+          <ul class="contetns" style="padding-right: 1em;">
+            <li>
+              <p style="color: wheat; text-align: justify;">The ideal statement or slogan of the National
+                Service Scheme is "Not I, but you."</p>
+            </li>
+            <li>
+              <p style="color: white; text-align: justify;">It epitomizes the essence of democratic life
+                and emphasizes the need for selfless service and appreciation of others' perspectives.
+              </p>
+            </li>
+            <li>
+              <p style="color: wheat; text-align: justify;">It also reflects upon the notion that an
+                individual's welfare ultimately depends on the overall welfare of society, as showcased
+                by promoting this ideal statement in everyday activities.</p>
+            </li>
+            <li>
+              <p style="color: white; text-align: justify;">The NSS aims to instill these values among its
+                participants and promote a sense of responsibility towards the welfare of fellow human
+                beings.</p>
+            </li>
+            <li>
+              <p style="color: white; text-align: justify;">Through this slogan, the NSS encourages
+                individuals to prioritize the well-being of others over their own, fostering a culture
+                of empathy and community service.</p>
+            </li>
+          </ul>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="how_to_apply">
+      <div class="first_section">
+        <div class="section-title mt-30 mb-50">
+          <h2>The symbol of the National Service Scheme </h2>
+        </div>
+        <span>
+          <p class="contents" style=" text-align: justify;line-height: 1.5;font-size: calc(17px * var(--font-scale));">
+            The symbol of the National Service Scheme is based on the "Rath" wheel of the Konark Sun Temple
+            in Odisha.
+
+            The navy-blue color signifies the universe, of which the NSS is a small part, ready to
+            contribute its share for the welfare of humanity.
+
+            The red color in the emblem indicates that NSS volunteers are filled with blood, meaning they
+            are vibrant, active, energetic, and filled with high spirits.
+
+            The massive wheels of the Sun Temple depict the cycle of creation, preservation, and release,
+            symbolizing movement in life across time and space.</p>
+        </span>
+        <div class="row" style="text-align: center;">
+          <div class="col-md-6">
+            <img style="height: 15em;" [src]="nssLogo" alt="NSS Logo">
+          </div>
+          <div class="col-md-6">
+            <img style="height: 15em;" [src]="konarkLogo" alt="Konark Logo">
+          </div>
+          <p style="font-weight: bold;color: black; margin-top: 1em;">Similarities Between NSS Symbol And Wheel
+            At Konark Temple</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title mt-50 mb-50">
+          <h2>Activities</h2>
+
+          <div class="row">
+            <ng-container *ngFor="let data of Activities_data">
+              <div class="col-lg-4 col-md-6 ">
+                <div class="Activities mt-3">
+                  <div class="thum">
+                    <div class="banner image" [style.background-image]="'url(' + data.Column1 + ')'"
+                      *ngIf="data.Column1">
+                      <img [src]="data.Column1" (error)="OnErrorImage($event)" alt="activities image">
+                      <div class="content">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cont">
+                    <span id="date"><i class="fa-regular fa-calendar-days"></i>{{data.web_content_date2|date:'MMMM d,
+                      y'}},</span>
+                    <span class="venue"><i class="fa-solid fa-location-dot"></i>{{data.Venue}}</span>
+                    <a>
+                      <h4>{{data.Content_Title}}</h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+            <div style="text-align: center !important;">
+              <div class="col-lg-12 col-sm-12 pt-3">
+                <a routerLink="/about/activities/category/2" class="main-btn">View All</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Part Strats  -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="">
+          <h2 class="section-title1">Awareness Programs</h2>
+          <div class="about-cont ">
+
+            <div class="sports_details even">
+
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="row">
+                    <h3>{{environment_day[currentSlide].title}}</h3>
+                    <p>{{environment_day[currentSlide].date}}</p>
+                    <hr>
+                  </div>
+                  <div>
+                    <p class="contents">
+                      {{environment_day[currentSlide].about}}
+                    </p>
+                  </div>
+
+                </div>
+                <div class="col-md-4">
+                  <div class="slider-container ">
+                    <img class="slider-image" [src]="environment_day[currentSlide].src"
+                      alt="Image {{ currentSlide + 1 }}">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sports_details">
+
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="slider-container ">
+                    <img class="slider-image" [src]="world_bicycle_day[currentSlide].src"
+                      alt="Image {{ currentSlide + 1 }}">
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="row">
+                    <h3>{{world_bicycle_day[currentSlide].title}}</h3>
+                    <p>{{world_bicycle_day[currentSlide].date}}</p>
+                    <hr>
+                  </div>
+                  <div>
+                    <p class="contents">
+                      {{world_bicycle_day[currentSlide].about}}
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="sports_details even">
+
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="row">
+                    <h3>{{yoga_awareness[currentSlide].title}}</h3>
+                    <p>{{yoga_awareness[currentSlide].date}}</p>
+                    <hr>
+                  </div>
+                  <div>
+                    <p class="contents">
+                      {{yoga_awareness[currentSlide].about}}
+                    </p>
+                  </div>
+
+                </div>
+                <div class="col-md-4">
+                  <div class="slider-container ">
+                    <img class="slider-image" [src]="yoga_awareness[currentSlide].src"
+                      alt="Image {{ currentSlide + 1 }}">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="view-more">
+            <a routerLink="/research/nss-program-details">
+              <button alt="View All" aria-label="View All NSS Programs">
+                <i>V</i>
+                <i>i</i>
+                <i>e</i>
+                <i>w</i>
+                <i>&nbsp;</i>
+                <i>A</i>
+                <i>l</i>
+                <i>l</i>
+              </button>
+            </a>
+          </div>
+        </div> <!-- section title -->
+      </div> <!-- about cont -->
+
+    </div> <!-- row -->
+
+  </div> <!-- container -->
+</section>
+
+<!-- Services Ends  -->
+
+
+<!--====== GALLERY PART STARTS ======-->
+
+<section class="pt-20 pb-5 mb-20">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title mt-400">
+          <h2>Special Camp Activities</h2>
+        </div>
+        <div class="mb-3 about-cont">
+          <div class="gallery_section ">
+            <div class="gallery-image">
+              <div class="container">
+                <div class="row">
+
+                  <div class="col-md-3 mb-2">
+                    <a [href]="GalleryImg1" data-lightbox="models">
+                      <div class="gallery-section">
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <img [src]="GalleryImg1" alt="Gallery Image" />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg2" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg2" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg3" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg3" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg4" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg4" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mb-3 about-cont">
+          <div class="gallery_section ">
+            <div class="gallery-image">
+              <div class="container">
+                <div class="row">
+                  <!-- Looping through each item in the Gallery_Details array -->
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg5" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg5" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg6" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg6" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg7" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg7" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg8" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg8" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="mb-3 about-cont">
+          <div class="gallery_section ">
+            <div class="gallery-image">
+              <div class="container">
+                <div class="row">
+                  <!-- Looping through each item in the Gallery_Details array -->
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg9" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg9" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg10" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg10" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg11" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg11" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg12" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg12" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="mb-3 about-cont">
+          <div class="gallery_section ">
+            <div class="gallery-image">
+              <div class="container">
+                <div class="row">
+                  <!-- Looping through each item in the Gallery_Details array -->
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg13" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg13" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg14" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg14" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg15" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg15" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg16" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg16" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="mb-3 about-cont">
+          <div class="gallery_section ">
+            <div class="gallery-image">
+              <div class="container">
+                <div class="row">
+                  <!-- Looping through each item in the Gallery_Details array -->
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg17" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg17" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg18" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg18" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg19" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg19" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg20" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg20" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="mb-3 about-cont">
+          <div class="gallery_section ">
+            <div class="gallery-image">
+              <div class="container">
+                <div class="row">
+                  <!-- Looping through each item in the Gallery_Details array -->
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg21" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg21" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg22" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg22" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg23" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg23" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-3 mb-2">
+                    <!-- Creating a column layout for three images in a row -->
+                    <a [href]="GalleryImg24" data-lightbox="models">
+                      <!-- Linking to the image with lightbox attributes -->
+                      <div class="gallery-section">
+                        <!-- Creating a container for the image -->
+                        <div class="gallery-image image banner"
+                          [style.background-image]="'url(' + 'assets/images/Campus-Life/NSS/Special_Camp_Activities/Special_Camp_Activities-1.jpg' + ')'">
+                          <!-- Styling the background image of the container -->
+                          <img [src]="GalleryImg24" alt="Gallery Image" />
+                          <!-- Displaying the image -->
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div> <!-- about cont -->
+
+    </div> <!-- row -->
+
+  </div> <!-- container -->
+</section>
+
+<!--====== GALLERY PART ENDS ======-->
+<app-contact-us></app-contact-us>

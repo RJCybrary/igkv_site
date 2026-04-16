@@ -1,0 +1,610 @@
+<app-banner [banner_heading]="'IT Cell'"
+    [banner_img]="bannerImg"></app-banner>
+
+<!-- Overview  -->
+<section id="Section3 " class="pt-3 pb-3 mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-title1">About IT Cell</h2>
+                <div class="about-cont">
+                    <p class="contents">
+                        The IT Cell of Indira Gandhi Krishi Vishwavidyalaya (IGKV) in Raipur, Chhattisgarh, serves as
+                        the technological backbone of the institution, facilitating seamless integration of digital
+                        solutions into academic and administrative processes. It oversees the implementation and
+                        maintenance of cutting-edge IT infrastructure, ensuring optimal functionality and efficiency
+                        across campus operations. From managing databases to providing technical support, the IT Cell
+                        plays a pivotal role in enhancing the university's digital ecosystem. Through its innovative
+                        initiatives and proactive approach, the cell empowers students, faculty, and staff with access
+                        to state-of-the-art technology, fostering a culture of innovation, collaboration, and digital
+                        literacy within the IGKV community.
+                    </p>
+                </div>
+            </div> <!-- about cont -->
+
+        </div> <!-- row -->
+
+    </div> <!-- container -->
+</section>
+
+
+<!-- Head Message  -->
+
+<section class="pt-3 pb-3 message_section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Head's Message</h2>
+        </div>
+        <div class="row">
+            <div class="profile col-md-3"> 
+                <img class="profile-picture" [src]="headImg" style="min-height: 218px; min-width: 233px;" onerror="this.src='assets/images/imgs/persion.jpg'" alt="staff image">
+                <p class="person-name">Dr. Ravi R. Saxena</p>
+                <p class="person-post">Nodal Officer MIS</p>
+            </div> 
+            <div class="message col-md-9">
+                <p class="contents scrolitem pt-3" style="line-height: 29px; letter-spacing: inherit;">
+                    As the Nodal Officer, I extend a warm welcome to all members of our IT-cell. Your dedication and expertise are integral to our mission of leveraging technology for organizational success. Let's collaborate effectively, share insights, and implement innovative solutions to address challenges and enhance efficiency. Together, we'll uphold the highest standards of data security, privacy, and integrity, ensuring seamless communication and support across all digital platforms. Thank you for your commitment to excellence, and I look forward to our collective achievements in advancing our organization's digital footprint and serving our stakeholders with excellence.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Facilities & Infrastructure  -->
+<div class="container-fluid pt-3 pb-3 gray-bg">
+    <div class="container">
+        <div class="Security section-title">
+            <h2>Facilities & Infrastructure </h2>
+
+            <div class="row first_row even">
+                <div class="col-md-7">
+                    <h3>{{ Digital_Studio[currentSlide].description }}</h3>
+                    <!-- <span> 
+                    The Digital Studio at Indira Gandhi Krishi Vishwavidyalaya (IGKV) in Raipur, Chhattisgarh, is a cutting-edge facility equipped for multimedia content creation and production. Utilizing advanced audiovisual equipment and software, it supports the development of digital resources such as educational videos, documentaries, and promotional materials. The studio serves as a hub for creative expression and communication, empowering faculty, students, and staff to effectively convey agricultural knowledge, research findings, and institutional messages through engaging multimedia presentations.</span> -->
+                    <ul class="contents">
+
+                        <li> Cutting-edge facility within Indira Gandhi Krishi Vishwavidyalaya (IGKV) in Raipur,
+                            Chhattisgarh.</li>
+                        <li>Equipped for multimedia content creation and production.</li>
+                        <li>Utilizes advanced audiovisual equipment and software.</li>
+                        <li>Supports development of digital resources like educational videos and documentaries.</li>
+                        <li>Empowers faculty, students, and staff to convey agricultural knowledge effectively.</li>
+                        <li>Facilitates creative expression and communication.</li>
+                        <li>Enhances engagement through engaging multimedia presentations.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 ">
+                    <div class="innerrow">
+                        <div class="slider-container ">
+                            <img class="slider-image" [src]="Digital_Studio[currentSlide].src"
+                                alt="Image {{ currentSlide + 1 }}">
+                            <div class="slider-description">{{ Digital_Studio[currentSlide].description }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row first_row">
+                <div class="col-md-5 ">
+                    <div class="innerrow">
+                        <div class="slider-container ">
+                            <img class="slider-image" [src]="Media_Control_Room[currentSlide].src"
+                                alt="Image {{ currentSlide + 1 }}">
+                            <div class="slider-description">{{ Media_Control_Room[currentSlide].description }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h3>{{ Media_Control_Room[currentSlide].description }}</h3>
+                    <ul class="contents">
+                        <li>Media Control Room at Indira Gandhi Krishi Vishwavidyalaya (IGKV) in Raipur, Chhattisgarh,
+                            is a central hub for broadcasting and communication.</li>
+                        <li>Equipped with advanced technology for seamless coordination of media activities.</li>
+                        <li>Facilitates live broadcasts, press conferences, and communication with stakeholders.</li>
+                        <li>Enables efficient dissemination of information through various media channels.</li>
+                        <li>Amplifies the university's outreach efforts, enhancing visibility and engagement.</li>
+                        <li>Supports effective communication strategies for promoting IGKV's initiatives and
+                            achievements.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row first_row even">
+                <div class="col-md-7">
+                    <h3>{{ Sensor_Lab[currentSlide].description }}</h3>
+                    <ul class="contents">
+                        <li>Sensor Lab at Indira Gandhi Krishi Vishwavidyalaya (IGKV) in Raipur, Chhattisgarh, is a
+                            cutting-edge facility for agricultural research. </li>
+                        <li>Equipped with state-of-the-art sensors and monitoring devices for precise data collection.
+                        </li>
+                        <li> Facilitates research on crop health, soil quality, climate monitoring, and precision
+                            agriculture techniques.</li>
+                        <li> Enables real-time monitoring and analysis of agricultural parameters. </li>
+                        <li> Contributes to advancements in agricultural technology and sustainable farming practices.
+                        </li>
+                        <li> Enhances research capabilities and innovation in agricultural science at IGKV. </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 ">
+                    <div class="innerrow">
+                        <div class="slider-container ">
+                            <img class="slider-image" [src]="Sensor_Lab[currentSlide].src"
+                                alt="Image {{ currentSlide + 1 }}">
+                            <div class="slider-description">{{ Sensor_Lab[currentSlide].description }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row first_row">
+                <div class="col-md-5 ">
+                    <div class="innerrow">
+                        <div class="slider-container ">
+                            <img class="slider-image" [src]="Developer_Room[currentSlide].src"
+                                alt="Image {{ currentSlide + 1 }}">
+                            <div class="slider-description">{{ Developer_Room[currentSlide].description }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h3>{{ Developer_Room[currentSlide].description }}</h3>
+                    <ul class="contents">
+                        <li>Developer Room at Indira Gandhi Krishi Vishwavidyalaya (IGKV) in Raipur, Chhattisgarh,
+                            fosters innovation and collaboration in software development.</li>
+                        <li>Provides a creative workspace equipped with cutting-edge technology and resources for
+                            developers.</li>
+                        <li>Facilitates collaborative projects, coding sessions, and hackathons.</li>
+                        <li>Encourages experimentation and prototyping of new software solutions.</li>
+                        <li>Promotes skill development and knowledge sharing among developers.</li>
+                        <li>Contributes to advancements in agricultural technology and digital solutions for the farming
+                            community.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row first_row even">
+                <div class="col-md-7">
+                    <h3>{{ Mini_Theatre[currentSlide].description }}</h3>
+                    <ul class="contents">
+                        <li>Mini Theatre at Indira Gandhi Krishi Vishwavidyalaya (IGKV) in Raipur, Chhattisgarh,
+                            facilitates project demonstrations and presentations.</li>
+                        <li>Provides an intimate setting for showcasing research findings and innovative projects.</li>
+                        <li>Equipped with audiovisual aids and seating arrangements for effective communication.</li>
+                        <li>Fosters interactive discussions and feedback sessions among students, faculty, and experts.
+                        </li>
+                        <li>Enhances academic discourse and knowledge dissemination in agriculture and related fields.
+                        </li>
+                        <li>Supports experiential learning and skill development through practical demonstrations and
+                            presentations.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 ">
+                    <div class="innerrow">
+                        <div class="slider-container ">
+                            <img class="slider-image" [src]="Mini_Theatre[currentSlide].src"
+                                alt="Image {{ currentSlide + 1 }}">
+                            <div class="slider-description">{{ Mini_Theatre[currentSlide].description }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row first_row">
+                <div class="col-md-5 ">
+                    <div class="innerrow">
+                        <div class="slider-container ">
+                            <img class="slider-image" [src]="Digital_Conference_Room[currentSlide].src"
+                                alt="Image {{ currentSlide + 1 }}">
+                            <div class="slider-description">{{ Digital_Conference_Room[currentSlide].description }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h3>{{ Digital_Conference_Room[currentSlide].description }}</h3>
+                    <ul class="contents">
+                       <li>Digital conference rooms revolutionize meetings with cutting-edge technology, facilitating seamless virtual collaboration and communication.</li>
+                       <li>Features like video conferencing, screen sharing, and interactive whiteboards enhance engagement and productivity.</li>
+                       <li>Remote participants can join meetings from anywhere, fostering inclusivity and flexibility.</li>
+                       <li>Integration with calendar apps streamlines scheduling and attendance tracking, optimizing time management.</li>
+                       <li>These rooms empower teams to collaborate effectively, share ideas, and make decisions in real-time, regardless of geographical barriers, driving innovation and success in modern workplaces.</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonial  -->
+<div class="container-fluid mb-5 mt-4">
+    <div class="container">
+        <div class="section-title">
+            <h2>Supporting Staff</h2>
+        </div>
+
+        <div id="testimonial-slider" class=" row owl-carousel mt-5 mb-5">
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img [src]="ImageNotFoundImg" alt="Supporting staff image">
+                    </div>
+                    <h3 class="title">Ms. Kalpana Banjare</h3>
+                    <p class="description">Kalpana Banjare is an adept Database Administrator & Program Assistant with over 11 years of experience. She excels in database management and program coordination, ensuring efficient operations.
+                    </p>
+                    <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <h3 class="name">Ms. Kalpana Banjare</h3>
+                            <span class="post">DBA & Program Assistant</span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star-half-empty"></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img [src]="ImageNotFoundImg" alt="Supporting staff image">
+                    </div>
+                    <h3 class="title">Mr. Sandeep Khatik</h3>
+                    <p class="description">Sandeep Khatik is a proficient Sr. Application Engineer & .NET Developer with over 11 years of experience. He demonstrates expertise in software development and engineering, contributing to innovative solutions.
+                    </p>
+                    <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <h3 class="name">Sandeep Khatik</h3>
+                            <span class="post"> Sr. Application Engineer & .NET Developer</span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star-half-empty"></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img [src]="ImageNotFoundImg" alt=" Supporting staff image">
+                    </div>
+                    <h3 class="title">Ms. Neha K. Bedi</h3>
+                    <p class="description">
+                        Neha Bedi, a proficient Senior .NET Developer and an expert in HRMIS modules, brings vast experience in software engineering and specializes in human resource management systems.</p>
+                    <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <h3 class="name">Ms. Neha k. Bedi</h3>
+                            <span class="post">Sr. .NET Developer & HRMIS Module Expert</span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star-half-empty"></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="testimonial-slider" class=" row owl-carousel mt-5 mb-5">
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img [src]="ImageNotFoundImg" alt="Supporting staff image">
+                    </div>
+                    <h3 class="title">Mr. Jitendra Sahu</h3>
+                    <p class="description">Jitendra Sahu is a skilled .NET Developer with specialized expertise in finance modules. With extensive experience in software development, he delivers tailored solutions for finance-related applications and systems.</p>
+                    <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <h3 class="name">Mr. Jitendra Sahu</h3>
+                            <span class="post">.NET Developer & Finance Module Expert </span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star-half-empty"></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img [src]="ImageNotFoundImg" alt="Supporting staff image">
+                    </div>
+                    <h3 class="title">Mr. Ujjwal Singh Mourya</h3>
+                    <p class="description">UJJwal Singh Mourya, an experienced Senior Network Engineer, adeptly oversees network administration, ensuring optimal performance and security for diverse networking platforms through infrastructure management.</p>
+                    <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <h3 class="name">Ujjwal Singh Mourya</h3>
+                            <span class="post"> Sr. Network Engineer </span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star-half-empty"></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img [src]="ImageNotFoundImg" alt="Supporting staff image">
+                    </div>
+                    <h3 class="title">Mr. Rakesh Sahu</h3>
+                    <p class="description">
+                        Rakesh Sahu, a talented Graphics and UI/UX Designer, excels in crafting visually appealing and user-centric designs. With a keen eye for detail and creativity, he delivers engaging and intuitive user experiences.</p>
+                    <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <h3 class="name">Mr. Rakesh Sahu</h3>
+                            <span class="post">Graphics & UI/UX Designer</span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star-half-empty"></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="testimonial-slider" class=" row owl-carousel mt-5 mb-5">
+           <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img [src]="ImageNotFoundImg" alt="Supporting staff image">
+                    </div>
+                    <h3 class="title">Mr. Suryakant Verma</h3>
+                    <p class="description">
+                        Suryakant Verma, an experienced Senior Network Engineer, adeptly manages network infrastructures. With a wealth of knowledge in networking technologies, he ensures optimal performance and security for network environments.</p>
+                    <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <h3 class="name">Mr. Suryakant Verma</h3>
+                            <span class="post"> Sr. Network Engineer </span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star-half-empty"></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img [src]="ImageNotFoundImg" alt="Supporting staff image">
+                    </div>
+                    <h3 class="title">Mr. Jitendra Chandrakar</h3>
+                    <p class="description">
+                        Mr. Jitendra Chandrakar is a skilled Android app developer, proficient in crafting innovative mobile applications. With expertise in Android development, he delivers user-friendly and feature-rich apps tailored to client requirements.
+                        </p>
+                    <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <h3 class="name">Mr. Jitendra Chandrakar</h3>
+                            <span class="post">Android Developer</span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star-half-empty"></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img [src]="ImageNotFoundImg" alt="Supporting staff image">
+                    </div>
+                    <h3 class="title">Mr. Rakesh Pal</h3>
+                    <p class="description">Mr. Rakesh Pal is a proficient AI Developer, adept in leveraging artificial intelligence technologies to develop innovative solutions. With expertise in AI development, he creates intelligent systems to solve complex problems.</p>
+                    <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <h3 class="name">Mr. Rakesh Pal</h3>
+                            <span class="post">AI Developer </span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star-half-empty"></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="testimonial-slider" class=" row owl-carousel mt-5 mb-5">
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img [src]="ImageNotFoundImg" alt="Supporting staff image">
+                    </div>
+                    <h3 class="title">Mr. Daulat Sahu</h3>
+                    <p class="description">Daulat Sahu, a proficient Angular developer, excels in building dynamic web applications. With expertise in Angular framework, he designs and implements scalable and responsive user interfaces for user experiences.</p>
+                    <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <h3 class="name">Mr. Daulat Sahu</h3>
+                            <span class="post"> Angular Developer </span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star-half-empty"></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img [src]="ImageNotFoundImg" alt="Supporting staff image">
+                    </div>
+                    <h3 class="title">Mr. Saurabh Bhoi</h3>
+                    <p class="description">Saurabh Bhoi, a skilled Angular developer and application engineer, excels in building dynamic web applications. With expertise in Angular development, he delivers efficient and user-friendly solutions tailored to client needs.</p>
+                    <div class="testimonial-content">
+                        <div class="testimonial-profile">
+                            <h3 class="name">Mr. Saurabh Bhoi</h3>
+                            <span class="post"> Angular Developer & Application Engineer </span>
+                        </div>
+                        <!-- <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star-half-empty"></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Contact Us Starts  -->
+<section id="Section4" class="pt-3 pb-3">
+    <div class="container">
+        <div class="row">
+            <h2 class="section-title1">Contact Us</h2>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-12">
+                <div class="about-cont">
+                    <div class="contact_us_section">
+                        <div class="contact_details">
+                            <div class="about-cont">
+                                <div class="contact_us_section">
+                                    <div class="contact_details">
+                                        <div class="forpadding row">
+                                            <div class="col-md-6 contact-us-heading">
+                                                <h2 class="heading">Contact Us :</h2>
+                                                <p class="text">
+                                                    For any queries related to the website or information please feel
+                                                    free to contact us via
+                                                    email, phone or visit physically by the given information here.
+                                                </p>
+                                                <div class="social-media">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <a routerLink="./"> <span><i
+                                                                        class="fa-brands fa-facebook icon-font-size"></i>&nbsp;Facebook</span>
+                                                            </a>
+                                                            <a routerLink="./"><span><i
+                                                                        class="fa-brands fa-twitter icon-font-size"></i>&nbsp;Twitter</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <a routerLink="./">
+                                                                <span><i
+                                                                        class="fa-brands fa-youtube icon-font-size"></i>&nbsp;Youtube</span>
+                                                            </a>
+                                                            <a routerLink="./">
+                                                                <span><i
+                                                                        class="fa-brands fa-instagram icon-font-size"></i>&nbsp;Instagram</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 address-section">
+                                                <div>
+                                                    <h4>
+                                                        <i class="fa-solid fa-location-dot icon-font-size"> </i>
+                                                        &nbsp;Address :-
+                                                    </h4>
+                                                    <span>
+                                                        <p>Knowledge  & Technology Resource Centre (MIS), IGKV Campus</p>
+                                                    </span>
+                                                    <hr>
+                                                </div>
+
+                                                <div>
+                                                    <h4>
+                                                        <i class="fa fa-phone icon-font-size "
+                                                            aria-hidden="true"></i>&nbsp;Contact Number :-
+                                                    </h4>
+                                                    <span>
+                                                        <p>07716486444</p>
+                                                    </span>
+                                                    <hr>
+                                                </div>
+
+                                                <div>
+                                                    <h4>
+                                                        <i class="fa fa-envelope icon-font-size "
+                                                            aria-hidden="true"></i>&nbsp;Email Id :-
+                                                    </h4>
+                                                    <span>
+                                                        <p>missupport&#64;igkv.ac.in</p>
+                                                    </span>
+                                                    <hr>
+                                                </div>
+
+                                                <div>
+                                                    <h4 class="heading">
+                                                        <i class="fa-solid fa-clock icon-font-size"></i>&nbsp;Office
+                                                        Time :-
+                                                    </h4>
+                                                    <span>
+                                                        <p>10 AM to 5 PM</p>
+                                                    </span>
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Us Ends  -->

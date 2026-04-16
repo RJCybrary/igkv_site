@@ -1,0 +1,15 @@
+<div class="latest-news new-rows">
+  <div class="news-header" style=" font-size: calc(14px * var(--font-scale)); ">{{'LATEST NEWS' | translate}}</div>
+  <div class="news-ticker-container" #newsTickerContainer>
+    <div class="news-ticker" #newsTicker>
+      <div class="news-item" *ngFor="let content of top_news" style=" font-size: calc(12px * var(--font-scale)) !important ; font-weight: 300;">
+        <a style="color: white; font-size: calc(12px * var(--font-scale)) !important ;" [routerLink]="['/about/news',unit_id,content.News_Category_ID,content.news_sub_category_id,content.News_Notification_Main_Id]">
+          {{ content.Main_Title }}
+          <span class="new-badge">{{ content.newsDate }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+

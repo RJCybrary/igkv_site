@@ -1,0 +1,135 @@
+/* image-slider.component.css */
+.slider-container {
+  height: 23em !important;
+  overflow: hidden;
+}
+
+  
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This property ensures that the image covers the container without stretching */
+    cursor: pointer;
+  }
+  
+  .slider-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0.8;
+  }
+  
+
+  // feature
+
+  .featured {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .featured .icon-box, .featured .icon-box1  {
+    transition: all ease-in-out 0.3s;
+    padding: 18px 20px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background: #fff;
+    transition: all ease-in-out 0.3s;
+    height: 23em;
+  }
+  
+  .featured .icon-box i {
+    color: #e96b56;
+    font-size: calc(42px * var(--font-scale));
+    margin-bottom: 15px;
+    display: block;
+    line-height: 0;
+  }
+
+  .featured .icon-box h3 a {
+    color: #006b4f;
+    transition: 0.3s;
+  }
+  
+  .featured .icon-box p ,.featured .icon-box1 p   {
+    color: #545454;
+    line-height: 24px;
+    font-size: calc(14px * var(--font-scale));
+    margin-bottom: 0;
+    height: 17em;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  
+  .featured .icon-box:hover {
+    background: #006b4f;
+  }
+  
+  .featured .icon-box:hover i,
+  .featured .icon-box:hover h3 a,
+  .featured .icon-box:hover p {
+    color: #fff;
+  }
+  
+  .featured{
+    margin-bottom: 20px;
+  }
+
+
+  .bg-color-green::before{
+    background-color: #006b4f;
+  }
+
+
+  .featured .icon-box1 {
+    background: #006b4f;
+  }
+  
+  .featured .icon-box1 i {
+    color: #006b4f;
+    font-size: calc(42px * var(--font-scale));
+    margin-bottom: 15px;
+    display: block;
+    line-height: 0;
+  }
+  
+  .featured .icon-box1 h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: calc(20px * var(--font-scale));
+  }
+  
+  .featured .icon-box1 h3 a {
+    transition: 0.3s;
+    color: #fff;
+  }
+  
+  .featured .icon-box1 p {
+    color: #fff;
+    line-height: 24px;
+    font-size: calc(14px * var(--font-scale));
+    margin-bottom: 0;
+  }
+
+
+  @media screen and (max-width: 1000px) {
+   
+  
+    .featured .icon-box , .featured .icon-box1 {
+      height: 17em;
+    }
+
+    .featured .icon-box p , .featured .icon-box1 p {
+      height: 12em;
+    }
+    .kvk-overview p{
+      height: 20em;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+    
+  }

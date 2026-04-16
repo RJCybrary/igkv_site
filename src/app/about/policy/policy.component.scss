@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.policy {
+    margin-bottom: 20px;
+}
+
+.policy h3 {
+    color: #1565bb;
+    border-bottom: 1px solid #949494;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.policy p {
+    margin-bottom: 10px;
+    text-align: justify;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}

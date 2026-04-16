@@ -1,0 +1,57 @@
+.counter{
+    color: #54840c;
+    background: linear-gradient(to top left,#54840c,#b9eb72);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    padding: 26px 35px 30px;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+.counter:before,
+.counter:after{
+    content: "";
+    background: #fff;
+    width: 95px;
+    height: 95px;
+    border-radius: 0 100% 0 100% / 0 100% 0 100%;
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.4);
+    transform: translateX(-50%) rotate(-45deg);
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    z-index: -1;
+}
+.counter:after{
+    top: auto;
+    bottom: -5px;
+}
+.counter .counter-icon{
+    font-size: calc(32px * var(--font-scale));
+    line-height: 32px;
+    margin: 0 auto 23px;
+}
+.counter h3{
+    color: #fff;
+    font-size: calc(17px * var(--font-scale));
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 0 0 22px 0;
+}
+.counter .counter-value{
+    font-size: calc(27px * var(--font-scale));
+    font-weight: 600;
+}
+.counter.blue{ background: linear-gradient(to top left,#026793,#54bfee); }
+.counter.blue{ color: #026793;}
+.counter.gray{ background: linear-gradient(to top left,#1b282e,#688799); }
+.counter.gray{ color: #1b282e;}
+.counter.magenta{ background: linear-gradient(to top left,#ba2f8d,#d4529c); }
+.counter.magenta{ color: #ba2f8d;}
+@media screen and (max-width:990px){
+    .counter{ margin-bottom: 40px; }
+} 

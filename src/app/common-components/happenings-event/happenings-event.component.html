@@ -1,0 +1,47 @@
+<div class="container-fluid" style=" background-color: #f8fcffe7; padding-bottom: 90px;">
+  
+  <div class="content-section"  >
+    <div class="header" class="header pb-5 mt-3" style="text-align: center !important;" >
+      <h2 class=" "> 
+       &nbsp; &nbsp; &nbsp; &nbsp;  {{"Happenings" | translate }} <br> {{"At IGKV" |translate}}
+       
+    </h2> 
+  </div>    
+
+    <div class="content-wrapper row " style="margin-top: 120px;">
+      <!-- Content Container -->
+      <div class="col-md-6 content-col" >
+        <div class="content-details"  data-aos="zoom-out-up">
+          <p class="date">{{ Activity_data[currentSlideIndex]?.web_content_date }}</p>
+          <a  [routerLink]="['/about/activities-details', Activity_data[currentSlideIndex]?.Website_Content_ID]">
+          <h2 class="title">{{ Activity_data[currentSlideIndex]?.Content_Title }}</h2>
+        </a>
+          <p class="description">
+            {{ Activity_data[currentSlideIndex]?.Content_Description }}
+          </p>
+       
+        </div>
+      </div>  
+      <!-- Image Container -->
+      <div class="col-md-6 image-col" data-aos="fade-left">
+        <a (click)="setdetails()"  [routerLink]="['/about/activities-details', Activity_data[currentSlideIndex]?.Website_Content_ID]" >
+          <img [src]="Activity_data[currentSlideIndex]?.Column1" alt="Event Image" class="image-element">
+        </a>
+      </div>
+    </div>
+   
+    <!-- Navigation buttons to change images -->
+    <div class="navigation-buttons">
+      <button (click)="prevSlide()" aria-label="Previous Slide">&lt;</button>
+      <!-- <button (click)="testClick()">Test Click</button> -->
+      <button (click)="nextSlide()" aria-label="Next Slide">&gt;</button>
+    </div>
+    <div class="containers pb-3 " style="text-align: center !important;" style="margin-top: -30px;">
+      <div class="col-lg-12 col-sm-12">
+          <a [routerLink]="['/about/activities',0]" class="main-btn">{{'View more' | translate}} </a>
+      </div>
+  </div>
+  </div>
+ 
+</div>
+

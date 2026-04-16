@@ -1,0 +1,72 @@
+
+.rout{
+    width: 280px;
+}
+
+.subhead{
+    border-top: solid #07294d;
+    padding: 10px;
+    background-color: #fcfcfc;
+    border-left: solid rgb(202, 200, 200) 1px;
+    border-right: solid rgb(202, 200, 200) 1px;
+    h3{
+        font-weight: 500;
+    }
+}
+
+// ++++++++++++ Banner +++++++
+
+.banner-section {
+    background-color: #fcfcfc; /* Banner background color */
+    color: #020202; /* Text color */
+    padding: 20px 0; /* Padding for the banner */
+    border: solid 1px;
+    border-color: rgb(202, 200, 200);
+    height: 120px;
+    vertical-align: middle;
+    h2{
+        font-size: calc(30px * var(--font-scale));
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.banner-heading {
+    text-align: left; 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    font-weight: 600;
+    margin-top: 23px;
+}
+
+
+// ===== Admission Rules=========
+.admission-rules-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+
+.section-heading {
+    text-align: center;
+    font-size: calc(32px * var(--font-scale));
+    margin-bottom: 30px;
+}
+
+.admission-rules-content p {
+    font-size: calc(16px * var(--font-scale));
+    margin-bottom: 20px;
+}
+
+.admission-rules-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.admission-rules-content a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,116 @@
+<app-loder *ngIf="loding"></app-loder>
+<app-banner
+  *ngIf="showpublication"
+  [banner_heading]="bannerHeading"
+  [banner_img]="bannerImg"
+></app-banner>
+
+<app-banner
+*ngIf="!showpublication"
+  [banner_heading]="'Newsletter'"
+  [banner_img]="bannerImg"
+></app-banner>
+<section id="Section1" class="pt-3 pb-3" aria-labelledby="latest-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div>
+                    <h2 id="latest-heading" class="section-title1">Latest</h2>
+                </div> <!-- section title -->
+                <div class="about-cont">
+
+                    <div *ngIf="showpublication && this.publicationList_Data?.length > 0 ;else elseblock" class="row justify-content-start">
+                        <div class="col-lg-3 mb-5 col-md-6 col-sm-8" *ngFor="let item of publicationList_Data">
+                            <div class="singel-publication">
+                                <div class="image">
+                                    <img src="https://igkv.ac.in/{{item.Image_URL}}" (error)="OnErrorImage($event)" alt="Publication" height="320px">
+                                </div>
+                                <div class="details">
+                                    <div style="height: 7em;" >
+                                        <span class="info">
+                                            <div class="author-name">
+                                                <p> <span>Author Name</span>: <strong>{{item.Author_Name}}</strong></p>
+                                            </div>
+                                            <div class="p-date">
+                                                <p> <span>Publication Date</span>: <strong>{{item.Publication_Date}} </strong></p>
+                                            </div>
+                                            <div class="p-title">
+                                                <p> <span>Publication Title</span>: <strong>{{item.Publication_Title}} </strong></p>
+                                            </div>
+
+                                            <!-- <p> <span>Co Author Name</span>: <strong>{{item.Co_Auther_Name}}</strong></p> -->
+                                            <!-- <p> <span>Publisher_Name</span>: <strong>{{item.Publisher_Name}} </strong></p> -->
+                                       
+                                            <!-- <p> <span>Publication_Date</span>: <strong>{{item.Publication_Date}}</strong></p> -->
+                                            <!-- <p class="text-center new" ><a [href]="item.File_URL" target="_blank" class="text-center" style="cursor: pointer;"> View</a> </p> -->
+                                        </span>
+                                    </div>
+                                   
+                                    <div class="view-more">
+                                        <a href="https://igkv.ac.in/{{item.File_URL}}" target="_blank">Read More <i
+                                                    class="fa-solid fa-arrow-right color-orange"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- 
+                    <div *ngIf="!showpublication" class="row justify-content-start">
+                        <div  class="col-lg-3 mb-5 col-md-6 col-sm-8" *ngFor="let item of newsletter">
+                            <div class="singel-publication">
+                                <div class="image">
+                                    <img src="{{.itemimage}}" (error)="OnErrorImage($event)" alt="Publication" height="320px">
+                                </div>
+                                <div class="details">
+                                    <div >
+                                        <span class="info">
+                                            <div class="p-title mt-2" >
+                                                 <p> <span> Title</span>: <strong>{{item.Main_Title}} </strong></p>
+                                            </div>
+                                        </span>
+                                    </div>
+                                   
+                                    <div class="view-more">
+                                        <a href="https://igkv.ac.in/{{item.File_URL}}" target="_blank">Read More <i
+                                                    class="fa-solid fa-arrow-right color-orange"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div *ngIf="!showpublication" class="row justify-content-start">
+                        <div class="col-lg-3 mb-5 col-md-6 col-sm-8" *ngFor="let item of top_news">
+                          <div class="singel-publication">
+                            <div class="image" *ngFor="let im of newsletter">
+                              <img [src]="im.image" (error)="OnErrorImage($event)" alt="Publication" height="320px">
+                            </div>
+                            <div class="details">
+                              <div>
+                                <span class="info">
+                                  <div class="p-title mt-2">
+                                    <p><span>Title</span>: <strong>{{ item.Main_Title }}</strong></p>
+                                  </div>
+                                </span>
+                              </div>
+                        
+                              <div class="view-more" *ngIf="item.attachment?.[0]?.[0]?.File_Path">
+                                <a [href]="item.attachment[0][0].File_Path" target="_blank">
+                                  Read More <i class="fa-solid fa-arrow-right color-orange"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                 <ng-template #elseblock>
+                <app-no-data></app-no-data>
+             </ng-template>  
+            </div>
+        </div> 
+    </div> 
+</section>
+
+  
+<app-contact-us></app-contact-us>

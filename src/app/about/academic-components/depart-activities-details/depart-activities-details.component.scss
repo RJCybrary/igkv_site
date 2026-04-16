@@ -1,0 +1,172 @@
+/* banner  */
+/* banner heading */
+
+#page-banner {
+    padding-top: 105px;
+    padding-bottom: 110px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  #page-banner:before {
+    content: "";
+    background: #07294dd0; /* Adjust the alpha value to control overlay transparency */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .page-banner-cont {
+    color: #fff;
+    position: relative;
+    z-index: 1; 
+    font-weight:700 ;
+  }
+  
+  .header{
+   font-size: calc(45px * var(--font-scale));
+   font-weight: 700;
+   line-height: normal;
+  }
+  
+  .breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .breadcrumb-item a {
+    color: #fff; /* Set breadcrumb text color to white */
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before{
+    color: white;
+  }
+  
+  .breadcrumb-item.active {
+    color: #ffc107; /* Set active breadcrumb text color to yellow */
+  }
+  
+  @media screen and (max-width: 768px) {
+     
+    .header{
+      font-size: calc(35px * var(--font-scale));
+     }
+     #page-banner {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+    
+  }
+  
+
+
+/*=====================================================
+    activities-detail  css 
+======================================================*/
+
+.activities-detail-left{
+    padding: 45px 50px;
+    background-color: #fff;
+}
+
+
+.activities-detail-left .title h3{
+    font-size: calc(25px * var(--font-scale));
+    color: #000;
+    font-weight: 600;
+    padding-bottom: 25px;
+    line-height: 1.5em;
+}
+
+
+.activities-detail-left .course-terms > ul > li{
+    display: inline-block;
+    margin-right: 60px;
+}
+.activities-detail-left .course-terms > ul li:last-child{
+    margin-right: 0;
+}
+
+.activities-detail-left .course-terms ul li .teacher-name{
+    position: relative;
+}
+.activities-detail-left .course-terms ul li .teacher-name .thum{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+}
+.activities-detail-left .course-terms ul li .teacher-name .thum img{
+    border-radius: 50%;
+}
+.activities-detail-left .course-terms ul li .teacher-name .name{
+    padding-left: 60px;
+}
+
+.activities-detail-left .course-terms ul li .review span,
+.activities-detail-left .course-terms ul li .teacher-name .name span,
+.activities-detail-left .course-terms ul li .course-category span{
+    color: #8a8a8a;
+    font-size: calc(14px * var(--font-scale));
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+
+.activities-detail-left .course-terms ul li .teacher-name .name h6,
+.activities-detail-left .course-terms ul li .course-category h6{
+    font-size: calc(16px * var(--font-scale));
+    color: #24486e;
+    font-weight: 700;
+}
+
+
+.activities-detail-left .course-terms ul li .review ul li {
+    display: inline-block;
+}
+.activities-detail-left .course-terms ul li .review ul li a {
+    font-size: calc(14px * var(--font-scale));
+    color: #ffc600;
+}
+.activities-detail-left .course-terms ul li .review ul li.rating{
+    font-size: calc(14px * var(--font-scale));
+    color: #000;
+    font-weight: 600;
+    margin-left: 13px;
+}
+
+.activities-detail-image{
+margin: auto;
+}
+
+.activities-detail-image img{
+    width: 100%;
+}
+
+.activities_details li i{
+    margin-right: 0.5em;
+    }
+    
+    
+    .activities_details li h3{
+        display: inline;
+        color:#07294d;
+        font-weight: 600;
+    }
+    
+    .activities_details ul{
+    padding-left: 0;
+    margin-bottom: 0.5em;
+    }
+
+    @media (max-width:768px) {
+        
+.activities-detail-left .title h3{
+    font-size: calc(21px * var(--font-scale)) !important;
+  
+    }
+}

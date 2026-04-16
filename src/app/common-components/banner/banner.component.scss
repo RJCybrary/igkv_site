@@ -1,0 +1,74 @@
+/* banner heading */
+
+
+
+#page-banner {
+  padding: 9em 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#page-banner:before {
+  content: "";
+  background: rgba(7, 41, 77, 0.95);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-banner-cont {
+  color: #fff;
+  position: relative;
+  z-index: 1; 
+  font-weight:700 ;
+}
+
+.header{
+//  font-size: calc(45px * var(--font-scale));
+ font-size: calc(45px * var(--font-scale));
+ font-weight: 700;
+ line-height: normal;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item a {
+  color: #fff; /* Set breadcrumb text color to white */
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+  color: white;
+}
+
+.breadcrumb-item.active {
+  color: #ffb703;
+  // font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .header {
+    //  font-size: calc(25px * var(--font-scale));
+     font-size: calc(25px * var(--font-scale));
+   }
+   .breadcrumb-item.active{
+    //  font-size: calc(14px * var(--font-scale));
+     font-size: calc(14px * var(--font-scale));
+   }
+   .page-banner-cont .breadcrumb .breadcrumb-item{
+    // font-size: calc(14px * var(--font-scale));
+    font-size: calc(14px * var(--font-scale));
+
+   }
+  
+   #page-banner {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+ }

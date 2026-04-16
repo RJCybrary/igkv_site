@@ -1,0 +1,557 @@
+<app-banner [banner_heading]="'Admission'" [banner_img]="bannerImg"></app-banner>
+
+
+
+<section class="container-fluid ">
+    <div class="container">
+        <div class="row">
+            <div class="section-title mt-5">
+                <h1 class="h2class">Admission Portal</h1>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-6">
+                <div class="login-container mt-3">
+                    <div class="description">
+                        <p class="contents">
+                            The IGKV Admission Portal is a comprehensive online platform designed to streamline the
+                            application and admission process for prospective students. It provides easy access to
+                            information on various undergraduate, postgraduate, and doctoral programs offered by the
+                            university. Applicants can conveniently fill out and submit their forms, track application
+                            status, and receive important updates. The portal ensures a user-friendly experience, with
+                            clear instructions and support for each step. Additionally, it offers details on eligibility
+                            criteria, fee structures, and important dates, making the admission process transparent and
+                            accessible for all aspiring students.
+                        </p>
+                    </div>
+                    <!-- <a href="https://igkv.ac.in/counselinghomenew.aspx" class=" text-center"><button aria-label="Apply Now"
+                            class=" button-29">Apply</button></a> -->
+                    <a href="https://igkv.ac.in/counselinghomenew.aspx" class="button-29 text-center d-inline-block"
+                        style="padding-top: 10px;" target="_blank" rel="noopener noreferrer"
+                        aria-label="Apply for admission (opens in a new tab)">
+                        Apply
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="img-container mt-3">
+                    <img [src]="igkvImg" class="img-fluid abcd" alt="IGKV Admission Portal" style="height: 300px;">
+                </div>
+            </div> &nbsp;&nbsp;
+        </div>
+    </div>
+</section>
+<!-- Patents section start-->
+<section id="Section1" class="pt-3 pb-3 gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div>
+                    <h2 class="section-title1">How to apply</h2>
+                </div> <!-- section title -->
+            </div> <!-- about cont -->
+
+        </div> <!-- row -->
+
+    </div> <!-- container -->
+</section>
+<!-- Patents section end-->
+
+
+
+<!-- patents details start -->
+<div class="container-fluid">
+
+    <div class="patents_category table_section  main_heading_section">
+        <section class="pb-20 mb-50 gray-bg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="how_to_apply_tab mt-50">
+                            <ul class="nav nav-justified" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="active" id="dashboard-tab" data-bs-toggle="tab" href="#UG_Programs"
+                                        role="tab" aria-controls="UG_Programs" aria-selected="true">UG Admissions
+                                        <span style="font-size: calc(13px * var(--font-scale));"><i
+                                                class="fa fa-graduation-cap" aria-hidden="true"></i></span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="courses-tab" data-bs-toggle="tab" href="#PG_Programs" role="tab"
+                                        aria-controls="PG_Programs" aria-selected="false">
+                                        PG Admissions <span>
+                                            <i class="fa-solid fa-user-graduate"></i></span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="reviews-tab" data-bs-toggle="tab" href="#Phd_Programs" role="tab"
+                                        aria-controls="Phd_Programs" aria-selected="false">Phd Admissions <span
+                                            style="font-size: calc(13px * var(--font-scale));"><i class="fa fa-flask"
+                                                aria-hidden="true"></i></span></a>
+                                </li>
+                            </ul> <!-- nav -->
+
+
+
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="UG_Programs" role="tabpanel"
+                                    aria-labelledby="dashboard-tab">
+                                    <div class="Steps_Part">
+
+                                        <div class="Step_1">
+
+                                            <div class="container my-5">
+                                                <div class="row">
+                                                    <!-- Card 1 -->
+                                                    <div class="col-md-4 pb-3">
+                                                        <div class="card text-center shadow-sm">
+                                                            <div class="card-body">
+                                                                <h3 class="card-title h5class">Admission Rules</h3>
+                                                                <a [href]="ug_admission_rule" target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    aria-label="View UG admission rules PDF (opens in a new tab)"
+                                                                    class="btn btn-primary">
+                                                                    View PDF
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Card 2 -->
+                                                    <div class="col-md-4 pb-3">
+                                                        <div class="card text-center shadow-sm">
+                                                            <div class="card-body">
+                                                                <h3 class="card-title h5class">Counseling Guidelines</h3>
+                                                                <a [href]="ug_couseling_guidelines" target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    aria-label="View UG Counseling Guidelines rules PDF (opens in a new tab)"
+                                                                    class="btn btn-secondary">
+                                                                    View PDF
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Card 3 -->
+                                                    <div class="col-md-4 pb-3">
+                                                        <div class="card text-center shadow-sm">
+                                                            <div class="card-body">
+                                                                <h3 class="card-title h5class">Counseling application form
+                                                                    guidelines.</h3>
+                                                                <a [href]="ug_couseling_form_filling_guidelines"
+                                                                    rel="noopener noreferrer"
+                                                                    aria-label="View UG Counseling application sample PDF (opens in a new tab)"
+                                                                    target="_blank" class="btn btn-success">
+                                                                    View PDF
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h3 class="text-center">UG Admission Procedures</h3>
+
+                                            <h4 class="text-center color-orange mb-30"><span>Step-01 &nbsp; <i
+                                                        class="fa-solid fa-arrow-down color-white"></i> </span></h4>
+                                            <h5 class="h6class">Counseling Process</h5>
+                                            <ul>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-orange"></i> &nbsp;In
+                                                    counseling process, firstly you need to fill application form with
+                                                    all documents needed. Register onto <a
+                                                        href="https://igkv.ac.in/web/igkv.aspx"><strong
+                                                            class="redirect-link"><strong
+                                                                class="redirect-link">igkv.ac.in</strong></strong></a>
+                                                    with
+                                                    basic details (Email ID, Name, Country, Mobile Number, Gender and
+                                                    Password).</li>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-orange"></i> &nbsp; You
+                                                    should ensure to register using the correct email id and mobile no.
+                                                    as all further communication will be through email and mobile no.
+                                                    only.</li>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-orange"></i> &nbsp; You
+                                                    should ensure that the application form is duly filled and the
+                                                    documentary evidence of the qualifying exam supporting the admission
+                                                    (if any) is also uploaded on <a
+                                                        href="https://igkv.ac.in/web/igkv.aspx"><strong
+                                                            class="redirect-link"><strong
+                                                                class="redirect-link">igkv.ac.in</strong></strong></a>
+                                                </li>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-orange"></i> &nbsp; For all
+                                                    the latest updates related to admission, visit <a
+                                                        href="https://igkv.ac.in/web/igkv.aspx"><strong
+                                                            class="redirect-link"><strong
+                                                                class="redirect-link">igkv.ac.in</strong></strong></a>
+                                                    from time to
+                                                    time.</li>
+                                            </ul>
+                                        </div>
+
+
+
+                                        <div class="Step_1">
+                                            <h4 class="text-center color-orange mb-30"><span>Step-02 &nbsp; <i
+                                                        class="fa-solid fa-arrow-down color-white"></i> </span></h4>
+                                            <h5 class="h6class">Merit List </h5>
+                                            <ul>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-orange"></i> &nbsp;Based on
+                                                    application form filled in counseling, Merit List will be uploaded.
+                                                </li>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-orange"></i> &nbsp;Please
+                                                    visit <a href="igkv.ac.in"><strong
+                                                            class="redirect-link">igkv.ac.in</strong></a> for other
+                                                    details.</li>
+
+                                            </ul>
+                                        </div>
+
+
+
+
+                                        <div class="Step_1">
+                                            <h4 class="text-center color-orange mb-30"><span>Step-03 &nbsp; <i
+                                                        class="fa-solid fa-arrow-down color-white"></i> </span></h4>
+                                            <h5 class="h6class">Seat Allotment & DVC</h5>
+                                            <ul>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-orange"></i> &nbsp; Based
+                                                    on
+                                                    Merit List , Seat will be allotted and DVC will be held. </li>
+                                            </ul>
+                                        </div>
+
+
+
+                                        <div class="Step_1">
+                                            <h4 class="text-center color-orange mb-30"><span>Step-04 &nbsp; <i
+                                                        class="fa-solid fa-arrow-down color-white"></i> </span></h4>
+                                            <h5 class="h6class">Fee Payment & Seat Confirmation</h5>
+                                            <ul>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-orange"></i> &nbsp; After
+                                                    DVC, Candidate need to pay the fee for the desired course.</li>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-orange"></i> &nbsp; After
+                                                    successfull payment , seat will be confirmed and have to visit to
+                                                    the alloted college/department.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="tab-pane fade" id="PG_Programs" role="tabpanel"
+                                    aria-labelledby="courses-tab">
+
+
+                                    <div class="Steps_Part">
+
+                                        <div class="Step_2">
+                                            <div class="container my-5">
+                                                <div class="row">
+                                                    <!-- Card 1 -->
+                                                    <div class="col-md-4 pb-3">
+                                                        <div class="card text-center shadow-sm">
+                                                            <div class="card-body">
+                                                                <h3 class="card-title h5class h3class_mb_0">Admission Rules & Instructions to
+                                                                    Fill Counseling Application Form</h3>
+                                                                <a [href]="PG_admission_rule_counseling_fill_form_guidelines"
+                                                                    target="_blank" class="btn btn-primary">
+                                                                    View PDF
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Card 2 -->
+                                                    <div class="col-md-4 pb-3">
+                                                        <div class="card text-center shadow-sm">
+                                                            <div class="card-body">
+                                                                <h3 class="card-title h5class">Detailed Notice </h3>
+                                                                <a [href]="PG_detailed_notice" target="_blank"
+                                                                    class="btn btn-secondary">
+                                                                    View PDF
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Card 3 -->
+                                                    <div class="col-md-4 pb-3">
+                                                        <div class="card text-center shadow-sm">
+                                                            <div class="card-body">
+                                                                <h3 class="card-title h5class">Instructions for Examinee</h3>
+                                                                <a [href]="PG_instructions_for_examinee" target="_blank"
+                                                                    class="btn btn-success">
+                                                                    View PDF
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h3 class="text-center">PG Admission Procedures</h3>
+
+                                            <h4 class="text-center color-orange mb-30"><span>Step-01 &nbsp; <i
+                                                        class="fa-solid fa-arrow-down color-white"></i> </span></h4>
+                                            <h5 class="h6class">Fill CET (Common Entrance Test) Online Application Form & Upload
+                                                Documents</h5>
+                                            <ul>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-blue"></i> &nbsp; Register
+                                                    onto <a href="https://igkv.ac.in/web/igkv.aspx"><strong
+                                                            class="redirect-link">igkv.ac.in</strong></a> with
+                                                    basic details (Email ID, Name, Country, Mobile Number, Gender and
+                                                    Password).</li>
+                                                <li> <i class="fa-solid fa-arrow-right color-blue"></i> &nbsp; You
+                                                    should ensure to register using the correct email id and mobile no.
+                                                    as all further communication will be through email and mobile no.
+                                                    only.</li>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-blue"></i> &nbsp; After
+                                                    registration, select the programme of your interest and fill the
+                                                    application form.</li>
+                                                <li> <i class="fa-solid fa-arrow-right color-blue"></i> &nbsp; You
+                                                    should ensure that the application form is duly filled and the
+                                                    documentary evidence of the qualifying exam supporting the admission
+                                                    (if any) is also uploaded on <a
+                                                        href="https://igkv.ac.in/web/igkv.aspx"><strong
+                                                            class="redirect-link">igkv.ac.in</strong></a></li>
+                                                <li> <i class="fa-solid fa-arrow-right color-blue"></i> &nbsp; For all
+                                                    the latest updates related to admission, visit <a
+                                                        href="https://igkv.ac.in/web/igkv.aspx"><strong
+                                                            class="redirect-link">igkv.ac.in</strong></a> from time to
+                                                    time.</li>
+                                            </ul>
+                                        </div>
+
+
+
+                                        <div class="Step_2">
+                                            <h4 class="text-center color-blue mb-30"><span>Step-02 &nbsp; <i
+                                                        class="fa-solid fa-arrow-down color-white"></i> </span></h4>
+                                            <h5 class="h6class">CET Exam Scheduling </h5>
+                                            <ul>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-blue"></i> &nbsp;After
+                                                    successfully submitting application form,applied candidates will be
+                                                    alloted admit card ,roll no. & exam center within a few days </li>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-blue"></i> &nbsp;Please
+                                                    visit <a href="igkv.ac.in"><strong
+                                                            class="redirect-link">igkv.ac.in</strong></a> &nbsp;for the
+                                                    admit card and
+                                                    other details.</li>
+
+                                            </ul>
+                                        </div>
+
+
+
+
+                                        <div class="Step_2">
+                                            <h4 class="text-center color-blue mb-30"><span>Step-03 &nbsp; <i
+                                                        class="fa-solid fa-arrow-down color-white"></i> </span></h4>
+                                            <h5 class="h6class">Result Declaration & Merit List</h5>
+                                            <ul>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-blue"></i> &nbsp; After
+                                                    completion of the examination result will be declared. </li>
+                                                <li> <i class="fa-solid fa-arrow-right color-blue"></i> &nbsp; Based on
+                                                    the CET Examination Result, Merit List Will be declared.</li>
+                                            </ul>
+                                        </div>
+
+
+
+                                        <div class="Step_2">
+                                            <h4 class="text-center color-blue mb-30"><span>Step-04 &nbsp; <i
+                                                        class="fa-solid fa-arrow-down color-white"></i> </span></h4>
+                                            <h5 class="h6class">Counseling Process</h5>
+                                            <ul>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-blue"></i> &nbsp;In
+                                                    counseling process, firstly you need to fill application form with
+                                                    all documents needed.</li>
+                                                <li> <i class="fa-solid fa-arrow-right color-blue"></i> &nbsp; Based on
+                                                    application form filled in counseling, Merit List will be uploaded.
+                                                </li>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-blue"></i> &nbsp; Based on
+                                                    Merit List , Seat will be allotted and DVC will be held. </li>
+                                                <li> <i class="fa-solid fa-arrow-right color-blue"></i> &nbsp; After
+                                                    DVC, Candidate need to pay the fee for the desired course.</li>
+                                                <li> <i class="fa-solid fa-arrow-right color-blue"></i> &nbsp; After
+                                                    successfull payment , seat will be confirmed and have to visit to
+                                                    the alloted college/department.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="Phd_Programs" role="tabpanel"
+                                    aria-labelledby="reviews-tab">
+
+
+                                    <div class="Steps_Part">
+
+                                        <div class="Step_3">
+                                            <div class="container my-5">
+                                                <div class="row">
+                                                    <!-- Card 1 -->
+                                                    <div class="col-md-4 pb-3">
+                                                        <div class="card text-center shadow-sm">
+                                                            <div class="card-body">
+                                                                <h3 class="card-title h5class h3class_mb_0">Admission Rules & Instructions to
+                                                                    Fill Counseling Application Form</h3>
+                                                                <a [href]="Phd_admission_rule_form_filling_guidelines"
+                                                                    target="_blank" class="btn btn-primary">
+                                                                    View PDF
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Card 2 -->
+                                                    <div class="col-md-4 pb-3">
+                                                        <div class="card text-center shadow-sm">
+                                                            <div class="card-body">
+                                                                <h3 class="card-title h5class h3class_mb_0">Detailed Admission Notice</h3>
+                                                                <a [href]="Phd_detailed_advertisement_24_25"
+                                                                    target="_blank" class="btn btn-secondary">
+                                                                    View PDF
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Card 3 -->
+                                                    <div class="col-md-4 pb-3">
+                                                        <div class="card text-center shadow-sm">
+                                                            <div class="card-body">
+                                                                <h3 class="card-title h5class h3class_mb_0">Instructions for Examinee</h3>
+                                                                <a [href]="Phd_instruction_for_examinee_24_25"
+                                                                    target="_blank" class="btn btn-success">
+                                                                    View PDF
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <h3 class="text-center">Phd Admission Procedures</h3>
+
+                                            <h4 class="text-center color-orange mb-30"><span>Step-01 &nbsp; <i
+                                                        class="fa-solid fa-arrow-down color-white"></i> </span></h4>
+                                            <h5 class="h6class">Fill CET (Common Entrance Test) Online Application Form & Upload
+                                                Documents</h5>
+                                            <ul>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-red"></i> &nbsp; Register
+                                                    onto <a href="https://igkv.ac.in/web/igkv.aspx"><strong
+                                                            class="redirect-link">igkv.ac.in</strong></a> with
+                                                    basic details (Email ID, Name, Country, Mobile Number, Gender and
+                                                    Password).</li>
+                                                <li> <i class="fa-solid fa-arrow-right color-red"></i> &nbsp; You should
+                                                    ensure to register using the correct email id and mobile no. as all
+                                                    further communication will be through email and mobile no. only.
+                                                </li>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-red"></i> &nbsp; After
+                                                    registration, select the programme of your interest and fill the
+                                                    application form.</li>
+                                                <li> <i class="fa-solid fa-arrow-right color-red"></i> &nbsp; You should
+                                                    ensure that the application form is duly filled and the documentary
+                                                    evidence of the qualifying exam supporting the admission (if any) is
+                                                    also uploaded on <a href="https://igkv.ac.in/web/igkv.aspx"><strong
+                                                            class="redirect-link">igkv.ac.in</strong></a>
+                                                </li>
+                                                <li> <i class="fa-solid fa-arrow-right color-red"></i> &nbsp; For all
+                                                    the latest updates related to admission, visit <a
+                                                        href="https://igkv.ac.in/web/igkv.aspx"><strong
+                                                            class="redirect-link">igkv.ac.in</strong></a> from time to
+                                                    time.</li>
+                                            </ul>
+                                        </div>
+
+
+
+                                        <div class="Step_3">
+                                            <h4 class="text-center color-red mb-30"><span>Step-02 &nbsp; <i
+                                                        class="fa-solid fa-arrow-down color-white"></i> </span></h4>
+                                            <h5 class="h6class">CET Exam Scheduling </h5>
+                                            <ul>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-red"></i> &nbsp;After
+                                                    successfully submitting application form,applied candidates will be
+                                                    alloted admit card ,roll no. & exam center within a few days </li>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-red"></i> &nbsp;Please
+                                                    visit
+                                                    <a href="igkv.ac.in"><strong class="redirect-link"><strong
+                                                                class="redirect-link">igkv.ac.in</strong></strong></a>
+                                                    &nbsp;for the admit card and other
+                                                    details.
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="Step_3">
+                                            <h4 class="text-center color-red mb-30"><span>Step-03 &nbsp; <i
+                                                        class="fa-solid fa-arrow-down color-white"></i> </span></h4>
+                                            <h5 class="h6class">Result Declaration & Merit List</h5>
+                                            <ul>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-red"></i> &nbsp; After
+                                                    completion of the examination result will be declared. </li>
+                                                <li> <i class="fa-solid fa-arrow-right color-red"></i> &nbsp; Based on
+                                                    the CET Examination Result, Merit List Will be declared.</li>
+                                            </ul>
+                                        </div>
+
+
+
+                                        <div class="Step_3">
+                                            <h4 class="text-center color-red mb-30"><span>Step-04 &nbsp; <i
+                                                        class="fa-solid fa-arrow-down color-white"></i> </span></h4>
+                                            <h5 class="h6class">Counseling Process</h5>
+                                            <ul>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-red"></i> &nbsp;In
+                                                    counseling process, firstly you need to fill application form with
+                                                    all documents needed.</li>
+                                                <li> <i class="fa-solid fa-arrow-right color-red"></i> &nbsp; Based on
+                                                    application form filled in counseling, Merit List will be uploaded.
+                                                </li>
+                                                <li style="font-size: calc(13px * var(--font-scale));"><i
+                                                        class="fa-solid fa-arrow-right color-red"></i> &nbsp; Based on
+                                                    Merit List , Seat will be allotted and DVC will be held. </li>
+                                                <li> <i class="fa-solid fa-arrow-right color-red"></i> &nbsp; After DVC,
+                                                    Candidate need to pay the fee for the desired course.</li>
+                                                <li> <i class="fa-solid fa-arrow-right color-red"></i> &nbsp; After
+                                                    successfull payment , seat will be confirmed and have to visit to
+                                                    the alloted college/department.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div> <!-- tab content -->
+                </div> <!-- teachers right -->
+            </div>
+        </section>
+    </div> <!-- row -->
+</div> <!-- container -->
+
+<!-- patents details end -->
+
+<app-contact-us></app-contact-us>

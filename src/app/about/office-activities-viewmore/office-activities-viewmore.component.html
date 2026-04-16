@@ -1,0 +1,42 @@
+
+<!-- <app-banner [banner_heading]="banner_heading" [banner_img]="imageUrl"></app-banner> -->
+<app-activity-banner [banner_img]="imageUrl"  [banner_heading]="banner_heading" [catTitle1]="office_name"></app-activity-banner>
+<section id="Activity" class="Activity section-bg pb-3 pt-3">
+    <div class="container" data-aos="fade-up">
+            <h2 class="section-title1">Activity</h2>
+            <app-pagination
+           [currentPages]="currentPages"
+            [totalrecords]="totalrecords"
+           (rowsPerPageChanged)="onRowsPerPageChanged($event)"
+             (pageChanged)="onPageChanged($event)"
+             (searchCriteria)="onSearchCriteriaReceived($event)"> 
+      <div class="row gy-4  demo"  *ngIf="Activity_data?.length !== 0 ; else elseblock " >
+           <ng-container *ngFor="let data of Activity_data" >
+        <div class="col-lg-4 col-md-6 d-flex mb-3 align-items-stretch">
+          <div class="Activity-member">
+            <div class="member-img banner1 image1"  [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <img [src]="data.Column1"  alt="office activity image" >
+              <div class="content">
+        
+              </div>
+            </div>
+            <div class="activities-details">
+            <div class="activities-date">
+              <p>{{data.web_content_date2|date: 'EEEE, MMMM d, y'}}</p>
+            </div>
+            <div class="member-info">
+              <h4>{{data.Content_Title}}</h4>
+            </div>
+          </div>
+            <h4 class="more"><a (click)="setdetails()" [routerLink]="['/about/activities-details',data.Website_Content_ID]" class="more">View &nbsp;<i class="fa-solid fa-arrow-right color-violet"></i></a></h4>
+          </div>
+        </div>
+      </ng-container>
+      </div>
+      <ng-template #elseblock>
+        <app-no-data></app-no-data>
+     </ng-template>
+       </app-pagination>
+    </div>
+  </section>
+  

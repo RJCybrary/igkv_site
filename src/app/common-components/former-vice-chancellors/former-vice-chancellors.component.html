@@ -1,0 +1,73 @@
+    <app-vc-menubar></app-vc-menubar>
+    <!-- Banner Starts Here  -->
+
+    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" [ngStyle]="{'background-image': 'url(' + imageUrl + ')', 'height': '400px'}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-banner-cont">
+                        <h2 class="header" >Former Vice Chancellors</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="." >Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Vice-chancellor</li>
+                            </ol>
+                        </nav>
+                    </div>  
+                </div>
+            </div> 
+        </div> 
+    </section>
+
+
+    <!-- Banner Ends Here  -->
+
+
+    <!-- Know the VC Starts  -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="know-the-vc row">
+            <h2 class="heading" style="font-size: calc(36px * var(--font-scale));">Former Vice-Chancellors</h2>
+            <hr>
+            <div class="col-md-8">
+                <!-- first row   -->
+                <div class="row contents" *ngFor="let item of paginatedContents">
+                <div class="col-md-4">
+                <img class="main-img" [src]="item.imgURL" (error)="item.imgURL = ImageNotFound" alt="former vice chancellor image">
+
+                </div>
+            
+                <div class="col-md-8">
+                    <div class="details">
+                        <h2 class="name">{{item.employee_name}}</h2>
+                        <span class="work-duration">{{item.from_date}}  to  {{item.to_date}}</span>
+                        <!-- <p class="description">OOPS ! No data found...</p> -->
+                    </div>
+                </div>
+                </div>
+                <!-- Pagination controls -->
+                <mat-paginator [length]="vcList_data?.length"
+                [pageSize]="pageSize"
+                [pageSizeOptions]="[12, 24, 36, 48, 100]"
+                (page)="onPageChange($event)"
+                aria-label="Select page">
+                </mat-paginator>
+            </div>
+
+            <div class="col-md-4 gray-bg">
+                <div class="card-details">
+                <div class="card-content">
+                    <img class="card-img" [src]="HVCImg" alt="Former Vice Chancellor Image">
+                    
+                        <h4>Know the VC</h4>
+                        <p class="about">
+                            The undersigned is a renowned Plant Breeder/Biotechnologist with a Ph.D. in Agriculture and 30 years of experience in agricultural education, research, and extension, including about 10 years of experience in Research Management. Before assuming the office of Vice Chancellor, he served ........
+                        </p>
+                        <p><button routerLink="/about/vice-chancellor/know-the-vc" class="read-more">Read More &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button></p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>

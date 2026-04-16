@@ -1,0 +1,121 @@
+
+/* Events css */
+
+
+/*--------------------------------------------------------------
+# Blog Posts List
+--------------------------------------------------------------*/
+.blog .posts-list .post-item {
+    // box-shadow: 0 4px 40px -12px #5F8D4E;
+    box-shadow: 0 4px 40px -12px gray;
+    transition: 0.3s;
+    padding: 1em;
+  }
+  
+  .blog .posts-list .post-img{
+    height: 15em;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .blog .posts-list .post-img img {
+    transition: 0.5s;
+    height: 100%;
+  }
+  
+  .blog .posts-list .post-date {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #427D9D;
+    color: white;
+    text-transform: uppercase;
+    font-size: calc(13px * var(--font-scale));
+    padding: 6px 12px;
+    font-weight: 500;
+  }
+  
+  .blog .posts-list .post-content {
+    padding-top: 0.5em;
+    height: 5em;
+  }
+  
+  .blog .posts-list .post-content h4{
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    // -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 23px;
+    font-weight: normal;
+  }
+  
+  
+  .blog .posts-list p {
+    margin-top: 20px;
+  }
+  
+  .blog .posts-list hr {
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  .blog .posts-list .readmore {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    line-height: 1;
+    transition: 0.3s;
+    color: #16628f;
+    text-align: center;
+  }
+  
+  .blog .posts-list .readmore i {
+    line-height: 0;
+    margin-left: 6px;
+    font-size: calc(16px * var(--font-scale));
+    text-align: center;
+  }
+  
+  
+  .blog .posts-list .post-item:hover .post-img img {
+    transform: scale(1.1);
+  }
+  
+  
+  .color-green{
+    color: #5F8D4E;
+  
+  }
+  @media (max-width: 576px) {
+    .carousel-inner .carousel-item {
+      height: 250px; /* Further reduce height for very small screens */
+    }
+  
+    .carousel-inner .carousel-item img {
+      object-fit: cover; /* Ensure image covers the space while maintaining aspect ratio */
+    }
+  
+    .carousel-caption {
+      font-size: calc(12px * var(--font-scale));
+      bottom: 2rem;
+    }
+  
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
+  /* Adjustments for ultra-small screens */
+  @media (max-width: 400px) {
+    .carousel-inner .carousel-item {
+      height: 200px;
+    }
+  
+    .carousel-caption h2 {
+      font-size: calc(1rem * var(--font-scale));
+    }
+  }
+  

@@ -1,0 +1,91 @@
+<app-banner [banner_heading]="bannerName?.Source_Name" [banner_img]="'assets/images/projectBanner.jpg'"></app-banner>
+
+
+<section id="project-data" class="project-data pt-3 pb-3">
+    <div class="container">
+        <h2 class="section-title1">Our Projects</h2>
+      <div class="row" style="margin-bottom: 10px;">
+        <div class="col-md-3 col-sm-6 pt-3"  *ngFor="let item of projectDash_Data; " style="margin-bottom: 30px;" >
+            <div class="counter blue">
+                 <div class="counter-icon">
+                     <i class="fa fa-rocket"></i>
+                 </div>
+                 <div class="counter-content">
+                     <h4>{{item.MajorHead_Name}}</h4>
+                     <span class="counter-value mt-3">{{item.Project_Count}}</span>
+                 </div>
+               <div class="mt-3"><a class="text-center link mt-3"  (click)="viewDetail(item.MajorHead_Code)">View Detail</a> </div>  
+             </div>
+        </div> 
+
+        <!-- <div class="col-lg-3" *ngFor="let item of projectDash_Data;">
+            <div class="box text-center" data-aos="fade-up">
+              <span class="text-center">{{item.Project_Count}}</span>
+              <h4 class="text-center">{{item.MajorHead_Name}}</h4>
+              <a class="text-center link"   (click)="viewDetail(item.MajorHead_Code)">View Detail</a>
+            </div>
+        </div> -->
+
+      </div>
+    </div>
+  </section> 
+
+  
+  <section id="specials" class="specials mt-3 projectDetailRow" style="background-color: rgb(246, 250, 253);" *ngIf="projectDetail_data">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title mt-3">
+        <h2> Project Detail</h2>
+      </div>
+
+      <div class="row projectDetailRow" data-aos="fade-up" data-aos-delay="100" *ngFor="let item of projectDetail_data; let i = index">
+          <div class="tab-content">
+            <div class="tab-pane active show" [attr.id]="'tab-' + i">
+             <h1> {{ i + 1 }}.</h1> 
+                <div class="row">
+                    <div class="col-lg-12 details order-2 order-lg-1">
+                        <h3>{{item.Scheme_Name}}</h3>
+                      </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 details order-2 order-lg-1">
+                        <table>
+                            <thead>
+                              <tr>
+                                <th>Schemes Year </th>
+                                <th>Source Head </th>
+                                <th>Major Head </th>
+                                <th>Budget (Lakh)</th>
+                                <th>PI Name</th>
+                                <th>Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>{{item.financial_Year}}</td>
+                                <td>{{item.Source_Name}}</td>
+                                <td>{{item.MajorHead_Name}}</td>
+                                <td>{{item.Budget_Amount}}</td>
+                                <td>{{item.PI_Name}}</td>
+                                <td><a href="#" target="_blank"><i class="fa-solid fa-file-pdf" style="color: rgb(45, 100, 172);"></i></a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+              <div class="row">
+                <div class="col-lg-7 details order-2 order-lg-1">
+                  <!-- <h5>{{item.Scheme_Name}}</h5> -->
+                  <p class="" style="text-align: justify;">{{item.project_overview}}</p>
+                </div>
+                <div class="col-lg-5 text-center order-1 order-lg-2">
+                  <img src="assets/lab-image-for-home.jpg" width="300px" max-height="300px"  onerror="this.src=''" alt="project image" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+       
+      </div>
+
+    </div>
+  </section>

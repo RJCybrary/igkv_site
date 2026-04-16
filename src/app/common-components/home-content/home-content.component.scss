@@ -1,0 +1,543 @@
+
+/*=====================================================
+    8. VIDEO FEATURES css 
+======================================================*/
+
+#video-feature{
+    position: relative;
+}
+.feature-bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(7, 41, 77, 0.9);
+}
+
+.video{
+    padding-left: 80px;
+}
+.video i{
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    font-size: calc(24px * var(--font-scale));
+    background-color: #ffc600;
+    color: #07294d;
+    border-radius: 50%;
+}
+
+.feature{
+    position: relative;
+    z-index: 5;
+}
+.feature .feature-title h3{
+    font-size: calc(36px * var(--font-scale));
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+.feature ul li .singel-feature{
+    padding-top: 55px;
+    overflow: hidden;
+}
+.feature ul li .singel-feature .icon{
+    overflow: hidden;
+    display: inline-block;
+    padding-right: 30px;
+}
+.feature ul li .singel-feature .cont {
+	width: 78%;
+	float: left;
+    overflow: hidden;
+}
+.feature ul li .singel-feature .cont h4{
+    font-size: calc(24px * var(--font-scale));
+    color: #fff;
+    padding-bottom: 15px;
+}
+.feature ul li .singel-feature .cont p{
+    color: #fff;
+}
+
+
+/*=====================================================
+    10. DEPARTMENT css 
+======================================================*/
+.singel-department {
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.singel-department .image{
+    position: relative;
+	overflow:hidden;
+}
+.singel-department .image img{
+    padding: 0;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	
+}
+
+.singel-department .image:hover img{
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.singel-department .image .add-cart{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255);
+    opacity: 1;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	font-size: calc(20px * var(--font-scale));
+    color: #fff;
+	font-weight: 100;
+}
+
+.singel-department .image:hover .add-cart{
+    opacity: 0.7;
+	background-color:#07294d;
+    cursor:pointer;
+}
+
+
+.singel-department .image .background_img{
+	max-height:13em;
+	min-height:13em;
+	min-width:20em;
+	max-width:20em;
+	
+}
+.singel-department .image:hover .add-cart img{
+    -webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.singel-department .image .add-cart span h6{
+	color:black;
+	padding-top:10px;
+	font-size: calc(13px * var(--font-scale));
+	font-weight:600;
+	margin: 0;
+    line-height: 1.4;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+ 
+ .singel-department:hover span h6{
+	color:white !important;
+}
+
+.singel-department .image .add-cart span i{
+    
+    width: 40px;
+    line-height: 40px;
+    filter: brightness(0%); 
+	text-align: center;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+.singel-department .image .add-cart:hover span i{
+	filter: brightness(0) invert(1);
+}
+
+.singel-department .image .add-cart span {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}
+
+//code by tushil
+.singel-department.default-hover .image img {
+  transform: scale(1.2) !important                                          ;
+}
+
+.singel-department.default-hover .image .add-cart {
+  opacity: 0.7 !important;
+  background-color: #07294d !important;
+}
+
+.singel-department.default-hover span h6 {
+  color: white !important;
+}
+
+.singel-department.default-hover .image .add-cart span i {
+  filter: brightness(0) invert(1) !important ;
+}
+
+/*=====================================================
+    11. TEASTIMONIAL css 
+======================================================*/
+
+#testimonial .section-title{
+    position: relative;
+    z-index: 5;
+}
+#testimonial .section-title h5,
+#testimonial .section-title h2{
+    color: #fff;
+}
+#testimonial .section-title h5::before{
+    background-color: #fff;
+}
+
+.testimonial-slied{
+    position: relative;
+    z-index: 5;
+}
+.singel-testimonial{
+    position: relative;
+}
+.singel-testimonial .testimonial-thum{
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.singel-testimonial .testimonial-thum img{
+	width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-style: solid;
+	border-color : #fff;
+    border-radius: 100px 100px 100px 100px;
+}
+.singel-testimonial .testimonial-thum .quote{
+    position: absolute;
+    right: -30px;
+    top: -22px;
+}
+.singel-testimonial .testimonial-thum .quote i{
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-color: #ffc600;
+    border-radius: 50%;
+    color: #07294d;
+    font-size: calc(18px * var(--font-scale));
+}
+.singel-testimonial .testimonial-cont {
+    padding-left: 170px;
+}
+.singel-testimonial .testimonial-cont p {
+    color: #fff;
+    padding-bottom: 32px;
+}
+.singel-testimonial .testimonial-cont h6 {
+    color: #fff;
+    padding-bottom: 4px;
+}
+.singel-testimonial .testimonial-cont span {
+    color: #fff;
+    font-size: calc(18px * var(--font-scale));
+}
+
+.testimonial-slied .slick-dots{
+    margin: 0 auto;
+}
+.testimonial-slied .slick-dots li{
+    display: inline-block;
+    margin-top: 15px;
+}
+.testimonial-slied .slick-dots li button{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 0;
+    padding: 0;
+    border: 0;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.testimonial-slied .slick-dots li.slick-active button{
+    background-color: #ffc600;
+}
+
+/*=====================================================
+    15. Service css 
+======================================================*/
+
+.singel-service-2 > .thum{
+    position: relative;
+}
+
+.hover02 figure img {
+	width: 300px;
+	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover02 figure:hover img {
+	width: 350px;
+}
+
+ .singel-service-2 > .thum .image figure {
+	background: #07294de6;
+}
+.singel-service-2 > .thum .image figure img {
+	opacity: 1;
+	width: 100%;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.singel-service-2 > .thum .image figure:hover img {
+	opacity: .5;
+	width: 550px;
+}
+.singel-service-2 > .thum .service-name{
+    background-color: rgb(0 0 0 / 48%);
+    padding: 15px 25px;
+    position: absolute;
+	text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.singel-service-2 > .thum .service-name > .thum{
+    display: inline-block;
+}
+
+.singel-service-2 > .thum .service-name .name{
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+    bottom: 13px;
+}
+.singel-service-2 > .thum .service-name .name h5{
+    color: #fff;
+	text-align:center;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+.singel-service-2 > .thum .service-name .name h5:hover{
+    color: #ffc600;
+}
+.singel-service-2 > .cont{
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+    bottom: 13px;
+}
+
+
+/* kvk css start */
+
+/* list css for kvk start*/
+
+.listing ul li:before {
+    content: "\f105";
+    background: #002147;
+    color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: calc(14px * var(--font-scale));
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    line-height: 14px;
+    text-align: center;
+    z-index: 1;
+    font-family: FontAwesome;
+}
+
+.listing ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+    color: #444444;
+    list-style:none;
+}
+
+/* list css for kvk end*/
+
+
+// KVK List CSS Starts From Here 
+.KVK-List{
+  text-align: center;
+  padding: 0.3em;
+  justify-content: space-between;
+  margin: 0.2em;
+  transition: border-bottom 0.3s ease; 
+}
+
+.KVK-List .image_part img{
+  height: 5em;
+  width: 5em;
+  border-radius: 5px;
+ margin: 0;
+ padding: 0;
+}
+
+.KVK-List .contents {
+  text-align: left;
+  color: #07294d;
+  font-size: calc(20px * var(--font-scale));
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+
+
+.KVK-List .contents .kvk-name{
+  text-align: left;
+  color: #07294d;
+  font-size: calc(20px * var(--font-scale));
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+
+}
+
+
+
+.KVK-List .first_row{
+  box-shadow: #07294d 0 1px 3px 0px;
+  cursor: pointer;
+  // margin-top: 0.9em;
+  padding: 0.5em;
+  border-radius: 10px;
+  background-color: white;
+  color:#5F8D4E;
+  margin: 0.5em;
+}
+
+/* Add this CSS to your stylesheet */
+
+.first_row {
+  transition: border-bottom 0.3s ease; /* Add transition for a smoother effect */
+}
+
+.first_row:hover {
+  border-bottom: 6px solid green; /* Adjust color and size as needed */
+  transform: translateY(-5px);
+}
+
+/* Additional styling to remove default link styling */
+.first_row a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Other styles for your layout */
+
+/* Media Queries Starts */
+@media(max-width:1207px){
+
+  .KVK-List .contents{
+      margin-left: 30px;
+      
+  }
+  
+  .KVK-List .contents .location ,.email{
+      text-align: left;
+  }
+}
+
+
+.link{
+	font-weight: 500;
+	color: rgb(10, 114, 175);
+}
+
+
+/* kvk css end */
+
+
+//code by tushil -- kvk css start
+
+.list-kvks{
+.card {
+	max-width: 300px;
+	background-color: #fff;
+	border-radius: 0px;
+	margin-bottom: 1em;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	text-align: center;
+	padding: 20px;
+	border: none;
+	transition: 0.3s all ease-out;
+  }
+
+  .card i {
+	font-size: 2em; /* Adjust the size of the FontAwesome icon */
+	color: #007bff; /* Adjust the color of the icon */
+	margin-bottom: 15px;
+  }
+
+  .card h2 {
+	font-size: 1em;
+	margin: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+
+  }
+
+  .card h1 {
+	font-size: 1.15em;
+	margin: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    // color: rgba(18, 146, 103, 0.918);
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+    background-color: #FF885B;
+    color: rgba(255, 255, 255, 0.952);
+}
+
+.card:hover .icon-hover {
+    color: #ff6600; /* Change the icon color on card hover */
+}
+
+.icon-hover {
+    color: #1675b4; /* Default icon color */
+    transition: color 0.3s ease; /* Smooth transition for the icon color */
+}
+
+
+//   Cards department
+@media only screen and (max-width: 600px) {
+    .cardss {
+      width: 170px;
+    }
+  }
+}
+
+.card.default-hover {
+  transform: scale(1.1) !important;
+  background-color: #FF885B !important;
+  color: rgba(255, 255, 255, 0.952) !important ;
+}
+
+.card.default-hover .icon-hover {
+  color: #fff !important;
+}
+  
+.card.default-hover h1:hover{
+color: #fff !important;
+ }
+
+////code by tushil -- kvk css end

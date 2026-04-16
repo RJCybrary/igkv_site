@@ -1,0 +1,90 @@
+<div class="container mt-5" *ngIf="EmpDetail">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-sm-6 col-xs-12 mb-3" >
+      <div class="row">
+        <div class="employee-card">
+          <div class="row align-items-center">
+            <div class="col-md-3">
+              <div class="profile-img">
+                <div class="image-frame">
+                  <img src="{{ EmpDetail.img_url }}" (error)="onErrorImage($event)" alt="Employee Image">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="employee-info">
+                <p class="employee-name"><span class="space"> </span>{{EmpDetail.Employee_Name}}</p>
+                <p class="employee-post"><span class="space"> Post:</span>{{EmpDetail.Post_Name}}</p>
+                <p class="employee-office"><span class="space"> Office:</span>{{EmpDetail.Office_Name}}</p>
+                <p class="employee-contact"><span class="space"> Contact:</span>{{phoneNumber}}</p>
+                <p class="employee-email"><span class="space"> Email:</span>{{EmpDetail.Email_Id}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="exp-timeline-container mt-3">
+          <span><h2 class="text-center" style="color: rgb(94, 91, 91);">Responsibility</h2></span>
+          <ul class="exp-timeline">
+            <li *ngFor="let item of emp_Responsibility">
+              <div class="exp-timeline-left">
+                <div class="exp-timeline-date1">
+                  <p style="font-weight: 600; text-align: center;">{{ item.From_Date }}
+                </div>
+              </div>
+              <div class="exp-timeline-right">
+                <!-- <span> <i class="fa-solid fa-arrows-to-dot"></i></span> -->
+                Responsible as {{ item.Post_Name }} in
+                {{ item.Office_Name}} from {{ item.From_Date }}, Post
+                Type {{ item.PostType}}
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+      
+    </div>
+    <div class="col-md-4">
+      <div class="section-time" style="margin-bottom: 10px;">
+        <div><h2 class="text-center" style="color: rgb(94, 91, 91);">Experience</h2></div>
+        <div class="timeline-container">
+          <ul class="timeline">
+            <li *ngFor="let item of emp_WorkExperience">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                Worked as {{ item.Post_Name }} in
+                {{ item.Office_Name }} from {{ item.FromDate }} to
+                {{ item.enddate }}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="title">
+      <h2 class="text-center" style="color: rgb(94, 91, 91);">Professional Profile</h2>
+    </div>
+    <div class="row pb-3">
+      <div class="col-md-6">
+        <span> 
+                <h3 style="font-weight: bold; color: #16628f;">View Professional Profile</h3>
+        </span>
+        <div>
+            <a href="profile.pdf" target="_blank" rel="noopener" aria-label="View Professional Profile PDF"> 
+            <span> <i class="fa-solid fa-file-pdf fa-2xl" aria-hidden="true"></i></span> 
+            </a>
+        </div>
+            
+    </div>
+    </div>
+  </div>
+</div>
+
+

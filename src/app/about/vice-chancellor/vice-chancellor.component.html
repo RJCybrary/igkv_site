@@ -1,0 +1,512 @@
+<app-vc-menubar></app-vc-menubar>
+
+<!-- Slider Code -->
+
+<div class="slider-container" style="height: initial; width: initial;">
+  <div class="slider-container-background" style="background: url('{{ currentImageUrl }}') center / cover no-repeat;"></div>
+  
+  <!-- Image element -->
+  <img src="{{currentImageUrl}}" alt="...">
+
+  <!-- Overlay with centered title -->
+  <!-- <div class="overlay">
+    <h2 class="overlay-title">Desk of Vice Chancellor</h2>
+  </div> -->
+</div>
+
+
+  <!-- vc-message -->
+<section class="container-fluid pt-3 pb-3 gray-bg" *ngIf="vc_data" >
+    <div class="container"> 
+        <div class="row" >
+          <h2 class="section-title1" style="font-size: calc(25px * var(--font-scale)); font-weight: 500;" >Message of Vice Chancellor</h2>
+                    <div class="row img-details">
+          <div class="col-md-3">
+            <div class=" image-part">
+              <img src="assets/images/Desk_of_Vice_Chancellor.jpg" alt="vice-chancellor image  " class="vc-img" >
+            </div>
+            <div class="row content-part">
+              <div>
+                <p>  {{vc_data.Emp_ShortName}}</p>
+                <p>  {{vc_data.Post_Name}}</p>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col-md-8 description-part" >
+            <!-- <h3 class="chancellor-head" sty>{{vc_data.Employee_Name}}</h3> -->
+            <p class="contents" style="text-align: justify; line-height: 31px; font-size: calc(15px * var(--font-scale));" >{{vc_pagedata.Content_Description}}</p>
+            <div class="chancellore-name" style="  border-left-style: solid;
+            border-left-color: coral;">
+               
+            </div>
+            </div>
+         </div>
+         <div class="row mb-3" style="text-align: center !important;" >
+          <div class="col-lg-12 col-sm-12">
+              <a routerLink="know-the-vc"  class="main-btn"> Know the Vice Chancellor</a>
+          </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- vc-activities -->
+<section id="about-page" class="pt-3 pb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+          <h2 class="section-title1">Activities</h2>
+        <!-- section title -->
+        <div class="about-cont mt-3"  *ngIf="Activity_data" >
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="row">
+                      <div class="activity-container">
+                          <a (click)="setdetails_vc('Activities','/about/vice-chancellor/vc-activities')"  [routerLink]="['/about/vc/activities-details',Activity_data[0].Website_Content_ID]">
+                          <img class="activity-img" [src]="Activity_data[0].Column1" alt="Activity Image">
+                          </a>
+                          <div class="activity-description">
+                              <p>{{Activity_data[0].Content_Title}}</p>
+                          </div>
+                          <div class="calendar-icon">
+                              <i class="fa-solid fa-calendar-days" style="color: #07294d;"></i>
+                          </div>
+                          <div class="calendar-date">
+                              <span>{{Activity_data[0].web_content_date2 | date:'MMM d, y'}}</span>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="row mt-4">
+                      <div class="col-md-12">
+                          <div class="activity-container">
+                              <a (click)="setdetails_vc('Activities','/about/vice-chancellor/vc-activities')" [routerLink]="['/about/vc/activities-details',Activity_data[1].Website_Content_ID]">
+                              <img class="activity-img" [src]="Activity_data[1].Column1" alt="Activity Image">
+                              </a>
+                              <div class="activity-description">
+                                  <p>{{Activity_data[1].Content_Title}}</p>
+                              </div>
+                              <div class="calendar-icon">
+                                  <i class="fa-solid fa-calendar-days" style="color: #07294d;"></i>
+                              </div>
+                              <div class="calendar-date">
+                                  <span>{{Activity_data[1].web_content_date2 | date:'MMM d, y'}}</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                <div class="activity-container-new">
+                  <a (click)="setdetails_vc('Activities','/about/vice-chancellor/vc-activities')" [routerLink]="['/about/vc/activities-details',Activity_data[2].Website_Content_ID]">
+                  <img class="activity-img" [src]="Activity_data[2].Column1" alt="Activity Image">
+                  </a>
+                  <div class="activity-description">
+                      <p>{{Activity_data[2].Content_Title}}</p>
+                  </div>
+                  <div class="calendar-icon">
+                      <i class="fa-solid fa-calendar-days" style="color: #07294d;"></i>
+                  </div>
+                  <div class="calendar-date">
+                      <span>{{Activity_data[2].web_content_date2 | date:'MMM d, y'}}</span>
+                  </div>
+              </div> &nbsp;
+              <div class="activity-container-new">
+                  <a (click)="setdetails_vc('Activities','/about/vice-chancellor/vc-activities')" [routerLink]="['/about/vc/activities-details',Activity_data[3].Website_Content_ID]">
+                <img class="activity-img" [src]="Activity_data[3].Column1" alt="Activity Image">
+                  </a>
+                <div class="activity-description">
+                    <p>{{Activity_data[3].Content_Title}}</p>
+                </div>
+                <div class="calendar-icon">
+                    <i class="fa-solid fa-calendar-days" style="color: #07294d;"></i>
+                </div>
+                <div class="calendar-date">
+                    <span>{{Activity_data[3].web_content_date2 | date:'MMM d, y'}}</span>
+                </div>
+            </div>&nbsp;
+            <div class="activity-container-new">
+              <a (click)="setdetails_vc('Activities','/about/vice-chancellor/vc-activities')" [routerLink]="['/about/vc/activities-details',Activity_data[4].Website_Content_ID]">
+              <img class="activity-img" [src]="Activity_data[4].Column1" alt="Activity Image">
+              </a>
+              <div class="activity-description">
+                  <p>{{Activity_data[4].Content_Title}}</p>
+              </div>
+              <div class="calendar-icon">
+                  <i class="fa-solid fa-calendar-days" style="color: #07294d;"></i>
+              </div>
+              <div class="calendar-date">
+                  <span>{{Activity_data[4].web_content_date2 | date:'MMM d, y'}}</span>
+              </div>
+          </div>
+              </div>
+          </div>
+          <div class=" pt-3" style="text-align: center !important;">
+            <div class="col-lg-12 col-sm-12">
+                <a routerLink="/about/vice-chancellor/vc-activities"  class="main-btn">{{'View more' | translate}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- vc-awards -->
+<section id="blog-award" class="blog-award gray-bg pt-3 pb-3" >
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="section-title1">Awards</h2>
+    <div class="row gy-4 posts-list" *ngIf="award_data">
+      <ng-container *ngFor="let data of award_data.slice(0, 3)">
+      <div class="col-xl-4 col-md-6">
+        <div class="post-item position-relative h-100">
+
+          <div class="post-img banner1 image1 position-relative overflow-hidden" [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+            <img [src]="data.Column1" class="img-fluid" alt="vice chancellor award image">
+            <div class="content1">
+            </div>
+          </div>
+          <div class="post-date">
+            <p>{{data.web_content_date2|date: 'EEEE, MMMM d, y'}}</p>
+          </div>
+        
+
+          <div class="post-content d-flex flex-column">
+            <h4>
+              {{data.Content_Title}}
+            </h4>
+          </div>
+          <hr>
+          <a (click)="setdetails_vc('Awards','/about/vice-chancellor/vc-awards')" [routerLink]="['/about/vc/activities-details',data.Website_Content_ID]" class="readmore">
+            <span>Read More&nbsp;<i class="fa-solid fa-arrow-right"></i> </span>
+          </a>
+        </div>
+      </div>
+    </ng-container>
+    <div class="mb-1 pt-3" style="text-align: center !important;"  >
+      <div class="col-lg-12 col-sm-12">
+          <a routerLink="/about/vice-chancellor/vc-awards"  class="main-btn">{{'View more' | translate}}</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- vc-events -->
+<section id="blog-events" class="blog-events pt-3 pb-3">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="section-title1">Events</h2>
+    <div class="row gy-4 posts-list" *ngIf="event_data">
+      <ng-container *ngFor="let data of event_data.slice(0, 3)">
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden banner1 image1"  [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <img [src]="data.Column1" class="img-fluid" alt="vice chancellor event image">
+              <span class="post-date">{{data.web_content_date2|date:'MMM d, y'}}</span>
+              <div class="content1">
+              </div>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+              <h4>
+                {{data.Content_Title}}
+              </h4>
+            </div>
+            <hr>
+            <a (click)="setdetails_vc('Events','/about/vice-chancellor/vc-events')" [routerLink]="['/about/vc/activities-details',data.Website_Content_ID]" class="readmore "><span>Read
+                More&nbsp;<i class="fa-solid fa-arrow-right"></i></span></a>
+          </div>
+        </div>
+      </ng-container>
+      <div class="mb-1 pt-3" style="text-align: center !important;">
+        <div class="col-lg-12 col-sm-12">
+          <a routerLink="/about/vice-chancellor/vc-events" class="main-btn">{{'View more' | translate}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<!-- vc speeches -->
+<div class="container-fluid pt-3 pb-3" style="background-color: rgb(234, 237, 240);" *ngIf="speech_data?.length > 0">
+  <div class="container" >
+    <div class="row ">
+        <h2 class="section-title1" >Vice Chancellor's Speech</h2>
+      <div class="col-lg-6 entries " >
+  
+        <article class="entry"  > 
+          <div class="entry-img banner1 image1"  [style.background-image]="'url(' + speech_data[0].Column1 + ')'" *ngIf="speech_data[0].Column1">
+            <img [src]="speech_data[0].Column1" alt="vice chancellor speech image" class="img-fluid">
+            <div class="content1">
+            </div>
+          </div>
+  
+          <h3 class="entry-title">
+            <a 
+            *ngIf="speech_data?.length > 0" 
+            (click)="setdetails_vc('Speech','/about/vice-chancellor/vc-speeches')" 
+            [routerLink]="['/about/vc/activities-details', speech_data[0]?.Website_Content_ID]"
+          >
+            {{ speech_data[0]?.Content_Title }}
+          </a>
+          </h3>
+  
+          <div class="entry-meta">
+            <ul>
+              <li class="d-flex align-items-center">
+                <i class="fa-solid fa-calendar-week" style="padding-right: 0.5em;"></i>{{speech_data[0].web_content_date2|date:'MMM d, y'}}</li>
+            </ul>
+            </div>
+  
+          <div class="entry-content">
+          
+            <div [innerHTML]="speech_data[0].Content_Description"></div>
+  
+          </div>
+        </article>
+      </div>
+
+      <div class="col-lg-6 entries " >
+  
+        <article class="entry"  > 
+          <div class="entry-img banner1 image1"  [style.background-image]="'url(' + speech_data[1].Column1 + ')'" *ngIf="speech_data[1].Column1">
+            <img [src]="speech_data[1].Column1" alt="vice chancellor speech image" class="img-fluid">
+            <div class="content1">
+            </div>
+          </div>
+  
+          <h3 class="entry-title">
+            <a 
+            *ngIf="speech_data?.length > 0" 
+            (click)="setdetails_vc('Speech','/about/vice-chancellor/vc-speeches')" 
+            [routerLink]="['/about/vc/activities-details', speech_data[1]?.Website_Content_ID]"
+          >
+            {{ speech_data[1]?.Content_Title }}
+          </a>
+          </h3>
+  
+          <div class="entry-meta">
+            <ul>
+              <li class="d-flex align-items-center">
+                <i class="fa-solid fa-calendar-week" style="padding-right: 0.5em;"></i>{{speech_data[1].web_content_date2|date:'MMM d, y'}}</li>
+            </ul>
+            </div>
+  
+          <div class="entry-content">
+          
+            <div [innerHTML]="speech_data[1].Content_Description"></div>
+  
+          </div>
+        </article>
+      </div>
+  
+      <div class="mb-2" style="margin-top: -20px; text-align: center !important;" >
+        <div class="col-lg-12 col-sm-12">
+            <a routerLink="/about/vice-chancellor/vc-speeches"  class="main-btn">{{'View more' | translate}}</a>
+        </div>
+      </div>
+    </div>
+   </div>
+</div>
+
+<!-- vc visit -->
+ <div class="container-fluid pt-3 pb-3" style="background-color: rgb(255, 255, 255);">
+  <div class="container" >
+    <div class="row know-the-vc">
+        <h2 class="section-title1" >Vice Chancellor's Visits</h2>
+      <div class="col-md-12" *ngIf="visit_data" >
+        <div class="row contents ">
+
+          <div class="col-md-6">
+              <div class="details"  style=" box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;  padding: 8px; height: 195px;">
+                <div class="row">
+                  <div class="col-md-8">
+                    <a (click)="setdetails_vc('Visits','/about/vice-chancellor/vc-visits')" [routerLink]="['/about/vc/activities-details',visit_data[0].Website_Content_ID]">
+                      <h2 class="title">{{visit_data[0].Content_Title}}</h2>
+                      </a>
+                      <span class="date">{{visit_data[0].web_content_date2|date:'MMM d, y'}}</span>
+                      <div class="description1"  [innerHTML]="visit_data[0].Content_Description"></div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="images">
+                      <img [src]="visit_data[0].Column1
+                      " alt="vice chancellor visit image">
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+      </div>
+      <div class="col-md-6" >
+        <div class="details"  style=" box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; padding: 8px; height: 195px;">
+          <div class="row">
+            <div class="col-md-8">
+              <a (click)="setdetails_vc('Visits','/about/vice-chancellor/vc-visits')" [routerLink]="['/about/vc/activities-details',visit_data[1].Website_Content_ID]">
+                <h2 class="title">{{visit_data[1].Content_Title}}</h2>
+                </a>
+                <span class="date">{{visit_data[1].web_content_date2|date:'MMM d, y'}}</span>
+                <div class="description1"  [innerHTML]="visit_data[1].Content_Description"></div>
+            </div>
+            <div class="col-md-4">
+              <div class="images">
+                <img [src]="visit_data[1].Column1
+                " alt="vice chancellor visit image">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+    
+    </div>
+    <div class="col-md-6">
+      <div class="details"  style=" box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;  padding: 8px; height: 195px;">
+        <div class="row">
+          <div class="col-md-8">
+            <a (click)="setdetails_vc('Visits','/about/vice-chancellor/vc-visits')" [routerLink]="['/about/vc/activities-details',visit_data[2].Website_Content_ID]">
+              <h2 class="title">{{visit_data[2].Content_Title}}</h2>
+              </a>
+              <span class="date">{{visit_data[2].web_content_date2|date:'MMM d, y'}}</span>
+              <div class="description1"  [innerHTML]="visit_data[2].Content_Description"></div>
+          </div>
+          <div class="col-md-4">
+            <div class="images">
+              <img [src]="visit_data[2].Column1
+              " alt="vice chancellor visit image">
+            </div>
+          </div>
+        </div>
+        
+      </div>
+</div>
+<div class="col-md-6" >
+<div class="details"  style=" box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; padding: 8px; height: 195px;">
+  <div class="row">
+    <div class="col-md-8">
+      <a (click)="setdetails_vc('Visits','/about/vice-chancellor/vc-visits')" [routerLink]="['/about/vc/activities-details',visit_data[3].Website_Content_ID]">
+        <h2 class="title">{{visit_data[3].Content_Title}}</h2>
+        </a>
+        <span class="date">{{visit_data[3].web_content_date2|date:'MMM d, y'}}</span>
+        <div class="description1"  [innerHTML]="visit_data[3].Content_Description"></div>
+    </div>
+    <div class="col-md-4">
+      <div class="images">
+        <img [src]="visit_data[3].Column1
+        " alt="vice chancellor visit image">
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+</div>
+      </div>
+
+      <!-- <div class="row contents pb-5">
+        
+    </div> -->
+    <div style="text-align: center !important;" >
+      <div class="col-lg-12 col-sm-12 pt-3">
+          <a routerLink="/about/vice-chancellor/vc-visits"  class="main-btn">{{'View more' | translate}}</a>
+      </div>
+    </div>
+      </div>
+      
+</div>
+  </div>
+</div> 
+
+
+<!-- Print-Media -->
+<section id="blog-award" class="blog-award gray-bg pt-3 pb-3" >
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="section-title1">Print Media</h2>
+    <div class="row gy-4 posts-list" *ngIf="media_data">
+      <ng-container *ngFor="let data of media_data.slice(0, 3)">
+      <div class="col-xl-4 col-md-6">
+        <div class="post-item position-relative h-100">
+
+          <div class="post-img banner1 image1 position-relative overflow-hidden" [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+            <img [src]="data.Column1" class="img-fluid" alt="vice chancellor print media image">
+            <div class="content1">
+            </div>
+          </div>
+          <div class="post-date">
+            <p>{{data.web_content_date2|date: 'EEEE, MMMM d, y'}}</p>
+          </div>
+        
+
+          <div class="post-content d-flex flex-column">
+            <h4>
+              {{data.Content_Title}}
+            </h4>
+          </div>
+          <hr>
+          <a (click)="setdetails_vc('Print Media','/about/vice-chancellor/vc-printMedia')"  [routerLink]="['/about/vc/activities-details',data.Website_Content_ID]" class="readmore">
+            <span>Read More&nbsp;<i class="fa-solid fa-arrow-right"></i> </span>
+          </a>
+        </div>
+      </div>
+    </ng-container>
+    <div class="mb-1 pt-3" style="text-align: center !important;">
+      <div class="col-lg-12 col-sm-12">
+          <a routerLink="/about/vice-chancellor/vc-printMedia"  class="main-btn">{{'View more' | translate}}</a>
+      </div>
+    </div>
+    </div>
+  </div>
+   
+</section>
+
+<!-- Social Media -->
+<div class="container-fluid social-media-section">
+  <div class="social-media-heading">Social Media</div>
+  <div class="row justify-content-center">
+    <!-- Facebook -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <i class="fab fa-facebook"></i> Facebook
+        </div>
+        <div class="card-body">
+          <div class="iframe-container">
+            <iframe title="facebook page of vice-chancellor" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgirish.chandel.311&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1307327203562884" title="media"  width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <i class="fab fa-instagram"></i> Instagram
+        </div>
+        <div class="card-body">
+          <div class="iframe-container">
+            <iframe title="instagram page of vice-chancellor" src="https://www.instagram.com/igkvraipurofficial/embed" title="gallery" ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Twitter -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <i class="fab fa-twitter"></i> X (Twitter)
+        </div>
+        <div class="card-body">
+          <div class="iframe-container">
+            <iframe title="twitter page of vice-chancellor" src="https://syndication.twitter.com/srv/timeline-profile/screen-name/igkv_kisan?dnt=false&amp;embedId=twitter-widget-0&amp;theme=light&amp;showHeader=true&amp;showReplies=false"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

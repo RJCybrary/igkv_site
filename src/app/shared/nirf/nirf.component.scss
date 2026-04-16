@@ -1,0 +1,23 @@
+.links{
+    display: flex;
+    font-size: calc(16px * var(--font-scale));
+     padding: 5px;
+    font-weight:600;
+    // justify-content: space-;
+    a{
+        padding: 12px;
+        color: #ffffff;
+        background-color: #164181;  // dark blue
+        border: 2px solid rgb(22, 65, 129);
+        border-radius: 8px;
+    }
+}
+
+.nirf-btn{
+    margin-left:2px;
+    margin-right: 2px;
+}
+
+.container-fluid{
+    width: 80%;
+}

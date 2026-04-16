@@ -1,0 +1,198 @@
+// Who's Who Css Starts 
+
+
+.who-is-who .office {
+
+    color: #07294d !important;
+}
+
+.who-is-who .emp_name{
+    color: #07294d !important; 
+    font-weight: 800 !important;
+    font-size: calc(26px * var(--font-scale));
+    text-align: center;
+}
+
+.who-is-who .post_name{
+    font-weight: 600;
+    font-size: calc(12px * var(--font-scale));
+    margin: 0.5em;
+    color: black;
+    text-align: center;
+}
+
+.who-is-who .social-media{
+    font-weight: 600;
+    text-align: justify;
+}
+
+.who-is-who .social-media-icon{
+    font-weight: 500;
+    text-align: justify;
+}
+
+.who-is-who .social-media-icon  {
+ display: flex
+}
+
+.who-is-who .social-media-icon #icon{
+    padding-left: 1em;
+    
+}
+.who-is-who .social-media-icon #icon1{
+    padding-left: 0.5em;
+    
+}
+
+
+.who-is-who hr{
+    margin: 0.5rem;
+}
+
+
+
+.singel-event-list{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-align-items: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+// .singel-event-list .event-thum {
+//     // border: 2px solid black;
+//     // background-color: #000;
+// 	// width: 38%;
+// }
+.singel-event-list .event-thum img{
+    width: 100%;
+    border-radius: 5px;
+}
+.singel-event-list .event-cont {
+	width: 62%;
+    padding-left: 15px;
+}
+
+.singel-event-list .event-cont span {
+	font-size: calc(14px * var(--font-scale));
+    display:block;
+	color:#000;
+	// margin-right: 20px;
+}
+.singel-event-list .event-cont span i {
+	color: #ffc600;
+	margin-right: 3px;
+}
+.singel-event-list .event-cont a {
+	display: block;
+}
+.singel-event-list .event-cont a h4 {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	color: #000;
+	font-size: calc(20px * var(--font-scale));
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+.singel-event-list .event-cont a:hover h4 {
+    color: #ffc600;
+}
+
+
+.singel-event-list .event-thum img {
+    border-radius: 5px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: auto;
+
+}
+
+
+
+.color-orange{
+    color: #9c3b22;
+}
+
+.who-is-who .view-more{
+    text-align: right;
+}
+
+.who-is-who .view-more a{
+    text-decoration: none;
+    color: #9c3b22;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+#listig-details ul{
+    margin-bottom: 0.5em;
+    list-style: none;
+  
+}
+
+#listig-details #title{
+    padding-bottom: 0.4em;
+}
+
+
+.office-details{
+    background-color: #fff;
+}
+.office-details .office-name{
+    padding: 0 1.5em;
+}   
+.office-details .office-name{
+    padding-top: 0.3em;
+}
+.emp_name{
+
+}
+// Whos's Who Css Ends Here
+.event-thum .profile-pic{
+    height: 250px;
+    width: 250px;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .singel-event-list{
+        display: block;
+    }
+
+    .singel-event-list .event-thum img{
+        width: 150px !important;
+      height: 150px !important;
+      border-radius: 50%;
+    }
+    .singel-event-list .event-cont {
+        width: 100%;
+    }
+    .singel-event-list{
+        padding: 0;
+        text-align: justify;
+    }
+    .event-cont .emp_name{
+        font-size: calc(18px * var(--font-scale));
+    }
+
+    .singel-event-list .event-cont span{
+        display: block;
+        text-align: center;
+    }
+    
+}
+

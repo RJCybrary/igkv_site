@@ -1,0 +1,132 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: calc(20px * var(--font-scale));
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0; /* Start as invisible */
+    visibility: hidden; /* Hide button initially */
+    transform: scale(0); /* Initially scaled down */
+    transition: all 0.3s ease-in-out; /* Smooth transition for appearance */
+  }
+  
+  .scroll-to-top.show {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make visible */
+    transform: scale(1); /* Scale up to original size */
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #0056b3; /* Hover color */
+    transform: scale(1.1); /* Slightly scale up on hover */
+    transition: all 0.2s ease-in-out; /* Faster hover animation */
+  }
+  
+  .scroll-to-top:focus {
+    outline: none;
+  }
+  
+
+  // chatbot button
+  .chatbot-button {
+    position: fixed;
+    bottom: 55px;
+    right: 20px;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: calc(22px * var(--font-scale));
+    cursor: grab;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    
+  }
+  .chatbot-button:hover {
+    background-color: #0056b3; /* Hover color */
+    transform: scale(1.1); /* Slightly scale up on hover */
+    transition: all 0.2s ease-in-out; /* Faster hover animation */
+  }
+
+
+  // popup styles
+  .admission-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 5px;
+    background-color: #004080;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    animation: fadeIn 0.5s ease;
+    font-size: 16px;
+  
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #ffc107;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #e0a800;
+      }
+    }
+  }
+
+
+    // popup styles
+  .convocation-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 5px;
+    background-color: #004080;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    animation: fadeIn 0.5s ease;
+    font-size: 16px;
+  
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #ffc107;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #e0a800;
+      }
+    }
+  }
+
+
+  
+  
+  @keyframes fadeIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

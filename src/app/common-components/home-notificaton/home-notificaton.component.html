@@ -1,0 +1,155 @@
+<section class="" *ngIf="newsCategory?.length > 0">
+  <div class="container pt-3 pb-3">
+    <div class="row notifiaction-news mb-4" style="background-color: rgb(232, 235, 240)">
+      <div class="news-container text-center">
+        <h1 class="main-header-title">{{"News & Notification" | translate}}</h1>
+      </div>
+      <div class="col-sm-4">
+        <div class="row" style="text-align: center">
+
+          <!-- for small screen -->
+          <div class="gray-bg newscategory-list-smallscreen" style="padding: 1em;">
+            <div class="category-section">
+              <select class="category-search-input" (change)="onSelectCategorysmall($event)">
+                <option value="" disabled selected>Select news Category</option>
+                <option *ngFor="let content of newsCategory" [value]="content.News_Category_ID">{{content.newsCategory}}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <!-- for big screen -->
+          <div class="col-sm-12 row newscategory-list-normalscreen">
+            <ng-container *ngFor="let content of newsCategory">
+              <div class="col-6">
+                <button aria-label="Select News Category" [ngClass]="{'college': isCollege,}" class="btn button-style-1"
+                  (click)="getNewsID(content.News_Category_ID)" style="
+                    margin: 5px;
+                    width: 100%;
+                    font-size: calc(13px * var(--font-scale)) !important;
+                    background-color: #16628f;
+                    font-weight: 500;
+                    color: white;
+                  " [ngClass]="{ college: isCollege, kvk: isKvk }">
+                  <span class="button-style-1-content">{{ content.newsCategory }}
+                  </span>
+                </button>
+              </div>
+            </ng-container>
+          </div>
+          <!-- <div class="btn-set">
+            <ng-container *ngFor="let content of newsCategory">
+              <button class="button-58 btn-primary"
+                (click)="getNewsID(content.News_Category_ID)">{{content.newsCategory}}</button>
+            </ng-container>
+          </div> -->
+
+          <span class="text-center newscategory-list-normalscreen">
+            <a *ngIf="isCollege != true && isKvk != true" [routerLink]="['/about/news',unit_id]" class="text-center"
+              class="btn btn-primary" style="
+              color: rgb(21, 22, 22);
+              background-color: #f1c123;
+              border: none;">{{'More News' | translate}}</a>
+
+
+            <a *ngIf="isCollege == true || isKvk == true" [routerLink]="['cont/notification',unit_id]"
+              class="text-center" class="btn btn-primary" style="
+          color: rgb(21, 22, 22);
+          background-color: #f1c123;
+          border: none;">{{'More News' | translate}}</a>
+          </span>
+        </div>
+      </div>
+      <!-- Your HTML template -->
+
+      <div class="col-sm-8 mb-4">
+        <div class="marqee-container1">
+          <div class="header" style="background-color: #16628f" [ngClass]="{ college: isCollege, kvk: isKvk }">
+            <!-- <h4 *ngIf="mainCategory" class="header-title">{{this.top_news[0].News_Category_Name_E}}</h4> -->
+            <!-- <h4   class="header-title">Heading</h4> -->
+            <ul class="header-title">
+              <li *ngIf="!mainCategory"><b>{{"Latest News" | translate}}</b></li>
+              <li *ngIf="mainCategory">
+                <b class="news-titles"> {{ this.top_news[0].News_Category_Name_E }}</b>
+              </li>
+            </ul>
+            <select (change)="onSubNewsCategorySelected($event)" class="dropdown" *ngIf="subNewsCategory">
+              <ng-container *ngFor="let data of subNewsCategory">
+                <option [value]="data.News_Category_ID">
+                  {{ data.newsCategory }}
+                </option>
+              </ng-container>
+            </select>
+          </div>
+          <div class="marquee-container">
+            <div class="marquee-track">
+              <ul class="top_news_list">
+                <li style="text-align: justify; list-style: none;" *ngFor="let content of top_news">
+
+                  <!-- Normal -->
+                  <a style="font-size: calc(13px * var(--font-scale));" *ngIf="!isCollege && !isKvk" [routerLink]="[
+            '/about/news',
+            unit_id,
+            content.News_Category_ID,
+            content.news_sub_category_id,
+            content.News_Notification_Main_Id
+          ]">
+
+                    {{ content.Main_Title }}
+                    <div class="clearfix"></div>
+
+                    <i class="fa-regular fa-calendar-days fa-fade" style="padding-right: 0.5em"></i>
+                    {{ content.newsDate }}
+
+                    <b>
+                      {{ content.News_Category_Name_E }} >
+                      {{ content.news_sub_category_name }}
+                    </b>
+                    <hr />
+                  </a>
+
+                  <!-- College / KVK -->
+                  <a *ngIf="isCollege || isKvk" [routerLink]="[
+            'cont/notification',
+            unit_id,
+            content.News_Category_ID,
+            content.news_sub_category_id,
+            content.News_Notification_Main_Id
+          ]">
+
+                    {{ content.Main_Title }}
+                    <div class="clearfix"></div>
+
+                    <i class="fa-regular fa-calendar-days fa-fade" style="padding-right: 0.5em"></i>
+                    {{ content.newsDate }}
+
+                    <b>
+                      {{ content.News_Category_Name_E }} >
+                      {{ content.news_sub_category_name }}
+                    </b>
+                    <hr />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <br />
+      <span class="text-center newscategory-list-smallscreen">
+        <a *ngIf="isCollege != true && isKvk != true" [routerLink]="['/about/news',unit_id]" class="text-center"
+          class="btn btn-primary" style="
+            color: rgb(21, 22, 22);
+            background-color: #f1c123;
+            border: none;">{{'More News' | translate}}</a>
+
+        <a *ngIf="isCollege == true || isKvk == true" [routerLink]="['cont/notification',unit_id]" class="text-center"
+          class="btn btn-primary" style="
+              color: rgb(21, 22, 22);
+              background-color: #f1c123;
+              border: none;">{{'More News' | translate}}</a>
+      </span>
+    </div>
+  </div>
+</section>

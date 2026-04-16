@@ -1,0 +1,52 @@
+
+
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" [style.background-image]="'url(' + bannerUrl + ')'" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-banner-cont">
+                    <h2 class="header" >Who's Who</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a >Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Who's Who</li>
+                        </ol>
+                    </nav>
+                </div>  
+            </div>
+        </div> 
+    </div> 
+</section> 
+
+
+	<!--====== TOP CATEGORY NAV PART START ======-->
+	
+        <!-- </div> -->
+		<section class="int-page">
+			<div class="container  who-s-who">
+				<div class="inner-page-main">
+        			<div class="inner-menu">
+						<ul>
+						</ul>
+					</div>
+					<div class="inner-menu-next table-responsive">
+                        <ul id="menu-whoswho" class="">
+                        <ng-container *ngFor="let content of PostList">
+                            <li id="menu-item-33700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33700"><a [routerLink]="['/about/who-is-who/members-list',content.level_id]">{{content.level_name}}</a></li>
+                        </ng-container>
+                    </ul>
+		
+        </div>
+       
+      </div>
+	 </div>
+        </section>
+	
+    <!--====== TOP CATEGORY NAV  PART ENDS ======-->
+
+
+
+
+
+	
+<router-outlet></router-outlet>

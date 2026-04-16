@@ -1,0 +1,14 @@
+span h3{
+    text-align: center;
+    font-size: calc(1.2rem* var(--font-scale));
+    margin-bottom: 0;
+    font-family: Poppins-Bold;
+    color: #028391;
+    line-height: 27px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: bold;
+}

@@ -1,0 +1,395 @@
+<!-- Navbar for College -->
+<nav class="navbar navbar-expand-lg topbar-menu-1" style="background-color: #b94e2f;" data-bs-theme="dark">
+  <div class="container-fluid">
+    <div>
+      <ul class="navbar-nav">
+        <li><a class="nav-link topnav text-white" routerLink="/about/college-home"><i class="fa-solid fa-house text-white"
+              style="padding-right: 0.5em;"></i>Back to University Site</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Main menu for big screen -->
+<nav *ngIf="College_Detail" class="navbar navbar-expand-lg navbar-light bg-light" id="mainMenu">
+  <div class="container-fluid">
+    <a routerLink="./" style="display: flex;">
+      <img src="assets/images/igkv_logo.png" alt="igkv logo" height="60px" style="margin-top: 6px;">
+      <h2 class="clg-head">{{College_Detail?.College_Full_Name_E}}</h2>
+    </a>
+
+    <nav class="navbar col d-block d-sm-none" data-bs-theme="light">
+      <button class="navbar-toggler" type="button" aria-label="navbar-toggler" data-bs-toggle="collapse"
+        data-bs-target="#navbarExample4" aria-controls="navbarExample4" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+    <div class="row">
+      <div class="collapse navbar-collapse mt-1" id="navbarNavDropdown">
+
+        <ul class="navbar-nav">
+
+          <!-- Home -->
+          <li class="nav-item">
+            <a class="nav-link topnav" routerLink="./" aria-label="Home">
+              <i class="fa-solid fa-house" style="color:#000;"></i>
+            </a>
+          </li>
+
+          <!-- About -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+               id="navbarDropdownAbout"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+              About
+            </a>
+
+            <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdownAbout">
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['/about/college-home/college/',Office_Id]"
+                   fragment="Overview">
+                   Overview
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['/about/college-home/college/',Office_Id]"
+                   fragment="DeskofDean">
+                   Desk of Dean
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['cont/staff-details/',Office_Id]">
+                   Who's Who
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['/about/college-home/college/',Office_Id]"
+                   fragment="awards">
+                   Awards & Achievement
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['cont/gallery/',Office_Id]">
+                   Gallery
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Academic -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+               id="navbarDropdownAcademic"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Academic
+            </a>
+
+            <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdownAcademic">
+              <li>
+                <a class="dropdown-item"
+                   href="https://igkv.ac.in/counselinghomenew.aspx"
+                   target="_blank">
+                   Admission
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['/about/college-home/college/',Office_Id]"
+                   fragment="Departments">
+                   Departments
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['cont/campus-life', Office_Id,7]">
+                   Library
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Research -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+               id="navbarDropdownResearch"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Research
+            </a>
+
+            <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdownResearch">
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['cont/project',Office_Id]">
+                   Projects
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['cont/publication',Office_Id,1]">
+                   Books & Magazines
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['cont/publication',Office_Id,3]">
+                   Publications
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['cont/publication',Office_Id,4]">
+                   Journals
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['cont/publication',Office_Id,5]">
+                   Research Paper
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Campus Life -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+               id="navbarDropdownCampus"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Campus Life
+            </a>
+
+            <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdownCampus">
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['cont/campus-life', Office_Id,10]">
+                   Sports
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['cont/campus-life', Office_Id,1]">
+                   NCC
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['cont/campus-life', Office_Id,2]">
+                   NSS
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   [routerLink]="['cont/infrastruturelist', Office_Id,4]">
+                   Hostel
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Infrastructure -->
+          <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="['cont/infrastruturetype', Office_Id]">
+               Infrastructure
+            </a>
+          </li>
+
+          <!-- Recruitment -->
+          <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="['cont/recruitment',Office_Id]">
+               Recruitment
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- menu for small screen -->
+<nav *ngIf="College_Detail" class="navbar navbar-expand-lg bg-body-tertiary" id="subMenu">
+  <div class="container-fluid">
+    <a routerLink="./" style="display: flex;" class="name">
+      <img src="assets/images/igkv_logo.png" alt="IGKV Logo" height="60px" style="margin-top: 6px;">
+      <h2 class="clg-head">{{College_Detail.College_Full_Name_E}}</h2>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a routerLink="./" class="nav-link"><i class="fa-solid fa-house fa-lg"></i></a>
+        <li class="nav-item dropdown">
+          <a class="nav-link  dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" [routerLink]="['/about/college-home/college/',Office_Id]"
+                fragment="Overview">Overview</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/about/college-home/college/',Office_Id]"
+                fragment="DeskofDean">Desk of Dean</a></li>
+            <li><a class="dropdown-item" [routerLink]="['cont/staff-details/',Office_Id]">Who's Who</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/about/college-home/college/',Office_Id]"
+                fragment="awards">Awards & Achievement</a></li>
+            <li><a class="dropdown-item" [routerLink]="['cont/gallery/',Office_Id]">Gallery</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Academic
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://igkv.ac.in/counselinghomenew.aspx" target="_blank">Admission</a>
+            </li>
+            <li><a class="dropdown-item" [routerLink]="['/about/college-home/college/',Office_Id]"
+                fragment="Departments">Departments</a></li>
+            <li><a class="dropdown-item" [routerLink]="['cont/campus-life', Office_Id,7]"
+                fragment="Departments">Library</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Research
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" [routerLink]="['cont/project',Office_Id]">Projects</a></li>
+            <li><a class="dropdown-item" [routerLink]="['cont/publication',Office_Id,1]">Books & Magazines</a></li>
+            <li><a class="dropdown-item" [routerLink]="['cont/publication',Office_Id,3]">Publications</a></li>
+            <li><a class="dropdown-item" [routerLink]="['cont/publication',Office_Id,4]">Journals</a></li>
+            <li><a class="dropdown-item" [routerLink]="['cont/publication',Office_Id,5]">Research Paper</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Campus Life
+          </a>
+          <ul class="dropdown-menu">
+            <a class="dropdown-item" [routerLink]="['cont/campus-life', Office_Id,10]">Sports</a>
+            <a class="dropdown-item" [routerLink]="['cont/campus-life', Office_Id,1]">NCC</a>
+            <a class="dropdown-item" [routerLink]="['cont/campus-life', Office_Id,2]">NSS</a>
+            <a class="dropdown-item" [routerLink]="['cont/infrastruturelist', Office_Id,4]">Hostel</a>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link " [routerLink]="['cont/infrastruturetype', Office_Id]" aria-expanded="false">
+            Infrastruture
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link " [routerLink]="['cont/recruitment',Office_Id]" aria-expanded="false">
+            Recruitment
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+  <router-outlet></router-outlet>
+</main>
+
+
+<!-- <router-outlet></router-outlet> -->
+
+<section *ngIf="showSubContent">
+
+  <app-clg-banner *ngIf="homeslider" [clgbanner]="homeslider"></app-clg-banner>
+
+  <div id="Overview"></div>
+  <div *ngIf="College_Detail" class="container-fluid pt-3 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="row">
+            <div class="col-lg-12 clg-overview">
+              <h2 class="section-title1">Overview</h2>
+              <p class="contents"> {{College_Detail.About_Unit}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="slider-container pt-3">
+
+            <img class="slider-image" aria-hidden="true" [src]="College_Detail?.Unit_Image_URL"
+              (error)="onErrorImage($event)" alt="College Overview Image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- clg history mission vision -->
+  <section class="featured mt-5 Scrollstyle1" *ngIf="College_Detail">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="icon-box">
+            <h3 class="section-title3"><a>Our History </a></h3>
+            <p class="contents">{{College_Detail.History_Unit}}</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="icon-box1">
+            <h3 class="section-title3"><a>Our Mission</a></h3>
+            <p class="contents">{{College_Detail.Mission_Unit}}</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <h3 class="section-title3"> <a>Our Vision</a></h3>
+            <p class="contents">{{College_Detail.Vision_Unit}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-message id="DeskofDean" *ngIf="College_Head_detail && College_Detail" [headDetail_data]="College_Head_detail"
+    [pageDetail_data]="College_Detail" [message]="'Error message!'" [isError]="true"></app-message>
+  <app-clg-departments id="Departments" [departmentlist]="departmentList" *ngIf="departmentList" [message]="'college!'"
+    [isCollege]="true"></app-clg-departments>
+  <app-home-notificaton [message]="'college!'" [isCollege]="true"></app-home-notificaton>
+  <hr>
+  <app-clg-activities *ngIf="Activity_data?.length > 0 " [activity_details]="Activity_data"></app-clg-activities>
+  <app-clg-award-common id="awards" *ngIf="award_data?.length > 0" [award_data]="award_data"></app-clg-award-common>
+  <app-clg-events-common *ngIf="event_data?.length > 0" [event_data]="event_data"></app-clg-events-common>
+  <!-- <app-clg-infrastructure-details ></app-clg-infrastructure-details> -->
+  <app-clg-infrastruture-type [infra_List]="infra_type.slice(0,3)" [office_id]="Office_Id"
+    *ngIf="infra_type?.length > 0 "></app-clg-infrastruture-type>
+  <app-staff-testimonial [unit_type]="Office_Id"></app-staff-testimonial>
+  <app-clg-contactus [contact_data]="College_Detail"></app-clg-contactus>
+
+</section>

@@ -1,0 +1,35 @@
+/* Custom styles for expansion panels */
+.expansion-panel {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 30px -10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+.expansion-panel:hover mat-panel-title span {
+    color: #FFC600; /* Change text color on hover */
+}
+
+.expansion-panel mat-expansion-panel-header.mat-expanded {
+    background-color: #f0f0f0; /* Background color when panel is open */
+}
+
+.expansion-panel mat-expansion-panel-header.mat-expanded mat-panel-title span {
+    color: #FFC600; /* Text color when panel is open */
+}
+
+.expansion-panel span {
+    font-size: calc(16px * var(--font-scale));
+    color: #000;
+    font-weight: 500;
+}
+
+.expansion-panel p {
+    font-size: calc(16px * var(--font-scale));
+    color: #333;
+    line-height: 22px;
+    margin-bottom: 16px;
+    font-weight: 400;
+    padding: 5px 10px 5px 25px;
+}

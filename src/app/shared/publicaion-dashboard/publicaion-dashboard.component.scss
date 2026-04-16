@@ -1,0 +1,30 @@
+.hero {
+    // background: url('') ;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+  }
+  
+  .link-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .link-card:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 40vh;
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+  
+  .card-title{
+    font-size: 1rem;
+    font-weight: bold;
+  }

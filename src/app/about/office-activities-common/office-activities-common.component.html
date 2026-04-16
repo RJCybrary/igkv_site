@@ -1,0 +1,38 @@
+
+
+<section id="Activity" class="Activity section-bg pb-3 pt-3" *ngIf="activity_details?.length > 0 ">
+    <div class="container" data-aos="fade-up">
+            <h2 class="section-title1">Recent Activity</h2>
+  
+      <div class="row gy-4  demo">
+     
+        <ng-container *ngFor="let data of activity_details" >
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="Activity-member">
+            <div class="member-img banner1 image1"  [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <img [src]="data.Column1"  alt="office activity image" >
+              <div class="content">
+        
+              </div>
+            </div>
+            <div class="activities-details">
+            <div class="activities-date">
+              <p>{{data.web_content_date2|date: 'EEEE, MMMM d, y'}}</p>
+            </div>
+            <div class="member-info">
+              <h4>{{data.Content_Title}}</h4>
+            </div>
+          </div>
+            <h4 class="more"><a (click)="setdetails()"  [routerLink]="['/about/activities-details',data.Website_Content_ID]" class="more">View&nbsp;<i class="fa-solid fa-arrow-right color-green"></i></a></h4>
+          </div>
+        </div>
+      </ng-container>
+      </div>
+    <div  style="text-align: center !important;" >
+        <div class="col-lg-12 col-sm-12 pt-3">
+            <a routerLink="activities" (click)="setdetails()" class="main-btn">{{'View more' | translate}}</a>
+        </div>
+    </div>
+    </div>
+  </section>
+  

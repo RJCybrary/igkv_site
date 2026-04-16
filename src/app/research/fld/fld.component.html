@@ -1,0 +1,55 @@
+
+<app-banner [banner_heading]="Title" [banner_img]="bannerImg" ></app-banner>
+
+
+<section id="courses-part" class="pt-60 pb-120 gray-bg">
+    <div class="container">
+        <app-pagination
+       [currentPages]="currentPages"
+        [totalrecords]="totalrecords"
+       (rowsPerPageChanged)="onRowsPerPageChanged($event)"
+         (pageChanged)="onPageChanged($event)"
+         (searchCriteria)="onSearchCriteriaReceived($event)"> 
+                   <div class="row mb-3" *ngIf="Activities_data?.length !== 0 ; else elseblock">
+                 
+                    <ng-container *ngFor="let data of Activities_data">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="Activities mt-3">
+                                <div class="thum">
+                                    <div class="banner image"
+                                        [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+                                        <img [src]="data.Column1" alt="Award">
+                                        <div class="content">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    <span id="date"><i class="fa-regular fa-calendar-days"></i>{{data.web_content_date2|date:'MMMM d, y'}}</span>,
+                                    <span class="venue"><i class="fa-solid fa-location-dot"></i>{{data.Venue}}</span>
+                                    <a>
+                                        <h4>{{data.Content_Title}}</h4>
+                                    </a>
+
+                                    <div class="col-lg-12 col-sm-12 view-button">
+                                        <a (click)="setdetails()" routerLink="/about/activities-details/{{data.Website_Content_ID}}"
+                                            class="main-btn">View</a>
+                                    </div>
+                                </div>
+                            </div> <!-- singel course -->
+                        </div>
+                    </ng-container>
+                   </div>
+                   <ng-template #elseblock>
+                    <app-no-data></app-no-data>
+                 </ng-template>
+                </app-pagination>
+                           
+                       
+                
+
+        
+    </div> 
+</section>
+
+<!--====== COURSES PART ENDS ======-->

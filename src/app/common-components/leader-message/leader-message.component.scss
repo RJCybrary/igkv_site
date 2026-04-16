@@ -1,0 +1,230 @@
+
+.mobile-view {
+  display: none;
+}
+.leader-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #164172;
+    padding: 30px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .message-box, .quote-box {
+    flex: 1;
+    padding-left: 40px;
+  }
+  
+  .message-box {
+    text-align: left;
+  }
+  
+  .message {
+    // font-size: calc(14px * var(--font-scale));
+    font-size: calc(14px * var(--font-scale)) ;
+    color: #ffffff;
+    position: relative;
+    padding-left: 30px;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify; 
+
+  }
+  
+  .quote-icon {
+    position: absolute;
+    left: 0;
+    // font-size: calc(66px * var(--font-scale));
+    font-size: calc(66px * var(--font-scale)) ;
+    color: #ffd000;
+  }
+  
+  .post-info {
+    // margin-top: 10px;
+    text-align: left;
+    padding-left: 30px;
+  }
+  
+  .post-info h2 {
+    // font-size: calc(16px * var(--font-scale));
+    font-size: calc(16px * var(--font-scale)) ;
+    color: #ffd000;
+    margin-bottom: 2px;
+    margin-top: -5px
+  }
+  
+  .post-info .post {
+    // font-size: calc(16px * var(--font-scale));
+    font-size: calc(16px * var(--font-scale)) ;
+    color: white;
+    margin-bottom: 2px;
+  }
+  
+  .leader-image {
+    flex: 0 0 260px;
+    margin: -29px -16px;
+    text-align: center;
+  }
+  
+  .leader-image img {
+    width: 350px !important;
+    height: 350px;
+    z-index: 3 !important;
+    overflow: auto;
+    // object-fit:contain;
+  }
+  
+  .quote-box {
+    text-align: left;
+  }
+  
+  .quote {
+    // font-size: calc(14px * var(--font-scale));
+    font-size: calc(14px * var(--font-scale)) ;
+    color: #ffffff;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .know-more {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffd000;
+    text-decoration: none;
+    border-radius: 5px;
+    // font-size: calc(16px * var(--font-scale));
+    font-size: calc(16px * var(--font-scale)) ;
+    transition: background-color 0.3s;
+  }
+  
+  .know-more:hover {
+    background-color: #e4cc62;
+    color: rgb(34, 32, 32);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .leader-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .message-box, .quote-box {
+      padding: 15px;
+    }
+  
+    .leader-image {
+      margin: 20px 0;
+    }
+  
+    .leader-image img {
+      width: 240px !important;
+      height: 180px;
+    }
+  
+    .know-more {
+      margin-top: 10px;
+    }
+    // .post-info{
+    //   display: none;
+    // }
+    // .quote-box{
+    //    display: none;
+    // }
+  }
+  
+  @media (max-width: 480px) {
+    .message {
+      // font-size: calc(16px * var(--font-scale));
+      font-size: calc(16px * var(--font-scale)) ;
+
+    }
+  
+    .quote {
+      // font-size: calc(16px * var(--font-scale));
+      font-size: calc(16px * var(--font-scale)) ;
+
+    }
+  
+    .post-info h2 {
+      // font-size: calc(18px * var(--font-scale));
+      font-size: calc(18px * var(--font-scale)) ;
+
+    }
+  
+    .post-info .post {
+      // font-size: calc(14px * var(--font-scale));
+      font-size: calc(14px * var(--font-scale)) ;
+
+    }
+  
+    .know-more {
+      // font-size: calc(14px * var(--font-scale));
+      font-size: calc(14px * var(--font-scale)) ;
+      padding: 8px 16px;
+    }
+  }
+  
+
+  // ------------- Mobile View ---------
+  /* Mobile-specific styles */
+@media (max-width: 768px) {
+  .leader-section {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+    text-align: center;
+    background-color: #164172;
+    padding: 20px;
+  }
+
+  .mobile-leader-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .mobile-leader-image img {
+    width: auto;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ffd000;
+    object-fit: cover;
+  }
+
+  .mobile-leader-info {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .mobile-name {
+    // font-size: calc(18px * var(--font-scale));
+    font-size: calc(18px * var(--font-scale)) ;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(219, 156, 21);
+    padding: 0;
+  }
+  .mobile-post {
+    // font-size: calc(12px * var(--font-scale));
+    font-size: calc(12px * var(--font-scale)) ;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(219, 156, 21);
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+
+  }
+
+
+  .mobile-message {
+    // font-size: calc(16px * var(--font-scale));
+    font-size: calc(16px * var(--font-scale)) ;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: justify; 
+   }
+}

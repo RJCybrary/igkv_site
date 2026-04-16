@@ -1,0 +1,185 @@
+
+
+<app-banner *ngIf="Office_id == 0" [banner_heading]="'Gallery'" [banner_img]="bannerImg"></app-banner>
+
+<div class="loader" *ngIf="isLoading"></div>
+
+
+<!-- for small screen -->
+<div class="gray-bg year-list-smallscreen" *ngIf="Office_id == 0">
+
+  <label for="year-dropdown">Select Years</label>
+
+  <select
+    id="year-dropdown"
+    (change)="onSelectyearsmall($event)"
+    aria-label="Select gallery year">
+
+    <option value="" disabled selected>Select</option>
+
+    <option *ngFor="let data of galleryListYear" [value]="data.year">
+      {{data.year}}
+    </option>
+
+  </select>
+
+</div>
+
+
+<!-- for big screen -->
+<nav aria-label="Gallery Year Navigation" *ngIf="Office_id == 0">
+
+  <section class="pt-5 pb-2 yearslist">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-2" *ngFor="let data of galleryListYear">
+
+          <a 
+            [routerLink]="['year',data.year]"
+            [attr.aria-label]="'View gallery for year ' + data.year"
+          >
+            <div class="counter blue">
+              <span class="counter-value">{{data.year}}</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</nav>
+
+
+<section id="Section1" class="pt-5 pb-5" *ngIf="galleryCategory && Office_id == 0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title pb-3">
+                    <h2>Categories</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <ng-container *ngFor="let data of galleryCategory">
+                <div class="col-lg-3 col-md-6">
+                    <div class="gallery mt-3">
+                        <div class="thum">
+
+                            <!-- ✅ Decorative background -->
+                            <div class="image banner" 
+                                 [style.background-image]="'url(' + data.imagepath + ')'"
+                                 *ngIf="data.imagepath"
+                                 aria-hidden="true">
+
+                                <!-- ✅ Improved link + alt -->
+                                <a 
+                                  [routerLink]="['gallery-list/',data.Event_Category_ID]"
+                                  [attr.aria-label]="'View ' + data.Event_Category_Name_E + ' gallery'"
+                                >
+                                    <img 
+                                      [src]="data.imagepath" 
+                                      [alt]="data.Event_Category_Name_E + ' gallery image'">
+                                </a>
+
+                                <div class="content"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="cont">
+                            <div class="col-lg-12 col-sm-12 view-button">
+
+                                <!-- ✅ semantic heading instead of span -->
+                                <h3>{{data.Event_Category_Name_E}}</h3>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+
+<section id="Section2" class="pt-3 pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title pb-3">
+                    <h2 *ngIf="Office_id == 0">All Images</h2>
+                    <h2 *ngIf="Office_id != 0">Gallery</h2>
+                </div> <!-- section title -->
+            </div>
+        </div>
+        <div class="row" *ngIf="galleryList?.length !== 0; else elseblock"  tabindex="-1"
+  aria-live="polite"
+  #galleryContainer>
+                <ng-container *ngFor="let data of galleryList">
+  <div class="col-lg-4 col-md-6">
+    <div class="gallery mt-3">
+
+      <div class="thum">
+
+        <!-- ✅ Decorative background -->
+        <div class="image banner"
+             [style.background-image]="'url(' + data.media_link + ')'"
+             *ngIf="data.media_link"
+             aria-hidden="true">
+
+          <!-- ✅ Improved ALT -->
+          <img 
+            [src]="data.media_link" 
+            [alt]="data.gallery_name + ' gallery image'">
+
+          <div class="content"></div>
+        </div>
+
+      </div>
+
+      <div class="cont">
+
+        <!-- ✅ icon hidden from screen reader -->
+        <span>
+          <i class="fa-regular fa-calendar-days" aria-hidden="true"></i>
+          Year : {{data._Year}}
+        </span>
+
+        <!-- ✅ fix heading level -->
+        <h3>{{data.gallery_name}}</h3>
+
+        <div class="col-lg-12 col-sm-12 view-button">
+
+          <!-- ✅ accessible link name -->
+          <a *ngIf="Office_id == 0"
+             [routerLink]="['/about/gallery-detail',data.gallery_main_id]"
+             class="main-btn"
+             [attr.aria-label]="'View more about ' + data.gallery_name + ' gallery'">
+            View more
+          </a>
+
+          <a *ngIf="Office_id != 0"
+             [routerLink]="['gallery-detail',data.gallery_main_id]"
+             class="main-btn"
+             [attr.aria-label]="'View more about ' + data.gallery_name + ' gallery'">
+            View more
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</ng-container>
+           
+        </div>
+        <ng-template #elseblock>
+            <app-no-data></app-no-data>
+        </ng-template>
+    </div>
+</section>

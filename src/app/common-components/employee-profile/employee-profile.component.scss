@@ -1,0 +1,653 @@
+/* Employee card styling */
+.employee-card {
+  // display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Profile image section */
+.profile-img {
+  text-align: center;
+}
+
+.profile-img img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border-left: 6px solid #A594F9;
+  border-right: 6px solid #A594F9;
+  // object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-img img:hover {
+  transform: scale(1.05);
+}
+
+table tbody tr:hover {
+    background-color:rgb(211, 211, 211) 
+}
+
+/* Employee info section */
+.employee-info {
+  padding-left: 15px;
+}
+
+.employee-name {
+  font-size: calc(18px * var(--font-scale));
+  font-weight: bold;
+  margin: 5px 0;
+  color: #333;
+}
+
+.employee-post,
+.employee-office,
+.employee-contact,
+.employee-email {
+  font-size: calc(14px * var(--font-scale));
+  margin: 3px 0;
+  color: #555;
+  font-size: calc(14px * var(--font-scale));
+  color: #666;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.employee-post span,
+.employee-office span,
+.employee-contact span,
+.employee-email span {
+  font-weight: bold;
+  color: #313233;
+}
+
+/* Hover effect on card */
+.employee-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.space {
+  margin-right: 10px;
+}
+
+/* Timeline container */
+.timeline-container {
+  padding: 20px;
+}
+
+/* Unordered list for the timeline */
+.timeline {
+  list-style-type: none;
+  padding-left: 0;
+  position: relative;
+  margin: 0;
+}
+
+/* Timeline dots */
+.timeline li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #A594F9;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.timeline-content {
+  font-size: calc(14px * var(--font-scale));
+  color: #666;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Vertical line connecting the dots */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ddd;
+}
+
+/* Hover effect for timeline items */
+.timeline li:hover .timeline-dot {
+  background-color: #f19743;
+}
+
+.timeline li:hover .timeline-content {
+  color: #000;
+}
+
+.section-time{
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Experience Timeline container */
+.exp-timeline-container {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Experience Timeline unordered list */
+.exp-timeline {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* Experience Timeline list item */
+.exp-timeline li {
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Left part of the Experience Timeline (date) */
+.exp-timeline-left {
+  flex: 0 0 20%;
+  text-align: right;
+  padding-right: 20px;
+  position: relative;
+}
+
+.exp-timeline-date1 {
+  background-color: #f08760f5;
+  color: #1b1b1bf5;
+  // padding: 1px;
+  border-radius: 8px;
+  font-size: 8px;
+  padding: 0px;
+  font-weight: 600;
+}
+
+.exp-timeline-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -7px;
+  width: 14px;
+  height: 14px;
+  background-color: #e96231f5;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* Vertical line for the Experience Timeline */
+.exp-timeline-left::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #ddd;
+}
+
+/* Right part of the Experience Timeline (details) */
+.exp-timeline-right {
+  flex: 1;
+  padding-left: 20px;
+  border-left: 2px solid #ddd;
+  font-size: calc(14px * var(--font-scale));
+  color: #666;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.exp-role {
+  font-size: calc(16px * var(--font-scale));
+  color: #007bff;
+  margin: 0;
+}
+
+.exp-company {
+  font-size: calc(14px * var(--font-scale));
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.exp-description {
+  font-size: calc(13px * var(--font-scale));
+  color: #666;
+  margin: 0;
+}
+
+/* Hover effect */
+.exp-timeline li:hover .exp-timeline-date {
+  background-color: #007bff;
+}
+
+.exp-timeline li:hover .exp-timeline-left::before {
+  background-color: #007bff;
+}
+
+
+// .section {
+//     padding: 40px 0;
+//     position: relative;
+// }
+// .gray-bg {
+//     background-color: #f5f5f5;
+// }
+// img {
+//     max-width: 100%;
+// }
+// img {
+//     vertical-align: middle;
+//     border-style: none;
+// }
+
+// /* Banner Top  */
+
+// /* Default styles */
+// .banner {
+//   height: 18em; /* Set initial height */
+//   overflow: hidden;
+// }
+
+// .banner img {
+//   height: 100%; /* Make the image fill its container vertically */
+//   width: 100%; /* Make the image fill its container horizontally */
+//   object-fit: cover; /* Maintain aspect ratio and cover the container */
+//   filter: brightness(50%);
+// }
+
+// .img-name {
+//   height: 0; /* Hide the element */
+// }
+
+// .name {
+//   margin-top: -100px; /* Adjust the margin */
+// }
+
+
+// /* About Me 
+// ---------------------*/
+
+
+// .about-text {
+//   padding: 10px;
+//   /* height: 10px; */
+//   margin-top: -75px !important;
+//   text-align: justify;
+// }
+
+// .about-text .Campus{
+//   margin-top: 30px;
+// }
+
+// .about-text h3 {
+//   font-size: calc(45px * var(--font-scale));
+//   font-weight: 700;
+//   margin: 0 0 6px;
+//   top: 40%;
+//   position: absolute;
+// }
+// @media (max-width: 767px) {
+//   .about-text h3 {
+//     font-size: calc(35px * var(--font-scale));
+   
+//   }
+// }
+// .about-text h6 {
+//   font-weight: 600;
+//   margin-bottom: 15px;
+// }
+// @media (max-width: 767px) {
+//   .about-text h6 {
+//     font-size: calc(18px * var(--font-scale));
+//   }
+// }
+// .about-text p {
+//   margin-top: 20px;
+//   font-size: calc(18px * var(--font-scale));
+//   max-width: auto;
+// }
+// .about-text p mark {
+//   font-weight: 600;
+//   color: #20247b;
+// }
+
+// .about-list .media {
+//   margin: 1rem;
+//   width: auto;
+//   height: auto;
+//   background: rgba(202, 202, 204, 0.58);
+//   border: 1px solid white;
+//   padding: 1rem;
+//   border-radius: 10px;
+//   box-sizing: border-box;
+// }
+
+// .about-list span {
+//   color: #20247b;
+//   font-weight: 600;
+//   width: auto;
+//   position: relative;
+//   display: inline-block;
+//   padding: 5px;
+// }
+
+// .about-list p {
+//   margin: 0;
+//   font-size: calc(15px * var(--font-scale));
+//   display: inline-block;
+//   font-weight: 500;
+//   width: auto;
+// }
+
+// .about-list .media1 {
+//   margin: 1rem;
+//   width: auto;
+//   height: auto;
+//   background: rgba(202, 202, 204, 0.58);
+//   border: 1px solid white;
+//   box-shadow: 12px 17px 51px rgba(0, 180, 224, 0.22);
+//   padding: 1rem;
+//   border-radius: 10px;
+//   box-sizing: border-box;
+// }
+
+
+// @media (max-width: 767px) {
+
+//   /* .name {
+//     color: black !important;
+//   } */
+
+//   .about-list{
+//     margin-top: -250px !important;
+//   }
+
+//   .dark-color {
+//     text-align: center;
+//     margin-top: 130px;
+//     color: rgb(243, 243, 243) !important;
+    
+//   }
+// }
+
+// @media (max-width:766px) {
+  
+//   .about-text{
+//     margin-top: -20px !important;
+//   }
+  
+// }
+
+
+// @media (max-width: 766px) {
+//   .about-avatar{
+//     margin-top: -120px !important;
+    
+//   }
+// }
+
+
+// @media(max-width:772px){
+// .about-list{
+  
+//   margin-top: 100px !important;
+// }
+// }
+
+// @media(max-width:2150px){
+//   .about-list{
+    
+//     margin-top: 100px !important;
+//   }
+//   }
+
+
+// .about-section .counter {
+//   padding: 0px 10px;
+//   background: #ffffff;
+//   border-radius: 10px;
+//   box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+// }
+// .about-section .counter .count-data {
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+// }
+// .about-section .counter .count {
+//   font-weight: 700;
+//   color: #20247b;
+//   margin: 0 0 5px;
+// }
+// .about-section .counter p {
+//   font-weight: 600;
+//   margin: 0;
+// }
+
+// .dark-color {
+//     color: #ffffff;
+//     font-weight: 700;
+// }
+
+// .about-avatar{
+// display: flex;
+// margin: auto;
+// justify-content: center;
+// /* background-color: #e73838;
+// background-clip: content-box; */
+// }
+
+// .about-avatar img{
+
+
+//     margin-top: -170px !important; 
+//     background: #ffffff;
+//     border-radius: 10px;
+//     box-sizing: border-box;
+//     margin: 0.8rem;
+//      width: 15em;
+//     height: 20em;
+//     border: 1px solid white;
+//     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+//     backdrop-filter: blur(6px);
+//     // cursor: pointer;
+//     transition: all 0.5s;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     user-select: none;
+//     transition: transform 0.3s ease;
+//     margin-right: 1em;;
+
+// }
+
+// .about-avatar img:hover{
+//   transform: scale(1.1);
+// }
+
+
+
+/* Patents_category */
+.table_section table,
+.table_section th,
+.table_section td {
+    border: 1px solid black;
+}
+
+
+
+/* Patents_category css end */
+
+/* patents category tab css start */
+
+
+.patents_category_tab {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.patents_category_tab .nav .nav-item a{
+    padding: 5px 3px;
+    background-color: #315377;
+    color: #fff;
+    font-weight: 15;
+    color: #fff;
+    display: flex;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    height: 4em;
+    align-items: center;
+    justify-content: center;
+
+}
+.patents_category_tab .nav .nav-item a.active,
+.patents_category_tab .nav .nav-item a:hover{
+    background-color: #fff;
+    color: #315377;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.patents_category_tab .tab-content{
+    padding: 0px 50px 35px;
+}
+.patents_category_tab .tab-content .dashboard-cont .singel-dashboard h5{
+    font-size: calc(18px * var(--font-scale));
+    color: #000;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.patents_category_tab .tab-content .reviews-cont{
+    padding: 45px 0 15px;
+}
+
+.patents_category_tab li{
+    padding: 0 0.2em;
+    justify-content: space-evenly;
+} 
+
+.patents_category_tab li a span{
+    padding-left: 0.5em;
+}
+ 
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 5%;
+   
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: grey;
+    color: white;
+    font-weight: 200;
+  }
+
+  .headers{
+    color:#000;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: calc(33px * var(--font-scale));
+  }
+
+// Media Queries 
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .patents_category_tab {
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: center; /* Center items horizontally */
+  }
+
+  .patents_category_tab .nav {
+      flex-direction: column; /* Stack navigation items vertically */
+  }
+
+  .patents_category_tab .nav .nav-item {
+      width: 100%; /* Make navigation items full width */
+      margin-bottom: 10px; /* Add space between navigation items */
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .patents_category_tab .tab-content {
+    padding: 20px;
+  }
+
+  .nav-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-item a span {
+    font-size: calc(12px * var(--font-scale)); /* Adjust the font size of the icon */
+    margin-top: 5px; /* Add some spacing between the icon and text */
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .patents_category_tab .tab-content {
+    padding: 20px;
+  }
+
+  .nav-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-item a span {
+    font-size: calc(12px * var(--font-scale)); /* Adjust the font size of the icon */
+    margin-top: 5px; /* Add some spacing between the icon and text */
+  }
+}
+
+
+// // Media Query for Image
+// @media (max-width: 767px) {
+
+  
+//   .patents_category_tab .tab-content {
+//     padding: 20px;
+//   }
+
+//   .about-avatar img {
+//     margin-top: 0 !important;
+//     width: 45%;
+//     height: auto;
+//     max-height: 15em;
+//   }
+// }

@@ -1,0 +1,78 @@
+// Pagination CSS 
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: calc(16px * var(--font-scale));
+}
+
+.pagination span {
+  font-size: calc(16px * var(--font-scale));
+  margin: 0 10px;
+}
+
+
+// Slider css
+
+
+.sports_details {
+  margin-bottom: 5%;
+  margin-top: 3%;
+  padding: 2%;
+  box-shadow: gray 0 0px 28px -18px;
+  background-color: #E0E8F2;
+
+}
+
+.sports_details h3 {
+  font-weight: 600;
+  font-size: calc(20px * var(--font-scale));
+  margin-top: 0.8em;
+}
+
+.sports_details p {
+  font-size: calc(15px * var(--font-scale));
+}
+
+.sports_details img {
+  height: auto !important;
+  width: 100% !important;
+}
+
+
+/* image-slider.component.css */
+.slider-container {
+  position: relative;
+  width: 100% !important;
+  height: 15em; /* Make the slider container responsive */
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slider-container img{
+  position: relative;
+  height: fit-content !important; /* Adjust height as needed */
+  overflow: hidden;
+  width: 100% !important; /* Make it full width */
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out; /* Add sliding effect */
+}
+
+.slider-description {
+ 
+  font-size: calc(28px * var(--font-scale));
+  color: #07294d;
+  font-weight: 600;
+  margin: 15px 0px 30px 0px;
+  text-align: center;
+}
+
+.slider-description:hover {
+  opacity: 1; /* Show description on hover */
+}

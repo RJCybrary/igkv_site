@@ -1,0 +1,21 @@
+
+
+
+  <app-banner [banner_heading]="'Explore Our Latest Publications'" [banner_img]="bannerIMG" banner_sub_heading="'Access journals, research papers, annual reports, and more.'" ></app-banner>
+  
+  <!-- Important Links Section -->
+  <section class="important-links container my-5">
+    <div class="row g-4">
+        <div class="col-md-4 col-sm-6" *ngFor="let link of links">
+          <div class="card link-card shadow-sm h-100">
+            <div class="card-body text-center">
+              <h6 class="card-title">{{ link.title | translate }}</h6>
+              <button class="btn btn-outline-primary" (click)="navigateTo(link)">Visit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  </section>
+  
+  

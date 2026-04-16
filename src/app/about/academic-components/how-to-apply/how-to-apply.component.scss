@@ -1,0 +1,494 @@
+/*How to apply CSS Starts*/
+
+.card {
+    border-radius: 8px;
+    height: 7rem;
+}
+
+.card-body h5 {
+    font-weight: 500;
+    font-size: calc(15px * var(--font-scale));
+}
+
+// .card-body .h6class {
+//     font-weight: 500 !important;
+//     font-size: calc(15px * var(--font-scale)) !important;
+// }
+
+.card-body a {
+    // margin-top: 10px;
+    font-size: 9px;
+    // padding: 5px 4px;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+/* patents category tab css start */
+
+h6 {
+    font-weight: 600;
+    font-size: large;
+    text-align: center;
+}
+
+.h6class {
+    font-weight: 600;
+    font-size: large;
+    text-align: center;
+}
+
+.how_to_apply_tab {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.how_to_apply_tab .nav .nav-item a {
+    padding: 20px 0;
+    background-color: #315377;
+    color: #fff;
+    font-weight: 15;
+    color: #fff;
+    display: block;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    border-radius: 40px;
+    font-weight: 600;
+}
+
+.how_to_apply_tab .nav .nav-item a.active,
+.how_to_apply_tab .nav .nav-item a:hover {
+    background-color: #fff;
+    color: #315377;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 40px;
+}
+
+.how_to_apply_tab .nav .nav-item a {
+    text-decoration: none;
+}
+
+.how_to_apply_tab .tab-content {
+    padding: 0px 50px 35px;
+}
+
+.how_to_apply_tab .tab-content .dashboard-cont .singel-dashboard h5 {
+    font-size: calc(13px * var(--font-scale));
+    color: #000;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+// .how_to_apply_tab .tab-content .dashboard-cont .singel-dashboard .h6class {
+//     font-size: calc(13px * var(--font-scale)) !important;
+//     color: #000 !important;
+//     font-weight: 600 !important;
+//     padding-bottom: 15px !important;
+// }
+
+.how_to_apply_tab .tab-content .reviews-cont {
+    padding: 45px 0 15px;
+}
+
+.how_to_apply_tab li {
+    padding: 0 0.2em;
+    justify-content: space-evenly;
+}
+
+.how_to_apply_tab li a span {
+    padding-left: 0.5em;
+}
+
+
+.Steps_Part {
+    margin: 2em;
+}
+
+
+.color-white {
+    color: white;
+}
+
+
+.Step_1 {
+    margin: 2em;
+}
+
+
+.Step_1 h4 {
+    text-align: center;
+    margin: 1em;
+    padding: 0.5em;
+
+}
+
+.Step_1 span {
+    text-align: center;
+    padding: 0.5em;
+    margin: -1.2em;
+    font-size: 18px;
+    background-color: #b34700;
+    color: #ffffff;
+}
+
+
+.Step_1 h7 {
+    text-decoration: underline;
+    margin: 1em;
+    font-weight: bold;
+}
+
+.Step_1 ul {
+    margin-top: 1em;
+
+}
+
+.Step_1 ul li {
+    line-height: 2;
+    font-size: 1.05em;
+}
+
+
+.Step_1 h3 {
+    font-weight: 700;
+    padding: 0.5em;
+    box-shadow: orange 0 0px 4px 1px;
+    border-radius: 40px;
+    font-size: large;
+}
+
+.Step_1 .h5class {
+    font-weight: 500 !important;
+    padding: 0 !important;
+    box-shadow: orange 0px 0px 0px 0px !important;
+    border-radius: 0px !important;
+    font-size: 16px !important;
+
+}
+
+.h3class_mb_0 {
+    margin-bottom: 0px !important;
+}
+
+.color-orange {
+    color: orange;
+}
+
+.color-white {
+    color: white;
+}
+
+
+
+.Step_2 {
+    margin: 2em;
+}
+
+
+.Step_2 h4 {
+    text-align: center;
+    margin: 1em;
+    padding: 0.5em;
+
+}
+
+.Step_2 span {
+    text-align: center;
+    padding: 0.5em;
+    margin: -1.2em;
+    font-size: 18px;
+    background-color: #10728b;
+    color: white;
+
+}
+
+
+.Step_2 h7 {
+    text-decoration: underline;
+    margin: 1em;
+    font-weight: bold;
+}
+
+.Step_2 ul {
+    margin-top: 1em;
+
+}
+
+.Step_2 ul li {
+    line-height: 2;
+    font-size: 1.05em;
+}
+
+
+.Step_2 h3 {
+    font-weight: 700;
+    padding: 0.5em;
+    box-shadow: #10728b 0 0px 4px 1px;
+    border-radius: 40px;
+    font-size: large;
+}
+
+.Step_2 .h5class {
+    font-weight: 500 !important;
+    padding: 0 !important;
+    box-shadow: orange 0px 0px 0px 0px !important;
+    border-radius: 0px !important;
+    font-size: 14px !important;
+    line-height: 15px;
+}
+
+.Step_3 .h5class {
+    font-weight: 500 !important;
+    padding: 0 !important;
+    box-shadow: orange 0px 0px 0px 0px !important;
+    border-radius: 0px !important;
+    font-size: 14px !important;
+    line-height: 15px;
+}
+
+
+.Step_3 {
+    margin: 2em;
+}
+
+
+.Step_3 h4 {
+    text-align: center;
+    margin: 1em;
+    padding: 0.5em;
+
+}
+
+.Step_3 span {
+    text-align: center;
+    padding: 0.5em;
+    margin: -1.2em;
+    font-size: 18px;
+    background-color: #820300;
+    color: white;
+}
+
+.color-red {
+    color: #820300;
+}
+
+.color-blue {
+    color: #10728b;
+}
+
+.Step_3 h7 {
+    text-decoration: underline;
+    margin: 1em;
+    font-weight: bold;
+}
+
+.Step_3 ul {
+    margin-top: 1em;
+
+}
+
+.Step_3 ul li {
+    line-height: 2;
+    font-size: 1.05em;
+}
+
+
+.Step_3 h3 {
+
+    font-weight: 700;
+    padding: 0.5em;
+    box-shadow: #820300 0 0px 4px 1px;
+    border-radius: 40px;
+    font-size: large;
+}
+
+
+/*How to Apply Css Ends*/
+
+
+
+//  Banner CSS Starts Here 
+
+
+#page-banner {
+    padding-top: 105px;
+    padding-bottom: 110px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#page-banner:before {
+    content: "";
+    background: #07294dd0;
+    /* Adjust the alpha value to control overlay transparency */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page-banner-cont {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+}
+
+.header {
+    font-size: calc(50px * var(--font-scale));
+    font-weight: 700;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item a {
+    color: #fff;
+    /* Set breadcrumb text color to white */
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: white;
+}
+
+.breadcrumb-item.active {
+    color: #ffc107;
+    /* Set active breadcrumb text color to yellow */
+}
+
+// Banner CSS Ends Here 
+
+
+
+// Media Query Starts 
+
+@media(max-width:600px) {
+    .how_to_apply_tab .nav {
+        display: flex;
+    }
+
+    .how_to_apply_tab .nav-justified {
+        display: grid;
+    }
+
+    .Steps_Part {
+        width: 100%;
+    }
+
+    .Step_1,
+    .Step_2,
+    .Step_3 {
+        margin: 0;
+        padding: 0;
+        margin-right: 50px;
+    }
+
+    .how_to_apply_tab .tab-content {
+        padding: 0;
+    }
+
+    .Step_1 h3,
+    .Step_2 h3,
+    .Step_3 h3 {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media(max-width:700px) {
+    .how_to_apply_tab .tab-content {
+        padding: 0;
+    }
+}
+
+@media(max-width:800px) {
+    .how_to_apply_tab .tab-content {
+        padding: 0;
+    }
+}
+
+@media(max-width:900px) {
+    .how_to_apply_tab .tab-content {
+        padding: 0;
+    }
+}
+
+// Media Query Ends Here 
+
+
+//   ===== Button ======
+.button-29 {
+    align-items: center;
+    color: #ffff;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #15577e 0, #4da2d3 100%);
+    border: 0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 38px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 18px;
+    padding-right: 18px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: calc(18px * var(--font-scale));
+}
+
+
+
+
+.button-29:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-29:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+@media (max-width: 740px) {
+    .card-body {
+        padding: 0;
+
+    }
+
+}
+
+@media only screen and (max-width: 678px) {
+    .how_to_apply_tab .nav-justified {
+        display: flex;
+    }
+
+    .card {
+        height: 5rem
+    }
+
+    .abcd {
+        display: none;
+    }
+}

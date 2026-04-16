@@ -1,0 +1,170 @@
+
+//   ======= Product Section =========
+
+  .left-content {
+    padding: 20px;
+  }
+  
+  .right-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .right-image img {
+    max-width: 400px; /* Ensures image doesn't exceed container width */
+    height: auto; /* Maintains aspect ratio */
+  ; /* Adjust as needed for your design */
+  }
+  
+  .product {
+    background-color: #fff; /* Background color for the product row */
+    padding: 20px; /* Padding around the content within the product row */
+    margin-bottom: 20px; /* Margin to separate product rows */
+}
+
+.product:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow effect on hover */
+}
+
+// ========== Production Section =========
+
+.production-section {
+    padding: 50px 0;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 250px; /* Set height as per your requirement */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+// error code when page is found
+
+/* Container styles */
+.not-found-container {
+  max-width: 700px;
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  align-items: center;
+}
+
+/* Error icon styles */
+.error-icon img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+/* Error code styles */
+.error-code {
+  font-size: 96px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+/* Error message styles */
+.error-message {
+  font-size: calc(18px * var(--font-scale));
+  margin-bottom: 30px;
+}
+
+/* Home link styles */
+.home-link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: calc(16px * var(--font-scale));
+  text-decoration: none;
+  color: #fff;
+  background-color: #2775a8;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.home-link:hover {
+  background-color: #2980b9;
+}
+
+// ----------  search --------------
+.Allnews {
+  background-color: rgb(225, 241, 241);
+}
+
+.morelink{
+  color: rgba(44, 94, 150, 0.925);
+  font-weight: 600;
+  
+}
+
+.newlink{
+margin-top: 20px;
+
+}
+
+.Allnews-search-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  padding-bottom: 19px;
+}
+
+.Allnews-search-input {
+  flex: 1;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.Allnews-search-button {
+  padding: 2px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (min-width: 768px) {
+  .Allnews-search-input {
+      width: calc(33.33% - 5px);
+      margin-bottom: 0;
+  }
+
+  .Allnews-search-button {
+      width: calc(33.33% - 150px);
+  }
+}
+
+
+.text-container h3{
+  font-weight: bold;
+  font-size: large;
+}

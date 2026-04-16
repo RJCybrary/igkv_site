@@ -1,0 +1,154 @@
+
+  // -------------------Contact us section css start -----------
+
+
+
+
+.contact_us_section .contact_details {
+    background:#fff;
+}
+
+.forpadding{
+    padding: 10px;
+    background-color:white;
+    color: #16628f;
+    box-shadow: #16628f 0 4px 35px -14px;
+    border-radius: 30px;
+}
+
+
+.page-heading { 
+    display: flex;
+    align-items: center;
+}
+
+  .icon-font-size{
+    font-size: calc(13px * var(--font-scale));
+    padding: 0.5em;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid;
+    background-color: #16628f;
+    color: white;
+   }
+  
+
+  
+  .contact-us-heading{
+    height: auto;
+    color:whitesmoke;
+    font-weight: 900;
+    font-size: calc(20px * var(--font-scale));
+    padding: 20px;
+    background-color: #16628f;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+  }
+
+  .contact-us-heading .social-media{
+
+    text-align: center;
+    justify-content: center; display: flex;
+    font-size: medium;
+  }
+    
+.contact-us-heading .social-media span{
+ align-items: center;
+ margin: 1.5em;
+ padding: 0.5em;
+ display: flex;
+ font-weight: 600;
+ color: white;
+}
+
+
+  .contact-us-heading .heading{
+    margin: 0.5em; padding: 0.5em; font-size: xx-large;font-weight: 900; justify-content: center; display: grid;
+  }
+
+  .contact-us-heading .text{
+    color: white;
+
+  }
+
+
+  .contact-us-heading .opening-hours{
+    text-align: center; padding: 0.5em;
+  }
+
+
+ 
+  .contact-us-heading .opening-hours .heading{
+    font-size: large;font-weight: 600;justify-content: center; display: flex;
+  }
+
+
+  .contact-us-heading .opening-hours .text{
+    text-align: center; font-weight: 500; color: #07294d
+  }
+
+
+  
+    .forpadding .Details{
+      margin-top: 2em;margin-bottom: 1em;
+    }
+
+    .forpadding .Details .address{
+      text-align: center; padding: 0.5em;
+    }
+
+    .forpadding .Details h4{
+      font-size: large;font-weight: 600; align-items: center; justify-content: center; display: flex; color: #0000;
+    }
+
+    .forpadding .Details p{
+      text-align: center; font-weight: 500; color: #07294d
+    }
+
+    .forpadding .Details .mobile_no{
+      text-align: center; padding: 0.5em;
+    }
+
+    .forpadding .Details .mobile_no p{
+  text-align: center;  font-weight: 500; color: #07294d
+}
+    
+.forpadding .Details .mobile_no h4{
+      font-size: large;font-weight: 600; justify-content: center; display: flex;
+    }
+
+
+    .forpadding .Details .email{
+      text-align: center; padding: 0.5em;
+    }
+
+    .forpadding .Details .email p{
+  text-align: center;  font-weight: 500; color: #07294d
+}
+
+ 
+.forpadding .Details .email h4{
+  font-size: large;font-weight: 600; justify-content: center; display: flex;
+}
+
+  
+    .contact_us_section .Officer_name h2 {
+     text-align: center;
+     align-items: center;
+     margin: 0.5em;
+     font-weight: 900;
+  }
+  
+  .contact_us_section .images {
+      align-items: center !important;
+      display: flex !important;
+      padding-right: 0 !important;
+  }
+  
+  .contact_us_section .contact_details {
+      background:#fff;
+     
+  }
+ 
+    

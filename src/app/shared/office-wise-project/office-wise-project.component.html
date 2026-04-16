@@ -1,0 +1,87 @@
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"
+  [ngStyle]="{'background-image': 'url(' + imageUrl + ')'}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-banner-cont">
+          <h2 class="header"> Projects</h2>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <!-- <li class="breadcrumb-item"><a >Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"></li> -->
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container pt-3">
+  <div class="row">
+    <h2 class="section-title1">Projects Detail</h2>
+
+  </div>
+</div>
+
+<section id="specials" class="specials mt-3 projectDetailRow" *ngIf="scheme_data">
+  <div class="container" data-aos="fade-up">
+
+
+    <div style="background-color: rgb(246, 250, 253);" class="row projectDetailRow" data-aos="fade-up"
+      data-aos-delay="100" *ngFor="let item of paginatedContents; let i = index">
+      <div class="tab-content">
+        <div class="tab-pane active show" [attr.id]="'tab-' + i">
+          <!-- <h1> {{ i + 1 }}.</h1>  -->
+          <div class="row">
+            <div class="col-lg-12 details order-2 order-lg-1">
+              <h3>{{item.Scheme_Name}}</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 details order-2 order-lg-1 table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Schemes Year </th>
+                    <th>Source Head </th>
+                    <th>Major Head </th>
+                    <th>Budget (Lakh)</th>
+                    <th>PI Name</th>
+                    <th>Document</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{item.financial_Year}}</td>
+                    <td>{{item.Source_Name}}</td>
+                    <td>{{item.MajorHead_Name}}</td>
+                    <td>{{item.Budget_Amount}}</td>
+                    <td>{{item.PI_Name}}</td>
+                    <td><a href="#" target="_blank"><i class="fa-solid fa-file-pdf"
+                          style="color: rgb(45, 100, 172);"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-7 details order-2 order-lg-1">
+              <!-- <h5>{{item.Scheme_Name}}</h5> -->
+              <p class="" style="text-align: justify;">{{item.project_overview}}</p>
+            </div>
+            <div class="col-lg-5 text-center order-1 order-lg-2">
+              <img src="" width="300px" max-height="300px" onerror="this.src=''" alt="office project image"
+                class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<mat-paginator *ngIf="filteredContents" [length]="filteredContents.length" [pageSize]="pageSize"
+  [pageSizeOptions]="[5,10, 20, 30, 50, 100]" (page)="onPageChange($event)" aria-label="Select page">
+</mat-paginator>

@@ -1,0 +1,239 @@
+
+.routes .facility-card:hover {
+  transform: scale(1.05); /* Increase size on hover */
+}
+
+.routes .facility-card:focus,
+.routes .facility-card:active {
+  transform: scale(0.95); /* Scale down the card when it is focused or active */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Add box shadow to create depth effect */
+ border-bottom: 2px ;
+}
+
+// Side nav Css Starts 
+.routes {
+  border: solid 1px; 
+  border-color: rgb(202, 200, 200);  
+  background-color: rgb(255, 255, 255);
+  height: 30em;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+
+.routes .facility-card {
+  padding: 10px;
+  border-bottom: 0.5px dotted black ;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.routes .facility-card img{
+  width: 66px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.routes .facility-card span{
+  margin-bottom: 10px;
+  font-size: calc(14px * var(--font-scale));
+  line-height: 20px;
+  color: #000;
+  font-weight: 600;
+  padding: 5px;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out; 
+}
+
+.subhead{
+  margin-top: 4.2em !important;
+  border-top: 7px solid  #fc654c;
+  padding: 20px;
+  font-weight: 600 !important;
+  font-size: calc(15px * var(--font-scale)) !important;
+  color: #000;
+  background-color: #fcfcfc;
+  border-left: solid rgb(202, 200, 200) 1px;
+  border-right: solid rgb(202, 200, 200) 1px;
+}
+
+// Slider CSS 
+
+/* image-slider.component.css */
+.slider-container {
+  position: relative;
+  width: 100% !important;
+  height: 27em; /* Make the slider container responsive */
+  overflow: hidden;
+}
+
+.slider-container img{
+  position: relative;
+  overflow: hidden;
+  height: 25em !important;
+  width: 100% !important; /* Make it full width */
+  transition: transform 0.5s ease-in-out; /* Add sliding effect */
+}
+
+.slider-description {
+ 
+  font-size: calc(28px * var(--font-scale));
+  color: #07294d;
+  font-weight: 600;
+  margin: 15px 0px 30px 0px;
+  text-align: center;
+}
+
+.slider-description:hover {
+  opacity: 1; /* Show description on hover */
+}
+
+
+.Description {
+  padding: 20px;
+  // background-color: #f2f2f2;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 100%; /* Ensure it doesn't exceed the container's width */
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.Description .title {
+  font-weight: 600;
+  color: #000;
+  font-size:13px ;
+  margin-bottom: 16px;
+}
+
+.Description .slider-description {
+  font-size: calc(28px * var(--font-scale));
+  line-height: 38px;
+  font-weight: bold;
+  color: #000;
+  text-rendering: optimizeLegibility;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.Description .about {
+  font-size: calc(13px * var(--font-scale));
+  color: #000;
+  line-height: 22px;
+  margin-bottom: 20px;
+  text-align: justify;
+  font-weight: 400;
+
+}
+
+
+/* .Description .highlights ul {
+  list-style-type:disc;
+  padding: 0;
+  margin: 0;
+  margin-left: 1em;
+}
+
+.Description .highlights ul li {
+  margin-bottom: 10px;
+  color: #000;
+  font-size: calc(13px * var(--font-scale));
+  line-height: 20px;
+  padding-left: 16px;
+  font-weight: 400;
+} */
+
+/* Media Query for responsiveness */
+@media screen and (max-width: 768px) {
+  .Description {
+      padding: 15px;
+  }
+
+  .Description .slider-description {
+      font-size: calc(16px * var(--font-scale));
+  }
+
+  .Description .about {
+  font-size: calc(13px * var(--font-scale));
+   color: #000;
+  line-height: 22px;
+  margin-bottom: 16px 
+}
+
+// Media Queries 
+
+@media screen and (max-width: 768px) {
+  /* Add responsive styles here */
+
+
+  .first_section {
+      display: flex;
+      flex-direction: column-reverse;
+  }
+
+  // .Contents{
+  //     margin-top: 4em;
+  // }
+
+  .Scrollstyle1{
+      margin: 0;
+      padding: 0;
+  }
+
+  .first_section .first_row .card {
+      margin: 2%;
+  }
+
+  .building-details {
+      height: auto;
+  }
+
+  .slider-description{
+      line-height: 1.2em;
+  }
+
+  /* Add more responsive styles as needed */
+}
+
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+
+  .routes {
+      height: auto; /* Adjust height for smaller screens */
+  }
+
+  .routes::-webkit-scrollbar,
+  .routes::-moz-scrollbar {
+      display: none; /* Hide scrollbar on smaller screens */
+  }
+
+  .routes {
+      overflow-y: visible; /* Allow content to expand vertically on smaller screens */
+  }
+
+  .subhead {
+      padding: 15px; /* Adjust padding for smaller screens */
+      margin-top: 1.2em !important;
+  }
+
+  /* Add more responsive styles as needed */
+}
+
+
+
+@media screen and (max-width: 1000px) {
+   
+  .routes{
+  display: none;
+    }
+
+}
+
+.banner1{
+  position: unset !important;
+}

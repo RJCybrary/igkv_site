@@ -1,0 +1,105 @@
+<app-banner [banner_heading]="'Krishi Vigyan Kendras'" [banner_img]="bannerImg"></app-banner>
+
+
+
+<section id="overview" class="pt-3 pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-title1">Overview</h2>
+                <div class="about-cont">
+                    <p class="contents">In Chhattisgarh, Krishi Vigyan Kendras (KVKs) serve as crucial institutions for
+                        agricultural development. These centers are dedicated to addressing the specific agricultural
+                        challenges and opportunities in the region. Chhattisgarh's KVKs focus on disseminating locally
+                        relevant knowledge, technologies, and practices to farmers. They play a pivotal role in
+                        promoting sustainable and climate-resilient agriculture, improving crop yields, and enhancing
+                        the livelihoods of farming communities. Through on-farm demonstrations, training programs, and
+                        collaborative research, KVKs in Chhattisgarh contribute significantly to the state's
+                        agricultural growth, empowering farmers with the necessary skills and information for efficient
+                        and profitable farming practices in the unique agro-climatic conditions of Chhattisgarh.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Overview section start-->
+<section id="aims" class="pt-3 gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-title1">Aims And Objectives</h2>
+                <div class="about-cont listing">
+                    <ul>
+                        <li class="contents">To demonstrate the latest Agricultural Technologies to the farmers as well
+                            as the extension workers of the state Department of agriculture/Non-Governmental
+                            organization with a view to reduce the time lag between the technologies generation and it's
+                            adoption.</li>
+                        <li class="contents">To test and verify the technologies in the socio economic condition of the
+                            farmers and to identify the production constraints.</li>
+                        <li class="contents">To get first hand scientific feed back from the fields and passing it to
+                            the research system in order to keep the scientist abreast with the performance of the
+                            technologies and the farming problems, so that they re -orient their research, education and
+                            training programmes accordingly.</li>
+                        <li class="contents">To impart training to the farmers, farmwomen, rural youth and field level
+                            extension functionaries by following the principles of "teaching by doing" and "learning by
+                            doing".</li>
+                        <li class="contents">To provide training and communication support to the line department of the
+                            state/NGOs.</li>
+                    </ul>
+                </div>
+            </div> <!-- about cont -->
+
+        </div> <!-- row -->
+
+    </div> <!-- container -->
+</section>
+<!-- Overview section end-->
+
+
+
+<!-- kvk list -->
+<section id="kvk-list" class="pt-3 pb-3 mb-5 " style="background-color:#fff">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- <h2 class="section-title1">Constituent Colleges</h2> -->
+                <h2 class="section-title1">Krishi Vigyan Kendras</h2>
+                <div class="about-cont">
+                    <section id="department-part">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <ng-container *ngFor="let data of kvklist">
+                                    <div class="col-6 col-sm-6 col-md-3 ">
+                                        <div class="singel-department mt-30"
+                                            style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;">
+                                            <div class="image">
+                                                <a [routerLink]="['kvk', data.Office_Code]"
+                                                    [attr.aria-label]="'View details of Krishi Vigyan Kendra ' + data.officeName + ' in ' + data.districtName">
+                                                    <img class="background_img" [src]="AllCollegeIcon" alt="">
+                                                    <div class="add-cart">
+                                                        <span>
+                                                            <i><img [src]="kvk_icon" alt=""></i>
+                                                        </span>
+                                                        <div>
+                                                            <h3 class="p1">{{ data.officeName }}</h3>
+                                                            <!-- Display office name -->
+                                                            <p class="p2">{{ data.districtName |titlecase }}</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ng-container>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>

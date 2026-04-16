@@ -1,0 +1,14 @@
+{
+    "/assets/i18n/*": {
+      "target": "https://igkv.ac.in/test",
+      "pathRewrite": { "^/assets/i18n": "/test/assets/i18n" },
+      "secure": false,
+      "changeOrigin": true
+    },
+    "/site/api": {
+    "target": "https://igkv.ac.in",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+  }

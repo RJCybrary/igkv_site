@@ -1,0 +1,148 @@
+/* Counter css */
+  .years-counts .hero{  
+    justify-content: center;
+  }
+
+  /* Main container styles */
+.years-counts {
+  background: linear-gradient(120deg, #f0f4f8 0%, #d9e4f5 100%);
+  // padding: 5px ;
+  text-align: center;
+}
+
+/* Counter box styles */
+.counter {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 15px;
+  margin: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: calc(18px * var(--font-scale));
+}
+
+/* Decorative background circle */
+.counter::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  top: -30px;
+  right: -30px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for the counter */
+.counter:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Change circle size and opacity on hover */
+.counter:hover::before {
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Active state for the counter */
+.counter.active {
+  transform: scale(1.05); /* Slightly larger when active */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  border: 2px solid #3498db; /* Border to indicate active state */
+  background: #3498db; /* Background color change */
+}
+
+/* Active state colors */
+#year2017 .counter.active {
+  background: #d32f2f; /* Dark red */
+  font-weight: 700;
+}
+#year2018 .counter.active {
+  background: #1976d2; /* Dark blue */
+}
+#year2019 .counter.active {
+  background: #8e24aa; /* Dark purple */
+}
+#year2020 .counter.active {
+  background: #388e3c; /* Dark green */
+}
+#year2022 .counter.active {
+  background: #f57c00; /* Dark orange */
+}
+
+/* Text and icon color change when active */
+.counter.active .counter-value,
+.counter.active .counter-icon {
+  color: #ffffff; /* White text and icon color when active */
+}
+
+/* Individual colors for each counter */
+#year2017 .counter {
+  background: #f4c7cc; /* darker pink */
+}
+
+#year2018 .counter {
+  background: #cfe3f8; /* darker light blue */
+}
+
+#year2019 .counter {
+  background: #e1c7eb; /* darker lavender */
+}
+
+#year2020 .counter {
+  background: #cfe8d3; /* darker mint green */
+}
+
+#year2022 .counter {
+  background: #f5d9b8; /* darker peach */
+}
+
+/* Color change on hover for each counter */
+#year2017 .counter:hover {
+  background: #e57373;
+}
+#year2018 .counter:hover {
+  background: #64b5f6;
+}
+#year2019 .counter:hover {
+  background: #ba68c8;
+}
+#year2020 .counter:hover {
+  background: #81c784;
+}
+#year2022 .counter:hover {
+  background: #ffb74d;
+}
+
+/* Text color change on hover */
+#year2017 .counter:hover .counter-value,
+#year2018 .counter:hover .counter-value,
+#year2019 .counter:hover .counter-value,
+#year2020 .counter:hover .counter-value,
+#year2022 .counter:hover .counter-value {
+  color: #ffffff;
+}
+
+/* Icon color change on hover */
+#year2017 .counter:hover .counter-icon,
+#year2018 .counter:hover .counter-icon,
+#year2019 .counter:hover .counter-icon,
+#year2020 .counter:hover .counter-icon,
+#year2022 .counter:hover .counter-icon {
+  color: #f1c40f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .counter {
+    margin: 20px auto;
+    width: 80%;
+  }
+}

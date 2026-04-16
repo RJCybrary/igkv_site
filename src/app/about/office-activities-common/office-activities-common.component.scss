@@ -1,0 +1,144 @@
+
+
+.Activity .Activity-member {
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.Activity .Activity-member .member-img {
+  position: relative;
+  overflow: hidden;
+  height: 12em;
+
+}
+
+.Activity .Activity-member .member-img img {
+  height: 100%;
+}
+
+
+.Activity .Activity-member .social {
+  position: absolute;
+  right: -100%;
+  top: 30px;
+  opacity: 0;
+  border-radius: 4px;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+
+.Activity .Activity-member .social a {
+  transition: color 0.3s;
+  color: rgba(55, 55, 63, 0.4);
+  margin: 15px 12px;
+  display: block;
+  line-height: 0;
+  text-align: center;
+}
+
+.Activity .Activity-member .social a:hover {
+  color: rgba(55, 55, 63, 0.9);
+}
+
+.Activity .Activity-member .social i {
+  font-size: calc(18px * var(--font-scale));
+}
+
+.Activity .Activity-member .member-info {
+  height: 5em;
+}
+
+.Activity .Activity-member .member-info h4 {
+  font-weight: 600;
+  font-size: calc(14px * var(--font-scale));
+  margin-bottom: 0;
+  padding: 0.5em;
+
+}
+
+.Activity .Activity-member .activities-date {
+  padding: 0.2em 0;
+  margin-bottom: 0;
+  color: #fff;
+  background-color: #16628f;
+}
+.Activity .Activity-member .activities-date p{
+  margin-bottom: 0;
+}
+
+.Activity .Activity-member .member-info span {
+  display: block;
+  font-size: calc(14px * var(--font-scale));
+  font-weight: 400;
+  color: rgba(33, 37, 41, 0.4);
+}
+
+.Activity .Activity-member .member-info p {
+  font-style: italic;
+  font-size: calc(14px * var(--font-scale));
+  padding-top: 15px;
+  line-height: 26px;
+  color: rgba(33, 37, 41, 0.7);
+}
+
+.Activity .Activity-member:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0 30px rgba(55, 55, 63, 0.15);
+  ;
+}
+
+.Activity .Activity-member:hover .social {
+  right: 8px;
+  opacity: 1;
+}
+
+.more {
+  font-weight: 500;
+  color: #07294d !important;
+  text-align: center;
+  margin: 0.5em;
+}
+
+.color-green {
+  color: #07294d;
+}
+
+
+
+/* background images blured css */
+.banner {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: cover;
+  filter: blur(5px);
+}
+
+img {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.content {
+  z-index: 2;
+ 
+}

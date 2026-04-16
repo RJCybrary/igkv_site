@@ -1,0 +1,67 @@
+<app-banner [banner_heading]="banner_heading" [banner_img]="bannerImg"></app-banner>
+
+<section class="container-fluid" >
+  <div class="container">
+    <h2 class=" mt-3">
+     {{nepHead}}
+    </h2>
+
+     <div class="about-cont">
+                    <p class="contents">{{overview}}</p>
+                </div>
+  </div>
+
+</section> 
+
+<section class="container-fluid pt-3 pb-3 gray-bg" >
+    <div class="container">
+        <h2 class="section-title1">{{banner_heading}}</h2>
+
+        <app-pagination
+     [currentPages]="currentPages"
+     [totalrecords]="totalrecords"
+     (rowsPerPageChanged)="onRowsPerPageChanged($event)"
+       (pageChanged)="onPageChanged($event)"
+       (searchCriteria)="onSearchCriteriaReceived($event)">
+
+       <mat-card  *ngFor="let data of top_news;let i=index" class="notification text-dark mt-3">
+        <div class="header" *ngIf="top_news">
+          <span class="date"><i class="fa-solid fa-calendar-days" style="margin-right: 5px;color: #07294d;"></i>{{
+            data.News_Date }}</span>
+            <span class="title">{{ data.Main_Title }}</span>
+          <!-- <a [routerLink]="['/about/news/news-details',data.News_Notification_Main_Id]">
+            <span class="title">{{ data.Main_Title }}</span>
+          </a> -->
+        </div>
+        <div class="content">
+          <div class="sub-notifications">
+            <ul *ngIf="data.attachment && data.attachment[0]">
+              <li *ngFor="let data1 of data.attachment[0]; let i = index" class="sub-notification">
+                <a href="{{data1.File_Path}}" target="_blank">
+                  <h5><i class="fa-solid fa-lg fa-file-pdf" style="color:red;"></i> {{ data1.Sub_Title}}</h5>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- <span *ngIf="data.PresentPrevious=='Y'" class="Readmore" (click)="toggleReadMore(i)">Read More</span> -->
+          <!-- <div *ngIf="isReadMoreOpen[i]">
+            <ul>
+              <li *ngFor="let data2 of data.attachment">
+                <a href="{{data2.File_Path}}" target="_blank">
+                  <h5 style="font-size: calc(13px* var(--font-scale));"><i class="fa-solid fa-lg fa-file-pdf" style="color:red;"></i> {{ data2.Sub_Title}}</h5>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </mat-card>
+      
+      <app-no-data *ngIf="top_news?.length === 0 " ></app-no-data>
+
+        </app-pagination>
+        
+    </div>
+
+   
+</section>
+

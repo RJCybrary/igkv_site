@@ -1,0 +1,45 @@
+<section
+  id="page-banner"
+  class="bg_cover"
+  role="img"
+  [attr.aria-label]="banner_heading + ' page banner image'"
+  data-overlay="8"
+  [style.backgroundImage]="'url(' + banner_img + ')'">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="page-banner-cont">
+
+          <!-- ✅ SINGLE H1 -->
+          <h1 class="header">
+            {{ banner_heading }}
+          </h1>
+
+          <!-- ✅ Breadcrumb Navigation -->
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+
+              <li class="breadcrumb-item">
+                <a routerLink="/" aria-label="Go to Home page">
+                  Home
+                </a>
+              </li>
+
+              <li 
+                class="breadcrumb-item active"
+                aria-current="page">
+                {{ banner_heading }}
+              </li>
+
+            </ol>
+          </nav>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,75 @@
+<app-loder *ngIf="loading"></app-loder>
+<app-banner *ngIf="Employee_List" [banner_heading]="Employee_List[0].Board_Name_E" [banner_img]="imageUrl"></app-banner>
+
+<div class="container-fluid gray-bg" *ngIf="Administrative_Board_ID == 2">
+    <div class="row" style="justify-content: end; " *ngIf="Administrative_Board_ID == 2">
+        <button class="mt-3" mat-stroked-button (click)="scrollToDiv()" style="background-color: rgba(16, 214, 214, 0.89); width: 200px;">View Regulations</button>
+    </div> 
+</div>
+
+
+<section *ngIf="Employee_List" id="Section1" class="pt-90 gray-bg">
+    <div class="container">
+       <div class="row who-is-who">
+      
+        <ng-container *ngFor="let content of Employee_List">
+            <div class="col-md-6">
+            <div class="section-title office  mt-3">
+                    <h2 >{{content.Office_Name}}</h2>
+             </div> 
+           <div class="col-md-12 mb-5"  style="padding:10px"> 
+               <div class=" singel-event-list " style="margin: auto;">
+                   <div class="col event-thum officer_img">
+                       <img [src]="content.Member_Photo_URL" (error)="onErrorImage($event)" 
+                       class="img-thumbnail "z
+                       onerror="this.src='assets/images/Img_notFound.png'"  style="min-height: 140px; max-height: 140px; width: 140px;" alt="staff image">
+                   </div>
+                   <div class="event-cont">
+                        <span class="emp_name"><i class="fa"></i><b style="font-size: calc(15px * var(--font-scale));">{{content.Member_Name_Eng}}</b></span> <hr>
+                        <span class="post_name">{{content.Designation}}</span>
+                        <hr>
+                        <span class="contact"><i class="fa fa-phone"></i>&nbsp;{{content.Member_Contact}}</span>
+                        <hr>
+                        <span class="email" style="overflow-x: hidden;"><i class="fa-solid fa-envelope"></i>&nbsp;{{content.Member_Email_ID}}</span>
+                        <hr>
+                        <div class="view-more">
+                            <a (click)="routetoprofile(content.Emp_ID)">View More<i class="fa-solid fa-arrow-right color-orange"></i></a>
+                        </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+     
+        </ng-container>
+       </div> <!-- row -->
+  
+      
+    </div> <!-- container -->
+</section>
+
+
+<div class="container" #targetDiv *ngIf="Administrative_Board_ID == 2">
+    <div class="row mt-3 pb-3">
+        <h2>
+            Regulations
+        </h2>
+    </div>
+    <div class="row set pb-3" style="margin-bottom: 10px;">
+        <div class="col-md-6">
+            <div class="news-tab">
+                <ul *ngFor="let item of GetingNews" style=" list-style-type: none;">
+                    <li>
+                        <!-- <p>{{ item.linkname }}</p> -->
+                        <a style="font-size: calc(14px * var(--font-scale)); font-weight: 500; color: rgba(23, 90, 179, 0.952);" [href]="item.TargetUrl" target="_blank"><span><i class="fa-solid fa-newspaper"></i></span> {{ item.linkname }}</a>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+           <div class="news">
+           </div>
+        </div>
+       
+    </div>
+</div>

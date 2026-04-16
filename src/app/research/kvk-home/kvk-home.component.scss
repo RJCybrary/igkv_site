@@ -1,0 +1,170 @@
+/* Departments css start */
+
+.departments {
+    padding-top: 15px;
+    /* background-color:blue */
+    background-color: rgba(236, 238, 240, 0.945);
+}
+
+.department-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: 0.3s;
+    border: 1px solid rgb(19, 111, 173);
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+.department-icon {
+    font-size: calc(32px * var(--font-scale));
+    padding-right: 10px;
+    line-height: 1;
+}
+
+h3 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: calc(16px * var(--font-scale));
+}
+
+a {
+    color: #37423b;
+    transition: 0.3s;
+}
+
+.department-card:hover {
+    border-color: #89b5bd;
+    transform: scale(1.05);
+    /* Zoom effect on hover */
+    background-color: rgb(164, 215, 231);
+}
+
+.department-card:hover a {
+    color: #ffffff;
+}
+
+/* Departments css end */
+
+
+
+/*=====================================================
+    10. DEPARTMENT css 
+======================================================*/
+.singel-department {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.singel-department .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.singel-department .image img {
+    padding: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+
+}
+
+.singel-department .image:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.singel-department .image .add-cart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255);
+    opacity: 1;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(20px * var(--font-scale));
+    color: #fff;
+    font-weight: 100;
+}
+
+.singel-department .image:hover .add-cart {
+    opacity: 0.7;
+    background-color: #07294d;
+    cursor: pointer;
+}
+
+
+.singel-department .image .background_img {
+    max-height: 13em;
+    min-height: 13em;
+    min-width: 20em;
+    max-width: 20em;
+
+}
+
+.singel-department .image:hover .add-cart img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.singel-department .image .add-cart div .p1 {
+    color: black;
+    padding-top: 10px;
+    font-size: calc(13px * var(--font-scale));
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+
+.singel-department .image .add-cart div .p2 {
+    color: black;
+    padding-top: 10px;
+    font-size: calc(16px * var(--font-scale));
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: center !important;
+}
+
+.singel-department:hover div .p1 {
+    color: white !important;
+}
+
+
+.singel-department:hover div .p2 {
+    color: white !important;
+}
+
+.singel-department .image .add-cart span i {
+
+    width: 40px;
+    line-height: 40px;
+    filter: brightness(100%);
+    text-align: center;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+.singel-department .image .add-cart:hover span i {
+    filter: brightness(0) invert(1);
+}
+
+.singel-department .image .add-cart span {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}

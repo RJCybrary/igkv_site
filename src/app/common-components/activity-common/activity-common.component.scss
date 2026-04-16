@@ -1,0 +1,192 @@
+/* vc activites */
+.activity-container {
+    position: relative;
+    width: 100%;
+    height: 22em;
+    overflow: hidden;
+    padding: 0% !important;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  }
+  
+  .activity-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+  }
+  
+  .activity-container:hover .activity-img {
+    transform: scale(1.2);
+  }
+  
+  .activity-container .activity-description p {
+    font-size: calc(14px * var(--font-scale));
+
+  }
+
+
+  .activity-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(248, 245, 245, 0.891);
+    color: #000000;
+    padding: 5px;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  
+  .activity-container:hover .activity-description {
+    opacity: 1;
+  }
+  
+  .calendar-icon {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    color: #fff;
+    font-size: calc(24px * var(--font-scale));
+  }
+  
+  .calendar-date {
+    position: absolute;
+    top: 2px;
+    right: 24px;
+	color:#fff;
+	background-color:#0000009c;
+	padding: 0.1em;
+	border-radius: 0.5em;
+  }
+  
+  .activity-container p {
+    font-weight: 600;
+    color: #050505;
+    margin-bottom: 0;
+   
+  }
+  
+  .calendar-date span {
+    font-size: calc(10px * var(--font-scale));
+  }
+  
+  .activity-container-new {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    padding: 0% !important;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  }
+  
+  .activity-container-new p {
+    font-weight: 600;
+    color: #080808;
+    line-height: 1.4;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: calc(14px * var(--font-scale));
+  }
+  
+  .activity-container-new:hover .activity-img {
+    transform: scale(1.2);
+  }
+  
+  /* more button  */
+  .button-59 {
+    /* // margin: 4px; */
+    align-items: center;
+    background-color: #e4fcf7;
+    border: 1px solid  rgb(7, 210, 236);
+    box-sizing: border-box;
+    color: rgb(7, 210, 236);
+    border-radius: 20px;
+    cursor: pointer;
+    fill:  rgb(7, 210, 236);
+    font-family: Inter,sans-serif;
+    font-size: calc(16px * var(--font-scale));
+    font-weight: 600;
+    /* //   height: 48px; */
+    justify-content: center;
+    /* //   letter-spacing: -.8px; */
+    /* //   line-height: 24px; */
+    outline: 0;
+    text-align: left;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+    
+    .button-59:focus {
+    color: #171e29;
+    }
+    
+    .button-59:hover {
+      /* border-color: rgb(7, 210, 236); */
+    color: rgb(255, 255, 255);
+    fill: rgb(7, 210, 236);
+    background: rgb(7, 210, 236);
+    }
+    
+    .button-59:active {
+    border-color: rgb(7, 210, 236);
+    color: rgb(255, 255, 255);
+    background: linear-gradient(#f3e5fc,#e9fcf6) 
+    
+    }
+    
+    @media (min-width: 768px) {
+    .button-59 {
+    min-width: 170px;
+    }
+    }
+
+    //   ------------ header ---------------
+
+.page-heading {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .heading-text {
+    margin-right: 20px;
+    font-size: calc(32px * var(--font-scale));
+    font-weight: bold;
+    position: relative;
+    font-family: 'Arvo', serif;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Exo', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Young Serif', serif;
+    font-family: 'Zilla Slab', serif;
+  }
+  
+  .heading-text::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 1px;
+    width: 90px;
+    height: 4px;
+    background-color: #239ae9;
+  }
+  
+  .image-row {
+    display: flex;
+    align-items: center;
+    height: 60vh;
+  }
+
+
+ .fas{
+  color: #fff;
+ }

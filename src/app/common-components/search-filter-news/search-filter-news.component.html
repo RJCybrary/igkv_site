@@ -1,0 +1,33 @@
+<div class="search-bar">
+    <!-- General Search -->
+    <input
+      type="text"
+      placeholder="title or attachement"
+      [(ngModel)]="searchText"
+      (keyup.enter)="onSearch()"
+    />
+  
+    <!-- Year Filter Dropdown -->
+    <select [(ngModel)]="selectedYear" (change)="onFilterChange()">
+      <option value="">Select Year</option>
+      <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+    </select>
+
+    <!-- months filter dropdown -->
+    <select [(ngModel)]="selectedMonth" (change)="onFilterChange()">
+      <option value="">Select Month</option>
+      <option *ngFor="let month of month" [value]="month">{{ month }}</option>
+    </select>
+  
+    <!-- Venue Filter Dropdown -->
+    <!-- <select [(ngModel)]="selectedVenue" (change)="onFilterChange()">
+      <option value="">Select Venue</option>
+      <option *ngFor="let venue of venues" [value]="venue">{{ venue }}</option>
+    </select> -->
+    
+    <button class="search-btn" (click)="onSearch()">Search</button>
+
+    <!-- Clear Filters -->
+    <button class="clear-btn" (click)="clearFilters()">Clear Filters</button>
+  </div>
+  

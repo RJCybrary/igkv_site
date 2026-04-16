@@ -1,0 +1,399 @@
+
+
+/* banner heading */
+
+#page-banner {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-size: cover !important;
+  background-position: center !important;
+  position: relative;
+}
+
+#page-banner:before {
+  content: "";
+  background: #07294dd0;
+  /* Adjust the alpha value to control overlay transparency */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.page-banner-cont {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+}
+
+.header {
+  font-size: calc(50px * var(--font-scale));
+  font-weight: 700;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item a {
+  color: #fff;
+  /* Set breadcrumb text color to white */
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  color: white;
+}
+
+.breadcrumb-item.active {
+  color: #ffc107;
+  /* Set active breadcrumb text color to yellow */
+}
+
+
+.banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  margin-top: 2em;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 41, 77, 0.75);
+}
+
+.banner-height{
+  height:200px !important;
+}
+
+
+
+
+  
+.routes .facility-card:hover {
+    transform: scale(1.05); /* Increase size on hover */
+  }
+
+  .routes .facility-card:focus,
+  .routes .facility-card:active {
+    transform: scale(0.95); /* Scale down the card when it is focused or active */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Add box shadow to create depth effect */
+   border-bottom: 2px ;
+}
+  
+// Side nav Css Starts 
+.routes {
+    border: solid 1px; 
+    border-color: rgb(202, 200, 200);  
+    background-color: rgb(255, 255, 255);
+    height: 13em;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+
+.routes .facility-card {
+    padding: 10px;
+    border-bottom: 0.5px dotted black ;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.routes .facility-card img{
+    width: 66px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.routes .facility-card span{
+    margin-bottom: 10px;
+    font-size: calc(14px * var(--font-scale));
+    line-height: 20px;
+    color: #000;
+    font-weight: 600;
+    padding: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out; 
+}
+
+.subhead{
+    margin-top: 4.2em !important;
+    border-top: 7px solid  #fc654c;
+    padding: 20px;
+    font-weight: 600 !important;
+    font-size: calc(15px * var(--font-scale)) !important;
+    color: #000;
+    background-color: #fcfcfc;
+    border-left: solid rgb(202, 200, 200) 1px;
+    border-right: solid rgb(202, 200, 200) 1px;
+}
+
+// Slider CSS 
+
+/* image-slider.component.css */
+.slider-container {
+    position: relative;
+    width: 100% !important;
+    height: 27em; /* Make the slider container responsive */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.slider-container img{
+    position: relative;
+    overflow: hidden;
+    height: 25em !important;
+    width: 100% !important; /* Make it full width */
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out; /* Add sliding effect */
+}
+
+.slider-description {
+   
+    font-size: calc(28px * var(--font-scale));
+    color: white;
+    font-weight: 600;
+    margin: 10px 0px 19px 0px;
+    padding: 10px 0 10px 0;
+    text-align: center; 
+    background-color: #e24b32;    
+}
+
+.slider-description:hover {
+    opacity: 1; /* Show description on hover */
+}
+
+
+.Description {
+    padding: 20px;
+    // background-color: #f2f2f2;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.Description .title {
+    font-weight: 600;
+    color: #000;
+    font-size:13px ;
+    margin-bottom: 16px;
+}
+
+.Description .slider-description {
+    font-size: calc(28px * var(--font-scale));
+    line-height: 38px;
+    font-weight: bold;
+    color: #000;
+    text-rendering: optimizeLegibility;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.Description .about {
+    font-size: calc(13px * var(--font-scale));
+    color: #000;
+    line-height: 22px;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-weight: 400;
+
+}
+
+.about-cont h4{
+
+    font-size: calc(15px * var(--font-scale));
+    font-weight: 500;
+    margin: 5px 0 5px 0;
+}
+
+.Description .highlights ul {
+    list-style-type:disc;
+    padding: 0;
+    margin: 0;
+    margin-left: 1em;
+}
+
+.Description .highlights ul li {
+    margin-bottom: 10px;
+    color: #000;
+    font-size: calc(13px * var(--font-scale));
+    line-height: 20px;
+    padding-left: 16px;
+    font-weight: 400;
+}
+
+/* Media Query for responsiveness */
+@media screen and (max-width: 768px) {
+    .Description {
+        padding: 15px;
+    }
+
+    .Description .slider-description {
+        font-size: calc(16px * var(--font-scale));
+    }
+
+    .Description .about {
+    font-size: calc(13px * var(--font-scale));
+     color: #000;
+    line-height: 22px;
+    margin-bottom: 16px 
+}
+
+  // Media Queries 
+
+  @media screen and (max-width: 768px) {
+    /* Add responsive styles here */
+
+    .first_section {
+      display: flex;
+      flex-direction: column-reverse;
+  }
+
+  .Contents{
+      margin-top: 4em;
+  }
+
+  .Scrollstyle1{
+      margin: 0;
+      padding: 0;
+  }
+    .first_section .first_row .card {
+        margin: 2%;
+    }
+
+    .building-details {
+        height: auto;
+    }
+
+    .slider-description{
+      line-height: 1.2em;
+  }
+
+    /* Add more responsive styles as needed */
+}
+  
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+
+    .routes {
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .routes::-webkit-scrollbar,
+    .routes::-moz-scrollbar {
+        display: none; /* Hide scrollbar on smaller screens */
+    }
+
+    .routes {
+        overflow-y: visible; /* Allow content to expand vertically on smaller screens */
+    }
+
+    .subhead {
+        padding: 15px; /* Adjust padding for smaller screens */
+        margin-top: 1.2em !important;
+    }
+
+    /* Add more responsive styles as needed */
+}
+
+
+@media screen and (min-width: 768px) {
+    .facility-card span {
+        font-size: calc(14px - 1px * (15 - length("Swami Vivekananda Auditorium"))); /* Adjust font size based on text length */
+    }
+}
+
+
+
+
+// Gallery Section Starts
+
+
+.gallery_section .gallery-image img {
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+    width: 100%;
+    height: 15em;
+    cursor: pointer;
+  }
+  
+  .gallery_section .img-box {
+    box-sizing: content-box;
+    width: 100%;
+    margin: 10px;
+    height: 245px;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    position: relative;
+    background-color: white;
+  }
+
+  .gallery_section .caption {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    opacity: 0.0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .gallery_section .caption p {
+    color: white;
+    font-weight: 400;
+    font-size: medium;
+  }
+  
+  .gallery_section .transparent-box {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .gallery_section .img-box:hover img {
+    transform: scale(1.1);
+  }
+  
+  .gallery_section .img-box:hover .transparent-box {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .gallery_section .img-box:hover .caption {
+    transform: translateY(-20px);
+    opacity: 1.0;
+  }
+  
+  .gallery_section .img-box:hover {
+    cursor: pointer;
+  }
+  
+  .gallery_section .caption>p:nth-child(2) {
+    font-size: 0.8em;
+  }
+  
+  .gallery_section .opacity-low {
+    opacity: 1;
+  }

@@ -1,0 +1,96 @@
+.fee-div {
+    background-color: #ffffff; /* Background color for fee div */
+    padding: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    border: solid 1px;
+    border-color: rgb(202, 200, 200);
+    // border-top: solid #07294d;
+    // padding: 10px;
+}
+
+.fee-div h3 {
+    color: #333; /* Heading color */
+    font-size: calc(20px * var(--font-scale));
+    margin-bottom: 10px;
+}
+
+.fee-div p {
+    color: #666; /* Text color */
+    font-size: calc(16px * var(--font-scale));
+    margin-bottom: 5px;
+}
+
+.apply-btn {
+    background-color: #053568; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-size: calc(16px * var(--font-scale));
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%; /* Set columns to full width on smaller screens */
+    }
+}
+
+.fee{
+    padding: 15px;
+    border-top: #0056b3;
+    background-color: #ebedf0;
+
+}
+
+.rout{
+    width: 280px;
+}
+
+
+
+.subhead{
+    border-top: solid #07294d;
+    padding: 10px;
+    background-color: #fcfcfc;
+    border-left: solid rgb(202, 200, 200) 1px;
+    border-right: solid rgb(202, 200, 200) 1px;
+    h3{
+        font-weight: 500;
+    }
+}
+// ++++++++++++ Banner +++++++
+
+.banner-section {
+    background-color: #fcfcfc; /* Banner background color */
+    color: #020202; /* Text color */
+    padding: 20px 0; /* Padding for the banner */
+    border: solid 1px;
+    border-color: rgb(202, 200, 200);
+    height: 120px;
+    vertical-align: middle;
+    h2{
+        font-size: calc(30px * var(--font-scale));
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.banner-heading {
+    text-align: left; 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    font-weight: 600;
+    margin-top: 23px;
+}
+

@@ -1,0 +1,204 @@
+<app-banner *ngIf="imageUrl" [banner_heading]="bannerHeading" [banner_img]="imageUrl"></app-banner>
+
+<!-- ================= OFFICE SECTION ================= -->
+<section id="forBig" class="container-fluid pt-3 pb-3" *ngIf="Office_Page_Data && Office_Head_Data">
+  <div class="container">
+
+    <!-- H2 -->
+    <h2 class="section-title1">
+      {{Office_Head_Data?.Post_Name}}
+    </h2>
+
+    <div class="row img-details pt-3">
+      
+      <div class="col-md-3">
+        <img 
+          [src]="Office_Head_Data?.img2" 
+          (error)="onErrorImage($event)" 
+          alt="{{Office_Head_Data?.Employee_Name}} profile photo" />
+      </div>
+
+      <div class="col-md-8">
+        
+        <!-- H3 -->
+        <h3 class="section-title3">
+          {{Office_Head_Data?.Employee_Name}}
+        </h3>
+
+        <p class="contents pt-3">
+          {{Office_Page_Data?.About_Unit}}
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NOTIFICATION ================= -->
+<section class="gray-bg" *ngIf="unit_id!=1 && unit_id!=5">
+  <app-home-notificaton></app-home-notificaton>
+</section>
+
+<!-- ================= MOBILE VIEW ================= -->
+<section id="forSmall" class="container-fluid pt-3 pb-3" *ngIf="Office_Page_Data && Office_Head_Data">
+  <div class="container">
+
+    <h2 class="section-title1">
+      {{Office_Head_Data?.Post_Name}}
+    </h2>
+
+    <div class="row img-details pt-3">
+      
+      <div class="col-md-3">
+        <img 
+          [src]="Office_Head_Data?.img2" 
+          (error)="onErrorImage($event)" 
+          alt="{{Office_Head_Data?.Employee_Name}} profile photo" />
+      </div>
+
+      <div class="col-md-8">
+        <h3 class="section-title3">
+          {{Office_Head_Data?.Employee_Name}}
+        </h3>
+
+        <p class="contents pt-3">
+          {{Office_Page_Data?.About_Unit}}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACTIVITIES ================= -->
+<app-office-activities-common 
+  [activity_details]="Activity_data" 
+  [setData_details]="setData" 
+  *ngIf="Activity_data?.length > 0">
+</app-office-activities-common>
+
+<!-- ================= EVENTS ================= -->
+<app-office-event-common 
+  [event_data]="Office_Event_Data" 
+  *ngIf="Office_Event_Data" 
+  [setData_details]="setData">
+</app-office-event-common>
+
+<!-- ================= AWARDS ================= -->
+<app-office-awards-common 
+  [award_data]="award_data" 
+  *ngIf="unit_id == 1" 
+  [setData_details]="setData">
+</app-office-awards-common>
+
+<!-- ================= FORMER VC ================= -->
+<section class="pt-3 pb-3" *ngIf="unit_id == 1">
+  <div class="container">
+
+    <h2 class="section-title1">Former Vice-Chancellors</h2>
+
+    <div class="row former-vc">
+      <ng-container *ngFor="let item of paginatedContents">
+
+        <div class="col-6 col-md-4">
+          <div 
+            class="row boxes"
+            tabindex="0"
+            role="group"
+            [attr.aria-label]="item.employee_name + ', Former Vice Chancellor from ' + item.from_date + ' to ' + item.to_date"
+          >
+
+            <div class="col-12 col-md-4">
+              <!-- Decorative -->
+              <img 
+                class="main-img img-fluid" 
+                [src]="item.imgURL" 
+                (error)="item.imgURL = ImageNotFound" 
+                alt="">
+            </div>
+
+            <div class="col-12 col-md-8">
+              <h3 class="name mb-0">{{item.employee_name}}</h3>
+              <span class="work-duration">
+                {{item.from_date}} to {{item.to_date}}
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+      </ng-container>
+
+      <mat-paginator 
+        [length]="vcList_data?.length" 
+        [pageSize]="pageSize" 
+        [pageSizeOptions]="[12, 24, 36, 48, 100]"
+        (page)="onPageChange($event)" 
+        aria-label="Select page">
+      </mat-paginator>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIAL ================= -->
+<section class="gray-bg">
+  <app-staff-testimonial [unit_type]="unit_id" *ngIf="unit_id"></app-staff-testimonial>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="pt-3 pb-3">
+  <div class="container">
+
+    <!-- H2 -->
+    <h2 class="section-title1">Contact Us</h2>
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="contact-info">
+
+          <div class="contact-card">
+            <h3>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Address
+            </h3>
+            <p>{{Office_Page_Data?.Unit_Address}}</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>
+              <i class="fa fa-phone" aria-hidden="true"></i> Contact Number
+            </h3>
+            <p>{{Office_Page_Data?.Phone_Number}}</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>
+              <i class="fa fa-envelope" aria-hidden="true"></i> Email ID
+            </h3>
+            <p>{{Office_Page_Data?.Email_ID}}</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>
+              <i class="fa-solid fa-clock" aria-hidden="true"></i> Office Time
+            </h3>
+            <p>10:00 AM to 5:00 PM</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <iframe 
+          title="Google Map showing IGKV location"
+       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2629.6679886860793!2d81.69424410311981!3d21.235332575024216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28c2cd61ab13f3%3A0x88aa0d80dc82ad34!2sUniversity%20Office%2C%20IGKV%20Raipur!5e0!3m2!1sen!2sin!4v1724417481982!5m2!1sen!2sin"
+          width="100%" 
+          height="200"
+          style="border:0;border-radius:10px;"
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,435 @@
+
+
+@import url(assets/css/customStyle.css);
+
+// @include mat.all-component-themes($my-theme-dark);  
+/* Montserrat Font Weights */
+@import '~@fontsource/montserrat/300.css'; /* Light */
+@import '~@fontsource/montserrat/400.css'; /* Regular */
+@import '~@fontsource/montserrat/500.css'; /* Medium */
+@import '~@fontsource/montserrat/600.css'; /* Semi-bold */
+@import '~@fontsource/montserrat/700.css'; /* Bold */
+
+/* Roboto Font Weights */
+@import '~@fontsource/roboto/300.css'; /* Light */
+@import '~@fontsource/roboto/400.css'; /* Regular */
+@import '~@fontsource/roboto/500.css'; /* Medium */
+@import '~@fontsource/roboto/700.css'; /* Bold */
+
+
+
+
+@media (min-width: 1300px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import url(assets/css/animate.css);
+@import url(assets/css/default.css);
+@import url(assets/css/style1.css);
+
+@import url(assets/css/responsive.css);
+@import url(assets/css/lightbox.css);
+// @import url("https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css");
+@import url(assets/css/design.css);
+@import url(assets/css/aos.css);
+
+// html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h4{
+    text-align: justify;
+}
+
+/* css for making scroll without showing scroll bar */
+.Scrollstyle1 ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.Scrollstyle1  ::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+.Scrollstyle1 ::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+.Scrollstyle1 ::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+.Scrollstyle1 ::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+.Scrollstyle1 ::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+.Scrollstyle1 ::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+.Scrollstyle1 ::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+.Scrollstyle1 ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+// ------- button -----------
+.main-btn {
+  display: inline-block;
+  padding: 0 15px;
+  font-size: calc(16px * var(--font-scale));
+  line-height: 40px;
+  font-weight: 700;
+  border-radius: 5px;
+  color: #07294d;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+  transition: 0.4s ease-in-out;
+  background-color: #ffdb4d;
+}
+.main-btn:hover{
+  color: #ffdb4d !important;
+  border-color: #07294d;
+  background-color: #07294d;
+}
+
+/* staff list carosule css */
+.carousel-control-next, .carousel-control-prev{
+  width: 4% !important;
+}
+
+/* for mat expansion panel */
+.mat-expansion-panel-body {
+  padding: 0 !important;
+}
+
+/* background images blured css */
+.banner1 {
+  display: flex !important;
+  justify-content: center !important;
+  position: relative !important;
+}
+
+.banner1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  // background-image: url('assets/images/bg_img.jpg'); /* Use the blurred image as the background */
+  background-size: cover;
+  filter: blur(8px);
+}
+
+.banner1 img {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.content1 {
+  z-index: 2;
+}
+
+/* director slider css */
+
+/* director slider css */
+
+// ------------ slider ------------
+.director .carousel-item{
+  height: 550px; /* Set the height of the container */
+  overflow: hidden; /* Hide the overflow content */
+  align-items: center; /* Center the image vertically */
+}
+
+.director .carousel-item img{
+  width: 100%; /* Make the image fill the container width */
+height: 100%; /* Make the image fill the container height */
+object-fit: cover; 
+}
+
+.director .carousel-item .carousel-caption {
+  color: #000;
+
+}
+
+
+.director .carousel-item .carousel-caption h2{
+font-weight: bold;
+background-color: rgba(255, 255, 255, 0.9); /* Set background color to azure with 70% transparency */
+padding: 1em;
+border-radius: 0.5em;
+height: 82px;
+text-align: center;
+font-size: calc(30px * var(--font-scale));
+}
+
+
+
+/* responsive css for topbar */
+
+@media (min-width: 1075px) {
+  .navbar-expand-lg .navbar-collapse {
+      display: flex !important;
+      flex-basis: auto !important; 
+  }
+}
+
+@media (min-width: 1075px) {
+  .navbar-expand-lg .navbar-nav {
+      flex-direction: row !important;
+  }
+}
+
+
+app-chatbot {
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  width: 320px;
+  max-height: 550px;
+  overflow: hidden;
+  z-index: 2000;
+}
+
+
+// material filter input
+.mat-mdc-option .mdc-list-item__primary-text {
+  white-space: normal;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  text-decoration: inherit;
+  text-transform: inherit;
+  margin-right: auto;
+  font-size: calc(13px * var(--font-scale)) !important;
+}
+/* Loader styles */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 80px;
+  height: 20px;
+  margin: auto;
+  margin-top: 10%;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-color: #3498db;
+  border-radius: 50%;
+  position: absolute;
+  animation: dot-bounce 0.8s infinite ease-in-out; /* Faster duration */
+}
+
+.loader::before {
+  left: -20px;
+  animation-delay: 0s;
+}
+
+.loader::after {
+  left: 20px;
+  animation-delay: 0.2s; /* Adjusted for smoother sequence */
+}
+
+/* Middle dot */
+.loader {
+  background-color: #3498db;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  animation: dot-bounce 0.8s infinite ease-in-out; /* Faster duration */
+  animation-delay: 0.1s;
+}
+
+
+
+/*=====================================================
+    
+======================================================*/
+
+
+
+
+
+
+/* Bouncing animation */
+@keyframes dot-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.3;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+ .header {
+    font-size: calc(31px * var(--font-scale));
+  }
+  .breadcrumb-item{
+    font-size: calc(14px * var(--font-scale));
+  }
+}
+
+// ==================== for font size ====================
+:root {
+  --font-scale: 1; /* Default scale factor */
+}
+
+// body {
+//   font-size: calc(16px * var(--font-scale)); /* Base font size */
+// }
+
+/* Apply scaling to different elements */
+h1 {
+  font-size: calc(2.5rem * var(--font-scale));
+}
+
+h2 {
+  font-size: calc(2rem * var(--font-scale));
+}
+
+h3 {
+  font-size: calc(1.5rem * var(--font-scale));
+}
+
+h4 {
+  font-size: calc(1.5rem * var(--font-scale));
+}
+// p, span, a, button {
+//   font-size: calc(1rem * var(--font-scale));
+// }
+
+p,  a, button {
+  font-size: calc(1rem * var(--font-scale));
+}
+
+li {
+  font-size: calc(0.875rem * var(--font-scale));
+}
+
+
+// ================ for theme ===========
+
+/* Default Theme Variables */
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --btn-bg: #007bff;
+  --btn-text: white;
+}
+
+/* Apply Variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+/* High Contrast Mode */
+.high-contrast * {
+  background-color: black !important;
+  color: white !important;
+  border-color: yellow !important;
+}
+
+/* Ensure Links are Yellow */
+.high-contrast a,
+.high-contrast a:visited {
+  color: yellow !important;
+  text-decoration: underline;
+}
+
+/* Override Specific Elements */
+.high-contrast body,
+.high-contrast div,
+.high-contrast p,
+.high-contrast span,
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast h4,
+.high-contrast h5,
+.high-contrast h6 {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Ensure Cards, Navbar, and Buttons Follow the High Contrast Theme */
+.high-contrast button,
+.high-contrast .card,
+.high-contrast .navbar,
+.high-contrast .footer,
+.high-contrast .container {
+  background-color: #222 !important;
+  color: white !important;
+  border: 2px solid yellow !important;
+}
+
+/* Override Deeply Nested Components */
+.high-contrast *::before,
+.high-contrast *::after {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Ensure Images Do Not Invert */
+.high-contrast img {
+  filter: none !important;
+}
+
+
+/* Ensuring images do not invert */
+.high-contrast img {
+  filter: none !important;
+}
+
+/* High Saturation Mode */
+.high-saturation {
+  filter: saturate(300%);
+}
+
+/* Low Saturation Mode */
+.low-saturation {
+  filter: saturate(30%);
+}
+
+/* Invert Colors Mode */
+.invert-colors {
+  filter: invert(100%);
+}
+
+/* Reset Mode */
+.reset-mode {
+  filter: none;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+//  for hide image 
+.hide-images img {
+  display: none !important;
+}
+
+
+.redirect-link{
+    color: #0033cc;
+    text-decoration: underline;
+}

@@ -1,0 +1,56 @@
+<app-banner [banner_heading]="'Facilities & Infrastructures Details'"
+    [banner_img]="bannerImg"></app-banner>
+
+
+<div class="container-fluid" style="background: #f2f7ff;">
+    <div class="container">
+        <div class="row first_section">
+            <div class="col-md-8 Contents">
+                <div *ngIf="infraListDetails">
+                    <p class="slider-description">{{infraListDetails[0]?.title }}</p>
+                    <div class="first_row">
+                        <div class="slider-container">
+                            <div class=" banner1 image1"
+                            [style.background-image]="'url(' + infraListDetails[currentSlide].imageURL + ')'" *ngIf="infraListDetails[currentSlide].imageURL">
+                            <img [src]="infraListDetails[currentSlide].imageURL" (error)="OnErrorImage($event)" alt="facilities image">
+                            <div class="content">
+                            </div>
+                             </div>
+                        </div>
+                      
+                    </div>
+
+
+                    <div class="Description">
+                        <p class="title">About</p>
+                        <div class="contents" [innerHTML]="infraListDetails[0]?.description"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 Scrollstyle1">
+                <div class="subhead  mt-5" *ngIf="infraList">
+                    <span class="text-center">{{infraList[0]?.Institution_setup_name}}</span>
+                </div>
+                <div class="routes">
+                    <ng-container *ngFor="let data of infraList">
+                        <div class="facility-card" [routerLink]="['/research/infrastructure-common/details/',office_id,data.Institution_setup_type_ID,data.Institution_Setup_main_id]">
+                            <!-- <a routerLink="research/facilities-infrastructure/details/1"> -->
+                            <div class="row">
+                                <div class="col-3"> <img [src]="data?.imageURL" alt="facilities image"></div>
+                                <div class="col-9" style="padding-left: 0;"> <span>{{data?.title}}</span></div>
+                            </div>
+                           
+                               
+                           
+                            <!-- </a> -->
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <!-- right side nav bar starts here  -->
+            
+        </div>
+
+
+    </div>
+</div>

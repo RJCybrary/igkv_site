@@ -1,0 +1,102 @@
+.sitemap {
+    margin: 20px;
+}
+
+ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    color: #007BFF;
+}
+
+.head {
+    font-weight: 600;
+    font-size: calc(16px * var(--font-scale));
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.sub-head {
+    font-weight: 600;
+    font-size: calc(14px * var(--font-scale));
+    color: #0b6fb8;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-left: 40px;
+}
+
+.list-item {
+    margin-left: 70px !important;
+}
+
+/* Custom bullet style */
+.list-item li {
+    position: relative;
+}
+
+.list-item li:before {
+    content: '\2022'; /* Unicode character for bullet (use '\25CF' for a solid circle) */
+    color: #0b6fb8; /* Bullet color */
+    font-size: calc(16px * var(--font-scale)); /* Bullet size */
+    margin-right: 8px; /* Adjust space between bullet and text */
+    font-weight: bold; /* Make bullet bold */
+    position: absolute;
+    left: -20px; /* Adjust the distance of the bullet from the list item */
+    top: 50%; /* Center the bullet vertically */
+    transform: translateY(-50%);
+}
+
+
+// ==
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.error-content {
+    text-align: center;
+}
+
+.error-code {
+    font-size: calc(6rem * var(--font-scale));
+    margin-bottom: 20px;
+    color: #dc3545;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+.error-description {
+    font-size: calc(1rem * var(--font-scale));
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+}

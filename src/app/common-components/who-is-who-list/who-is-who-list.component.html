@@ -1,0 +1,171 @@
+<app-loder *ngIf="loading"></app-loder>
+<section id="Section1" class="pt-3 pb-3 gray-bg">
+    <div class="container">
+        <div class="row who-is-who">
+
+            <div class="col-md-12" *ngIf="Post_Level==0">
+                   
+                <div class="col-md-12" style="padding:10px">
+                    <div class="office-details mb-5">
+                        <div class="office-name">
+                            <div class="section-title office mt-3">
+                                <h2 class="section-title1">Raj Bhavan, Raipur</h2>
+                            </div>
+                        </div>
+                    <div class=" row singel-event-list" style="margin-inline: auto;">
+                        <div class="col-md-4 event-thum ">
+                            <img style="height: 350px; width: 350px;"  [src]="governorImage"
+                                class="img-thumbnail "
+                                (error)="onErrorImage($event)" alt="staff image">
+
+                        </div>
+                       
+                        <div class="col-md-8 event-cont" style="padding-top: 0px !important;">
+                            <span class="emp_name" style="font-size: x-large;"><i
+                                    class="fa"></i>Shri Ramen Deka</span>
+                            <span class="post_name">Chancellor</span>
+
+                            <hr>
+                           
+                            <ul style="list-style: none;">
+                                <li>
+                                    The 10th Governor of Chhattisgarh, Shri Ramen Deka was born on 1 March 1954 in Sualkuchi, Kamrup (R), Assam. His father's name is Late Shri Surendra Nath Deka and mother's name is Late Smt. Champabati Deka. He received his B.A. degree in Philosophy and Economics from Pragjyotish College, Guwahati University, Assam. His wife's name is Mrs. Ranee Deka kakoti.
+
+                                </li>
+                                <br>
+                                <li>
+                                    Shri Ramen Deka is a senior politician. He has been active in politics since 1977. He was a founding member of the Bharatiya Janata Party in the year 1980. Shri Ramen Deka has also been the state president of Assam BJP in the year 2006. While working in BJP, he has also handled many responsibilities at the national level. He was Vice Chairman of State Innovation and Transformation Aayog , Assam (Cabinet Rank) from August 2021 to 29 July 2024.
+                                </li>
+                                <br>
+                                                       
+                            </ul>
+                             
+                              
+                            <div class="view-more ">
+                                <a href="https://rajbhavancg.gov.in/honorable-governors/honorable-governors.php">View More <i class="fa-solid fa-arrow-right color-orange"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <ng-container *ngFor="let content of Employee_List; let i =index">
+                <div *ngIf="content.level_id > 0 && content.level_id < 5; else otherTemplate">
+                    <div class="col-md-12">
+                        <div class="col-md-12"  style="padding:10px">
+                            <div class="office-details mb-5">
+                                <div class="office-name">
+                                    <div class="section-title office mt-3">
+                                        <h2 style="vertical-align: text-bottom;">{{content.Office_Name}}</h2>
+                                    </div>
+                                </div>
+                            <div class="row singel-event-list" style="margin: auto;">
+                                <div class="col-md-4 event-thum ">
+                                    <img style="height: 350px; width: 350px;" src="https://igkv.ac.in/{{ content.img2 }}"
+                                        class="img-thumbnail "
+                                        (error)="onErrorImage($event)" alt="staff image">
+
+                                </div>
+                             
+                                <div class="col-md-8 event-cont" style="padding-top: 0px !important;">
+                                    <span class="emp_name" ><i
+                                            class="fa"></i>{{content.Employee_Name}}</span>
+                                    <span class="post_name">{{content.Post_Name1}}</span>
+
+                                      <!-- <div id="listig-details" >
+                                        <strong id="title"> Experience:</strong>
+                                        <ul *ngFor="let item of emp_WorkExperience[i]" >
+                                            <li>
+                                            <i class="fa-solid fa-arrows-to-dot"></i>
+                                             {{ item.Post_Name }} in
+                                              {{ item.Office_Name }} from {{ item.FromDate }} to
+                                              {{ item.enddate }}
+                                            </li>
+                                          </ul>
+                                          <hr>
+    
+                                            <strong> Responsibility:</strong>
+                                            <ul *ngFor="let item of emp_Responsibility[i]">
+                                                <li>
+                                                 <i class="fa-solid fa-arrows-to-dot"></i>
+                                                 Responsible as {{ item.Post_Name }} in
+                                                  {{ item.Office_Name}} from {{ item.From_Date }}
+                                                  , Post Type {{ item.PostType}}
+                                                </li>
+                                              </ul>
+                                      </div> -->
+                                    
+                                      <hr>
+                                      <span class="social-media"><i class="fa fa-phone"></i>&nbsp;{{content.Contact_No_1}}</span>
+                                      <hr>
+                                      <span class="social-media" style="overflow-x: hidden;"><i class="fa-solid fa-envelope"></i>&nbsp;{{content.Email_Id}}</span>
+                                      <hr>
+                                      <div class="social-media-icon">
+                                        <span><i class="fa-brands fa-square-facebook fa-xl" style="color: #4267B2;"> </i>Facebook</span>
+                                        <span id="icon"><i class="fa-brands fa-square-instagram fa-xl" style="color: #d70459;"></i>Instagram</span>
+                                        <span id="icon"><i class="fa-brands fa-square-x-twitter fa-xl" style="color: #000;"></i>Twitter</span>
+                                      </div>
+                                   
+                                <hr>
+                                    <div class="view-more ">
+                                        <a *ngIf="Post_Level!=1"  (click)="routetoprofile(content.Emp_Id)">View More <i class="fa-solid fa-arrow-right color-orange"></i></a>
+
+                                        <a *ngIf="Post_Level==1" routerLink="/about/vice-chancellor/know-the-vc">View More <i class="fa-solid fa-arrow-right color-orange"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <ng-template #otherTemplate>
+                    <div class="col-md-6" *ngIf="content.level_id > 0">
+                        <div class="col-md-12"  style="padding:10px">
+                            <div class="office-details mb-5">
+                                <div class="office-name">
+                                    <div class=" section-title office mt-3">
+                                        <h2 style="vertical-align: text-bottom;">{{content.Office_Name}}</h2>
+                                    </div>
+                                </div>
+                            <div class=" singel-event-list " >
+                                <div class="event-thum ">
+                                    <img class="imgss profile-pic"  src="https://igkv.ac.in/{{ content.img2 }}"
+                                        class="img-thumbnail"
+                                        (error)="onErrorImage($event)" alt="staff image">
+
+                                </div>
+                                <!-- <img [src]="content.img2 " style="height: 150px; width: 150px;"
+                                    class="d-block d-sm-none img-thumbnail" (error)="onErrorImage($event)"
+                                    alt="no image"> -->
+                                <div class="event-cont" style="padding-top: 0px !important;">
+                                    <span class="emp_name" style="font-size:large;"><i
+                                            class="fa"></i>{{content.Employee_Name}}</span>
+                                    <span class="post_name">{{content.Post_Name1}}</span>
+                                    <!-- <span class="post_name">{{content.Post_Name}}</span> -->
+
+                                    <hr>
+                                    <span class="social-media"><i
+                                            class="fa fa-phone"></i>&nbsp;{{content.Contact_No_1}}</span>
+                                    <hr>
+                                    <span class="social-media"><i
+                                            class="fa-solid fa-envelope"></i>&nbsp;{{content.Email_Id}}</span>
+                                    <hr>
+                                    <div class="social-media-icon">
+                                        <span><i class="fa-brands fa-square-facebook fa-xl" style="color: #4267B2;"> </i></span>
+                                        <span id="icon1"><i class="fa-brands fa-square-instagram fa-xl " style="color: #d70459;"></i></span>
+                                        <span id="icon1"><i class="fa-brands fa-square-x-twitter fa-xl" style="color: #000;"></i></span>
+                                      </div>
+                                    <div class="view-more ">
+                                        <a (click)="routetoprofile(content.Emp_Id)">View More <i class="fa-solid fa-arrow-right color-orange"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </div> 
+    </div> 
+</section>

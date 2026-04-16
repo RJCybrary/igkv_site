@@ -1,0 +1,61 @@
+<app-vc-menubar></app-vc-menubar>
+
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" [ngStyle]="{'background-image': 'url(' + imageUrl + ')', 'height': '400px'}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-banner-cont">
+                    <h2 class="header" >VC's Awards</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="." >Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Vice-chancellor-Awards</li>
+                        </ol>
+                    </nav>
+                </div>  
+            </div>
+        </div> 
+    </div> 
+</section>
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="know-the-vc">
+        <h2 class="heading">Hon'ble Vice Chancellor's Awards</h2>
+        <hr>
+                    <app-pagination
+                   [currentPages]="currentPages"
+                    [totalrecords]="totalrecords"
+                   (rowsPerPageChanged)="onRowsPerPageChanged($event)"
+                     (pageChanged)="onPageChanged($event)"
+                     (searchCriteria)="onSearchCriteriaReceived($event)"> 
+                     <section *ngIf="award_data?.length !== 0;else elseblock ">
+                        <ng-container *ngFor="let data of award_data" >
+                            <div class="row contents">
+                            <div class="col-md-4">
+                                <a (click)="setdetails()" [routerLink]="['/about/vc/activities-details',data.Website_Content_ID]">  
+                            <img class="main-img" [src]="data.Column1" alt="vice chancellor award image">
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="details">
+                                    <a (click)="setdetails()" [routerLink]="['/about/vc/activities-details',data.Website_Content_ID]">
+                                    <h2 class="title">{{data.Content_Title}}</h2>
+                                </a>
+                                    <span class="date">{{data.web_content_date2|date:'MMMM d, y'}}</span>
+                                    <!-- <p class="description">{{data[0].Content_Description}}</p> -->
+                                    <div class="description"  [innerHTML]="data.Content_Description"></div>
+                                </div>
+                            </div>
+                            </div>
+                        </ng-container>
+                     </section>
+                     <ng-template #elseblock>
+                        <app-no-data></app-no-data>
+                     </ng-template>
+                   
+                    </app-pagination>
+        </div>
+    </div>
+</div>
+

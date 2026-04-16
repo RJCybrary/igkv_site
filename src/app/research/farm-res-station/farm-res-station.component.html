@@ -1,0 +1,44 @@
+
+<app-banner *ngIf="publicationType == 1"  [banner_heading]="'Research Stations'" [banner_img]="bannerImg"></app-banner>
+<app-banner *ngIf="publicationType == 2"  [banner_heading]="'Farms'" [banner_img]="bannerImg"></app-banner>
+
+<section id="Section3" class="pt-3 pb-3 mb-5 " style="background-color:#fff">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                    <!-- <h2 class="section-title1">Constituent Colleges</h2> -->
+                    <h2 class="section-title1">List          </h2>
+                <div class="about-cont">
+                    <section id="department-part">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <ng-container *ngFor="let data of res_farm">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6 cardss">
+                                      <div class="singel-department mt-30" style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;">
+                                        <div class="image">
+                                          <a>
+                                            <img class="background_img" [src]="AllCollegeIcon" alt="farm icon" >
+                                            <div class="add-cart">
+                                              <span>
+                                                <i><img [src]="kvk_icon" alt="College"></i> 
+                                              </span>
+                                              <span>
+                                                <h6>{{ data.Office_Name }}</h6> <!-- Display office name -->
+                                              </span>
+                                            </div>
+                                          </a>
+                                        </div>
+                                      </div> 
+                                    </div>
+                                  </ng-container>
+                                  
+                            </div> 
+                        </div> 
+                    </section>
+                </div>
+            </div> 
+
+        </div>
+
+    </div> 
+</section>

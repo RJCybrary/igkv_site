@@ -1,0 +1,103 @@
+
+<!-- <app-banner  [banner_heading]="' Advisory'"  [banner_img]="bannerImg"></app-banner> -->
+<section class="container-fluid Allnews pt-3 pb-3 gray-bg ">
+    <!-- <div class="container">
+        <h2 class="section-title1"> News & Notificatons</h2>
+    </div> -->
+    <div class="container-fluid pb-5">
+      <div class="container">
+        <app-pagination
+       [currentPages]="currentPages"
+        [totalrecords]="totalrecords"
+       (rowsPerPageChanged)="onRowsPerPageChanged($event)"
+         (pageChanged)="onPageChanged($event)"
+         (searchCriteria)="onSearchCriteriaReceived($event)">
+  
+        <div class="row">
+  
+          <div class="col-md-3 mt-3">
+            <section>
+              <mat-accordion  >
+                <!-- Main Categories -->
+              
+                <!-- Loop through newsCategory and create panels dynamically -->
+                <mat-expansion-panel #panel *ngFor="let data of newsCategory; let i = index"  [expanded]="true" (opened)="onPanelOpened(data.News_Category_ID)">
+                  <mat-expansion-panel-header>
+                    <a class="text-secondary">{{ data.newsCategory }}</a>
+                  </mat-expansion-panel-header>
+                  <!-- Subcategories -->
+                  <div class="subsection">
+                    <ul *ngFor="let data1 of subNewsCategory">
+                      <li>
+                        <h5 class="subcategory" [class.selected]="selectedSubCategoryId == data1.News_Category_ID" (click)="onSubIdClicked(data1.News_Category_ID)">
+                          {{data1.newsCategory}}
+                        </h5>
+                      </li>
+                    </ul>
+                  </div>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </section>
+          
+           
+            
+          </div>
+          
+          <div class="col-md-9 mt-3">
+            <div class="news-title">
+              <h2>{{news_title}}</h2>
+            </div>
+            <div class="loader" *ngIf="isLoading"></div>
+            <section *ngIf="!isLoading && top_news?.length !== 0">
+              <mat-card  *ngFor="let data of top_news;let i=index" class="notification text-dark">
+                <div class="header" *ngIf="top_news">
+                  <span class="date"><i class="fa-solid fa-calendar-days" style="margin-right: 5px;color: #07294d;"></i>{{
+                    data.News_Date }}</span>
+                  <!-- <a [routerLink]="['news-details',data.News_Notification_Main_Id]">
+                    <span class="title">{{ data.Main_Title }}</span>
+                  </a> -->
+                    <span class="title">{{ data.Main_Title }}</span>
+                 <span class="categories"><b> <p> {{data.News_Category_Name_E}}</p> > <p>{{data.news_sub_category_name}}</p></b></span> 
+                </div>
+                <div class="content">
+                  <div class="sub-notifications">
+                    <ul *ngIf="data.attachment && data.attachment[0]">
+                      <li *ngFor="let data1 of data.attachment[0]; let i = index" class="sub-notification">
+                        <a href="{{data1.File_Path}}" target="_blank">
+                          <h5><i class="fa-solid fa-lg fa-file-pdf" style="color:red;"></i> {{ data1.Sub_Title}}</h5>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <span *ngIf="data.PresentPrevious=='Y'" class="Readmore" (click)="toggleReadMore(i);get_Previous_News_Attachment(data.News_Notification_Main_Id) "> {{ isReadMoreOpen[i] ? 'Show Less' : 'Read More' }}</span>
+                  <div class="toggle-content" [class.open]="isReadMoreOpen[i]">
+                    <ul>
+                      <hr>
+                      <li *ngFor="let data2 of P_attach" style="list-style: none;">
+                        <span class="date"><i class="fa-solid fa-calendar-days" style="margin-right: 5px;color: #07294d;"></i>{{
+                    data2.News_Date || 'dd/MM/yyyy' }}</span>
+                    <br>
+                        <span class="title">{{ data2.Main_Title }}</span>
+                        <a href="{{data2.File_Path}}" target="_blank">
+                          <h5 style="font-size: calc(13px* var(--font-scale));"><i class="fa-solid fa-lg fa-file-pdf" style="color:red;"></i> {{ data2.Sub_Title}}</h5>
+                        </a>
+                        <hr>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </mat-card>
+            </section>
+            <section>
+              <app-no-data *ngIf="top_news?.length === 0 " ></app-no-data>
+            </section>
+          </div>
+         
+        </div>
+        
+        </app-pagination>
+      </div>
+    
+    </div>
+  </section>

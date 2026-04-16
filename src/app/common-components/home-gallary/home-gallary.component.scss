@@ -1,0 +1,71 @@
+
+/*gallery section css start*/
+
+
+
+
+.gallery_section .gallery-image img {
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+    width:100%;   
+    cursor:pointer;
+  }
+  
+  .gallery_section .img-box {
+    box-sizing: content-box;
+    width:100%;
+    margin: 10px;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    position: relative;
+    background-color: white;
+  }
+  
+  .gallery_section .caption {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    opacity: 0.0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .gallery_section .caption p{
+  color:white;
+  }
+  
+  .gallery_section .transparent-box {
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .gallery_section .img-box:hover img { 
+    transform: scale(1.1);
+  }
+  
+  .gallery_section .img-box:hover .transparent-box {
+    background-color:rgba(0, 0, 0, 0.5);
+  }
+  
+  .gallery_section .img-box:hover .caption {
+    transform: translateY(-20px);
+    opacity: 1.0;
+  }
+  
+  .gallery_section .img-box:hover {
+    cursor: pointer;
+  }
+  
+  .gallery_section .caption > p:nth-child(2) {
+    font-size: 0.8em;
+  }
+  
+  .gallery_section .opacity-low {
+    opacity: 0.5;
+  }
+  /*gallery section css end*/

@@ -1,0 +1,69 @@
+
+
+
+// Another ONE
+.counter {
+  background: #e3e8ebed; /* Light background for simplicity */
+  border: 2px solid transparent;
+  border-top: 7px solid #007bff; /* Unique color stripe for each counter */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.counter:hover {
+  border-color: #16628f ; /* Matches stripe color */
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.counter-content h3 {
+  font-size: calc(1.1rem * var(--font-scale));
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.counter-value {
+  font-size: calc(2rem * var(--font-scale));
+  font-weight: bold;
+  color: #16628f;
+}
+
+.counter-icon {
+  font-size: calc(2rem * var(--font-scale));
+  margin-top: 10px;
+  color: #16628f;
+}
+
+/* Assign different border-top colors to each counter */
+.counter:nth-child(1) {
+  border-top-color: #17a2b8; /* Teal */
+}
+.counter:nth-child(2) {
+  border-top-color: #28a745; /* Green */
+}
+.counter:nth-child(3) {
+  border-top-color: #ffc107; /* Yellow */
+}
+.counter:nth-child(4) {
+  border-top-color: #dc3545; /* Red */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .counter {
+    margin-bottom: 20px;
+  }
+
+  .counter-content h3 {
+font-size: calc(1.2rem* var(--font-scale))
+  }
+
+  .counter-value {
+    font-size: calc(2rem * var(--font-scale));
+  }
+}

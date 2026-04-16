@@ -1,0 +1,109 @@
+//   ------------ header ---------------
+
+#forBig{
+  display:contents;
+}
+#forSmall{
+  display: none;
+}
+
+.page-heading {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .heading-text {
+    margin-right: 20px;
+    font-size: calc(32px * var(--font-scale));
+    font-weight: bold;
+    position: relative;
+    font-family: 'Arvo', serif;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Exo', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Young Serif', serif;
+    font-family: 'Zilla Slab', serif;
+  }
+  
+  .heading-text::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 1px;
+    width: 90px;
+    height: 4px;
+    background-color: #239ae9;
+  }
+  
+  .image-row {
+    display: flex;
+    align-items: center;
+    height: 60vh;
+  }
+
+  .staff-container{
+    margin: 6px;
+  }
+
+
+  .card-body{
+    color: black;
+  }
+// ----------------------------------- for small screen ------------------------------
+.employee-card {
+  max-width: 90%; /* Ensures proper width */
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card-img-top {
+  max-height: 180px;
+  min-height: 180px;
+  background-color: #5f5d5d;
+  border-bottom: #ccc solid 1px;
+}
+
+.card-body {
+  padding: 5px;
+  min-height: 96px;
+  color: black;
+}
+
+.view-profile {
+  font-size: calc(13px* var(--font-scale));
+  font-weight: 500;
+  color: #16628f;
+  margin-top: 0.5em;
+  line-height: 15px;
+}
+
+@media (max-width: 768px) {
+  #forBig{
+    display: none;
+  }
+  #forSmall{
+    display: contents;
+  }
+  .carousel-inner{
+    padding: 1em 0 !important;
+  }
+  .carousel .row {
+    flex-wrap: nowrap; /* Prevent cards from stacking vertically */
+    display: flex;
+    justify-content: space-around; /* Center cards horizontally */
+  }
+
+  .employee-card {
+    width: 100%; /* Ensure two cards fit horizontally */
+    margin: 5px;
+  }
+  .card-title{
+    font-size: calc(12px * var(--font-scale));
+  }
+}

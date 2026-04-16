@@ -1,0 +1,153 @@
+<app-banner [banner_heading]="Title" [banner_img]="bannerImg"></app-banner>
+
+<!-- for small screen -->
+<div class="gray-bg event-list-smallscreen" style="padding: 1em;" *ngIf="showCategory">
+    <div class="category-section">
+        <label for="category-dropdown" class="dropdown-label">Select Category</label>
+        <div class="custom-dropdown">
+            <select id="category-dropdown" class="category-search-input"
+                (change)="onSelectCategorysmall($event, 0, '')">
+                <option value="" disabled selected>Select an option</option>
+                <option *ngFor="let data of Event_List" [value]="data.Event_Category_ID">
+                    {{ data.Event_Category_Name_E }}
+                </option>
+            </select>
+        </div>
+    </div>
+</div>
+
+
+<section id="courses-part" class="pt-3 pb-5 gray-bg">
+    <div class="container">
+
+        <div class="tab-content" id="myTabContent">
+            <div>
+                <div class="row" *ngIf="!showOnlyContent">
+                    <div class="col-md-9">
+                        <app-pagination [currentPages]="currentPages" [totalrecords]="totalrecords"
+                            (rowsPerPageChanged)="onRowsPerPageChanged($event)" (pageChanged)="onPageChanged($event)"
+                            (searchCriteria)="onSearchCriteriaReceived($event)">
+                            <div class="loader" *ngIf="isLoading"></div>
+                            <div class="row listOfActivities mt-3 mb-3" [ngClass]="{'heightoflist': iddataoverflow}"
+                                *ngIf="!isLoading && Activities_data?.length !== 0">
+                                <ng-container *ngFor="let data of Activities_data">
+                                    <div class="col-lg-4 col-md-6">
+
+                                        <!-- ✅ FULL CARD AS LINK -->
+                                        <a class="Activities mt-3 d-block" (click)="setdetails()"
+                                            [routerLink]="['/about/activities-details', data.Website_Content_ID]"
+                                            [attr.aria-label]="'View: ' + data.Content_Title + ', ' + (data.web_content_date2 | date:'MMMM d, y') + ', ' + data.Venue"
+                                           >
+
+                                            <div class="thum">
+                                                <div class="banner image"
+                                                    [style.background-image]="'url(' + data.Column1 + ')'"
+                                                    *ngIf="data.Column1">
+
+                                                    <!-- ✅ Decorative image -->
+                                                    <img [src]="data.Column1" (error)="OnErrorImage($event)" alt="">
+
+                                                    <div class="content"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="cont">
+
+                                                <!-- Date -->
+                                                <span>
+                                                    <i class="fa-regular fa-calendar-days" aria-hidden="true"></i>
+                                                    {{data.web_content_date2 | date:'MMMM d, y'}}
+                                                </span>,
+
+                                                <!-- Venue -->
+                                                <span class="venue">
+                                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                                    {{data.Venue}}
+                                                </span>
+
+                                                <!-- Title -->
+                                                <h4
+                                                    >
+                                                    {{data.Content_Title}}
+                                                </h4>
+
+                                                <!-- Visible text -->
+                                                <span class="main-btn">View</span>
+
+                                            </div>
+
+                                        </a>
+
+                                    </div>
+                                </ng-container>
+                            </div>
+                            <app-no-data *ngIf="Activities_data?.length === 0 "></app-no-data>
+                        </app-pagination>
+
+                    </div>
+                    <div class="col-lg-3 event-list-normalscreen" *ngIf="showCategory">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-6 mt-5 ">
+                                <div class="event-List mt-5">
+                                    <ul>
+                                        <li *ngFor="let data of Event_List">
+                                            <a [routerLink]="['/about/activities/category/', data.Event_Category_ID]">
+                                                <i class="fa-solid fa-list" aria-hidden="true"></i>
+                                                {{ data.Event_Category_Name_E }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="showOnlyContent">
+                    <div class="loader" *ngIf="isLoading"></div>
+                    <div class="col-md-12" *ngIf="!isLoading && Activities_data?.length !== 0">
+                        <div class="row listOfActivities">
+                            <ng-container *ngFor="let data of Activities_data">
+                                <div class="col-lg-4 col-md-6">
+
+                                    <a class="Activities mt-3 d-block" (click)="setdetails()"
+                                        [routerLink]="['/about/activities-details', data.Website_Content_ID]"
+                                        [attr.aria-label]="'View: ' + data.Content_Title + ', ' + (data.web_content_date2 | date:'MMMM d, y') + ', ' + data.Venue">
+
+                                        <div class="thum">
+                                            <div class="banner image"
+                                                [style.background-image]="'url(' + data.Column1 + ')'"
+                                                *ngIf="data.Column1">
+
+                                                <img [src]="data.Column1" (error)="OnErrorImage($event)" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="cont">
+                                            <span>
+                                                <i class="fa-regular fa-calendar-days" aria-hidden="true"></i>
+                                                {{data.web_content_date2 | date:'MMMM d, y'}}
+                                            </span>,
+
+                                            <span class="venue">
+                                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                                {{data.Venue}}
+                                            </span>
+
+                                            <h4>{{data.Content_Title}}</h4>
+
+                                            <span class="main-btn">View</span>
+                                        </div>
+
+                                    </a>
+
+                                </div>
+                            </ng-container>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

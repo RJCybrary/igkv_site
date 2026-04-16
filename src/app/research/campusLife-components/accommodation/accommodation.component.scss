@@ -1,0 +1,344 @@
+/* ===== vission css start ===== */
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    margin-top: 2em;
+  }
+  
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 41, 77, 0.5);
+    margin-top: 2em;
+  }
+
+
+.vision {
+    background-color: #E0E8F2;
+    height: fit-content;
+    margin-top: 1rem;
+    border-radius: 10px;
+    color: #07294d;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+
+}
+
+img{
+    height: 15em;
+}
+
+.vision .first_section h3 {
+    text-align: left;
+    color: #07294d;
+    margin-top: 2em;
+}
+
+.vision .first_section span {
+    color: #07294d;
+    text-align: justify;
+    margin-top: 27px;
+
+}
+
+
+.vision .first_section span ul {
+    list-style: disc;
+    margin-left: 10px;
+
+}
+
+.vision .first_section span ul li {
+    margin: 1.5rem;
+}
+
+.vision .first_section span ul li a {
+    text-decoration: none;
+    color: #07294D;
+}
+
+.vision .second_section {
+    margin-top: 1.2em;
+    text-align: center;
+}
+
+.vision .second_section img {
+    height: 11em;
+    width: 18em;
+    margin-bottom: 1.5em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.vision .second_section img:hover {
+    transform: scale(0.9);
+}
+
+
+.vision .second_section .first_row {
+    margin-top: 5px;
+    margin-bottom: 1.2em;
+}
+
+
+.vision .third_section button {
+    background-color: #FDA800;
+    color: white;
+    border-radius: 5px;
+}
+
+/* ===== vission css end ===== */
+
+
+
+/* ===== card css start ===== */
+
+.our-hostle .card {
+
+    box-shadow: 0 0px 26px 10px #E0E8F2;
+    background-color: #fff;
+    margin: 5%;
+    // height: 36em;
+    transition: all 0.5s ease;
+    padding: 10px;
+
+}
+
+
+.our-hostle .card:hover {
+
+    transform: scale(1.07);
+    border-bottom: #07294d 4px solid;
+    overflow: hidden;
+
+}
+
+.our-hostle .card img {
+    // height: 20em;
+    // width: 100%;
+    overflow: hidden;
+}
+
+.our-hostle .card h5:hover {
+    color: #07294B;
+}
+
+
+.our-hostle .card h5 {
+    padding: 2%;
+    margin-bottom: 0;
+    color: #07294d;
+    font-weight: bold;
+
+}
+
+.our-hostle .card a {
+    text-decoration: none;
+
+}
+
+
+.our-hostle .card p {
+    margin-bottom: 0;
+
+}
+
+.our-hostle .card h5 {
+
+    color: black;
+    text-align: center;
+    font-size: x-large;
+    cursor: pointer;
+    box-shadow: i;
+}
+
+.our-hostle .card span {
+    margin: 10px;
+}
+
+.our-hostle .odd h5 {
+    background-color: #fff;
+    color: #07294D;
+    font-size: calc(20px * var(--font-scale));
+
+}
+
+.our-hostle .even h5 {
+    background-color: white;
+    color: #07294D;
+    font-size: calc(20px * var(--font-scale));
+
+}
+
+.our-hostle .even p {
+    background-color: white;
+
+}
+
+.our-hostle .odd p {
+    background-color: white;
+    color: black;
+}
+
+/* ===== card css end ===== */
+
+
+/* ===== how to apply part  css start ===== */
+.how_to_apply {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding: 10px;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+
+.how_to_apply .first_section span {
+    margin-top: 20px;
+}
+
+.how_to_apply .first_section h2 {
+    margin-bottom: 1em;
+}
+
+
+.how_to_apply .first_section span ul {
+    line-height: 2;
+    list-style: disc;
+}
+
+.how_to_apply .second_section {
+    background-color: #07294B;
+    color: white;
+    padding: 1.5rem;
+}
+
+.how_to_apply .second_section h2 {
+    color: white;
+    margin-top: -15px;
+    margin-bottom: 1em;
+}
+
+.how_to_apply .second_section span {
+    margin-top: 15px;
+}
+
+.how_to_apply .second_section h4 {
+    margin: 15px;
+    color: white;
+}
+
+.how_to_apply .second_section h5 {
+    background-color: #0C4DA2;
+    color: white;
+    padding: 1.5rem;
+}
+
+
+.how_to_apply .second_section ul {
+    list-style: disc;
+    line-height: 2;
+}
+  
+// Activities Ends 
+
+
+
+// light box css
+
+@media (min-width: 200px) {
+  .how_to_apply .first_section h2{
+    margin-top: 1em;
+  }
+
+  .how_to_apply .second_section h2{
+    margin: 0;
+    padding: 0;
+  }
+}
+   
+.gallery-image img {
+  margin-bottom: 1em;
+}
+
+//   highlights 
+
+
+.lab_infrastructure h2 {
+    font-weight: 600;
+    font-size: 1.8em;
+  }
+  
+  .lab_infrastructure p {
+    font-weight: 500;
+  }
+  
+  /*.lab_infrastructure {
+    overflow: hidden;
+  }*/
+  
+  
+  .lab_infrastructure img {
+    padding: 0;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  
+  }
+  
+  /* Zoom Out #1 */
+  
+  .lab_infrastructure img:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  .lab_infrastructure .innerrow .image_section {
+    overflow: hidden;
+  }
+  
+  .lab_infrastructure {
+    margin: 5px;
+  }
+  
+  .lab_infrastructure .innerrow {
+  
+    background-color: #fff;
+    text-align: center;
+    margin-top: 10%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    height: auto;
+  }
+  
+  .lab_infrastructure p {
+    text-align: justify;
+    padding: 1em;
+    font-weight: 500;
+    padding-top: 0;
+  }
+  
+  .lab_infrastructure h2 {
+    margin: 0.4em;
+  }
+  
+  .lab_infrastructure h4 {
+    padding: 0.5em;
+    font-weight: 600;
+  }
+  
+  /* lab abd infrastructure end */
+  
+  

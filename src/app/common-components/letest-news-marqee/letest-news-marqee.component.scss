@@ -1,0 +1,53 @@
+
+
+
+.latest-news {
+  display: flex;
+  align-items: center;
+  background-color: #002b80;
+  color: white;
+  padding: 7px;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-header {
+  flex: 0 0 auto;
+  font-weight: bold;
+  padding-right: 15px;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  z-index: 2;
+  background-color: #002b80;
+  padding-left: 10px;
+}
+
+.news-ticker-container {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.news-ticker {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.news-item {
+  display: inline-block;
+  padding-right: 50px;
+  color: yellow;
+}
+
+.new-badge {
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  margin-left: 5px;
+  font-size: 0.8em;
+  border-radius: 3px;
+}
+
+
+

@@ -1,0 +1,54 @@
+<app-vc-menubar *ngIf="showvcmenu" ></app-vc-menubar>
+<app-banner *ngIf="showbanner" [banner_heading]="gallery_Details?.gallery_name" [banner_img]="bannerImg"></app-banner>
+
+<div class="loader" *ngIf="isLoading"></div>
+<section id="gallery-detail" class="pt-5 pb-5 gray-bg">
+    <div class="container white-bg">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="mt-3">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class=>
+                                <img [src]="gallery_Details?.media_link" alt="Main image">
+                            </div> <!-- corses singel image -->
+                        </div>
+                       <div class="col-md-6">
+                        <div class="gallery-detail">
+                            <h2>{{gallery_Details?.gallery_name}}</h2>
+                            <p>{{gallery_Details?.gallery_description}}</p>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="row mt-5">
+                          <ng-container *ngFor="let data of gallery_Details?.detail">
+                            <div class="col-md-4 mb-5">
+                                <a [href]="data.media_link" data-lightbox="models" data-title={{data.media_description}}>
+                                    <div class=" gallery-section">
+                                        <div
+                                        class="gallery-image image banner"
+                                        [style.background-image]="'url(' + data.media_link + ')'"
+                                        *ngIf="data.media_link">
+                                        <img [src]="data.media_link" alt="Gallery Image" />
+                                      </div>
+                                      <div class="sub-Gallery-Details">
+                                        <h4>{{data.media_title}}</h4>
+                                        <!-- <h5>{{data.media_description}}</h5> -->
+                                      </div>
+                                    </div>
+                                </a>
+                              
+                            </div>
+                          </ng-container>
+                        
+                      </div>
+                      
+                </div> <!-- corses singel left -->
+             
+            </div>
+       
+        </div> <!-- row -->
+       
+    </div> <!-- container -->
+</section>
+

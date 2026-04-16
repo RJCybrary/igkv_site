@@ -1,0 +1,15 @@
+<section class="pt-3 pb-3 message_section" *ngIf="pageDetail_data" [ngClass]="{'error-message': isError, 'success-message': isSuccess}">
+    <div class="container">
+        <div class="row">
+            <div class="profile col-md-3"> 
+                <img class="profile-picture" [src]="headDetail_data.img2" style="min-height: 218px; min-width: 233px;" (error)="errorHandler($event)" alt="staff image" >
+                <p class="person-name">{{headDetail_data.Employee_Name}}</p>
+                <p class="person-post">{{headDetail_data.Post_Name}}</p>
+            </div> 
+            <div class="message col-md-9">
+                <p class="contents scrolitem pt-3" style="line-height: 29px; letter-spacing: inherit;">{{pageDetail_data.Principal_Dean_Message}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+

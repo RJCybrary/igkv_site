@@ -1,0 +1,21 @@
+<div class="chat-container" style="margin-top: 100px;">
+  <div class="chat-header">
+    <h2>Chatbot Comming Soon</h2>
+  </div>
+  
+  <!-- <div class="default-questions">
+    <div class="question" *ngFor="let question of defaultQuestions" (click)="sendMessage(question)">
+      {{ question }}
+    </div>
+  </div> -->
+  
+  <div class="messages" #messagesContainer>
+    <div *ngFor="let message of messages" [ngClass]="{'user-message': message.user === 'user', 'bot-message': message.user === 'bot'}">
+      <div class="message-content">
+        {{ message.text }}
+        Comming Soon
+      </div>
+    </div>
+  </div>
+
+</div>

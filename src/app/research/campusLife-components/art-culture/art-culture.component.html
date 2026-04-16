@@ -1,0 +1,405 @@
+<section id="page-banner">
+
+  <div class="video-wrapper">
+    <video #bannerVideo [src]="banner_video" autoplay muted loop controls aria-label="Intro video">
+
+      <track kind="captions" srclang="en" src="assets/captions/intro-video.vtt" label="English captions" default>
+    </video>
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="container page-banner-cont">
+    <h2 class="header">{{banner_heading}}</h2>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href=".">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {{banner_heading}}
+        </li>
+      </ol>
+    </nav>
+  </div>
+
+</section>
+
+
+<section class="pt-3 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-title1">Overview</h2>
+
+        <p class="contents"> Indira Gandhi Krishi Vishwavidyalaya (IGKV) in Raipur, Chhattisgarh, cultivates a rich
+          tapestry of art and
+          culture within its academic landscape. Embracing the ethos of cultural diversity, the university celebrates
+          a vibrant spectrum of artistic expressions through various events, performances, and exhibitions. Students
+          showcase their talents in music, dance, theater, and visual arts, fostering a dynamic and inclusive
+          environment that nurtures creativity and expression. Beyond traditional forms, IGKV also intertwines
+          cultural elements with agricultural practices, reflecting the deep-rooted connection between art,
+          agriculture, and rural life. Through its vibrant art and cultural scene, IGKV cultivates a sense of
+          belonging and community spirit among its students and staff.</p>
+
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Cultural Events  -->
+
+<div class="container-fluid pt-3 pb-3">
+  <div class="container">
+    <h2 class="section-title1">Highlights</h2>
+    <div class="row first_section text-center">
+      <div class="col-md-4 first_row">
+        <a [routerLink]="['details',1]" [attr.aria-label]="'View details of ' + Agri_Carnival[currentSlide].description" aria-label="View details of Madai cultural event">
+          <div class="card">
+            <div class="slider-container ">
+              <img class="slider-image" [src]="Madai[currentSlide].src"
+                alt="Madai cultural event {{ currentSlide + 1 }}">
+            </div>
+            <div class="slider-description">{{ Madai[currentSlide].description }}</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 first_row">
+        <a [routerLink]="['details',2]"  [attr.aria-label]="'View details of ' + Agri_Carnival[currentSlide].description">
+          <div class="card">
+            <div class="slider-container ">
+              <img class="slider-image" [src]="Agri_Carnival[currentSlide].src" alt="Image {{ currentSlide + 1 }}">
+            </div>
+            <div class="slider-description">{{ Agri_Carnival[currentSlide].description }}</div>
+          </div>
+        </a>
+      </div>
+      <!-- <div class="col-md-4 first_row">
+        <a [routerLink]="['details',3]">
+          <div class="card">
+            <div class="slider-container ">
+              <img class="slider-image" [src]="Youth_Festival[currentSlide].src" alt="Image {{ currentSlide + 1 }}">
+            </div>
+            <div class="slider-description">{{ Youth_Festival[currentSlide].description }}</div>
+          </div>
+        </a>
+      </div> -->
+
+      <div class="col-md-4 first_row">
+        <a [routerLink]="['details',4]" [attr.aria-label]="'View details of ' + Agri_Carnival[currentSlide].description">
+          <div class="card">
+            <div class="slider-container ">
+              <img class="slider-image" [src]="Akti_Tihaar[currentSlide].src" alt="Image {{ currentSlide + 1 }}">
+            </div>
+            <div class="slider-description">{{ Akti_Tihaar[currentSlide].description }}</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="pt-20 pb-2 gray-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title mt-400">
+          <h2>Gallery (Session Wise)</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- YEAR BUTTONS -->
+  <div class="pt-5 pb-5 gray-bg container text-center years-counts">
+    <div class="row hero">
+
+      <!-- 2023 -->
+      <div class="col-md-2">
+        <button class="counter blue"
+          (click)="openContent('year2023')"
+          aria-label="Open gallery for year 2023"
+          type="button">
+          <span class="counter-value">2023</span>
+        </button>
+      </div>
+
+      <!-- 2022 -->
+      <div class="col-md-2">
+        <button class="counter blue"
+          (click)="openContent('year2022')"
+          aria-label="Open gallery for year 2022"
+          type="button">
+          <span class="counter-value">2022</span>
+        </button>
+      </div>
+
+      <!-- 2019 -->
+      <div class="col-md-2">
+        <button class="counter blue"
+          (click)="openContent('year2019')"
+          aria-label="Open gallery for year 2019"
+          type="button">
+          <span class="counter-value">2019</span>
+        </button>
+      </div>
+
+      <!-- 2018 -->
+      <div class="col-md-2">
+        <button class="counter blue"
+          (click)="openContent('year2018')"
+          aria-label="Open gallery for year 2018"
+          type="button">
+          <span class="counter-value">2018</span>
+        </button>
+      </div>
+
+      <!-- 2017 -->
+      <div class="col-md-2">
+        <button class="counter blue"
+          (click)="openContent('year2017')"
+          aria-label="Open gallery for year 2017"
+          type="button">
+          <span class="counter-value">2017</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== 2023 ===================== -->
+  <div class="gray-bg" *ngIf="selectedYear === 'year2023'">
+    <section class="pt-20 pb-5 mb-20">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <div class="section-title mt-400">
+              <h3>Gallery of 2023</h3>
+            </div>
+
+            <!-- IMAGE GRID -->
+            <div class="mb-3 about-cont">
+              <div class="gallery_section">
+                <div class="gallery-image">
+                  <div class="container">
+                    <div class="row">
+
+                      <!-- SAMPLE IMAGE -->
+                      <div class="col-md-3 mb-2">
+                        <a 
+                          [href]="Akti_2023_Img_1"
+                          data-lightbox="models"
+                          aria-label="View full image of Akti Tihaar 2023">
+                          <div class="gallery-section">
+                            <div class="gallery-image image banner">
+                              <img 
+                                [src]="Akti_2023_Img_1"
+                                alt="Akti Tihaar cultural event 2023" />
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-md-3 mb-2">
+                        <a 
+                          [href]="Akti_2023_Img_2"
+                          data-lightbox="models"
+                          aria-label="View full image of Akti Tihaar 2023">
+                          <img 
+                            [src]="Akti_2023_Img_2"
+                            alt="Akti Tihaar celebration 2023" />
+                        </a>
+                      </div>
+
+                      <div class="col-md-3 mb-2">
+                        <a 
+                          [href]="Akti_2023_Img_3"
+                          data-lightbox="models"
+                          aria-label="View full image of Akti Tihaar 2023">
+                          <img 
+                            [src]="Akti_2023_Img_3"
+                            alt="Akti Tihaar festival activities 2023" />
+                        </a>
+                      </div>
+
+                      <div class="col-md-3 mb-2">
+                        <a 
+                          [href]="Akti_2023_Img_4"
+                          data-lightbox="models"
+                          aria-label="View full image of Akti Tihaar 2023">
+                          <img 
+                            [src]="Akti_2023_Img_4"
+                            alt="Akti Tihaar program 2023" />
+                        </a>
+                      </div>
+
+                      <div class="col-md-3 mb-2">
+                        <a 
+                          [href]="Akti_2023_Img_5"
+                          data-lightbox="models"
+                          aria-label="View full image of Akti Tihaar 2023">
+                          <img 
+                            [src]="Akti_2023_Img_5"
+                            alt="Akti Tihaar program 2023" />
+                        </a>
+                      </div>
+
+                         <div class="col-md-3 mb-2">
+                        <a 
+                          [href]="Akti_2023_Img_6"
+                          data-lightbox="models"
+                          aria-label="View full image of Akti Tihaar 2023">
+                          <img 
+                            [src]="Akti_2023_Img_6"
+                            alt="Akti Tihaar program 2023" />
+                        </a>
+                      </div>
+
+                         <div class="col-md-3 mb-2">
+                        <a 
+                          [href]="Akti_2023_Img_7"
+                          data-lightbox="models"
+                          aria-label="View full image of Akti Tihaar 2023">
+                          <img 
+                            [src]="Akti_2023_Img_7"
+                            alt="Akti Tihaar program 2023" />
+                        </a>
+                      </div>
+
+                         <div class="col-md-3 mb-2">
+                        <a 
+                          [href]="Akti_2023_Img_8"
+                          data-lightbox="models"
+                          aria-label="View full image of Akti Tihaar 2023">
+                          <img 
+                            [src]="Akti_2023_Img_8"
+                            alt="Akti Tihaar program 2023" />
+                        </a>
+                      </div>
+
+                         <div class="col-md-3 mb-2">
+                        <a 
+                          [href]="Madai_2023_Img_1"
+                          data-lightbox="models"
+                          aria-label="View full image of Akti Tihaar 2023">
+                          <img 
+                            [src]="Madai_2023_Img_1"
+                            alt="Akti Tihaar program 2023" />
+                        </a>
+                      </div>
+
+                         <div class="col-md-3 mb-2">
+                        <a 
+                          [href]="Madai_2023_Img_2"
+                          data-lightbox="models"
+                          aria-label="View full image of Akti Tihaar 2023">
+                          <img 
+                            [src]="Madai_2023_Img_2"
+                            alt="Akti Tihaar program 2023" />
+                        </a>
+                      </div>
+
+                         <div class="col-md-3 mb-2">
+                        <a 
+                          [href]="Madai_2023_Img_3"
+                          data-lightbox="models"
+                          aria-label="View full image of Akti Tihaar 2023">
+                          <img 
+                            [src]="Madai_2023_Img_3"
+                            alt="Akti Tihaar program 2023" />
+                        </a>
+                      </div>
+
+                         <div class="col-md-3 mb-2">
+                        <a 
+                          [href]="Madai_2023_Img_4"
+                          data-lightbox="models"
+                          aria-label="View full image of Akti Tihaar 2023">
+                          <img 
+                            [src]="Madai_2023_Img_4"
+                            alt="Akti Tihaar program 2023" />
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- You can repeat same pattern for remaining images -->
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== 2022 ===================== -->
+  <div class="gray-bg" *ngIf="selectedYear === 'year2022'">
+    <section class="pt-20 pb-5 mb-20">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <div class="section-title mt-400">
+              <h3>Gallery of 2022</h3>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-3 mb-2">
+                <a 
+                  [href]="Agri_Carnival_2022_Img_1"
+                  data-lightbox="models"
+                  aria-label="View full image of Agri Carnival 2022">
+                  <img 
+                    [src]="Agri_Carnival_2022_Img_1"
+                    alt="Agri Carnival exhibition 2022" />
+                </a>
+              </div>
+
+              <div class="col-md-3 mb-2">
+                <a 
+                  [href]="Agri_Carnival_2022_Img_2"
+                  data-lightbox="models"
+                  aria-label="View full image of Agri Carnival 2022">
+                  <img 
+                    [src]="Agri_Carnival_2022_Img_2"
+                    alt="Agri Carnival event 2022" />
+                </a>
+              </div>
+
+               <div class="col-md-3 mb-2">
+                <a 
+                  [href]="Agri_Carnival_2022_Img_3"
+                  data-lightbox="models"
+                  aria-label="View full image of Agri Carnival 2022">
+                  <img 
+                    [src]="Agri_Carnival_2022_Img_3"
+                    alt="Agri Carnival event 2022" />
+                </a>
+              </div>
+
+               <div class="col-md-3 mb-2">
+                <a 
+                  [href]="Agri_Carnival_2022_Img_4"
+                  data-lightbox="models"
+                  aria-label="View full image of Agri Carnival 2022">
+                  <img 
+                    [src]="Agri_Carnival_2022_Img_4"
+                    alt="Agri Carnival event 2022" />
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</section>

@@ -1,0 +1,46 @@
+
+<section id="about-page" class="pt-3 pb-3 gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                    <h2 class="section-title1">Activities</h2>
+                    <app-pagination 
+                   [currentPages]="currentPages"
+                    [totalrecords]="totalrecords"
+                   (rowsPerPageChanged)="onRowsPerPageChanged($event)"
+                     (pageChanged)="onPageChanged($event)"
+                     (searchCriteria)="onSearchCriteriaReceived($event)">   
+                <div class="about-cont mt-3"  *ngIf="Activity_data?.length !== 0 ; else elseblock">
+                    <div class="row ">
+                        <ng-container *ngFor="let data of Activity_data">
+                            <div class="col-md-4 mb-5 " >
+                                    <div class="activity-container">
+                                        <!-- <a [routerLink]="['/about/activities-details',Activity_data[5].Website_Content_ID]">
+                                        <img class="activity-img" [src]="Activity_data[5].Column1" alt="Beautiful Image">
+                                        </a> -->
+                                        <a [routerLink]="['/about/college-home/college', college_id, 'cont', 'activities-details', data.Website_Content_ID]">
+                                            <img class="activity-img" [src]="data.Column1" (error)="onErrorImage($event)" alt="Beautiful Image">
+                                        </a>
+                                            <div class="activity-description">
+                                            <p>{{data.Content_Title}}</p>
+                                        </div>
+                                        <div class="calendar-icon">
+                                            <i class="fa-solid fa-calendar-days" style="color: #07294d;"></i>
+                                        </div>
+                                        <div class="calendar-date">
+                                            <span>{{data.web_content_date}}</span>
+                                        </div>
+                                    </div>
+                            </div>
+                        </ng-container>
+
+                    </div>
+                </div>
+                <ng-template #elseblock>
+                    <app-no-data></app-no-data>
+                 </ng-template>
+                    </app-pagination>
+            </div>
+        </div>
+    </div>
+</section>

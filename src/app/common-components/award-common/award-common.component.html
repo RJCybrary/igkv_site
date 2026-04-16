@@ -1,0 +1,36 @@
+<section id="blog" class="blog container-fluid pt-3 pb-3" *ngIf="award_data != ''">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h2 class="section-title1">Recent Awards</h2>
+    <div class="row gy-4 posts-list ">
+      <ng-container *ngFor="let data of award_data.slice(0, 3)">
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden  banner1 image1"
+              [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <img [src]="data.Column1" (error)="OnErrorImage($event)" class="img-fluid" alt="college awards image">
+              <span class="post-date">{{data.web_content_date2|date:'MMMM d, y'}}</span>
+              <div class="content1">
+              </div>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+              <p class="contents">
+                {{data.Content_Title}}
+              </p>
+            </div>
+            <hr>
+            <a [routerLink]="['/about/activities-details',data.Website_Content_ID]" class="readmore stretched-link"
+              aria-label="View award"><span>Read
+                More&nbsp;<i class="fa-solid fa-arrow-right color-green"></i></span></a>
+          </div>
+        </div>
+      </ng-container>
+      <div class="col-lg-12 col-sm-12" style="text-align: center !important;">
+        <a [routerLink]="['/about/activities',5]" class="main-btn">{{'View more' | translate}} </a>
+      </div>
+    </div><!-- End blog posts list -->
+
+  </div>
+  <hr>
+</section>

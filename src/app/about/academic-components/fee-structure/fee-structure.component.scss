@@ -1,0 +1,106 @@
+
+.fee-details {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.fee-details a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: calc(16px * var(--font-scale));
+    border-radius: 5px;
+}
+
+ /*Fee Structure Part Starts*/
+ 
+ .Fee_Structure_tab {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.Fee_Structure_tab .nav .nav-item a{
+    padding: 20px 0;
+    background-color: #b34700;
+    color: #fff;
+    font-weight: 15;
+    color: #fff;
+    display: block;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    border-radius:40px;
+    font-weight:600;
+}
+.Fee_Structure_tab .nav .nav-item a.active{
+    background-color: #fff;
+    color: #315377;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius:40px;
+}
+
+.Fee_Structure_tab .nav .nav-item a{
+    text-decoration: none;
+}
+
+.Fee_Structure_tab .tab-content{
+    padding: 0px 50px 35px;
+}
+.Fee_Structure_tab .tab-content .dashboard-cont .singel-dashboard h5{
+    font-size: calc(18px * var(--font-scale));
+    color: #000;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.Fee_Structure_tab .tab-content .reviews-cont{
+    padding: 45px 0 15px;
+}
+
+.Fee_Structure_tab li{
+    padding: 0 0.2em;
+    justify-content: space-evenly;
+} 
+
+.Fee_Structure_tab li a span{
+    padding-left: 0.5em;
+}
+
+/*Table Css Starts*/ 
+
+
+.Fee_Structure table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+  .Fee_Structure th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+   .Fee_Structure th {
+     font-weight:600;
+     font-size:17px;
+    }
+
+   
+   .Fee_Structure tr {
+     font-weight:300;
+    }
+
+   .Fee_Structure tr:nth-child(even){background-color: #f2f2f2}
+
+  .Fee_Structure caption {
+      caption-side: top;
+      text-align: center;
+      font-weight: bold;
+      font-size: calc(1.2em * var(--font-scale));
+      margin-bottom: 10px;
+    }
+
+
+ 

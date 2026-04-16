@@ -1,0 +1,619 @@
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="4">
+    <video autoplay muted loop class="banner-video" aria-label="Intro video" controls>
+        <source [src]="banner_video" type="video/mp4">
+                <track kind="captions" srclang="en" src="assets/captions/intro-video.vtt" label="English captions" default>
+    </video>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-banner-cont">
+                    <h2 class="header">{{banner_heading}}</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href=".">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{banner_heading}}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container-fluid" style="background: #f2f7ff;">
+    <div class="container">
+        <div class="row first_section">
+            <div class="col-md-8 Contents">
+                <!-- Madai -->
+                <div *ngIf="facility_id==1">
+                    <p class="slider-description">{{ Madai[currentSlide].description }}</p>
+                    <div class="first_row">
+                        <div class="slider-container">
+                            <img [src]="Madai[currentSlide].src" alt="Image {{ currentSlide + 1 }}">
+                        </div>
+                    </div>
+
+                    <div class="Description">
+                        <p class="title">About</p>
+                        <p class="about">
+                            The Madai festival at IGKV is a vibrant celebration that combines sports and cultural
+                            events, fostering camaraderie and healthy competition among agricultural colleges. This
+                            annual extravaganza showcases a rich tapestry of traditions, including folk dances, music
+                            performances, and traditional sports competitions. Participants from various agricultural
+                            colleges come together to display their skills and talents, creating a dynamic atmosphere of
+                            unity and excitement. The festival serves as a platform to celebrate agricultural heritage
+                            while promoting sportsmanship and cultural exchange among students, faculty, and
+                            participants from diverse backgrounds, contributing to a memorable and enriching experience
+                            for all involved.
+                        </p>
+
+                        <p class="title">Highlights</p>
+                        <div class="highlights">
+                            <ul>
+                                <li>Annual Madai Festival at IGKV.</li>
+                                <li>Fusion of sports and cultural events.</li>
+                                <li>Showcases traditional folk dances and music.</li>
+                                <li>Features competitive sports competitions.</li>
+                                <li>Participating agricultural colleges engage in friendly rivalry.</li>
+                                <li>Promotes unity and cultural exchange.</li>
+                                <li>Celebrates agricultural heritage.</li>
+                                <li>Fosters sportsmanship and teamwork.</li>
+                                <li>Memorable experience for students and faculty.</li>
+                                <li>Enhances community spirit and camaraderie.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agri Carnival -->
+                <div *ngIf="facility_id==2">
+                    <p class="slider-description">{{ Agri_Carnival[currentSlide].description }}</p>
+                    <div class="first_row">
+                        <div class="slider-container">
+                            <img [src]="Agri_Carnival[currentSlide].src" alt="Image {{ currentSlide + 1 }}">
+                        </div>
+                    </div>
+
+                    <div class="Description">
+                        <p class="title">About</p>
+                        <p class="about">
+                            The Agri-Carnival Festival at IGKV celebrates agriculture's vibrancy with an extensive
+                            exhibition showcasing diverse agricultural products, state-of-the-art equipment, and organic
+                            goods. This festival serves as a platform for farmers, researchers, and agricultural
+                            enthusiasts to explore innovative farming techniques, exchange knowledge, and celebrate the
+                            rich agricultural heritage. Visitors immerse themselves in a dynamic atmosphere filled with
+                            demonstrations, interactive workshops, and networking opportunities. From showcasing
+                            traditional farming practices to highlighting modern agricultural innovations, the
+                            Agri-Carnival Festival at IGKV fosters a deeper appreciation for agriculture's vital role in
+                            sustaining communities and driving economic growth.
+                        </p>
+
+                        <p class="title">Highlights</p>
+                        <div class="highlights">
+                            <ul>
+                                <li>Diverse exhibition featuring agricultural products, equipment, and organic goods.
+                                </li>
+                                <li>Platform for farmers, researchers, and enthusiasts to exchange knowledge.</li>
+                                <li>Demonstrations and interactive workshops on innovative farming techniques.</li>
+                                <li>Celebration of traditional farming practices alongside modern innovations.</li>
+                                <li>Networking opportunities for stakeholders in the agricultural sector.</li>
+                                <li>Fosters appreciation for agriculture's role in community sustenance and economic
+                                    growth.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youth Festival -->
+
+                <div *ngIf="facility_id==3">
+                    <p class="slider-description">{{ Youth_Fest[currentSlide].description }}</p>
+                    <div class="first_row">
+                        <div class="slider-container">
+                            <img [src]="Youth_Fest[currentSlide].src" alt="Image {{ currentSlide + 1 }}">
+                        </div>
+                    </div>
+
+                    <div class="Description">
+                        <p class="title">About</p>
+                        <p class="about">
+                            The Musical Garden at Indira Gandhi Krishi Vishwavidyalaya (IGKV) in Raipur, Chhattisgarh,
+                            offers a
+                            unique
+                            sensory experience where nature harmonizes with music. Every element in the garden,
+                            meticulously
+                            designed,
+                            mirrors musical instruments, creating an immersive environment for visitors. From pathways
+                            resembling piano
+                            keys to flower beds shaped like drums, the garden celebrates the fusion of nature and
+                            melody.
+                            Visitors can
+                            explore interactive installations that produce melodious sounds, fostering creativity and
+                            joy. This
+                            innovative space not only serves as a recreational area but also inspires harmony between
+                            art and
+                            agriculture, reflecting IGKV's commitment to holistic education and cultural enrichment.
+
+                        </p>
+
+                        <p class="title">Highlights</p>
+                        <div class="highlights">
+                            <ul>
+                                <li>Features a unique design where elements mimic musical instruments.</li>
+                                <li>Pathways resemble piano keys and flower beds shaped like drums.</li>
+                                <li>Interactive installations allow visitors to create melodious sounds.</li>
+                                <li>Fosters creativity, joy, and cultural enrichment.</li>
+                                <li>Celebrates the fusion of nature and music.</li>
+                                <li>Reflects IGKV's commitment to holistic education and innovative design.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Akti Tihaar -->
+
+                <div *ngIf="facility_id==4">
+                    <p class="slider-description">{{ Akti_Tihaar[currentSlide].description }}</p>
+                    <div class="first_row">
+                        <div class="slider-container">
+                            <img [src]="Akti_Tihaar[currentSlide].src" alt="Image {{ currentSlide + 1 }}">
+                        </div>
+                    </div>
+
+                    <div class="Description">
+                        <p class="title">About</p>
+                        <p class="about">
+                            The canteen at Indira Gandhi Krishi Vishwavidyalaya (IGKV) in Raipur, Chhattisgarh, stands
+                            as a
+                            vibrant hub
+                            of culinary diversity and student camaraderie. Nestled within the campus, it offers a
+                            welcoming
+                            atmosphere
+                            for students, faculty, and staff alike. With a variety of delicious and affordable food
+                            options, the
+                            canteen
+                            caters to diverse tastes and dietary preferences. From traditional Indian cuisine to
+                            international
+                            dishes,
+                            there's something for everyone to enjoy. Beyond nourishment, it serves as a social gathering
+                            spot
+                            where
+                            ideas are exchanged, friendships are forged, and memories are made, enriching the vibrant
+                            campus
+                            community
+                            at IGKV.
+                        </p>
+
+                        <p class="title">Highlights</p>
+                        <div class="highlights">
+                            <ul>
+                                <li>Offers a diverse range of delicious and affordable food options</li>
+                                <li>Welcoming atmosphere for students, faculty, and staff</li>
+                                <li>Catering to various tastes and dietary preferences, including traditional Indian
+                                    cuisine
+                                </li>
+                                <li>Social gathering spot fostering camaraderie and exchange of ideas</li>
+                                <li>Contributes to the vibrant campus community and student life at IGKV </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- right side nav bar starts here  -->
+            <div class="col-md-4 mb-3 Scrollstyle1">
+                <div class="subhead  mt-5">
+                    <span class="text-center">More Cultural Events</span>
+                </div>
+                <div class="routes">
+                    <div class="facility-card" (click)="routeToInfrastrucutre(1)">
+                        <!-- <a routerLink="research/facilities-infrastructure/details/1"> -->
+                        <img [src]="MadaiImg" alt="Madai image">
+                        <span>Madai</span>
+                        <!-- </a> -->
+                    </div>
+
+                    <div class="facility-card" (click)="routeToInfrastrucutre(2)">
+
+                        <img [src]="AgriCarnivalImg" alt="Agri Carnival image">
+                        <span>Agri Carnival</span>
+                    </div>
+
+
+
+                    <div class="facility-card" (click)="routeToInfrastrucutre(4)">
+                        <img [src]="AktiImg" alt="Akti Tihaar image">
+                        <span>Akti Tihaar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery section start-->
+        <section *ngIf="facility_id==1" id="Section3" class="pt-20 pb-5 mb-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title mt-400">
+                            <h2>Gallery</h2>
+                        </div> <!-- section title -->
+                        <div class="mb-3 about-cont">
+                            <div class="gallery_section ">
+                                <div class="gallery-image">
+                                    <div class="container">
+                                        <div class="row">
+                                            <!-- Looping through each item in the Gallery_Details array -->
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="MadaiImg1"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="MadaiImg1"
+                                                                alt="madai image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="MadaiImg2"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="MadaiImg2"
+                                                                alt="Madai image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="MadaiImg3"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="MadaiImg3"
+                                                                alt="Madai image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="MadaiImg4"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="MadaiImg4"
+                                                                alt="Madai image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- about cont -->
+
+                </div> <!-- row -->
+
+            </div> <!-- container -->
+        </section>
+
+        <section *ngIf="facility_id==2" id="Section3" class="pt-20 pb-5 mb-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title mt-400">
+                            <h2>Gallery</h2>
+                        </div> <!-- section title -->
+                        <div class="mb-3 about-cont">
+                            <div class="gallery_section ">
+                                <div class="gallery-image">
+                                    <div class="container">
+                                        <div class="row">
+                                            <!-- Looping through each item in the Gallery_Details array -->
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="AgriCarnivalImg1"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="AgriCarnivalImg1"
+                                                                alt="Agri Carnival image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="AgriCarnivalImg2"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="AgriCarnivalImg2"
+                                                                alt="Agri Carnival image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="AgriCarnivalImg3"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="AgriCarnivalImg3"
+                                                                alt="Agri Carnival image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="AgriCarnivalImg4"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="AgriCarnivalImg4"
+                                                                alt="Agri Carnival image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div> <!-- about cont -->
+
+                </div> <!-- row -->
+
+            </div> <!-- container -->
+        </section>
+
+        <!-- Gallery Starts  -->
+
+        <section *ngIf="facility_id==4" id="Section3" class="pt-20 pb-5 mb-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title mt-400">
+                            <h2>Gallery</h2>
+                        </div> <!-- section title -->
+                        <div class="mb-3 about-cont">
+                            <div class="gallery_section ">
+                                <div class="gallery-image">
+                                    <div class="container">
+                                        <div class="row">
+                                            <!-- Looping through each item in the Gallery_Details array -->
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="AktiImg1"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="AktiImg1"
+                                                                alt="Akti image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="AktiImg2"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="AktiImg2"
+                                                                alt="Akti image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="AktiImg3"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="AktiImg3"
+                                                                alt="Akti image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="AktiImg4"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="AktiImg4"
+                                                                alt="Akti image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="mb-3 about-cont">
+                            <div class="gallery_section ">
+                                <div class="gallery-image">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="AktiImg5"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="AktiImg5"
+                                                                alt="Akti image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="AktiImg6"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="AktiImg6"
+                                                                alt="Akti image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="AktiImg7"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="AktiImg7"
+                                                                alt="Akti image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+
+                                            <div class="col-md-3 mb-3">
+                                                <!-- Creating a column layout for three images in a row -->
+                                                <a [href]="AktiImg8"
+                                                    data-lightbox="models">
+                                                    <!-- Linking to the image with lightbox attributes -->
+                                                    <div class="gallery-section">
+                                                        <!-- Creating a container for the image -->
+                                                        <div class="gallery-image image banner">
+                                                            <!-- Styling the background image of the container -->
+                                                            <img [src]="AktiImg8"
+                                                                alt="Akti image" />
+                                                            <!-- Displaying the image -->
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div> <!-- about cont -->
+
+                </div> <!-- row -->
+
+            </div> <!-- container -->
+        </section>
+    </div> <!-- about cont -->
+
+</div> <!-- row -->

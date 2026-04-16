@@ -1,0 +1,42 @@
+
+<!-- ============ Translator =========== -->
+ <!-- <div>{{'Hello' | translate}}</div>
+<button (click)="switchLanguage('en')">en</button>
+<button (click)="switchLanguage('hn')">hn</button> -->
+
+<app-topbar></app-topbar>
+<!-- <router-outlet (activate)="onActivate()"></router-outlet> -->
+<router-outlet></router-outlet>
+<!-- chat button -->
+<!-- <button class="chatbot-button" (click)="toggleChatbot()">
+  <i class="fa-regular fa-comment-dots" *ngIf="!isChatbotOpen"></i>
+  <i class="fa-regular fa-circle-xmark" *ngIf="isChatbotOpen"></i>
+</button> -->
+<app-chatbot *ngIf="isChatbotOpen"></app-chatbot>
+
+
+
+<!-- Scroll Button -->
+<button aria-label="scroll-to-top"
+  class="scroll-to-top"
+  title="Go to top"
+  [ngClass]="{'show': isShowScrollToTop}"
+  (click)="scrollToTop()">
+  ↑
+</button>
+
+<!--  show popup -->
+<!-- Admission Popup -->
+<div class="admission-popup" *ngIf="showAdmissionPopup">
+  <p>{{ 'Admission Starts for 2026-27' | translate }}</p>
+  <button (click)="onApplyAdd()">{{ 'Apply Now' | translate }}</button>
+</div>
+
+<!-- 
+ <div class="convocation-popup" *ngIf="showAdmissionPopup">
+  <p>11th Convocation</p>
+  <button (click)="onApplyCon()">View</button>
+</div> -->
+
+
+<app-footer></app-footer>

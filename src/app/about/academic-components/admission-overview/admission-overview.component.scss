@@ -1,0 +1,60 @@
+
+/*Admission Portal Css Starts */
+
+.Degree_Programs {
+    text-align: center;
+    background-color: white;
+    height: 9em;
+    color: white;
+}
+
+
+
+.Degree_Programs h6{
+   
+    font-size:larger;
+    margin:1em;
+    padding:2em;
+    color:yellow;
+    
+}
+
+.Degree_Programs .first_column {
+   text-align:center;
+   border-radius:4px;
+   color:yellow;
+   height:7em;
+   background-color:#07294d;
+   box-shadow:black 0 0px 2px 2px;
+}
+
+    .Degree_Programs .col-md-4 {
+        transition: ease-in-out 0.5s;
+    }
+
+        .Degree_Programs .col-md-4:hover {
+        transform:scale(1.09);
+    }
+
+.Degree_Programs .second_column {
+   text-align:center;
+   border-radius:4px;
+   color:yellow;
+   height:7em;
+   background-color:#07294d;
+} 
+
+.Degree_Programs .third_column {
+   text-align:center;
+   border-radius:4px;
+   color:yellow;
+   height:7em;
+  background-color:#07294d;
+}
+
+
+.color-yellow {
+    color:yellow;
+    font-size:larger;
+}
+/*Ends*/

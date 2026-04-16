@@ -1,0 +1,104 @@
+
+/*=====================================================
+    21. ABOUT PAGE css 
+======================================================*/
+
+.about-image img {
+    // border-radius: 5px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   float: right; 
+   margin: 15px 0 0 20px;
+}
+
+.about-singel-items span{
+   font-size: calc(60px * var(--font-scale))px;
+   color: #000 ;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 600;
+   line-height: 46px;
+   padding-bottom: 22px;
+}
+.about-singel-items h4{
+   color: #000;
+   font-size: calc(24px * var(--font-scale));
+   padding: 15px 0px 25px 0px;
+}
+
+.image img{
+  height: 3em;
+}
+
+
+.fa-file-pdf{
+   color: #b32b2b;
+}
+
+// hover Effect Css 
+.hero{
+   background-color: #16628f;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+   height: 25em;
+}
+
+.hero span{
+   font-size: calc(60px * var(--font-scale))px;
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   line-height: 46px;
+   padding-bottom: 22px;
+}
+.hero h4{
+   color: white;
+   font-size: calc(24px * var(--font-scale));
+   padding: 15px 0px 25px 0px;
+}
+
+.hero p{
+   color: white;
+}
+
+// .about-singel-items:hover {
+//    background-color: #16628f;
+//    color: white; /* Change the text color on hover */
+//    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+
+
+//    h4 {
+//       color: white;
+//    }
+// }
+
+
+// hover Effect Css 
+.about-singel-items {
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.1);
+   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+   height: 25em;
+}
+
+.about-singel-items:hover {
+   background-color: #16628f;
+   color: white; /* Change the text color on hover */
+   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+
+
+
+   h4,span,p {
+      color: white;
+   }
+}
+
+
+//   Cards department
+@media only screen and (max-width: 700px) {
+   .cardss {
+     width: 350px;
+   }
+ }

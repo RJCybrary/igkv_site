@@ -1,0 +1,103 @@
+<app-banner [banner_heading]="'Site Map'"
+    [banner_img]="bannerImg"></app-banner>
+
+<div class="container mt-5">
+  <h4 style="font-weight:600; margin-left:20px;">Main Menu</h4>
+
+  <div class="sitemap">
+    <ul>
+
+      <!-- ABOUT -->
+      <li>
+        <h3 class="head">About</h3>
+        <ul>
+          <li>
+            <h4 class="sub-head">IGKV In Focus</h4>
+            <ul class="list-item">
+              <li><a routerLink="/about/about-overview">Overview</a></li>
+              <li><a routerLink="/about/Chancellor">Chancellor</a></li>
+              <li><a routerLink="/about/vice-chancellor">Desk Of Vice Chancellor</a></li>
+              <li><a [routerLink]="['/about/Administrative',1]">Board of Management</a></li>
+              <li><a [routerLink]="['/about/Administrative',3]">Administrative Council</a></li>
+              <li><a [routerLink]="['/about/Administrative',2]">Academic Council</a></li>
+              <li><a routerLink="/about/who-is-who/members-list/1">Who's Who</a></li>
+              <li><a [routerLink]="['/about/staff',0]">Directory Search</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <h4 class="sub-head">Organisation</h4>
+            <ul class="list-item">
+              <li><a [routerLink]="['/about/Offices',1]">VC Secretariat</a></li>
+              <li><a [routerLink]="['/about/Offices',2]">Registrar Office</a></li>
+              <li><a [routerLink]="['/about/Offices',3]">Comptroller Office</a></li>
+              <li><a [routerLink]="['/about/Offices',4]">Medical Unit</a></li>
+              <li><a [routerLink]="['/research/guest-house']">Guest House</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ACADEMICS -->
+      <li>
+        <h3  class="head">Academics</h3>
+        <ul>
+          <li>
+            <h4 class="sub-head">Overview</h4>
+            <ul class="list-item">
+              <li><a [routerLink]="['/research/director',111]">Directorate of Instruction</a></li>
+              <li><a routerLink="/about/college-home">Colleges</a></li>
+              <li><a routerLink="/about/department">Departments</a></li>
+              <li><a href="https://igkv.ac.in/blockchain/blockHome.aspx">Shrinkhala</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <h4  class="sub-head">Admission</h4>
+            <ul class="list-item">
+              <li><a routerLink="/about/admission-overview">Admission Procedure</a></li>
+              <li><a routerLink="/about/fee-structure">Fee Structure</a></li>
+              <li><a routerLink="/about/faq">FAQs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- RESEARCH -->
+      <li>
+        <h3 class="head">Research</h3>
+        <ul>
+          <li>
+            <h4 class="sub-head">Overview</h4>
+            <ul class="list-item">
+              <li><a [routerLink]="['/research/director',100]">Directorate of Research Services</a></li>
+              <li><a routerLink="/research/sponcerd-project">Projects</a></li>
+              <li><a href="https://igkv.ac.in/xenom/index.aspx">LMTdb</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- STUDENT WELFARE -->
+      <li>
+        <h3 class="head">Student Welfare</h3>
+        <ul>
+          <li>
+            <h4 class="sub-head">Life At IGKV</h4>
+            <ul class="list-item">
+              <li><a [routerLink]="['/research/director',57]">Dean Student Welfare</a></li>
+              <li><a routerLink="/research/sports-overview">Sports</a></li>
+              <li><a routerLink="/research/facilities-infrastructure">Facilities & Operations</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- SIMPLE LINKS -->
+      <li><a href="https://igkv.ac.in/recruitmenthome.aspx" class="head">Recruitment</a></li>
+      <li><a href="https://igkv.ac.in/counselinghomenew.aspx" class="head">Admission</a></li>
+      <li><a routerLink="/research/international-overview" class="head">International</a></li>
+
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<app-banner [banner_heading]="Title" [banner_img]="bannerImg" ></app-banner>
+
+<section id="Section2 mt-4 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title mt-50 mb-50">
+                    <!-- <h2>Activities</h2> -->
+                    
+                    <div class="about-cont lab_infrastructure">
+                        <div class="row" >
+                            <div class="col-md-4" *ngFor="let item of Activities_data">
+                                <div class="innerrow">
+                                    <div class="image_section">
+                                        <img src="{{item.Column1}}" alt="image">
+                                    </div>
+                                    <div>
+                                        <h4> {{item.Content_Title}}</h4>
+                                        <p>{{ item.Content_Description | stripHtml }}<p>    
+                                        <a style="color: rgba(26, 133, 214, 0.993); justify-content: center;"  routerLink="/about/activities-details/{{item.Website_Content_ID}}"
+                                            class="">
+                                            View Detail
+                                        </a>                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div> 
+  
+        </div>
+    </div> 
+    </div>
+  </section>

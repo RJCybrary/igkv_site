@@ -1,0 +1,312 @@
+<!-- Navbar for Kvk -->
+<!-- <nav class="navbar navbar-expand-lg topbar-menu-1" style="background-color: #009970;" data-bs-theme="dark"  > -->
+  <nav class="navbar navbar-expand-lg topbar-menu-1"
+     style="background-color: #006b4f;"
+     data-bs-theme="dark">
+    <div class="container-fluid">
+        <div>
+            <ul class="navbar-nav">
+                <li><a class="nav-link topnav" aria-label="Home" routerLink="/research/kvk-home"><i class="fa-solid fa-house" aria-hidden="true" style="padding-right: 0.5em;">
+                
+                </i>Back to University Site</a>
+              </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+  <!-- Main menu for big screen -->
+  <nav *ngIf="kvks_Detail" class="navbar navbar-expand-lg " id="mainMenu" style="background-color: rgba(255, 255, 255, 0.973); height: 90px; z-index: 2;" >
+    <div class=" container-fluid">
+        <a routerLink="./" style="display: flex;">
+            <img src="assets/images/igkv_logo.png" alt="IGKV Logo" aria-hidden="true" height="60px" style="margin-top: 6px;">
+             <h1 class="kvk-head">{{kvks_Detail.office_name | titlecase}}</h1>
+        </a>
+     
+            <nav class="navbar col d-block d-sm-none" data-bs-theme="light">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarExample4" aria-controls="navbarExample4"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+           <div class="row">
+  <div class="collapse navbar-collapse mt-1" id="navbarNavDropdown">
+
+    <ul class="navbar-nav">
+
+      <!-- Home -->
+      <li class="nav-item">
+        <a class="nav-link topnav" routerLink="./" aria-label="Home">
+          <i class="fa-solid fa-house" style="padding-right:0;color:black;"></i>
+        </a>
+      </li>
+
+      <!-- About -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+           id="navbarDropdownAbout"
+           data-bs-toggle="dropdown"
+           aria-expanded="false">
+          About
+        </a>
+
+        <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdownAbout">
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['/research/kvk-home/kvk/',Office_id]"
+               fragment="Overview">
+               Overview
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['/research/kvk-home/kvk/',Office_id]"
+               fragment="SeniorScientist">
+               Senior Scientist and Head
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['cont/staff-details/',Office_id]">
+               Who's Who
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['cont/gallery/',Office_id]">
+               Gallery
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Research -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+           id="navbarDropdownResearch"
+           data-bs-toggle="dropdown"
+           aria-expanded="false">
+          Research
+        </a>
+
+        <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdownResearch">
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['cont/project/',Office_id]">
+               Projects
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['cont/publication',Office_id,1]">
+               Books & Magazines
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['cont/publication',Office_id,3]">
+               Publications
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['cont/publication',Office_id,4]">
+               Journals
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['cont/publication',Office_id,5]">
+               Research Paper
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Activity -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+           id="navbarDropdownActivity"
+           data-bs-toggle="dropdown"
+           aria-expanded="false">
+          Activity
+        </a>
+
+        <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdownActivity">
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['cont/farmer-corner/',Office_id,17]">
+               Visit
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['cont/farmer-corner/',Office_id,15]">
+               Training
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['cont/farmer-corner/',Office_id,13]">
+               FLD
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item"
+               [routerLink]="['cont/farmer-corner/',Office_id,14]">
+               OFT
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Farmer Corner -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+           id="navbarDropdownFarmerCorner"
+           data-bs-toggle="dropdown"
+           aria-expanded="false">
+          Farmer Corner
+        </a>
+
+        <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdownFarmerCorner">
+          <li>
+            <a class="dropdown-item" routerLink="cont/sucessStories">
+              Success Stories
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Infrastructure -->
+      <li class="nav-item">
+        <a class="nav-link"
+           [routerLink]="['cont/infrastruturetype/',Office_id]">
+          Infrastructure
+        </a>
+      </li>
+
+      <!-- Recruitment -->
+      <li class="nav-item">
+        <a class="nav-link"
+           [routerLink]="['cont/recruitment',Office_id]">
+          Recruitment
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+</div>
+       </div>
+  </nav>
+
+   <!-- menu for small screen -->
+   <nav *ngIf="kvks_Detail" class="navbar navbar-expand-lg bg-body-tertiary"  id="subMenu">
+    <div class="container-fluid" >
+      <a routerLink="./" style="display: flex;" class="name">
+        <img src="assets/images/igkv_logo.png" alt="igkv logo" aria-hidden="true" height="60px" style="margin-top: 6px;">
+         <h2 class="kvk-head">{{kvks_Detail.office_name | titlecase}}</h2>
+    </a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item dropdown">
+            <a routerLink="./" class="nav-link"><i class="fa-solid fa-house fa-lg"></i></a>
+    <li class="nav-item dropdown">
+    <a class="nav-link  dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        About
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" [routerLink]="['/research/kvk-home/kvk/',Office_id]" fragment="Overview">Overview</a></li>
+        <li><a class="dropdown-item" [routerLink]="['/research/kvk-home/kvk/',Office_id]" fragment="SeniorScientist">Senior Scientist and Head </a></li>
+        <li><a class="dropdown-item" [routerLink]="['cont/staff-details/',Office_id]">Who's Who</a></li>
+        <li><a class="dropdown-item" [routerLink]="['cont/gallery/',Office_id]">Gallery</a></li>
+    </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Research
+        </a>
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" [routerLink]="['cont/project/',Office_id]" >Projects</a></li>
+        <li><a class="dropdown-item" [routerLink]="['cont/publication',Office_id,1]">Books & Magazines</a></li>
+        <li><a class="dropdown-item" [routerLink]="['cont/publication',Office_id,3]">Publications</a></li>
+        <li><a class="dropdown-item" [routerLink]="['cont/publication',Office_id,4]">Journals</a></li>
+        <li><a class="dropdown-item" [routerLink]="['cont/publication',Office_id,5]">Research Paper</a></li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Activity
+        </a>
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" [routerLink]="['cont/farmer-corner/',Office_id,17]">Visit</a></li>
+        <li><a class="dropdown-item" [routerLink]="['cont/farmer-corner/',Office_id,15]">Training</a></li>
+        <li><a class="dropdown-item" [routerLink]="['cont/farmer-corner/',Office_id,13]">FLD</a></li>
+        <li><a class="dropdown-item" [routerLink]="['cont/farmer-corner/',Office_id,14]">OFT</a></li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          FarmerCorner 
+        </a>
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" routerLink="cont/sucessStories">Success Stories</a></li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link " [routerLink]="['cont/infrastruturetype/',Office_id]"  aria-expanded="false">
+        Infrastruture
+      </a>
+  </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link " [routerLink]="['cont/recruitment',Office_id]"  aria-expanded="false">
+            Recruitment
+        </a>
+    </li>
+</ul>
+</div>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>
+
+<section *ngIf="showSubContent">
+<app-kvk-detail-banner *ngIf="homeslider"  [kvkbanner]="homeslider"></app-kvk-detail-banner>
+
+<app-kvk-overview-common *ngIf="kvks_Detail" id="Overview" [kvkoverview]="kvks_Detail" ></app-kvk-overview-common> 
+
+
+<app-message id="SeniorScientist" *ngIf="kvks_headDetail && kvks_Detail"  [headDetail_data]="kvks_headDetail"  [pageDetail_data]="kvks_Detail"   [message]="'Error message!'" [isError]="true"></app-message>
+
+
+<section style="background-color: #fff;">
+<app-home-notificaton [message]="'kvk!'" [isKvk]="true"></app-home-notificaton>
+</section>
+
+<app-kvk-award-common *ngIf="award_data?.length > 0" [award_data]="award_data"></app-kvk-award-common>
+
+<app-kvk-activity-common *ngIf="Activity_data?.length > 0" [activity_details]="Activity_data" ></app-kvk-activity-common>
+<section class="gray-bg">
+  <app-kvk-events-common *ngIf="event_data?.length > 0 " [event_data]="event_data"></app-kvk-events-common>
+</section>
+<app-kvk-infrastruture-type  [infra_List]="infra_type.slice(0,3)" [office_id]="Office_id" *ngIf="infra_type?.length > 0 " ></app-kvk-infrastruture-type>
+<app-staff-testimonial [unit_type]="Office_id" *ngIf="Office_id"></app-staff-testimonial>
+<app-kvk-contact-us  [contact_data]="kvks_Detail"></app-kvk-contact-us>
+
+</section>
+
+

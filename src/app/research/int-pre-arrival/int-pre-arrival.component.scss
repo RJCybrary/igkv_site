@@ -1,0 +1,38 @@
+.pre-arrival-info-section .pre-arrival-info {
+    display: flex;
+    flex-direction: column; /* Display steps vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.pre-arrival-info-section .step {
+    width: 100%; /* Set width to full width */
+    max-width: 400px; /* Limit maximum width */
+    margin-bottom: 20px; /* Bottom margin between steps */
+    text-align: center; /* Center step content */
+}
+
+.pre-arrival-info-section .step-icon {
+    font-size: calc(48px * var(--font-scale)); /* Size of the step icon */
+    margin-bottom: 20px; /* Bottom margin for the icon */
+}
+
+.pre-arrival-info-section .step p {
+    font-size: calc(13px * var(--font-scale));
+    font-weight: 500; /* Font size for the step description */
+}
+
+.rout{
+    width: 280px;
+}
+
+.subhead{
+    border-top: solid #07294d;
+    padding: 10px;
+    background-color: #fcfcfc;
+    border-left: solid rgb(202, 200, 200) 1px;
+    border-right: solid rgb(202, 200, 200) 1px;
+    h3{
+        font-weight: 500;
+    }
+}
+

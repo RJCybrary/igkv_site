@@ -1,0 +1,43 @@
+.rout{
+    width: 280px;
+}
+
+.subhead{
+    border-top: solid #07294d;
+    padding: 10px;
+    background-color: #fcfcfc;
+    border-left: solid rgb(202, 200, 200) 1px;
+    border-right: solid rgb(202, 200, 200) 1px;
+    h3{
+        font-weight: 500;
+    }
+}
+
+// ++++++++++++ Banner +++++++
+
+.banner-section {
+    background-color: #fcfcfc; /* Banner background color */
+    color: #020202; /* Text color */
+    padding: 20px 0; /* Padding for the banner */
+    border: solid 1px;
+    border-color: rgb(202, 200, 200);
+    height: 120px;
+    vertical-align: middle;
+    h2{
+        font-size: calc(30px * var(--font-scale));
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.banner-heading {
+    text-align: left; 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    font-weight: 600;
+    margin-top: 23px;
+}

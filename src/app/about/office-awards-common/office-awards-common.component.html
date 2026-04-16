@@ -1,0 +1,51 @@
+<!-- Awards section start-->
+<section id="about-page" class="pt-3 pb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+          <h2 class="section-title1">Recent Awards</h2>
+        <!-- section title -->
+        <div class="about-cont">
+          <section class="portfolio" id="portfolio">
+            <div class="portfolio-grid">
+              <div class="container" style="padding: 0;">
+                <div class="row ">
+                  <ng-container *ngFor="let data of award_data">
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                      <div class="card card-block">
+                        <a (click)="setdetails()" [routerLink]="['/about/activities-details',data.Website_Content_ID]"
+                        aria-label="View award">
+                          <div class="image banner" [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+                          <img [src]="data.Column1" alt="office awards image" />
+                          <div class="content">
+        
+                          </div>
+                        </div>
+                          <div class="portfolio-over">
+                            <div>
+                              <p class="card-text">
+                                {{data.web_content_date2|date:'MMMM d, y'}}
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                         <div class="card-title">
+                        <h4>{{data.Content_Title}}</h4>
+                      </div>
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+                <div style="text-align: center !important;">
+                  <div class="col-lg-12 col-sm-12 pt-3">
+                    <a routerLink="awards"  (click)="setdetails()" class="main-btn">{{'View more' | translate}}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

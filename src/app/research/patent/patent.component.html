@@ -1,0 +1,72 @@
+<app-banner [banner_heading]="'Patents'" [banner_img]="imageUrl"></app-banner>
+
+
+<mat-card>
+  <div class="container pt-3 pb-3">
+    <div class="patents_category table_section main_heading_section">
+      <section class="pb-4 mt-3">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12">
+              <div class="patents_category_tab">
+                <mat-form-field class="filter-field" style="margin-bottom: -30px;">
+                  <mat-label>Filter</mat-label>
+                  <input matInput (keyup)="applyFilter($event)" placeholder="">
+                </mat-form-field>
+                <!-- Responsive table container -->
+                <div class="table-responsive">
+                  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+                    <!-- Patent Number Column -->
+                    <ng-container matColumnDef="Patent_Number">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Patent Number</th>
+                      <td mat-cell *matCellDef="let element">{{ element.Patent_Number }}</td>
+                    </ng-container>
+                    <!-- Title Column -->
+                    <ng-container matColumnDef="Title">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
+                      <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+                    </ng-container>
+                    <!-- Description Column -->
+                    <ng-container matColumnDef="Description">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
+                      <td mat-cell *matCellDef="let element">{{ element.Description }}</td>
+                    </ng-container>
+                    <!-- Grant Date Column -->
+                    <ng-container matColumnDef="Grant_Date">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Grant Date</th>
+                      <td mat-cell *matCellDef="let element">{{ element.grant_date | date: 'MMMM d, y' }}</td>
+                    </ng-container>
+                    <!-- Expiry Date Column -->
+                    <ng-container matColumnDef="Expiry_Date">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Expiry Date</th>
+                      <td mat-cell *matCellDef="let element">{{ element.expiry_date | date: 'MMMM d, y' }}</td>
+                    </ng-container>
+                    <!-- Year of Patent Awarded Column -->
+                    <ng-container matColumnDef="Year_of_Patent_Awarded">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Year of Patent Awarded</th>
+                      <td mat-cell *matCellDef="let element">{{ element.Year_of_patent_awarded }}</td>
+                    </ng-container>
+                    <!-- File Column -->
+                    <ng-container matColumnDef="File">
+                      <th mat-header-cell *matHeaderCellDef>File</th>
+                      <td mat-cell *matCellDef="let element">
+                        <a [href]="element.document_path" target="_blank">View</a>
+                      </td>
+                    </ng-container>
+                    <!-- Header and Row Definitions -->
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+                </div>
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</mat-card>
+
+
+  

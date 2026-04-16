@@ -1,0 +1,86 @@
+
+/* Section Title 1 */
+.section-title1{
+    color: #07294d;
+    position: relative;
+    padding-bottom: 12px;
+}
+.section-title1::before{
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background-color: #ffc600;
+    bottom: 0;
+    /* left: 0; */
+}
+
+/* Section Title 2 */
+.section-title2{
+    /* font-size: calc(28px * var(--font-scale)) !important; */
+    font-size: calc(28px * var(--font-scale)) !important;
+    color:#0b69c6f5;
+    font-weight: 600 !important;
+    padding-top: 10px;
+}
+
+/* Section Title 3 */
+.section-title3{
+    font-weight: 700 !important;
+    margin-bottom: 15px !important;
+    font-size: calc(20px * var(--font-scale)) !important;
+}
+
+/* Person Name Heding */
+.person-name{
+    margin-top: 5px !important ;
+    font-weight: 500 !important;
+    margin: 5px 0 !important;
+    color: #000000 !important;
+    padding-top: 0.2em !important;
+}
+
+/* Person Post Heding */
+.person-post{
+    font-size: calc(14px * var(--font-scale));
+    color: #232222;
+    margin: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif; 
+
+}
+
+
+/* Content Paragraph  */
+.contents{
+    text-align: justify;
+    font-size: calc(14px * var(--font-scale));
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif; 
+    line-height: 22px;
+    color: #000;
+    font-weight: 500;
+    word-spacing: -1px !important;
+}
+
+
+@media(max-width:500px){
+    .section-title2{
+        /* font-size: calc(18px * var(--font-scale)) !important;!important; */
+        font-size: calc(18px * var(--font-scale)) !important;
+        font-weight: 500 !important;
+        padding-top: 0 !important;
+    }
+
+    .main-btn {
+        padding: 0 20px !important;
+        /* font-size: calc(14px * var(--font-scale)) !important; */
+        font-size: calc(14px * var(--font-scale)) !important;
+        font-weight: 600 !important;
+        line-height: 35px !important;
+    }
+    .section-title1{
+        padding-bottom: 5px !important;
+        /* font-size: calc(16px * var(--font-scale)) !important; */
+        font-size: calc(16px * var(--font-scale)) !important;
+
+    }
+}

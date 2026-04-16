@@ -1,0 +1,52 @@
+<section id="page-banner" class="mt-40 pt-105 pb-110 bg_cover" data-overlay="8" [style.backgroundImage]="'url(' + bannerImageUrl + ')'">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-banner-cont">
+                    <h2 class="header" >{{catTitle1}}</h2> 
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href=".">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{catTitle2}}</li>
+                        </ol>
+                    </nav>
+                </div>  
+            </div>
+        </div> 
+    </div> 
+</section>
+
+
+
+
+<section id="activities-detail" class="pb-120 gray-bg" *ngIf="Activities_detail_data">
+    <div class="container">
+        <div class="row" style="justify-content: space-between;"> 
+            <div class="col-lg-12">
+                <div class="activities-detail-left mt-30">
+                    <div class="title">
+                        <h3>{{Activities_detail_data.Content_Title}}</h3>
+                    </div> <!-- title -->
+                    <div class="activities-detail-image col-md-7">
+                        <img [src]="Activities_detail_data.Column1" alt="activities detail image" />
+                    </div> <!-- corses singel image -->
+                    <div class="activities_details mt-3">
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot fa-lg"></i><h3>Venue :- {{Activities_detail_data.Venue}}</h3></li>
+                            <li><i class="fa-regular fa-calendar-days fa-lg"></i><h3>Date :- {{Activities_detail_data.web_content_date2|date:'MMMM d, y'}}</h3></li>
+                        </ul>
+                    </div>
+                    <div class=" activities-detail-description" style="text-align:justify">
+                        <div [innerHTML]="Activities_detail_data.Content_Description"></div>
+                    </div>
+                  
+                </div> <!-- corses singel left -->
+                
+            </div>
+        </div> <!-- row -->
+       
+    </div> <!-- container -->
+</section>
+
+
+  

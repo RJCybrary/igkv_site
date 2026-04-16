@@ -1,0 +1,684 @@
+<!-- <app-banner [banner_heading]="Office_Page_Data.office_name" [banner_img]="imageUrl"></app-banner> -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button *ngFor="let data of banner_data; let i = index" type="button"
+            [attr.data-bs-target]="'#carouselExampleCaptions'" [attr.data-bs-slide-to]="i" [class.active]="i === 0"
+            [attr.aria-label]="'Slide ' + (i + 1)">
+        </button>
+    </div>
+
+    <section class="banner">
+        <div class="carousel-inner director">
+
+            <div class="carousel-item  igkv-slider-style1" *ngFor="let data of banner_data; let i = index"
+                [class.active]="i === 0">
+
+                <div class="slider-container">
+                    <div class="slider-container-background"
+                        style=" background: url('{{ data.img}}') center / cover no-repeat;"></div>
+
+                    <img src="{{ data.img}}" class="" alt="slider image">
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="z-index: 3;"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" style="z-index: 3;" type="button"
+            data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"> </span>
+            <span class="visually-hidden" style="z-index: 500;">Next</span>
+        </button>
+    </section>
+</div>
+
+<div class="director-Title" *ngIf="Office_Page_Data">
+    <h1 style="color: #134b79;">{{Office_Page_Data.office_name}}</h1>
+</div>
+
+
+<section id="Section3" class="gray-bg  pb-3" *ngIf="Office_Page_Data">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div>
+                    <h2 class="section-title1">Overview</h2>
+                </div>
+                <div class="about-cont">
+                    <p class="contents">{{Office_Page_Data.About_Unit}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- dashboard -->
+<section class="pt-3 pb-3 mt-5">
+    <div class="container">
+        <div class="row" style="justify-content: space-evenly;" *ngIf="unit_id==111">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="collegeTotal" #counter>
+                <div class="counter">
+                    <span class="counter-value">{{currentCounts[0]}}</span>
+                    <h3>Colleges</h3>
+                    <div class="counter-icon">
+                        <i class="fa fa-university"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="facultyTotal" #counter>
+                <div class="counter purple">
+                    <span class="counter-value">{{currentCounts[1]}}</span>
+                    <h3>Faculty</h3>
+                    <div class="counter-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="departmentTotal" #counter>
+                <div class="counter">
+                    <span class="counter-value">{{currentCounts[2]}}</span>
+                    <h3>Departments</h3>
+                    <div class="counter-icon">
+                        <i class="fa fa-building"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="CurrentStudentTotal" #counter>
+                <div class="counter purple">
+                    <span class="counter-value">{{currentCounts[3]}}+</span>
+                    <h3>Students</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!--    <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="StudentF_data">
+                    <div class="counter">
+                        <span class="counter-value">{{StudentF_data.Student_Count}}</span>
+                        <h3>Girls</h3>
+                        <div class="counter-icon">
+                            <i class="fas fa-female"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="StudentM_data">
+                    <div class="counter purple">
+                        <span class="counter-value">{{StudentM_data.Student_Count}}</span>
+                        <h3>Boys</h3>
+                        <div class="counter-icon">
+                            <i class="fas fa-male"></i>
+                        </div>
+                    </div>
+                </div> -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6"  *ngIf="pasoutCount" #counter>
+                <div class="counter">
+                    <span class="counter-value">{{currentCounts[4]}}+</span>
+                    <h3>Passout Students</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row" style="justify-content: center;" *ngIf="unit_id==100" >
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="patent_data">
+                <div class="counter">
+                    <!-- <span class="counter-value">{{patent_data.Patent_count}}+</span> -->
+                    <span class="counter-value">--</span>
+                    <h3>Patents</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="variety_data">
+                <div class="counter purple">
+                    <!-- <span class="counter-value">{{variety_data.total_vareity}}+</span> -->
+                    <span class="counter-value">--</span>
+                    <h3>Variety released</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="publication_data">
+                <div class="counter">
+                    <!-- <span class="counter-value">{{publication_data.publication}}+</span> -->
+                    <span class="counter-value">--</span>
+                    <h3>Journals</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="copyright_data">
+                <div class="counter purple">
+                    <span class="counter-value">{{copyright_data.Copyright_count}}</span>
+                    <h3>Copyrights</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-copyright"></i>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="currentProject">
+                <div class="counter">
+                    <span class="counter-value" >{{currentProject.Project_Count}}</span>
+                    <h3 class="counter-name">Running Projects</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="counter purple">
+                    <span class="counter-value">147+</span>
+                    <h3 class="counter-name">Consultancy projects</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="technology_data">
+                <div class="counter">
+                    <!-- <span class="counter-value">{{technology_data.Technology_Count}}+</span> -->
+                    <span class="counter-value">--</span>
+                    <h3>Technologies developed</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row" style="justify-content: center;" *ngIf="unit_id==101">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="kvklist" >
+                <div class="counter purple">
+                    <span class="counter-value">{{kvklist}}</span>
+                    <h3>KVK's</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+                <div class="counter">
+                    <span class="counter-value">{{currentCounts[1]}}+</span>
+                    <h3>Registered Farmer</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-person-circle-check"></i>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="scientist">
+                <div class="counter purple">
+                    <span class="counter-value">{{scientist}}</span>
+                    <h3>Scientists</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" >
+                <div class="counter">
+                    <!-- <span class="counter-value">58</span> -->
+                    <span class="counter-value">--</span>
+                    <h3>Research Stations</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="farm">
+                <div class="counter purple">
+                    <!-- <span class="counter-value">{{farm}}</span> -->
+                    <span class="counter-value">--</span>
+                    <h3>Farms</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-building-wheat"></i>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="publication_data">
+                <div class="counter">
+                    <span class="counter-value">{{publication_data.publication}}+</span>
+                    <h3>Publications</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+                <div class="counter purple">
+                    <span class="counter-value">792189+</span>
+                    <h3>Crop Doctor</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row" style="justify-content: center;" *ngIf="unit_id==57">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="collegeTotal" #counter>
+                <div class="counter ">
+                    <span class="counter-value">{{currentCounts[0]}}</span>
+                    <h3>Colleges</h3>
+                    <div class="counter-icon">
+                        <i class="fa fa-university"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="CurrentStudentTotal" #counter>
+                <div class="counter purple">
+                    <span class="counter-value">{{currentCounts[3]}}+</span>
+                    <h3>Students</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="Girls_Hostel" #counter>
+                <div class="counter ">
+                    <span class="counter-value">6</span>
+                    <h3>Girls Hostel</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+                <div class="counter purple">
+                    <span class="counter-value">6</span>
+                    <h3>Boys Hostel</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="counter">
+                    <span class="counter-value">8745+</span>
+                    <h3>NCC Candidate</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="counter purple">
+                    <span class="counter-value">157+</span>
+                    <h3>NSS Candidate</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="pasoutCount" #counter>
+                <div class="counter">
+                    <span class="counter-value">{{currentCounts[4]}}+</span>
+                    <h3>Alumni</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="pasoutCount" #counter>
+                <div class="counter">
+                    <!-- <span class="counter-value">{{currentCounts[4]}}+</span> -->
+                    <span class="counter-value">--</span>
+                    <h3>Alumni</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="justify-content: center;" *ngIf="unit_id==112">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="counter purple">
+                    <span class="counter-value">8</span>
+                    <h3>kisan mela</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+                <div class="counter">
+                    <span class="counter-value">{{currentCounts[2]}}+</span>
+                    <h3>Registered Farmer</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-person-circle-check"></i>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+                <div class="counter">
+                    <span class="counter-value">789998</span>
+                    <h3>Registered Farmer</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-person-circle-check"></i>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="counter purple">
+                    <!-- <span class="counter-value">157+</span> -->
+                    <span class="counter-value">--</span>
+                    <h3>Farms</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-building-wheat"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="counter">
+                    <!-- <span class="counter-value">58</span> -->
+                    <span class="counter-value">--</span>
+                    <h3>Research Stations</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="scientist">
+                <div class="counter purple">
+                    <span class="counter-value">{{scientist}}</span>
+                    <h3>Scientists</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+                <div class="counter purple">
+                    <span class="counter-value">{{currentCounts[1]}}+</span>
+                    <h3>Crop Doctor</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+                <div class="counter purple">
+                    <span class="counter-value">792189+</span>
+                    <h3>Crop Doctor</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6" *ngIf="kvklist" >
+                <div class="counter purple">
+                    <span class="counter-value">{{kvklist}}</span>
+                    <h3>KVK's</h3>
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<app-message [pageDetail_data]="Office_Page_Data" [headDetail_data]="Office_Head_Data"
+    *ngIf="Office_Head_Data||Office_Page_Data "></app-message>
+<app-home-notificaton></app-home-notificaton>
+
+<!-- Activities -->
+<section id="Activity" class="Activity section-bg pb-3 pt-3 gray-bg" *ngIf="Activity_data?.length > 0">   
+    <div class="container" data-aos="fade-up">
+        <div>
+            <h2 class="section-title1">Recent Activity</h2>
+        </div>
+
+        <div class="row gy-4 demo">
+
+            <ng-container *ngFor="let data of Activity_data.slice(0, 3)">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="Activity-member">
+                        <div class="member-img banner1 image1" [style.background-image]="'url(' + data.Column1 + ')'"
+                            *ngIf="data.Column1">
+                            <img [src]="data.Column1" alt="director activity image">
+                            <div class="content">
+
+                            </div>
+                        </div>
+                        <div class="activities-details">
+                            <div class="activities-date">
+                                <p>{{data.web_content_date2|date: 'EEEE, MMMM d, y'}}</p>
+                            </div>
+                            <div class="member-info">
+                                <h4>{{data.Content_Title}}</h4>
+                            </div>
+                        </div>
+
+                        <h4 class="more">
+                            <a 
+                              (click)="setdetails_dir('Activity','/research/director/' + unit_id + '/activities')" 
+                              [routerLink]="['/about/activities-details', data.Website_Content_ID]" 
+                              class="more">
+                              Read More&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                          </h4>
+                    </div>
+                </div>
+            </ng-container>
+            <div class="mb-1 pt-3" style="text-align: center !important;">
+                <div class="col-lg-12 col-sm-12">
+                    <a routerLink="activities" class="main-btn">{{'View more' | translate}}</a>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</section>
+
+
+<!-- Events -->
+<section id="blog" class="blog pt-3 pb-3" *ngIf="Event_Data?.length > 0">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div>
+            <h2 class="section-title1">Latest Events</h2>
+        </div>
+        <div class="row gy-4 posts-list">
+            <ng-container *ngFor="let content of Event_Data.slice(0, 3)">
+                <div class="col-xl-4 col-md-6">
+                    <div class="post-item position-relative h-100">
+                        <div class="post-img position-relative overflow-hidden">
+                            <a (click)="setdetails_dir('Event','/research/director/' + unit_id + '/events')" [routerLink]="['/about/activities-details',content.Website_Content_ID]">
+                                <div class="banner image" [style.background-image]="'url(' + content.Column1 + ')'"
+                                    *ngIf="content.Column1">
+                                    <img [src]="content.Column1" class="img-fluid" alt="director event image">
+                                </div>
+                                <div class="content">
+
+                                </div>
+                            </a>
+                            <span class="post-date">{{content.web_content_date}}</span>
+                        </div>
+                        <div class="post-content d-flex flex-column">
+                            <h4>{{content.Content_Title}}</h4>
+                        </div>
+                        <hr>
+                        <a (click)="setdetails_dir('Event','/research/director/' + unit_id + '/events')"   [routerLink]="['/about/activities-details',content.Website_Content_ID]"
+                            class="readmore "><span>Read
+                                More&nbsp;<i class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </ng-container>
+
+            <div class="mb-1 pt-3" style="text-align: center !important;">
+                <div class="col-lg-12 col-sm-12">
+                    <a routerLink="events" class="main-btn">{{'View more' | translate}}</a>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</section>
+
+<!-- Awards section start-->
+<section id="about-page" class="pt-3 pb-3 gray-bg" *ngIf="award_data?.length> 0"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            <h2 class="section-title1">Recent Awards</h2>
+          <!-- section title -->
+          <div class="about-cont">
+            <section class="portfolio" id="portfolio">
+              <div class="portfolio-grid">
+                <div class="container" style="padding: 0;">
+                  <div class="row ">
+                    <ng-container *ngFor="let data of award_data">
+                      <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                          <a (click)="setdetails_dir('Awards','/research/director/'+ unit_id +'/awards')" [routerLink]="['/about/activities-details',data.Website_Content_ID]"\
+                          aria-label="View award">
+                            <div class="image banner" [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+                            <img [src]="data.Column1" alt="director award image" />
+                            <div class="content">
+          
+                            </div>
+                          </div>
+                            <div class="portfolio-over">
+                              <div>
+                                <p class="card-text">
+                                  {{data.web_content_date2|date:'MMMM d, y'}}
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                           <div class="card-title">
+                          <h4>{{data.Content_Title}}</h4>
+                        </div>
+                        </div>
+                      </div>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="mb-1 pt-3" style="text-align: center !important;">
+                <div class="col-lg-12 col-sm-12">
+                    <a routerLink="awards" class="main-btn">{{'View more' | translate}}</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- testimonial -->
+<section >
+    <app-staff-testimonial [unit_type]="unit_id" *ngIf="unit_id"></app-staff-testimonial>
+</section>
+
+<!-- contact us -->
+
+
+
+<section id="Section4" class="pt-3 pb-3" *ngIf="Office_Page_Data">
+    <div class="container">
+      <div class="row">
+        <h2 class="section-title1">Contact Us</h2>
+      </div>
+   
+      <!-- new contact us -->
+       <div class="row">
+        <div class="col-md-6">
+          <div class="contact-info">
+            <!-- Address Section -->
+            <div class="contact-card">
+      
+              <h2  style="font-size: calc(16px * var(--font-scale));" ><i class="fa-solid fa-location-dot icon-font-size"></i> &nbsp; Address</h2>
+              <p>{{Office_Page_Data.Unit_Address}}</p>
+            </div>
+      
+            <!-- Contact Number -->
+            <div class="contact-card">
+              <h2  style="font-size: calc(16px * var(--font-scale));" ><i class="fa fa-phone icon-font-size " aria-hidden="true"></i>&nbsp;Contact Number</h2>
+              <p>{{Office_Page_Data.Phone_Number}}</p>
+            </div>
+      
+            <!-- Email ID -->
+            <div class="contact-card">
+              <h2 style="font-size: calc(16px * var(--font-scale));" ><i class="fa fa-envelope icon-font-size " aria-hidden="true"></i>&nbsp;Email ID</h2>
+              <p>{{Office_Page_Data.Email_ID}}</p>
+            </div>
+      
+            <!-- Office Hours -->
+            <div class="contact-card">
+              <h2 style="font-size: calc(16px * var(--font-scale));" ><i class="fa-solid fa-clock icon-font-size"></i> &nbsp;Office Time</h2>
+              <p class="text">10:00 AM to 5:00 PM <br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="map-container">
+            <iframe title="google maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2629.6679886860793!2d81.69424410311981!3d21.235332575024216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28c2cd61ab13f3%3A0x88aa0d80dc82ad34!2sUniversity%20Office%2C%20IGKV%20Raipur!5e0!3m2!1sen!2sin!4v1724417481982!5m2!1sen!2sin"
+              width="100%" height="625" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy" title="location" 
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+       </div>  
+    </div>
+  </section>

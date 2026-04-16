@@ -1,0 +1,230 @@
+.faculty-search-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0 auto; /* Center the container */
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.search-input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.search-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.search-button,
+.clear-button {
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-size: calc(16px * var(--font-scale));
+}
+
+.search-button {
+  background: linear-gradient(135deg, #00bcd4, #007bff);
+  color: white;
+  border: none;
+}
+
+.clear-button {
+  background: linear-gradient(135deg, #f44336, #e91e63);
+  color: white;
+  border: none;
+}
+
+.search-button:hover {
+  background: linear-gradient(135deg, #008c9e, #0056b3);
+}
+
+.clear-button:hover {
+  background: linear-gradient(135deg, #d32f2f, #c2185b);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add spacing below the input */
+  }
+
+  .search-buttons {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .search-button,
+  .clear-button {
+    font-size: calc(14px * var(--font-scale));
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faculty-search-group {
+    padding: 10px;
+  }
+
+  .search-buttons {
+    gap: 10px;
+  }
+}
+
+  
+
+/* General Section Styling */
+section {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Pagination Controls */
+.pagination-controls {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Space between elements */
+  padding: 10px 0;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+}
+
+/* Buttons */
+.pagination-button {
+  font-size: calc(14px * var(--font-scale));
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+
+.pagination-button.previous {
+  background-color: #f44b3f; /* Soft red for the previous button */
+}
+
+.pagination-button.previous:hover {
+  background-color: #ed2719; /* Darker red on hover */
+}
+
+.pagination-button.next {
+  background-color: #4b5bb3; /* Soft blue for the next button */
+}
+
+.pagination-button.next:hover {
+  background-color: #142baf; /* Darker blue on hover */
+}
+
+.pagination-button:disabled {
+  background-color: #dee2e6;
+  color: #495057;
+  cursor: not-allowed;
+}
+
+/* Pagination Info */
+.pagination-info {
+  font-size: calc(16px * var(--font-scale));
+  font-weight: 600;
+  color: #495057;
+  padding: 5px 10px;
+  background-color: #e3f2fd;
+  border-radius: 5px;
+}
+
+/* Pagination Summary */
+.pagination-summary {
+  text-align: center;
+  margin-top: 10px;
+  font-size: calc(14px * var(--font-scale));
+  color: #6c757d;
+}
+
+/* Page Buttons */
+.page-button {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin-top: 15px;
+}
+
+.page-button button {
+  padding: 8px 16px;
+  font-size: calc(14px * var(--font-scale));
+  background-color: #e3f2fd;
+  color: #0d47a1;   /* dark blue */
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.page-button button:hover {
+   background-color: #bbdefb;
+  border-color: #90caf9;
+  color: #0d47a1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pagination-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pagination-info {
+    font-size: calc(14px * var(--font-scale));
+    padding: 5px;
+  }
+
+  .page-button button {
+    font-size: calc(12px * var(--font-scale));
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination-controls {
+    gap: 8px;
+  }
+
+  .pagination-info {
+    font-size: calc(12px * var(--font-scale));
+  }
+
+  .page-button button {
+    font-size: calc(10px * var(--font-scale));
+    padding: 4px 8px;
+  }
+}
+
+

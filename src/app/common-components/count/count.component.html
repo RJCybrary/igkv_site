@@ -1,0 +1,121 @@
+
+<section class="gray-bg pt-3 pb-3" *ngIf="collegeTotal && departmentTotal && facultyTotal && CurrentStudentTotal && pasoutCount" >
+    <div class="container">
+        <div class="row">
+                <h2  class="section-title1" style="color: #07294d;">Dashboard</h2>
+          </div>
+    <!-- New Counter CSS  -->
+    <!--====== COUNTER PART START ======-->
+    <div id="Div1">
+        <div class="container">
+        <div class="row">
+                <div class="col-lg-12 ">
+                    <div class="section-title " style="color: #fff;">
+                    </div> 
+                </div>
+            </div> 
+        
+            <div class="row" style="justify-content: center;">
+                        
+                <div class="col-lg-2 col-sm-6" *ngIf="collegeTotal"  #counter>
+                    <a routerLink="/about/college-home">
+                    <div class="singel-counter text-center">
+                        <div class="image">
+                            <i class="fa fa-university icon-font-size"></i>
+                        </div>
+                        <span class="counter">{{currentCounts[0]}}</span>
+                        <p>Colleges</p>
+                    </div> 
+                    </a>
+                </div>
+                <div class="col-lg-2 col-sm-6" *ngIf="facultyTotal" #counter> 
+                    <div class="singel-counter text-center">
+                        <div class="image">
+                            <i class="fas fa-users icon-font-size"></i>
+                        </div>
+                      <span class="counter">{{currentCounts[1]}}</span>
+                        <p>Faculty</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6"  *ngIf="departmentTotal" #counter>
+                    <a routerLink="/about/department">
+                    <div class="singel-counter text-center">
+                        <div class="image">
+                            <i class="fa fa-building icon-font-size"></i>
+                        </div>
+                       <span class="counter">{{currentCounts[2]}}</span>
+                        <p>Departments</p>
+                    </div> 
+                    </a>
+                </div>
+                <div class="col-lg-2 col-sm-6" *ngIf="CurrentStudentTotal" #counter>
+                    <a routerLink="/about/student">
+                    <div class="singel-counter text-center">
+                        <div class="image">
+                            <i class="fa-solid fa-graduation-cap icon-font-size"></i>
+                        </div>
+                        <span><span class="counter">{{currentCounts[3]}}</span>+</span>
+                        <p>Students</p>
+                    </div> 
+                    </a>
+                </div>
+                  <div class="col-lg-2 col-sm-6"  *ngIf="StudentF_data" #counter>
+                    <div class="singel-counter text-center">
+                        <div class="image ">
+                            <i class="fas fa-female icon-font-size"></i>
+                        </div>
+                        <span><span class="counter">{{currentCounts[4]}}</span>+</span>
+                        <p>Girls</p>
+                    </div> 
+                </div>
+            </div> 
+
+    <!-- Second Row  -->
+            <div class="row mt-4" style="justify-content: center;">
+                <div class="col-lg-2 col-sm-6" *ngIf="StudentM_data" #counter>
+                    <div class="singel-counter text-center">
+                        <div class="image">
+                            <i class="fas fa-male icon-font-size"></i>
+                        </div>
+                        <span><span class="counter">{{currentCounts[5]}}</span>+</span>
+                        <p>Boys</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6" *ngIf="pasoutCount" #counter>
+                    <div class="singel-counter text-center">
+                        <div class="image">
+                            <i class="fa-solid fa-user-graduate icon-font-size"></i>
+                        </div>
+                        <span><span class="counter">{{currentCounts[6]}}</span>+</span>
+                        <p>Alumnis</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6" *ngIf="kvklist" #counter>
+                    <a routerLink="/research/kvk-home">
+                        <div class="singel-counter text-center">
+                            <div class="image">
+                                <i class="fa fa-university icon-font-size"></i>
+                            </div>
+                            <span class="counter">{{currentCounts[7]}}</span>
+                            <p>KVKs</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <a routerLink="/about/staff/0">
+                        <div class="singel-counter text-center">
+                            <div class="image">
+                                <i class="fa fa-user icon-font-size"></i>
+                            </div>
+                            <span><span class="counter">1580</span>+</span>
+                            <p>Employees</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div> 
+    </div>
+    
+    </div>
+</section>
+

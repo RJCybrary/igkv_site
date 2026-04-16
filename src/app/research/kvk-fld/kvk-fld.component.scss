@@ -1,0 +1,72 @@
+
+.lab_infrastructure img {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  
+  }
+  
+  /* Zoom Out #1 */
+  
+  .lab_infrastructure img:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  .lab_infrastructure .innerrow .image_section {
+    overflow: hidden;
+    height: 15rem;
+  }
+  
+  .lab_infrastructure .innerrow .image_section img{
+    height: 15rem;
+  
+  }
+  
+  .lab_infrastructure {
+    margin: 5px;
+  }
+  
+  .lab_infrastructure .innerrow {
+  
+    background-color: #fff;
+    text-align: center;
+    margin-top: 10%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    height: 30rem;
+    // justify-content: center;
+    // align-items: center;
+    // display: grid;
+  }
+  
+  .lab_infrastructure p {
+    text-align: justify;
+    padding: 1em;
+    font-weight: 500;
+    padding-top: 0;
+  }
+  
+  .lab_infrastructure h2 {
+    margin: 0.4em;
+  }
+  
+  .lab_infrastructure h4 {
+    padding: 0.5em;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  
+  .innerrow p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: calc(14px * var(--font-scale));
+  }

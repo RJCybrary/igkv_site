@@ -1,0 +1,112 @@
+<div class="container-fluid pt-3 pb-3">
+    <div class=" container">
+       <h2 class="section-title1">Our Departments</h2>
+        <div class="season_tabs  row mt-4">
+
+
+<!-- for small screen -->
+  <div class="gray-bg depart-list-smallscreen" style="padding: 1em;" >
+    <div class="category-section">
+      <label for="category-dropdown" class="dropdown-label">Select Department</label>
+      <div class="custom-dropdown">
+        <select
+          id="category-dropdown"
+          class="category-search-input"
+          (change)="onSelectCategorysmall($event)">
+          <option value="" disabled selected>Select</option>
+          <option *ngFor="let data of departmentlist; let i=index" [value]="i">{{data.DepartmentName}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+            
+            <!-- for big screen -->
+            <div class="col-md-4 department-list" style="max-height: 679px; ">
+                <div id="buttonContainer">
+                    <ng-container *ngFor="let data of departmentlist;let i=index">
+                        <button #button class="button-31" role="button" (click)="getSubjectId(i)" aria-label="department list"
+                                [ngClass]="{'college': isCollege, 'other': isOther}">
+                          <div [innerHTML]="data.DepartmentName"></div>
+                        </button>
+                      </ng-container>
+<!-- 
+                      <ng-container *ngFor="let data of departmentlist">
+                        <p>{{data.DepartmentName}}</p>
+                      </ng-container> -->
+                      
+                </div>
+            </div>
+            <div class="season_tab col-md-8">
+                <div class="season_content gray-bg ">
+                    <h2 [ngClass]="{'college': isCollege, 'other': isOther}" class="title">
+                        {{departmentdetails?.DepartmentName}}</h2>
+                    <div class="row first_row">
+
+                        <div class=" col-sm-4 text-center ">
+                                <div class="image-section">
+                                    <img [src]="departmentdetails?.HeadDetail.img2"
+                                    (error)="onErrorImage($event)" alt="department head image" />
+                                </div>
+                           
+                            <p class="person-name" style="margin-bottom: 5px;">
+                                <b>{{departmentdetails?.HeadDetail.Employee_Name}}</b></p>
+                                
+                            <p class="person-post"> {{departmentdetails?.HeadDetail.Post_Name}}</p>
+
+
+                        </div>
+
+                        <div class="department_details_part col-sm-8">
+                            <p class="text-secondary"><i class="fa fa-building" aria-hidden="true"></i><b>&nbsp;&nbsp;Establishment
+                                    Year:</b>&nbsp;{{departmentdetails?.Establishment_Year}}</p>
+
+                            <p class="text-secondary"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;<b>Degree offer:</b> </p>
+
+                            <p class="text-secondary"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;<b>Contacts +91</b>
+                                {{departmentdetails?.Phone_Number}}</p>
+
+                            <!-- <p class="text-secondary"><i class="fa-solid fa-location-dot"></i> &nbsp;
+                                <b>{{departmentdetails?.Unit_Address}}</b>
+                            </p> -->
+
+                            <a class="more-button" [routerLink]="['/about/department/departmentDetail',departmentdetails?.Subject_Id]"><i class="bi bi-info-circle"></i>
+                                 View Department</a> <br>
+                            <!-- <a class="more-button" [routerLink]="['student-list',departmentdetails?.Subject_Id]"><i class="bi bi-info-circle"></i>
+                                Get Student List
+                            </a> -->
+                        </div>
+
+                        <ng-container *ngFor="let data of departmentdetails?.dashboard">
+                            <div class="row second-row">
+                              <hr>
+                              <div class="depart-name">
+                                <p>{{data.Degree_Programme_Name_E}}</p>
+                              </div>
+                              <div class="counter">
+                                <h3>Students</h3>
+                                <span class="counter-value">{{data.Student_Count}}</span>
+                              </div>
+                              <div class="counter red">
+                                <h3>Boys</h3>
+                                <span class="counter-value">{{data.Student_bodys}}</span>
+                              </div>
+                              <div class="counter red">
+                                <h3>Girls</h3>
+                                <span class="counter-value">{{data.Student_girls}}</span>
+                              </div>
+                              <div class="counter red">
+                                <h3>Subject</h3>
+                                <span class="counter-value">{{data.subject_count}}</span>
+                              </div>
+                            </div>
+                          </ng-container>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.carousel-inner img {
+    width: 100%; /* Ensures the image takes up the full width of its container */
+    height: 400px; /* Set a fixed height for all images */
+    filter: brightness(0.7) saturate(1);
+  /* - saturate: Increases saturation for more vivid color. */
+    object-fit: cover; /* Ensures images maintain their aspect ratio and fill the height */
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 70%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    color: #fff; /* White text color */
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .carousel-caption h5 {
+    font-size: calc(2rem * var(--font-scale));
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .carousel-caption p {
+    // font-size: 1.2rem;
+  }
+  

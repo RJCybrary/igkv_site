@@ -1,0 +1,94 @@
+
+.kvkAwards .kvkAwards-member {
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 0 30px rgba(55, 55, 63, 0.08);
+    transition: 0.3s;
+    width: 100%;
+  }
+  
+  .kvkAwards .kvkAwards-member .member-img {
+    position: relative;
+    overflow: hidden;
+    height: 12em;
+    // padding-top: 10px;
+  }
+  
+
+  
+  .kvkAwards .kvkAwards-member .social {
+    position: absolute;
+    right: -100%;
+    top: 30px;
+    opacity: 0;
+    border-radius: 4px;
+    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 2;
+  }
+  
+  .kvkAwards .kvkAwards-member .social a {
+    transition: color 0.3s;
+    color: rgba(55, 55, 63, 0.4);
+    margin: 15px 12px;
+    display: block;
+    line-height: 0;
+    text-align: center;
+  }
+  
+  .kvkAwards .kvkAwards-member .social a:hover {
+    color: rgba(55, 55, 63, 0.9);
+  }
+  
+  .kvkAwards .kvkAwards-member .social i {
+    font-size: calc(18px * var(--font-scale));
+  }
+  
+  .kvkAwards .kvkAwards-member .member-info {
+    padding: 0.5em;
+    height: 5em;
+  }
+  
+  .kvkAwards .kvkAwards-member .member-info h4 {
+    font-weight: 600;
+    font-size: calc(14px * var(--font-scale));
+    margin-bottom: 0;
+ 
+  }
+  
+  .kvkAwards .kvkAwards-member .member-info span {
+    display: block;
+    font-size: calc(14px * var(--font-scale));
+    font-weight: 400;
+    color: rgba(33, 37, 41, 0.4);
+  }
+  
+  .kvkAwards .kvkAwards-member .member-info p {
+    font-style: italic;
+    font-size: calc(14px * var(--font-scale));
+    padding-top: 15px;
+    line-height: 26px;
+    color: rgba(33, 37, 41, 0.7);
+  }
+  
+  .kvkAwards .kvkAwards-member:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 0 30px rgba(55, 55, 63, 0.15);;
+  }
+
+  .kvkAwards .kvkAwards-member:hover .social {
+    right: 8px;
+    opacity: 1;
+  }
+
+  .more{
+    font-weight: 500;
+    color: #009970 !important;
+    text-align: center;
+    margin: 0.5em;
+  }
+.color-green{
+  color: #009970;
+}

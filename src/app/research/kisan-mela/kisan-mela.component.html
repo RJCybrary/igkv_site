@@ -1,0 +1,679 @@
+<app-banner [banner_heading]="'Kisan Mela'" [banner_img]="bannerImg" ></app-banner>
+
+<div class="container">
+  <section id="Section3" class="pt-3 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="section-title1">Overview</h2>
+          <div class="about-cont">
+            <p class="contents">
+              Indira Gandhi Krishi Vishwavidyalaya (IGKV) plays a pivotal role in promoting innovation and new
+              technologies in agriculture through its annual Kisan Mela. This event serves as a vital platform for farmers
+              to gain insights into the latest advancements in agricultural practices, tools, and technologies. IGKV's
+              Kisan Mela showcases a wide array of innovations, from modern farming techniques to cutting-edge equipment
+              designed to enhance productivity and sustainability.
+  
+              Through live demonstrations, expert-led workshops, and interactive sessions, farmers are introduced to the
+              benefits of adopting new technologies, such as precision farming, organic practices, and water-saving
+              irrigation methods. IGKV also emphasizes the importance of sustainable agriculture, encouraging farmers to
+              adopt practices that protect the environment while boosting crop yields.
+  
+              The Kisan Mela fosters a collaborative environment where farmers can interact with scientists, agricultural
+              experts, and fellow farmers, facilitating the exchange of knowledge and experiences. By highlighting success
+              stories and providing hands-on experiences, IGKV motivates farmers to embrace innovation, ultimately leading
+              to improved livelihoods and a more resilient agricultural sector. Through the Kisan Mela, IGKV reinforces
+              its commitment to empowering the farming community with the knowledge and tools needed to thrive in a
+              rapidly changing agricultural landscape. </p>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  
+  <section class="pt-20 pb-2 ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title mt-400">
+            <h2>Some Glimpse of Kisan Mela (Session Wise) </h2>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <div class="pt-5 pb-5  container-fluid text-center years-counts">
+      <div class="row hero">
+
+        <div class="col-md-2" id="year2024" (click)="openContent('year2024')">
+          <a>
+            <div class="counter blue">
+              <div class="counter-content">
+                <div class="counter-icon">
+                </div>
+                <span class="counter-value">2024</span>
+              </div>
+            </div>
+          </a>
+        </div>
+    
+        <div class="col-md-2" id="year2022" (click)="openContent('year2022')">
+          <a>
+            <div class="counter blue">
+              <div class="counter-content">
+                <div class="counter-icon">
+                </div>
+                <span class="counter-value">2022</span>
+              </div>
+            </div>
+          </a>
+        </div>
+    
+        <div class="col-md-2" id="year2020" (click)="openContent('year2020')">
+          <a>
+            <div class="counter blue">
+              <div class="counter-content">
+                <div class="counter-icon">
+                </div>
+                <span class="counter-value">2020</span>
+              </div>
+            </div>
+          </a>
+        </div>
+    
+        <div class="col-md-2" id="year2019" (click)="openContent('year2019')">
+          <a>
+            <div class="counter blue">
+              <div class="counter-content">
+                <div class="counter-icon">
+                </div>
+                <span class="counter-value">2019</span>
+              </div>
+            </div>
+          </a>
+        </div>
+    
+        <div class="col-md-2" id="year2018" (click)="openContent('year2018')">
+          <a>
+            <div class="counter blue">
+              <div class="counter-content">
+                <div class="counter-icon">
+                </div>
+                <span class="counter-value">2018</span>
+              </div>
+            </div>
+          </a>
+        </div>
+    
+        <div class="col-md-2" id="year2017" (click)="openContent('year2017')">
+          <a>
+            <div class="counter blue">
+              <div class="counter-content">
+                <div class="counter-icon">
+                </div>
+                <span class="counter-value">2017</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="" *ngIf="selectedYear === 'year2017'">
+      <section  class="pt-20 pb-5 mb-20">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title mt-400">
+                <h2>Gallery of 2017</h2>
+              </div>
+              <div class="mb-3 about-cont">
+                <div class="gallery_section ">
+                  <div class="gallery-image">
+                    <div class="container">
+                      <div class="row">
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img1_2017" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img1_2017" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-3 mb-2">
+                          <a [href]="Img2_2017" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img2_2017" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-3 mb-2">
+                          <a [href]="Img3_2017" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img3_2017" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-3 mb-2">
+                          <a [href]="Img4_2017" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img4_2017" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="mb-3 about-cont">
+                <div class="gallery_section ">
+                  <div class="gallery-image">
+                    <div class="container">
+                      <div class="row">
+    
+                        <div class="col-md-3 mb-2">
+                          <a [href]="Img5_2017" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img5_2017" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-3 mb-2">
+                          <a [href]="Img6_2017" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img6_2017" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-3 mb-2">
+                          <a [href]="Img7_2017" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img7_2017" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-3 mb-2">
+                          <a [href]="Img8_2017" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img8_2017" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <div class="" *ngIf="selectedYear === 'year2018'">
+      <section  class="pt-20 pb-5 mb-20">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title mt-400">
+                <h2>Gallery of 2018</h2>
+              </div>
+              <div class="mb-3 about-cont">
+                <div class="gallery_section ">
+                  <div class="gallery-image">
+                    <div class="container">
+                      <div class="row">
+    
+                        <div class="col-md-3 mb-2">
+                          <a [href]="Img1_2018" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img1_2018" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-3 mb-2">
+                          <a [href]="Img2_2018" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img2_2018" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-3 mb-2">
+                          <a [href]="Img3_2018" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img3_2018" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-3 mb-2">
+                          <a [href]="Img4_2018" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img4_2018" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    
+    <div class="" *ngIf="selectedYear === 'year2019'">
+      <section  class="pt-20 pb-5 mb-20">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title mt-400">
+                <h2>Gallery of 2019</h2>
+              </div>
+              <div class="mb-3 about-cont">
+                <div class="gallery_section ">
+                  <div class="gallery-image">
+                    <div class="container">
+                      <div class="row">
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img1_2019" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img1_2019" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img2_2019" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img2_2019" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img3_2019" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img3_2019" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="mb-3 about-cont">
+                <div class="gallery_section ">
+                  <div class="gallery-image">
+                    <div class="container">
+                      <div class="row">
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img4_2019" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img4_2019" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img5_2019" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img5_2019" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img6_2019" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img6_2019" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <div class="" *ngIf="selectedYear === 'year2020'">
+      <section  class="pt-20 pb-5 mb-20">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title mt-400">
+                <h2>Gallery of 2020</h2>
+              </div>
+              <div class="mb-3 about-cont">
+                <div class="gallery_section ">
+                  <div class="gallery-image">
+                    <div class="container">
+                      <div class="row">
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img1_2020" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img1_2020" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img2_2020" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img2_2020" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img3_2020" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img3_2020" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="mb-3 about-cont">
+                <div class="gallery_section ">
+                  <div class="gallery-image">
+                    <div class="container">
+                      <div class="row">
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img4_2020" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img4_2020" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img5_2020" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img5_2020" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img6_2020" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img6_2020" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    
+    <div class="" *ngIf="selectedYear === 'year2022'">
+      <section  class="pt-20 pb-5 mb-20">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title mt-400">
+                <h2>Gallery of 2022</h2>
+              </div>
+              <div class="mb-3 about-cont">
+                <div class="gallery_section ">
+                  <div class="gallery-image">
+                    <div class="container">
+                      <div class="row">
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img1_2022" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img1_2022" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img2_2022" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img2_2022" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img3_2022" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img3_2022" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="mb-3 about-cont">
+                <div class="gallery_section ">
+                  <div class="gallery-image">
+                    <div class="container">
+                      <div class="row">
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img4_2022" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img4_2022" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img5_2022" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img5_2022" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+    
+                        <div class="col-md-4 mb-2">
+                          <a [href]="Img6_2022" data-lightbox="models">
+                            <div class="gallery-section">
+                              <div class="gallery-image image banner">
+                                <img [src]="Img6_2022" alt="Gallery Image" />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+</div>
+
+<div class="" *ngIf="selectedYear === 'year2024'">
+  <section  class="pt-20 pb-5 mb-20">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title mt-400">
+            <h2>Gallery of 2024</h2>
+          </div>
+          <div class="mb-3 about-cont">
+            <div class="gallery_section ">
+              <div class="gallery-image">
+                <div class="container">
+                  <div class="row">
+
+                    <div class="col-md-4 mb-2">
+                      <a [href]="Img1_2024" data-lightbox="models">
+                        <div class="gallery-section">
+                          <div class="gallery-image image banner">
+                            <img [src]="Img1_2024" alt="Gallery Image" />
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-4 mb-2">
+                      <a [href]="Img2_2024" data-lightbox="models">
+                        <div class="gallery-section">
+                          <div class="gallery-image image banner">
+                            <img [src]="Img2_2024" alt="Gallery Image" />
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-4 mb-2">
+                      <a [href]="Img3_2024" data-lightbox="models">
+                        <div class="gallery-section">
+                          <div class="gallery-image image banner">
+                            <img [src]="Img3_2024" alt="Gallery Image" />
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-4 mb-2">
+                      <a [href]="Img4_2024" data-lightbox="models">
+                        <div class="gallery-section">
+                          <div class="gallery-image image banner">
+                            <img [src]="Img4_2024" alt="Gallery Image" />
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <a [href]="Img5_2024" data-lightbox="models">
+                        <div class="gallery-section">
+                          <div class="gallery-image image banner">
+                            <img [src]="Img5_2024" alt="Gallery Image" />
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <a [href]="Img6_2024" data-lightbox="models">
+                        <div class="gallery-section">
+                          <div class="gallery-image image banner">
+                            <img [src]="Img6_2024" alt="Gallery Image" />
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- <app-home-gallary></app-home-gallary> -->    
+<app-contact-us></app-contact-us>

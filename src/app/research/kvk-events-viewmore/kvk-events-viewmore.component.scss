@@ -1,0 +1,119 @@
+
+/*--------------------------------------------------------------
+# Blog
+--------------------------------------------------------------*/
+.blog .blog-pagination {
+    margin-top: 30px;
+    color: #838893;
+  }
+  
+  .blog .blog-pagination ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .blog .blog-pagination li {
+    margin: 0 5px;
+    transition: 0.3s;
+  }
+  
+  .blog .blog-pagination li a {
+    color: var(--color-secondary);
+    padding: 7px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .blog .blog-pagination li.active,
+  .blog .blog-pagination li:hover {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  
+  .blog .blog-pagination li.active a,
+  .blog .blog-pagination li:hover a {
+    color: var(--color-white);
+  }
+  
+  /*--------------------------------------------------------------
+  # Blog Posts List
+  --------------------------------------------------------------*/
+  .blog .posts-list .post-item {
+    // box-shadow: 0 4px 40px -12px #5F8D4E;
+    box-shadow: 0 4px 40px -12px gray;
+    transition: 0.3s;
+    padding: 1em;
+  }
+  
+  .blog .posts-list .post-img{
+    height: 15em;
+  }
+  
+  .blog .posts-list .post-img img {
+    transition: 0.5s;
+    height: 100%;
+   
+  }
+  
+  .blog .posts-list .post-date {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #009970;
+    color: white;
+    text-transform: uppercase;
+    font-size: calc(13px * var(--font-scale));
+    padding: 6px 12px;
+    font-weight: 500;
+    z-index: 5;
+  }
+  
+  .blog .posts-list .post-content {
+    padding-top: 0.5em;
+    height: 5em;
+  }
+  
+  .blog .posts-list .post-content h4{
+    font-size: calc(14px * var(--font-scale));
+    font-weight: 600;
+  }
+  
+  .blog .posts-list .post-title {
+    font-size: calc(24px * var(--font-scale));
+    color: var(--color-secondary);
+    font-weight: 700;
+    transition: 0.3s;
+    margin-bottom: 15px;
+  }
+  
+  .blog .posts-list .meta i {
+    font-size: calc(16px * var(--font-scale));
+    color: var(--color-primary);
+  }
+  
+  .blog .posts-list .meta span {
+    font-size: calc(15px * var(--font-scale));
+    color: #838893;
+  }
+  
+  .blog .posts-list p {
+    margin-top: 20px;
+  }
+
+  
+
+  
+  .blog .posts-list .post-item:hover .post-img img {
+    transform: scale(1.1);
+  }
+  
+
+  
+  
+  
+  
+  
+  

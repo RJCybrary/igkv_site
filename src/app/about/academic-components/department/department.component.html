@@ -1,0 +1,146 @@
+
+<app-banner [banner_heading]="'Departments'"[banner_img]="bannerImg" ></app-banner>
+
+    <!-- Overview section start-->
+    <section id="Section1" class="pt-3 pb-3 gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div>
+                        <h2 class="section-title1">Overview</h2>
+                    </div> 
+                    <div class="about-cont">
+                        <p class="contents">  Directrate of Instruction Office is responsible for making arrangements for housing, boarding and welfare of the students and various co-curricular activities other than the academic work. The Directorate of Students Welfare serves as a hub of students' guidance, counseling and placement activities for all its constituent colleges. Directorate helps CCS HAU graduates to get suitable placement in various nationalized banks, agro-based companies/industries/MNCs/NGO's etc. It facilitates students to pursue their higher education in India and abroad by conducting coaching classes, motivation lectures, mock group discussions, and interview simulations etc. The ultimate objective is to groom the students to become good citizens of country by personality development and skill for better living. The DSW office also comprises different cadre official's assigned additional duties from other departments for welfare activities. The Directorate also organizes conventions and contacts with the Alumni's of the University Activities Manpower Alumni Association Executive Committee (2016-18)Alumni Membership Form Souvenir-8th Alumni Convention Felicitation Souvenir-7th Alumni Convention </p>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+    </section>     
+<!-- Overview section end-->
+
+<!--====== COUNTER PART START ======-->
+<section class="pt-5 pb-5" *ngIf="totalDepartment && faculty_data">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-3" >
+                <div class="counter blue">
+                    <div class="counter-content"  #counter>
+                        <h3>Departments</h3>
+                        <span class="counter-value fa-beat">{{currentCounts[0]}}</span>
+                    </div>
+                    <div class="counter-icon">
+                        <!-- <i class="fas fa-building icon-color"></i> -->
+                    </div>
+                </div>
+            </div>
+
+            <ng-container *ngFor="let item of faculty_data;let i=index" >
+            <div class="col-6 col-sm-6 col-md-3" #counter>
+                <a [routerLink]="['/about/faculty',item.Faculty_Id]">
+                <div class="counter blue">
+                    <div class="counter-content">
+                        <h3>{{item.faculty_name}}</h3>
+                        <span class="counter-value fa-beat">{{currentCounts[i+1]}}</span>
+                    </div>
+                    <div class="counter-icon">
+                    </div>
+                </div>
+              </a>
+            </div>
+        </ng-container>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!--      DEPARTMENT LIST BY  FACULTY    -->
+<section id="Agriculture Departments" class="pt-3 pb-3 gray-bg">
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-lg-6 col-md-8 col-sm-7">
+                <div>
+                    <h2 class="section-title1">Agriculture Departments</h2>
+                </div> 
+            </div>
+        </div> 
+        <div class="row justify-content-center">
+            <ng-container *ngFor="let item of departmentList_data_agri;let i=index" >  
+                <div class="col-6 col-sm-6 col-md-3">
+                    <div class="singel-department mb-3">
+                        <div class="image">
+                                <a [routerLink]="['departmentDetail',item.Subject_Id]">
+                            <img class="background_img" [src]="Department_Images[i].img"   alt="Department Background Image">
+                            <div class="add-cart">
+                                <span><i><img [src]="bookIconImg" alt="Department Book Icon"></i> </span>
+                                <span><h6>{{item.Subject_Name_E}}</h6></span>
+                            </div>
+                        </a>
+                        </div>
+                    </div> 
+               </div> 
+            </ng-container>
+        </div> 
+    </div> 
+</section>
+
+<section id="Agriculture Engineering Departments" class="pt-3 pb-3">
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-lg-6 col-md-8 col-sm-7">
+                <div>
+                    <h2 class="section-title1">Agriculture Engineering Departments</h2>
+                </div> 
+            </div>
+        </div> 
+        <div class="row justify-content-center">
+            <ng-container *ngFor="let item of departmentList_data_agri_eng;let i=index" >  
+                <div class="col-6 col-sm-6 col-md-3">
+                    <div class="singel-department mb-3">
+                        <div class="image">
+                                <a [routerLink]="['departmentDetail',item.Subject_Id]">
+                            <img class="background_img" [src]="Department_Images[i].img"   alt="Department Background Image">
+                            <div class="add-cart">
+                                <span><i><img [src]="bookIconImg" alt="Department Book Icon"></i> </span>
+                                <span><h6>{{item.Subject_Name_E}}</h6></span>
+                            </div>
+                        </a>
+                        </div>
+                    </div> 
+               </div> 
+            </ng-container>
+        </div> 
+    </div> 
+</section>
+
+<section id="Horticulture Departments" class="pt-3 pb-3 gray-bg">
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-lg-6 col-md-8 col-sm-7">
+                <div>
+                    <h2 class="section-title1">Horticulture Departments</h2>
+                </div> 
+            </div>
+        </div> 
+        <div class="row justify-content-center">
+            <ng-container *ngFor="let item of departmentList_data_horti;let i=index" >  
+                <div class="col-6 col-sm-6 col-md-3">
+                    <div class="singel-department mb-3">
+                        <div class="image">
+                                <a [routerLink]="['departmentDetail',item.Subject_Id]">
+                            <img class="background_img" [src]="Department_Images[i].img"   alt="Department Background Image">
+                            <div class="add-cart">
+                                <span><i><img [src]="bookIconImg" alt="Department Book Icon"></i> </span>
+                                <span><h6>{{item.Subject_Name_E}}</h6></span>
+                            </div>
+                        </a>
+                        </div>
+                    </div> 
+               </div> 
+            </ng-container>
+        </div> 
+    </div> 
+</section>
+
+	

@@ -1,0 +1,185 @@
+<app-loder *ngIf="loding"></app-loder>
+<!-- BANNER -->
+<app-banner [banner_heading]="faculty_Data?.faculty_Name_E" [banner_img]="bannerImageUrl" ></app-banner>
+<!-- OVERVIEW -->
+<section id="Section3" class="pt-3 pb-3">
+  <div class="container">
+    <div class="row">
+      <div  *ngIf="faculty_Data">
+        <div >
+          <h2 class="section-title1">Overview</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="about-cont">
+              <p class="contents" style="line-height: 29px; letter-spacing: inherit;">{{faculty_Data.Overview}}</p>
+            </div>
+            </div>
+            <div class="col-md-3">
+              <div class="image-containers">
+                <!-- ✅ FIX ALT (not generic) -->
+                <img [src]="faculty_Detail.img_url" class="img-class" (error)="onErrorImage($event)"
+                  alt="{{faculty_Detail.emp_full_name}} profile photo" />
+            
+                <div class="details">
+                  <!-- ✅ Already correct h3 -->
+                  <h3 class="person-name">{{faculty_Detail.emp_full_name}}</h3>
+                  <p class="person-post">{{faculty_Detail.post_name}}</p>
+                </div>
+              </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- DASHBOARD 2 -->
+<section class="gray-bg pt-5 pb-5" *ngIf="total && dashboard_Data1 && dashboard_Data2">
+  <div class="container ">
+   
+    <div class="row pb-5 justify-content-center">
+        <div class="col-6 col-sm-6 col-md-3" #counter>
+            <div class="counter">
+                <div class="counter-icon"><i class="fa fa-users" aria-hidden="true"></i>  </div>
+                <span class="counter-value fa-beat">{{currentCounts[0]}}+</span>
+                <h3>Students</h3>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-3" #counter>
+          <div class="counter">
+              <div class="counter-icon"><i class="fa fa-female" aria-hidden="true"></i></div>
+              <span class="counter-value fa-beat">{{currentCounts[1]}}+</span>
+              <h3>Girls</h3>
+          </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-3" #counter>
+        <div class="counter">
+            <div class="counter-icon"><i class="fa fa-male" aria-hidden="true"></i></div>
+            <span class="counter-value fa-beat">{{currentCounts[2]}}+</span>
+            <h3>Boys</h3>
+        </div>
+    </div>
+</div>
+</div> <!-- container -->
+</section>
+
+<section class="program_off pt-3 pb-3">
+    <div class="container ">
+        <div class="row">
+            <div >
+                <h2 class="section-title1">Program Offered</h2>
+            </div>
+          </div>
+      <div class="row ">
+        <div class="col-lg-4 col-md-4 col-4 ">
+            <a routerLink="program/1" class="program-link">
+              <div class="program-offered" (onerror)="onErrorImage($event)" [ngStyle]="{'background-image': 'url(' + UGImage + ')'}">
+                <div class="overlay"></div>
+                <div class="text-center" style="padding: 5px;">UG</div>
+              </div>
+            </a>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-4  ">
+          <a routerLink="program/2" class="program-link">
+            <div class="program-offered" (onerror)="onErrorImage($event)" [ngStyle]="{'background-image': 'url(' + PGImg + ')'}">
+              <div class="overlay"></div>
+              <div class="text-center" style="padding: 5px;">PG</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-4  ">
+          <a routerLink="program/3" class="program-link"> 
+            <div class="program-offered" (onerror)="onErrorImage($event)" [ngStyle]="{'background-image': 'url(' + PhdImg + ')'}">
+              <div class="overlay"></div>
+              <div class="text-center" style="padding: 5px;">PhD</div>
+            </div>
+          </a>
+        </div> &nbsp;
+      </div>
+    </div>
+  </section>
+  <!-- ========= END PROGRAM OFFERED ========= -->
+
+  <section class="gray-bg pt-3 pb-3">
+    <div class="container">
+      <div class="row">
+        <div >
+            <h2 class="section-title1">Running Following Departments</h2>
+        </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-4 col-md-3 col-6" *ngFor="let item of Program_Data">
+          <div class="card-cont mb-3">
+            <div class="head">
+              <p>
+                <span style="font-size: calc(32px * var(--font-scale));">
+                  <!-- ✅ hide decorative icon -->
+                  <i class="fa-solid fa-book" aria-hidden="true"></i>
+                </span>
+              </p>
+              <span  class="head">{{item.Subject_Name_E}}</span>
+            </div>
+          </div>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+<section id="contact" class="contact pt-3 pb-3 gray-bg" *ngIf="faculty_Detail">
+    <div class="container" data-aos="fade-up">
+
+  <div>
+      <h2 class="section-title1">Contact</h2>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-6">
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="info-box">
+              <i class="fa-solid fa-location-dot" aria-hidden="true" style="color: #eecc0a;"></i>             
+               <h3>Our Address</h3>
+              <p>{{faculty_Detail.College_Name_E}}</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-box mt-4">
+              <i class="fa-regular fa-envelope" aria-hidden="true" style="color: #eecc0a;"></i>             
+               <h3>Email Us</h3>
+              <p>{{faculty_Detail.Email_Id}}</p>
+              <br>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-box mt-4">
+              <i class="fa-solid fa-phone-volume" aria-hidden="true" style="color: #eecc0a;"></i>
+                            <h3>Call Us</h3>
+            <a style="color: #fff;" [href]="'tel:+91' + faculty_Detail.Contact_No_1" [attr.aria-label]="'Call ' + faculty_Detail.Contact_No_1">
+              +91 {{faculty_Detail.Contact_No_1}}
+            </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-6 map-section">
+       <div class="map" style="height: 100%;">
+        <iframe title="google map for contact"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.855563411841!2d81.70287997394063!3d21.237575380576363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28c2c4faaf35b5%3A0xa87f28f60a13aa36!2sIndira%20Gandhi%20Agricultural%20University!5e0!3m2!1sen!2sin!4v1705223052197!5m2!1sen!2sin" width="100%" height="300px" style="border:0;height: 100%;" allowfullscreen="" loading="lazy" title="location" referrerpolicy="no-referrer-when-downgrade"></iframe>       </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>

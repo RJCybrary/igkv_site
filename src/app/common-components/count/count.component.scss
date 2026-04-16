@@ -1,0 +1,119 @@
+
+// New Conter CSS 
+/* Counter CSS */
+.singel-counter span {
+    color: #1565c0; /* Dark blue */
+    font-size: calc(20px * var(--font-scale));
+    font-weight: 500;
+}
+
+.singel-counter p {
+    color: #1976d2; /* Medium blue */
+    font-weight: 600;
+    margin-top: 12px !important;
+}
+
+.singel-counter {
+    border: 1px solid #64b5f6; /* Light blue */
+    border-radius: 2.3em;
+    overflow: hidden;
+    margin: 0.5em;
+    height: 13em;
+    width: 11em;
+    // box-shadow: 0 1px 30px -12px #64b5f6   ;
+}
+
+.singel-counter .image {
+    padding: 10% 0;
+    background-color: #155da9; /* Very light blue */
+    margin-bottom: 0.6em;
+}
+
+.icon-font-size {
+    font-size: 5em;
+    // color: #0277bd; /* Deep blue */
+    color: white;
+}
+
+/*counter css end*/
+.singel-counter {
+    transition: transform 0.3s ease;
+}
+
+.singel-counter:hover {
+    transform: translateY(-10px); /* Slide up the element by 5 pixels */
+}
+
+
+// Media Query 
+
+/* CSS for counter items responsiveness */
+@media (max-width: 1200px) {
+    .singel-counter {
+        padding: 0;
+        height: 14em;
+        width: 12em;
+        font-size: 86%;
+        justify-content: space-evenly !important;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .singel-counter {
+        padding: 0;
+        height: 14em;
+        width: 14em;
+        font-size: 86%;
+    }
+
+    .row {
+        display: flex;
+    }
+    .col-sm-6 {
+        text-align: -webkit-center;
+    }
+}
+
+@media (max-width: 768px) {
+    .singel-counter {
+       padding: 0;
+       font-size: 85%;
+       text-align: center !important;
+    }
+    .row {
+        display: flex;
+    }
+    .col-sm-6 {
+        text-align: -webkit-center;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .singel-counter {
+        padding: 0;
+        font-size: 75%;
+    }
+
+    .col-sm-6 {
+        text-align: -webkit-center;
+    }
+
+    .row {
+        display: flex;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .singel-counter {
+      width: 130px;
+    }
+  }
+

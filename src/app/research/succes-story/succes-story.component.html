@@ -1,0 +1,103 @@
+<app-banner [banner_heading]="title" style="margin-top: 2em;" [banner_img]="banner_img"></app-banner>
+
+<div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <section class="container-fluid Allnews mt-5">
+          <div class="container">
+            <label for="selectFarmer" style="padding-top: 10px; font-weight: 600; font-size: calc(14px * var(--font-scale));">Select Farmer</label> 
+            <div class="Allnews-search-section">
+              <select class="Allnews-search-input" id="selectFarmer" aria-label="Select Farmer" [(ngModel)]="selectedKissan"  (change)="getAllSuccessStory()" >
+                <option value="">--select--</option>
+                <option *ngFor="let office of farmer_Data" [value]="office.farmer_story_id">{{ office.Full_Name }}</option>
+              </select>
+              <button class="Allnews-search-button" (click)="refreshPage()">
+                Refresh<span></span>
+              </button>
+            </div>
+          </div>
+        </section>       
+      </div>
+    </div>
+  </div>
+
+
+<div class="container-fluid mb-5" style="background-color: rgb(255, 255, 255);" >
+    <div class="container">
+        <div class="row mt-5">
+            <header>
+            </header>
+        </div>
+        <!-- Angular Material Expansion Panel -->
+        <mat-accordion  class="mt-5">
+            <ng-container *ngFor="let farmer of farmerData; let i = index">
+                <mat-expansion-panel [expanded]="i === 0"  style="margin-bottom: 6px; margin-top: 2px;">
+                    <mat-expansion-panel-header class="panel-head">
+                        <mat-panel-title>
+                            {{farmer.Full_Name}} - {{farmer.Village}}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <section id="doctors" class="doctors">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-5 mt-4">
+                                    <div class="member d-flex align-items-start" style="border: solid 1px; border-color: rgb(202, 200, 200);">
+                                        <div class="pic">
+                                            <img [src]="ImgNotFound" class="img-fluid" alt="sucess story image">
+                                        </div>
+                                        <div class="member-info">
+                                            <p class="detail">Name: {{farmer.Full_Name}}</p>
+                                            <p class="detail">Address: {{farmer.Village}}</p>
+                                            <p class="detail">Mo.No: {{farmer.Mobile_No}}</p>
+                                            <p class="detail">Age: {{farmer.Farmer_Age}}</p>
+                                            <p class="detail">Education: {{farmer.Farmer_Education}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-7 info-table">
+                                    <table>
+                                        <tr>
+                                            <td>Taknik kitne varsh se apna rahe hai</td>
+                                            <td>{{farmer.Technique_pired}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Takniki jankari prapt krne ka sthan</td>
+                                            <td>{{farmer.Technique_info_place}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>is takniki ke antargat kul chhetra</td>
+                                            <td>{{farmer.Technique_aria}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>kissano dwara swayum ki takniki apnane</td>
+                                            <td>self Farmer</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="info-table">
+                        <section class="description">
+                            <h2 style="text-align: center;">Success Story</h2>
+                            <p style="text-align: justify; padding: 10px; font-size: calc(14px * var(--font-scale));">{{farmer.Description}}</p>
+                        </section>
+                    </section>
+
+                    <!-- <section class="image-gallery">
+                        <h2>Image Gallery</h2>
+                        <div class="image-row">
+                            <img src="assets/images/imgs/dhan001.jpg" alt="Image 1">
+                            <img src="assets/images/imgs/dhan002.jpg" alt="Image 2">
+                            <img src="assets/images/imgs/dhan003.jpg" alt="Image 3">
+                        </div>
+                    </section> -->
+                </mat-expansion-panel>
+            </ng-container>
+        </mat-accordion>
+    </div>
+</div>
+

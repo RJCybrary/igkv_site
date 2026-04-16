@@ -1,0 +1,108 @@
+/* ================= Dean / Message Section ================= */
+
+.message_section {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e3f0f7; /* light blue */
+  background-size: cover;
+  background-position: center;
+  padding: 1em;
+}
+
+/* Error state */
+.error-message {
+  background-color: #f0f0ef;
+}
+
+.error-message .contents,
+.error-message .person-name,
+.error-message .person-post {
+  color: #000000;
+}
+
+/* ================= Text Colors (WCAG safe) ================= */
+
+.message_section .contents,
+.message_section .message-text {
+  color: #000000; /* strong dark gray – WCAG AA+ */
+  font-weight: 500;
+}
+
+.message_section .person-name {
+  color: #07294d; /* brand dark blue */
+  font-weight: 600;
+}
+
+.message_section .person-post {
+  color: #333333;
+  font-weight: 500;
+}
+
+/* ================= Profile ================= */
+
+.message_section .profile {
+  text-align: center;
+}
+
+.message_section .profile-picture {
+  height: 14em;
+  width: 12em;
+  border-radius: 5%;
+  border: 3px solid #ffffff;
+}
+
+/* ================= Message Content ================= */
+
+.message_section .message {
+  text-align: left;
+}
+
+.message_section .message-title {
+  font-size: calc(28px * var(--font-scale));
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.message_section .message-text {
+  font-size: calc(17px * var(--font-scale));
+  line-height: 1.6;
+  text-align: justify;
+  padding: 2em 0 3%;
+}
+
+/* ================= Button ================= */
+
+.button-70 {
+  background-color: #ffc600;
+  color: #07294d;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: large;
+}
+
+/* ================= Scroll Area ================= */
+
+.scrolitem {
+  height: 280px;
+  overflow-y: auto;
+  transition: all ease-in-out 0.3s;
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrolitem::-webkit-scrollbar {
+  display: none; /* Chrome / Edge */
+}
+
+/* ================= Responsive ================= */
+
+@media screen and (max-width: 1000px) {
+  .profile .profile-picture {
+    min-width: unset !important;
+    min-height: unset !important;
+  }
+}

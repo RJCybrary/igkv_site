@@ -1,0 +1,95 @@
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+      <button *ngFor="let data of banner_data; let i = index" type="button"
+          [attr.data-bs-target]="'#carouselExampleCaptions'" [attr.data-bs-slide-to]="i" [class.active]="i === 0"
+          [attr.aria-label]="'Slide ' + (i + 1)">
+      </button>
+  </div>
+  <section class="banner">
+      <div class="carousel-inner director">
+
+        
+          <div class="carousel-item  igkv-slider-style1" *ngFor="let data of banner_data; let i = index"
+              [class.active]="i === 0">
+
+              <div class="slider-container">
+                  <div class="slider-container-background"
+                      style=" background: url('{{ data.img}}') center / cover no-repeat;"></div>
+
+                  <img src="{{ data.img}}" class="" alt=" director activity banner image">
+              </div>
+
+              <div class="carousel-caption d-none d-md-block" *ngIf="Office_Page_Data" style="bottom: 5.25rem;">
+                  <h2 style="color: #134b79">{{Office_Page_Data.office_name}}</h2>
+              </div>
+          </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true" style="z-index: 3;"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" style="z-index: 3;" type="button"
+          data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"> </span>
+          <span class="visually-hidden" style="z-index: 500;">Next</span>
+      </button>
+  </section>
+</div>
+
+<!-- Awards section start-->
+<section id="about-page" class="pt-3 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            <h2 class="section-title1">Awards</h2>
+          <!-- section title -->
+          <div class="about-cont">
+            <section class="portfolio" id="portfolio">
+              <div class="portfolio-grid">
+                <div class="container" style="padding: 0;">
+                  <app-pagination
+                 [currentPages]="currentPages"
+                 [totalrecords]="totalrecords"
+                 (rowsPerPageChanged)="onRowsPerPageChanged($event)"
+                   (pageChanged)="onPageChanged($event)"
+                   (searchCriteria)="onSearchCriteriaReceived($event)"> 
+                  <div class="row" *ngIf="award_data?.length !== 0 ; else elseblock">
+                    <ng-container *ngFor="let data of award_data">
+                      <div class="col-lg-4 mb-5 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                          <a (click)="setdetails_dir()"  [routerLink]="['/about/activities-details',data.Website_Content_ID]">
+                            <div class="image banner2" [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+                            <img [src]="data.Column1" alt="director awards image" />
+                            <div class="content">
+          
+                            </div>
+                          </div>
+                            <div class="portfolio-over">
+                              <div>
+                                <p class="card-text">
+                                  {{data.web_content_date2|date:'MMMM d, y'}}
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                           <div class="card-title">
+                          <h4>{{data.Content_Title}}</h4>
+                        </div>
+                        </div>
+                      </div>
+                    </ng-container>
+                  </div>
+                  <ng-template #elseblock>
+                    <app-no-data></app-no-data>
+                 </ng-template>
+                </app-pagination>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

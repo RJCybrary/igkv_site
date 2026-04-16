@@ -1,0 +1,153 @@
+/* banner heading */
+.table-responsive {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+  width: 100%; /* Ensures container takes full width */
+}
+
+#page-banner {
+    padding-top: 105px;
+    padding-bottom: 110px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  #page-banner:before {
+    content: "";
+    background: #07294dd0; /* Adjust the alpha value to control overlay transparency */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .page-banner-cont {
+    color: #fff;
+    position: relative;
+    z-index: 1; 
+    font-weight:700 ;
+  }
+  
+  .header{
+   font-size: calc(45px * var(--font-scale));
+   font-weight: 700;
+   line-height: normal;
+  }
+  
+  .breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .breadcrumb-item a {
+    color: #fff; /* Set breadcrumb text color to white */
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before{
+    color: white;
+  }
+  
+  .breadcrumb-item.active {
+    color: #ffc107; /* Set active breadcrumb text color to yellow */
+  }
+  
+  @media screen and (max-width: 768px) {
+     
+    .header{
+      font-size: calc(31px * var(--font-scale)) ;
+     }
+     #page-banner {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+    .specials .details h3{
+      font-size: calc(14px * var(--font-scale)) !important
+    }
+    
+  }
+  
+
+  // Project Styles
+  /*--------------------------------------------------------------
+# Specials
+--------------------------------------------------------------*/
+.specials {
+    overflow: hidden;
+  }
+    
+  .specials .details h3 {
+    font-size: calc(26px * var(--font-scale));
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #565858;
+  }
+  
+  .specials .details h5 {
+    font-size: calc(18px * var(--font-scale));
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #565858;
+  }
+
+  .specials .details p {
+    color: #2f4c5a;
+  }
+  
+  .specials .details p:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 992px) {
+    .specials .nav-link {
+      border: 0;
+      padding: 15px;
+      margin-top: 13px;
+    }
+  }
+  
+
+  .txt{
+    font-size: large;
+    font-weight: 500;
+    margin-left: 20px;
+  }
+
+  .headTxt{
+    font-size: medium;
+    font-weight: 400;
+  }
+
+//   table css
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    background-color: #f9f9f9;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #3f637b;
+    color: white;   
+  }
+
+  /* Hover Effect */
+  tr:hover {
+    background-color: #d1d1d1;
+    border: 1px solid #cccccc;
+  } 
+
+  .projectDetailRow{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }

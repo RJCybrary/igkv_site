@@ -1,0 +1,345 @@
+// .faculty {
+//     background-color: rgb(230, 228, 228);
+//   }
+
+/* Employee card styling */
+.employee-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+/* Profile image section */
+.employee-card .profile-img {
+  flex-shrink: 0;
+  margin-right: 10px;
+  border-radius: 50%;
+  /* To make the border follow the circular shape */
+  // padding: 2px; /* Add padding to create space for the border */
+  // border: 2px solid #265a96; /* Add a 3px solid blue border */
+}
+
+.employee-card .profile-img img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  // object-fit: cover;
+}
+
+/* Employee info section */
+.employee-card .employee-info {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.employee-card .employee-name {
+  font-size: calc(15px * var(--font-scale));
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.employee-card .employee-post {
+  color: #666;
+  font-size: calc(11px * var(--font-scale));
+  margin: 4px 0;
+}
+
+.employee-card .employee-contact {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.employee-card .more-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.employee-card .more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Hover effect on card */
+.employee-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+// below code
+.faculty-search-section {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 20px 0;
+  align-items: flex-end;
+}
+
+.faculty-search-group {
+  flex: 1;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faculty-search-group label {
+  margin-bottom: 5px;
+  font-size: calc(14px * var(--font-scale));
+  color: #333;
+  font-weight: bold;
+}
+
+.faculty-search-input {
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  background-color: rgb(214, 218, 221);
+}
+
+.faculty-search-button {
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 120px;
+  /* Set proper width */
+  align-self: flex-start;
+  margin-left: auto;
+  /* Align the button to the far right */
+  margin-top: 33px !important;
+}
+
+/* Responsive styles */
+@media screen and (min-width: 768px) {
+  .faculty-search-group {
+    width: calc(33.33% - 10px);
+  }
+
+  .faculty-search-button {
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faculty-search-section {
+    flex-wrap: wrap;
+  }
+
+  .faculty-search-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .faculty-search-input {
+    width: 300px;
+  }
+}
+
+/* faculty profile */
+.faculty-profile {
+  max-width: 300px;
+  /* Set your desired max width */
+  margin: auto;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 14px;
+}
+
+/* faculty profile */
+.faculty-profile {
+  max-width: 300px;
+  /* Set your desired max width */
+  margin: auto;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 14px;
+}
+
+
+
+//   .faculty-image {
+//     width: 80%;
+//     height: auto;
+//   }
+
+//   .faculty-details {
+//     margin-top: 20px;
+//     font-weight: bold;
+//   }
+
+//   .faculty-name {
+//     font-size: calc(18px * var(--font-scale));
+//   }
+
+//   .faculty-designation {
+//     font-size: calc(14px * var(--font-scale));
+//     color: #555;
+//   }
+
+//   .set-btn{
+//     font-weight: 500;
+//     color: rgb(50, 122, 185);
+//   }
+
+
+// banner
+#page-banner {
+  padding-top: 115px;
+  padding-bottom: 110px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#page-banner:before {
+  content: "";
+  // background: rgba(7, 41, 77, 0.3); /* Adjust the alpha value to control overlay transparency */
+  // background: rgba(7, 41, 77, 0.65); /* was 0.3 */
+  background: linear-gradient(rgba(7, 41, 77, 0.75),
+      rgba(7, 41, 77, 0.75));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-banner-cont {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+}
+
+.header {
+  font-size: calc(50px * var(--font-scale));
+  font-weight: 700;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item a {
+  color: #fff;
+  /* Set breadcrumb text color to white */
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  color: white;
+}
+
+.breadcrumb-item.active {
+  // color: #ffc107;
+   color: #ffc107;
+  /* Set active breadcrumb text color to yellow */
+}
+
+.page-item {
+  cursor: pointer;
+}
+
+.card-body {
+  height: 12.5em;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+
+// loader ===========
+
+
+/* css for loading screen */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loaders {
+  border: 4px solid #f3f3f3;
+  /* Light grey */
+  border-top: 4px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.example-full-width {
+  width: 100%;
+}
+
+.mat-mdc-option .mdc-list-item__primary-text {
+  white-space: normal;
+  /* font-size: inherit; */
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  text-decoration: inherit;
+  text-transform: inherit;
+  margin-right: auto;
+  font-size: calc(14px * var(--font-scale));
+}
+
+.employee-office {
+  font-size: calc(10px * var(--font-scale));
+  // padding: 1px !important;
+  // margin: 2px;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: calc(25px * var(--font-scale));
+  }
+
+  .breadcrumb-item.active {
+    font-size: calc(14px * var(--font-scale));
+  }
+
+  .page-banner-cont .breadcrumb .breadcrumb-item {
+    font-size: calc(14px * var(--font-scale));
+  }
+
+  #page-banner {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}

@@ -1,0 +1,68 @@
+<app-banner></app-banner>
+
+<section class="container-fluid" *ngIf="medicalUnit_data">
+  <div class="container">
+    <div class="row">
+      <div class="section-title mt-3">
+        <h2>{{medicalUnitOffice.office_name}} </h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="image-row col-md-5">
+
+        <div class="image-containers">
+          <img
+            src="assets/images/imgs/persion.jpg"
+            alt="staff image"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-7">
+        <h2 class="registrar-head">{{medicalUnit_data.Employee_Name}}</h2>
+        <h4 class=""> {{medicalUnit_data.Post_Name}}</h4>
+        <p style="text-align: justify">
+          The Chhattisgarh state is very large and has the diverse agro-climatic
+          situations pose a great challenge for agriculture development. The
+          Indira Gandhi Krishi Vishwavidyalaya is responsible for quality
+          education, research and extension activities for enhancing
+          agricultural productivity, profitability, livelihood enhancement and
+          diversification of agriculture in the state of Chhattisgarh. A new
+          farmer centric, industry driven knowledge based strategy may bring
+          desired results. The emerging challenges and opportunities call for a
+          paradigm shift in the innovation-driven agricultural education and
+          research system to address all the stakeholders in the entire food
+          supply chain. It is the need of the hour to identify doable programs
+          and implement them in a time bound manner..
+        </p>
+        <div
+          class="registrar-name"
+          style="border-left-style: solid; border-left-color: rgb(80, 185, 255)"
+        >
+          <p style="font-style: italic; padding-left: 6px">
+            <strong>
+              Yours,
+              <br />
+            </strong>
+            <strong>
+              {{medicalUnit_data.Employee_Name}}
+              <br />
+            </strong>
+            <span>
+             {{ medicalUnitOffice.office_name}}
+
+              <br />
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-home-notificaton></app-home-notificaton>
+
+<app-office-event-common></app-office-event-common>
+<app-staff-testimonial [unit_type]="unit_id"></app-staff-testimonial>
+
+  <app-contact-us></app-contact-us>

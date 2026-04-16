@@ -1,0 +1,122 @@
+
+/*=====================================================
+    24. EVENT PAGE css 
+======================================================*/
+
+.singel-event-list{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-align-items: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.singel-event-list .event-thum {
+	width: 38%;
+}
+.singel-event-list .event-thum img{
+    width: 100%;
+    border-radius: 5px;
+}
+.singel-event-list .event-cont {
+	width: 62%;
+    padding-left: 15px;
+}
+
+.singel-event-list .event-cont span {
+	font-size: calc(14px * var(--font-scale));
+    display:block;
+	color: #8a8a8a;
+	margin-right: 20px;
+}
+.singel-event-list .event-cont span i {
+	color: #ffc600;
+	margin-right: 3px;
+}
+.singel-event-list .event-cont a {
+	display: block;
+}
+.singel-event-list .event-cont a h4 {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	color: #000;
+	font-size: calc(20px * var(--font-scale));
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+.singel-event-list .event-cont a:hover h4 {
+    color: #ffc600;
+}
+
+/* banner css */
+#page-banner {
+  padding-top: 105px;
+  padding-bottom: 110px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#page-banner:before {
+  content: "";
+  background: #07294dd0; /* Adjust the alpha value to control overlay transparency */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-banner-cont {
+  color: #fff;
+  position: relative;
+  z-index: 1; 
+  font-weight:700 ;
+}
+
+.header{
+ font-size: calc(50px * var(--font-scale));
+ font-weight: 700;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item a {
+  color: #fff; /* Set breadcrumb text color to white */
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+  color: white;
+}
+
+.breadcrumb-item.active {
+  color: #ffc107; /* Set active breadcrumb text color to yellow */
+}
+@media (max-width: 768px) {
+  .header {
+     font-size: calc(25px * var(--font-scale));
+   }
+   .breadcrumb-item.active{
+     font-size: calc(14px * var(--font-scale));
+   }
+   .page-banner-cont .breadcrumb .breadcrumb-item{
+    font-size: calc(14px * var(--font-scale));
+   }
+  
+   #page-banner {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+ }

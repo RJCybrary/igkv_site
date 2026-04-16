@@ -1,0 +1,42 @@
+<section id="blog" class="blog container-fluid pt-3 pb-3">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h2 class="section-title1">Awards</h2>
+    <app-pagination 
+   [currentPages]="currentPages"
+    [totalrecords]="totalrecords"
+   (rowsPerPageChanged)="onRowsPerPageChanged($event)"
+     (pageChanged)="onPageChanged($event)"
+     (searchCriteria)="onSearchCriteriaReceived($event)">   
+    <div class="row gy-4 posts-list mt-3 mb-3" *ngIf="award_data?.length !== 0 ; else elseblock">
+      <ng-container *ngFor="let data of award_data">
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden  banner1 image1"
+              [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <a
+                [routerLink]="['/about/college-home/college', college_id, 'cont', 'activities-details', data.Website_Content_ID]">
+                <img [src]="data.Column1" class="img-fluid" alt="college awards image">
+              </a>
+              <span class="post-date">{{data.web_content_date2|date:'MMMM d, y'}}</span>
+              <div class="content1">
+
+              </div>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+              <p class="contents">
+                {{data.Content_Title}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <ng-template #elseblock>
+      <app-no-data></app-no-data>
+   </ng-template>
+    </app-pagination>
+
+  </div>
+</section>

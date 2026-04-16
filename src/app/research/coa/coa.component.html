@@ -1,0 +1,334 @@
+<app-banner [banner_heading]="Office_Page_Data?.office_name" [banner_img]="imageUrl"></app-banner>
+
+<app-overview *ngIf="(Office_id != 1009) && (Office_id!=1012) && (Office_id!=1010)"
+  [overview]="Office_Page_Data.About_Unit"></app-overview>
+
+<app-message [pageDetail_data]="Office_Page_Data"></app-message>
+
+
+
+<!-- lab and infrastructure start-->
+<section *ngIf="Office_id==1010" id="Section2" class="pt-10">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title mt-50">
+          <h2>Infrastructure</h2>
+        </div>
+
+
+        <div class="about-cont">
+          <div class="container">
+
+            <div class="lab_infrastructure Facilities">
+              <div class="row">
+                <div class="col-md-5 ">
+                  <div class="innerrow">
+                    <div class="image_section">
+                      <img [src]="PC_PolyhouseImg" alt="Polyhouse crops under cultivation">
+                      <figcaption>Polyhouse cultivation</figcaption>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7 Facilities_Part ">
+                  <h2>Polyhouse</h2>
+                  <div class="Facilities_List">
+                    <hr>
+                    <ul>
+                      <li>Polyhouses enable year-round cultivation, extending growing seasons and diversifying crop
+                        production.</li>
+                      <li>They promote sustainable agriculture practices by reducing water usage and minimizing chemical
+                        inputs.</li>
+                      <li>Precision farming technologies, such as sensors and drones, facilitate real-time monitoring
+                        and data-driven decision-making.</li>
+                      <li>Integrated pest management strategies minimize pesticide use, promoting eco-friendly
+                        cultivation practices.</li>
+                      <li>Polyhouses offer crop protection from extreme weather events, ensuring consistent yields and
+                        economic stability for farmers.</li>
+                      <li>Precision farming in polyhouses improves crop uniformity and minimizes resource wastage,
+                        enhancing profitability and sustainability in agriculture.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="lab_infrastructure Facilities">
+              <div class="row">
+                <div class="col-md-7 Facilities_Part ">
+                  <h2>NET House</h2>
+                  <div class="Facilities_List">
+                    <hr>
+                    <ul>
+                      <li>NET houses provide semi-controlled environments for crop cultivation, offering protection
+                        against pests and adverse weather conditions.</li>
+                      <li>They allow for natural ventilation, reducing the need for artificial cooling systems.</li>
+                      <li>Precision farming techniques optimize resource utilization within NET houses, ensuring
+                        efficient water and fertilizer application.</li>
+                      <li>Automated irrigation systems deliver water directly to plant roots, minimizing wastage.</li>
+                      <li>NET houses enable year-round cultivation, extending growing seasons and diversifying crop
+                        production.</li>
+                      <li>They promote sustainable agriculture practices by reducing pesticide use and minimizing
+                        environmental impact.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-5 ">
+                  <div class="innerrow">
+                    <div class="image_section">
+                      <img [src]="PC_nethouseImg" alt="Net House for protected farming">
+                      <figcaption>Net House Image</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="lab_infrastructure Facilities">
+              <div class="row">
+                <div class="col-md-5 ">
+                  <div class="innerrow">
+                    <div class="image_section">
+                      <img [src]="PC_NurseryImg" alt="Nursery Area outer side of Net House">
+                      <figcaption>Nursery Area Image</figcaption>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7 Facilities_Part ">
+                  <h2>Nursery Area</h2>
+                  <div class="Facilities_List">
+                    <hr>
+                    <ul>
+                      <li>Nursery areas in protective cultivation provide controlled environments for seed germination
+                        and early plant growth.</li>
+                      <li>They ensure optimal conditions for seedling development, promoting uniform growth and healthy
+                        root systems.</li>
+                      <li>Precision farming techniques optimize nursery operations, including water and nutrient
+                        management for seedling health.</li>
+                      <li>Automated irrigation systems deliver precise amounts of water, minimizing wastage and
+                        promoting efficient plant growth.</li>
+                      <li>Nursery areas enable year-round propagation of plants, supporting continuous crop production
+                        cycles.</li>
+                      <li>They facilitate the production of disease-free and high-quality seedlings, ensuring successful
+                        crop establishment.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="lab_infrastructure Facilities">
+              <div class="row">
+                <div class="col-md-7 Facilities_Part ">
+                  <h2>Head Stock Automation Unit</h2>
+                  <div class="Facilities_List">
+                    <hr>
+                    <ul>
+                      <li>Head stock automation units control and monitor various aspects of protective cultivation,
+                        such as temperature, humidity, and ventilation.</li>
+                      <li>They optimize environmental conditions for crop growth, ensuring optimal yields and quality.
+                      </li>
+                      <li>Precision farming techniques integrate automation units to regulate irrigation, fertigation,
+                        and other inputs for efficient resource management.</li>
+                      <li>Automated systems adjust environmental parameters based on real-time data, maximizing crop
+                        performance and minimizing waste.</li>
+                      <li>Head stock automation units enable remote monitoring and control of cultivation parameters,
+                        allowing for proactive management and rapid response to changes.</li>
+                      <li>They facilitate the integration of sensors and smart technologies for data-driven
+                        decision-making in precision farming.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-5 ">
+                  <div class="innerrow">
+                    <div class="image_section">
+                      <img [src]="PC_HeadStockAutomationImg"
+                        alt="Head Stock Automation Unit for Precision farming techniques">
+                      <figcaption>Head Stock Automation Unit Image</figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="lab_infrastructure Facilities">
+              <div class="row">
+                <div class="col-md-5 ">
+                  <div class="innerrow">
+                    <div class="image_section">
+                      <img [src]="PC_WaterHarvesting" alt="Water Harvesting Reservoir for store rainwater">
+                      <figcaption>Water Harvesting Reservoir Image</figcaption>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7 Facilities_Part ">
+                  <h2>Water Harvesting Reservoir</h2>
+                  <div class="Facilities_List">
+                    <hr>
+                    <ul>
+                      <li>Water harvesting reservoirs collect and store rainwater for irrigation and other agricultural
+                        purposes.</li>
+                      <li>They help mitigate water scarcity by capturing and storing rainfall runoff.</li>
+                      <li>Precision farming techniques optimize reservoir management, ensuring efficient water
+                        utilization and distribution.</li>
+                      <li>Automated systems regulate water levels and monitor reservoir conditions for optimal
+                        operation.</li>
+                      <li>Water harvesting reservoirs support sustainable agriculture practices by reducing dependence
+                        on groundwater and surface water sources.</li>
+                      <li>They enable year-round irrigation, ensuring consistent crop water supply and reducing drought
+                        risk.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- lab and infrastructure end-->
+
+<!-- Gallery section start-->
+<section *ngIf="Office_id==1010" id="Section3" class="pb-3 pt-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title ">
+          <h2>Gallery</h2>
+        </div>
+
+
+        <div class="about-cont">
+          <div class="gallery_section ">
+            <div class="gallery-image">
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="img-box">
+                    <img [src]="PC_Gallery1" alt="Polyhouse crops under protected cultivation" loading="lazy" />
+                    <div class="transparent-box">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="img-box">
+                    <img [src]="PC_Gallery2" alt="नेट house structure for crop protection" loading="lazy" />
+                    <div class="transparent-box">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="img-box">
+                    <img [src]="PC_Gallery3" alt="Nursery seedlings in trays" loading="lazy" />
+                    <div class="transparent-box">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="img-box">
+                    <img [src]="PC_Gallery4" alt="Automated irrigation system in operation" loading="lazy" />
+                    <div class="transparent-box">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="img-box">
+                    <img [src]="PC_Gallery5" alt="Automated irrigation system facility" loading="lazy" />
+                    <div class="transparent-box">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="img-box">
+                    <img [src]="PC_Gallery6" alt="Water harvesting reservoir facility" loading="lazy" />
+                    <div class="transparent-box">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<app-staff-testimonial [unit_type]="Office_id" *ngIf="(Office_id !=1009)"></app-staff-testimonial>
+
+<!-- <app-contact-us ></app-contact-us> -->
+
+<!-- contact us -->
+
+
+
+<section id="Section4" class="pt-3 pb-3" *ngIf="Office_Page_Data">
+  <div class="container">
+    <div class="row">
+      <h2 class="section-title1">Contact Us</h2>
+    </div>
+
+    <!-- new contact us -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-info">
+          <!-- Address Section -->
+          <div class="contact-card">
+
+            <h3 class="h2class"><i class="fa-solid fa-location-dot icon-font-size"></i> &nbsp; Address</h3>
+            <p>{{Office_Page_Data?.Unit_Address ? Office_Page_Data?.Unit_Address : `Indira Gandhi Krishi
+              Vishwavidyalaya, Krishak Nagar, Raipur, Chhattisgarh 492012`}}</p>
+          </div>
+
+          <!-- Contact Number -->
+          <div class="contact-card">
+            <h3 class="h2class"><i class="fa fa-phone icon-font-size " aria-hidden="true"></i>&nbsp;Contact Number</h3>
+            <p>{{Office_Page_Data?.Phone_Number ? Office_Page_Data?.Phone_Number : "077124-42537"}}</p>
+          </div>
+
+          <!-- Email ID -->
+          <div class="contact-card">
+            <h3 class="h2class"><i class="fa fa-envelope icon-font-size " aria-hidden="true"></i>&nbsp;Email ID</h3>
+            <p>{{Office_Page_Data.Email_ID}}</p>
+          </div>
+
+          <!-- Office Hours -->
+          <div class="contact-card">
+            <h3 class="h2class"><i class="fa-solid fa-clock icon-font-size"></i> &nbsp;Office Time</h3>
+            <p class="text">10:00 AM to 5:00 PM <br></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="map-container">
+          <iframe title="google map for contact"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2629.6679886860793!2d81.69424410311981!3d21.235332575024216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28c2cd61ab13f3%3A0x88aa0d80dc82ad34!2sUniversity%20Office%2C%20IGKV%20Raipur!5e0!3m2!1sen!2sin!4v1724417481982!5m2!1sen!2sin"
+            width="100%" height="625" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

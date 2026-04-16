@@ -1,0 +1,112 @@
+
+<section >
+  <section *ngIf="currentSection === 'Research'" class="research-section" id="Research">
+    <div class="left-content" data-aos="fade-up-right">
+      <div  class="stat"><h2>{{currentProject.Project_Count}}+</h2><p>Research Projects</p></div>
+      <hr>
+      <div class="stat"><h2>{{publication_data.publication}}+</h2><p>Publications</p></div>
+      <hr>
+      <div class="stat"><h2>{{patent_data.Patent_count}}+</h2><p>Patents</p></div>
+    </div>
+    <div class="right-content">
+      <h2>{{"WORLD RECOGNIZED RESEARCH AND INNOVATION" |translate}}</h2>
+      <a href="#" class="read-more-btn">Read More</a>
+    </div>
+    <div class="triangle-background" [ngStyle]="{'background-image': 'url(' + backgroundImageReserch + ')'}"></div>
+  </section>
+  
+  <section *ngIf="currentSection === 'Academic'" class="research-section" id="Academic">
+    <div class="left-content">
+      <div class="stat"*ngIf="collegeTotal"><h2>{{collegeTotal}}</h2><p>Total Colleges</p></div>
+      <hr>
+      <div class="stat" *ngIf="constituentClg"><h2>{{constituentClg}}</h2><p>Constituent Colleges</p></div> 
+      <hr>
+      <div class="stat" *ngIf="afilatedClg"><h2>{{afilatedClg}}</h2><p>Affiliated Colleges</p></div>
+    </div>
+    <div class="right-content">
+      <h2>{{"Our institution encompasses a diverse range of educational offerings" |translate}}</h2>
+      <a href="#" class="read-more-btn">Read More</a>
+    </div>
+    <div class="triangle-background" [ngStyle]="{'background-image': 'url(' + backgroundImageAca + ')'}"></div>
+  </section>
+  
+    <!-- Department Dashboard Facultiwise -->
+    <section *ngIf="currentSection === 'Department'" class="research-section" id="Department">
+      <div class="left-content">
+        <div class="stat" *ngIf="facultyTotal" >
+          <h2>{{facultyTotal}}</h2>
+          <p>Faculty</p>
+        </div>
+        <hr>
+        <div class="stat" *ngIf="totalDepartment">
+          <h2>{{totalDepartment}}</h2>
+          <p>Departments</p>
+        </div>
+        <hr>
+        <div class="stat">
+          <h2>19</h2>
+          <p>Programme</p>
+        </div>
+      </div>
+    
+      <div class="right-content">
+        <h2>{{"Offering a comprehensive academic environment" | translate}}</h2>
+        <a href="#" class="read-more-btn">Read More</a>
+      </div>
+    
+      <div class="triangle-background" [ngStyle]="{'background-image': 'url(' + backgroundImageDep + ')'}"></div>
+    </section>
+
+        <!-- Student Dashboard -->
+        <section *ngIf="currentSection === 'Student'" class="research-section" id="Student">
+          <div class="left-content">
+            <div class="stat" *ngIf="CurrentStudentTotal">
+            <h2>{{CurrentStudentTotal}}</h2>
+              <p>Students </p>
+            </div>
+            <hr>
+            <div class="stat" *ngIf="StudentM_data">
+              <h2>{{StudentM_data}}</h2>
+              <p>Male</p>
+            </div>
+            <hr>
+            <div class="stat" *ngIf="StudentF_data">
+              <h2>{{StudentF_data}}</h2>
+              <p>Female</p>
+            </div>
+          </div>
+        
+          <div class="right-content">
+            <h2>{{"With a vibrant community of students,fostering diversity and growth"|translate}}</h2>
+            <a href="#" class="read-more-btn">Read More</a>
+          </div>
+        
+          <div class="triangle-background" [ngStyle]="{'background-image': 'url(' + backgroundImageStu + ')'}"></div>
+        </section>
+
+      <!-- KVK Dashboard -->
+      <section *ngIf="currentSection === 'KVK'" class="research-section" id="KVK">
+        <div class="left-content">
+          <div class="stat">
+            <h2>58+</h2>
+            <p>Research Station</p>
+          </div>
+          <hr>
+          <div class="stat" *ngIf="kvklist">
+            <h2>{{kvklist}}</h2>
+            <p>KVK</p>
+          </div>
+          <hr>
+          <div class="stat">
+            <h2>157 +</h2>
+            <p> Farms</p>
+          </div>
+        </div>
+      
+        <!-- <div class="right-content">
+          <h2> We drive agricultural innovation and research</h2>
+          <a href="#" class="read-more-btn">Read More</a>
+        </div> -->
+        <div class="triangle-background" [ngStyle]="{'background-image': 'url(' + backgroundImageKVK + ')'}"></div>
+      </section>
+</section>

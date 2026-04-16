@@ -1,0 +1,16 @@
+<!-- Container for banner -->
+<div class="container-fluid banner" 
+     [style.background-image]="'url(' + displayedBanner + ')'" 
+     *ngIf="displayedBanner">
+  <!-- Display image -->
+  <img [src]="displayedBanner" alt="banner image">
+
+  <!-- Content (Optional) -->
+  <div class="content">
+    <!-- Your banner content can go here -->
+  </div>
+
+  <!-- Slider navigation buttons (only if it's a slider, i.e., for arrays) -->
+  <button *ngIf="isSlider" aria-label="Previous Banner" (click)="prevBanner()" class="nav-btn prev">‹</button>
+  <button *ngIf="isSlider" aria-label="Next Banner" (click)="nextBanner()" class="nav-btn next">›</button>
+</div>

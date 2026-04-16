@@ -1,0 +1,35 @@
+
+<section id="blog" class="blog pb-3 pt-3" >
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="section-title1">Recent Events</h2>
+    <div class="row gy-4 posts-list  pb-3" *ngIf="event_data != ''">
+      <ng-container *ngFor="let data of event_data">
+      <div class="col-xl-4 col-md-6">
+        <div class="post-item position-relative h-100">
+          <div class="post-img position-relative overflow-hidden  banner1 image1"  [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+            <a [routerLink]="['cont/activities-details',data.Website_Content_ID]">
+            <img [src]="data.Column1" class="img-fluid" alt="kvk event image">
+            </a>
+            <div class="content1">
+        
+            </div>
+            <span class="post-date">{{data.web_content_date}}</span>
+          </div>
+          <div class="post-content d-flex flex-column">
+            <p class="contents">
+              {{data.Content_Title}}
+            </p>
+          </div>
+          <hr>
+          <!-- <a [routerLink]="['/about/activities-details',data.Website_Content_ID]" class="readmore stretched-link"><span>Read More&nbsp;<i
+                class="fa-solid fa-arrow-right color-green"></i></span></a> -->
+        </div>
+      </div>
+    </ng-container>
+    <div class="col-lg-12 col-sm-12" style="text-align: center !important;">
+      <a routerLink="cont/events-list" class="main-btn">{{'View more' | translate}} </a>
+    </div>
+    </div>
+   
+  </div>
+</section>

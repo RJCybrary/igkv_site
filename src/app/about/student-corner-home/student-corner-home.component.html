@@ -1,0 +1,388 @@
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"
+  [style.background-image]="'url(' + bannerImage + ')'">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-banner-cont">
+          <h2 class="header">Student Corner</h2>
+          <!-- <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="." >Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Student Corner</li>
+                        </ol>
+                    </nav> -->
+          <a href="https://igkv.ac.in/web/AuthenticationStudent.aspx" target="_blank" class="button-29">
+            Login Here
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- login portal -->
+<section class="container-fluid gray-bg">
+  <div class="container">
+    <div class="row">
+      <div class="section-title mt-5">
+        <h2>Student Login Portal</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="login-container mt-3">
+          <div class="description">
+            <p style="text-align: justify">
+              The Student Portal of IGKV (Indira Gandhi Krishi Vishwavidyalaya) serves as a comprehensive platform for
+              students, providing seamless access to academic resources, important announcements, and administrative
+              services. It is designed to support the academic journey by offering features like course registration,
+              examination schedules, and result viewing. Additionally, the portal connects students with essential
+              resources such as library access, scholarship information, and e-learning materials. User-friendly and
+              accessible, the IGKV Student Portal ensures that students have the tools they need to succeed, fostering a
+              supportive and efficient educational environment.
+            </p>
+          </div>
+          <a href="https://igkv.ac.in/web/AuthenticationStudent.aspx" target="_blank" class="button1 login-link">
+            Login Here
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="img-container mt-3">
+          <img [src]="student_corner_img1" class="img-fluid" alt="student login portal image" />
+        </div>
+      </div>
+      &nbsp;&nbsp;
+    </div>
+  </div>
+</section>
+
+<!-- important links -->
+<div class="container-fluid">
+  <div class="container important-links mt-5">
+    <div class="row">
+      <div class="section-title mt-50">
+        <!-- <h5>Nehru Library</h5> -->
+        <h2>Important Links</h2>
+      </div>
+      <div class="align-div">
+        <div class="card-library mt-3">
+          <!-- Replace 'your-image.jpg' with the actual path to your image -->
+          <div class="card-content">
+            <a (click)="navigateToLibrary()">
+              <img [src]="library_Icon" height="80px" alt="Icon or Image" />
+              <div class="name">Library</div>
+            </a>
+          </div>
+        </div>
+        <div class="card-library mt-3">
+          <!-- Replace 'your-image.jpg' with the actual path to your image -->
+          <div class="card-content">
+            <a href="https://igkv.ac.in/counselinghomenew.aspx" target="_blank">
+              <img [src]="admission_icon" alt="Icon or Image" />
+              <div class="name">Admission</div>
+            </a>
+          </div>
+        </div>
+        <div class="card-library mt-3">
+          <!-- Replace 'your-image.jpg' with the actual path to your image -->
+          <div class="card-content">
+            <a (click)="navigateToHostel()">
+              <img [src]="hostel_icon" height="80px" alt="Icon or Image" />
+              <div class="name">Hostel</div>
+            </a>
+          </div>
+        </div>
+        <div class="card-library mt-3">
+          <!-- Replace 'your-image.jpg' with the actual path to your image -->
+          <div class="card-content">
+            <a (click)="navigateToAbout()">
+              <img [src]="ncc_icon" height="80px" alt="Icon or Image" />
+              <div class="name">NCC</div>
+            </a>
+          </div>
+        </div>
+        <div class="card-library mt-3">
+          <!-- Replace 'your-image.jpg' with the actual path to your image -->
+          <div class="card-content">
+            <a (click)="navigateToSports()">
+              <img [src]="sports_icon" height="80px" alt="Icon or Image" />
+              <div class="name">Sports</div>
+            </a>
+          </div>
+        </div>
+        <div class="card-library mt-3">
+          <!-- Replace 'your-image.jpg' with the actual path to your image -->
+          <div class="card-content">
+            <a href="https://igkv.ac.in//Establishment/Estb_Egreivance_Igmis_Complain_Registration_Form.aspx">
+              <img [src]="help_icon" height="80px" alt="Icon or Image" />
+              <div class="name">Help</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- dashboard -->
+<div id="Div1" class="mt-3 mb-3 container-fluid">
+
+  <div class="container">
+    <div class="row">
+      <div class="section-title mt-5">
+        <h2>Dashboard</h2>
+      </div>
+    </div>
+
+    <div class="row" style="justify-content: center">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+
+        <div class="counter">
+          <!-- <a routerLink="/about/college-home"> -->
+          <span class="counter-value">{{currentCounts[0]}}</span>
+          <h3>Colleges</h3>
+          <div class="counter-icon">
+            <i class="fa fa-university"></i>
+          </div>
+          <!-- </a> -->
+        </div>
+
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+        <div class="counter purple">
+          <span class="counter-value">{{currentCounts[1]}}</span>
+          <h3>Faculty</h3>
+          <div class="counter-icon">
+            <i class="fas fa-users"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+        <!-- <a routerLink="/about/department"> -->
+        <div class="counter">
+          <span class="counter-value">{{currentCounts[2]}}</span>
+          <h3>Departments</h3>
+          <div class="counter-icon">
+            <i class="fa fa-building"></i>
+          </div>
+        </div>
+        <!-- </a> -->
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+        <div class="counter purple">
+          <span class="counter-value">{{currentCounts[3]}}+</span>
+          <h3>Students</h3>
+          <div class="counter-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+        <div class="counter">
+          <span class="counter-value">{{currentCounts[4]}}+</span>
+          <h3>Girls</h3>
+          <div class="counter-icon">
+            <i class="fas fa-female"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+        <div class="counter purple">
+          <span class="counter-value">{{currentCounts[5]}}+</span>
+          <h3>Boys</h3>
+          <div class="counter-icon">
+            <i class="fas fa-male"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6 col-6" #counter>
+        <div class="counter">
+          <span class="counter-value">{{currentCounts[6]}}+</span>
+          <h3>Passout Students</h3>
+          <div class="counter-icon">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!--====== Anti Ragging Start ======-->
+<div class="anti-rag-container container-fluid" style="background-color: #07294d">
+  <div class="anti-rag">
+    <div class="container">
+      <h3>Anti-Ragging Committee</h3>
+      <span>Indira Gandhi Krishi Vishwavidyalaya (IGKV) takes a strong stance against ragging, ensuring a safe and
+        supportive environment for all students. The university strictly adheres to the guidelines set by the University
+        Grants Commission (UGC) and has a zero-tolerance policy towards any form of ragging. IGKV has established
+        anti-ragging committees and squads to monitor and prevent such activities. Awareness programs and workshops are
+        regularly conducted to educate students about the consequences of ragging. The university encourages students to
+        report any incidents, assuring confidentiality and swift action against perpetrators to maintain a harmonious
+        campus atmosphere.</span>
+    </div>
+    <div class="anti-rag-button">
+      <a [routerLink]="['/about/other-news',34]"><button>
+          Know More
+
+          <div class="arrow-wrapper">
+            <div class="arrow"></div>
+          </div>
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- student awards -->
+<section id="student-award" class="blog-student-award container-fluid pt-3 pb-3" *ngIf="award_data != ''">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h2 class="section-title1">Student Awards</h2>
+    <div class="row gy-4 posts-list ">
+      <ng-container *ngFor="let data of award_data">
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden  banner1 image1"
+              [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <img [src]="data.Column1" class="img-fluid" alt="student corner awards image">
+              <span class="post-date">{{data.web_content_date2|date:'MMMM d, y'}}</span>
+              <div class="content1">
+              </div>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+              <p class="contents">
+                {{data.Content_Title}}
+              </p>
+            </div>
+            <hr>
+            <!-- <a [routerLink]="['/about/activities-details',data.Website_Content_ID]" class="readmore stretched-link" ><span>Read
+                More&nbsp;<i class="fa-solid fa-arrow-right color-green"></i></span></a> -->
+          </div>`
+        </div>
+      </ng-container>
+      <div class="col-lg-12 col-sm-12" style="text-align: center !important;">
+        <a routerLink="/about/activities/category/26" class="main-btn">{{'View more' | translate}} </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- NCC Activities -->
+<section id="ncc-activities" class="blog-student-award container-fluid pt-3 pb-3"
+  *ngIf="Activity_data_NCC?.length > 0">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h2 class="section-title1">NCC Activities</h2>
+    <div class="row gy-4 posts-list ">
+      <ng-container *ngFor="let data of Activity_data_NCC">
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden  banner1 image1"
+              [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <img [src]="data.Column1" class="img-fluid" alt="NCC Activities Image">
+              <span class="post-date">{{data.web_content_date2|date:'MMMM d, y'}}</span>
+              <div class="content1">
+              </div>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+              <p class="contents">
+                {{data.Content_Title}}
+              </p>
+            </div>
+            <hr>
+            <!-- <a [routerLink]="['/about/activities-details',data.Website_Content_ID]" class="readmore stretched-link" ><span>Read
+                More&nbsp;<i class="fa-solid fa-arrow-right color-green"></i></span></a> -->
+          </div>`
+        </div>
+      </ng-container>
+      <div class="col-lg-12 col-sm-12" style="text-align: center !important;">
+        <a routerLink="/about/activities/category/1" class="main-btn">{{'View more' | translate}} </a>
+      </div>
+    </div><!-- End blog-student-award posts list -->
+  </div>
+</section>
+
+<hr>
+<!-- NSS Activites -->
+<section id="nss-activities" class="blog-student-award container-fluid pt-3 pb-3"
+  *ngIf="Activity_data_NSS?.length > 0">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h2 class="section-title1">NSS Activities</h2>
+    <div class="row gy-4 posts-list ">
+      <ng-container *ngFor="let data of Activity_data_NSS">
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden  banner1 image1"
+              [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <img [src]="data.Column1" class="img-fluid" alt="NSS Activities Image">
+              <span class="post-date">{{data.web_content_date2|date:'MMMM d, y'}}</span>
+              <div class="content1">
+              </div>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+              <p class="contents">
+                {{data.Content_Title}}
+              </p>
+            </div>
+            <hr>
+            <!-- <a [routerLink]="['/about/activities-details',data.Website_Content_ID]" class="readmore stretched-link" ><span>Read
+                More&nbsp;<i class="fa-solid fa-arrow-right color-green"></i></span></a> -->
+          </div>`
+        </div>
+      </ng-container>
+      <div class="col-lg-12 col-sm-12" style="text-align: center !important;">
+        <a routerLink="/about/activities/category/2" class="main-btn">{{'View more' | translate}} </a>
+      </div>
+    </div><!-- End blog-student-award posts list -->
+  </div>
+</section>
+
+<!-- students-events -->
+<section id="student-events" class="blog-student-event pb-3 pt-3" *ngIf="Academic_data?.length > 0 ">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h2 class="section-title1">Academic Activities</h2>
+    <div class="row gy-4 posts-list  pb-3">
+      <ng-container *ngFor="let data of Academic_data">
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100">
+            <div class="post-img position-relative overflow-hidden  banner1 image1"
+              [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <img [src]="data.Column1" class="img-fluid" alt="Academic Activities Image">
+              <div class="content1">
+
+              </div>
+              <span class="post-date">{{data.web_content_date}}</span>
+            </div>
+            <div class="post-content d-flex flex-column">
+              <p class="contents">
+                {{data.Content_Title}}
+              </p>
+            </div>
+            <hr>
+            <!-- <a [routerLink]="['/about/activities-details',data.Website_Content_ID]" class="readmore stretched-link"><span>Read More&nbsp;<i
+                class="fa-solid fa-arrow-right color-orange"></i></span></a> -->
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="col-lg-12 col-sm-12" style="text-align: center !important;">
+      <a routerLink="/about/activities/category/5" class="main-btn">{{'View more' | translate}} </a>
+    </div>
+  </div>
+</section>

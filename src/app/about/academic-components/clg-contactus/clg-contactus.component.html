@@ -1,0 +1,49 @@
+
+  <section id="Section4" class="pt-3 pb-3" *ngIf="contact_data">
+    <div class="container">
+      <div class="row">
+        <h2 class="section-title1">Contact Us</h2>
+      </div>
+   
+      <!-- new contact us -->
+       <div class="row">
+        <div class="col-md-6">
+          <div class="contact-info">
+            <!-- Address Section -->
+            <div class="contact-card">
+      
+              <h2><i class="fa-solid fa-location-dot icon-font-size"></i> &nbsp; Address</h2>
+              <p>{{contact_data.Unit_Address}}</p>
+            </div>
+      
+            <!-- Contact Number -->
+            <div class="contact-card">
+              <h2><i class="fa fa-phone icon-font-size " aria-hidden="true"></i>&nbsp;Contact Number</h2>
+              <p>{{contact_data.Phone_Number}}</p>
+            </div>
+      
+            <!-- Email ID -->
+            <div class="contact-card">
+              <h2><i class="fa fa-envelope icon-font-size " aria-hidden="true"></i>&nbsp;Email ID</h2>
+              <p>{{contact_data.Email_ID}}</p>
+            </div>
+      
+            <!-- Office Hours -->
+            <div class="contact-card">
+              <h2><i class="fa-solid fa-clock icon-font-size"></i> &nbsp;Office Time</h2>
+              <p class="text">10:00 AM to 5:00 PM <br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="map-container">
+            <iframe title="google map for contact"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2629.6679886860793!2d81.69424410311981!3d21.235332575024216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28c2cd61ab13f3%3A0x88aa0d80dc82ad34!2sUniversity%20Office%2C%20IGKV%20Raipur!5e0!3m2!1sen!2sin!4v1724417481982!5m2!1sen!2sin"
+              width="100%" height="625" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy" title="location"
+              referrerpolicy="no-referrer-when-downgrade"></iframe> 
+          </div>
+        </div>
+       </div>  
+    </div>
+  </section>
+  

@@ -1,0 +1,31 @@
+<app-banner [banner_heading]="bannerName" [banner_img]="bannerImage"></app-banner>
+
+<section>
+    <div class="container pt-3 pb-3">
+        <!-- <h2 class="section-title1">Technologies Developed</h2> -->
+        <div class=" table_section" style="overflow-x:auto;">
+            <table *ngIf="bannerName=='Technologies Developed'">
+                <tr>    
+                    <th>Sr.no</th>
+                    <th>Name of the Technologies</th>
+                    <th>Description </th>
+                    <th>Features </th>
+                    <th>Development Team</th>
+                    <!-- <th>Patents/Licenses</th> -->
+                    <th>Year</th>
+                </tr>
+                <tr *ngFor="let item of technology_data;  let  i = index " >
+                    <td>{{i+1}}</td>
+                    <td>{{item.tech_name}}</td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.features}}</td>
+                    <td>{{item.development_team}}</td>
+                    <td>{{ item.year | date: 'dd/MM/yyyy' }}</td>
+                </tr>
+                
+            </table>
+
+
+        </div>
+    </div>
+</section>

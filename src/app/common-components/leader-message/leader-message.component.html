@@ -1,0 +1,33 @@
+<section class="leader-section" *ngIf="currentLeader">
+  <div class="message-box">
+    <p class="message">
+      <!-- <i class="quote-icon">“</i> -->
+    </p>
+    <div class="post-info">
+      <h2 style="text-align: justify;">{{currentLeader.message}}</h2>
+      <p class="post">{{currentLeader.name}}</p>
+      <p class="name" style="color: rgb(219, 209, 21);">{{currentLeader.post}}</p>
+    </div>
+  </div>
+  <div class="leader-image">
+    <img [src]="getLeaderImage()" alt="Leader Image">
+  </div>
+  <div class="quote-box">
+    <!-- <h2 style="color: white; font-family: Montserrat;">{{"Unparalleled Leadership" | translate}}</h2> -->
+    <p class="quote">
+      <!-- {{currentLeader.quote}} -->
+    </p>
+  </div>
+</section>
+
+
+<div class="mobile-view">
+  <div class="mobile-leader-image">
+    <img [src]="getLeaderImage()" alt="Leader Image">
+  </div>
+  <div class="mobile-leader-info">
+    <h2 class="mobile-name">{{currentLeader.name}}</h2>
+    <h2 class="mobile-post">{{currentLeader.post}}</h2>
+    <p class="mobile-message">{{currentLeader.message}}</p>
+  </div>
+</div>

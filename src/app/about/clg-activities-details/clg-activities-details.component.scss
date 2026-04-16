@@ -1,0 +1,50 @@
+/*=====================================================
+    activities-detail  css 
+======================================================*/
+
+.activities-detail-left{
+    padding: 2em;
+    background-color: #fff;
+}
+
+
+.activities-detail-left .title h3{
+    font-size: calc(25px * var(--font-scale));
+    color: #000;
+    font-weight: 600;
+    padding-bottom: 25px;
+    line-height: 1.5em;
+}
+
+
+.activities-detail-image{
+margin: auto;
+}
+
+.activities-detail-image img{
+    width: 100%;
+}
+
+.activities_details li i{
+    margin-right: 0.5em;
+    }
+    
+    
+    .activities_details li h3{
+        display: inline;
+        color:#07294d;
+        font-weight: 600;
+    }
+    
+    .activities_details ul{
+    padding-left: 0;
+    margin-bottom: 0.5em;
+    list-style: none;
+    }
+
+    @media (max-width:768px) {
+        
+.activities-detail-left .title h3{
+    font-size: calc(21px * var(--font-scale)) !important;
+    }
+}

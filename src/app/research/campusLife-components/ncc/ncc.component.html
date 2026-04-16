@@ -1,0 +1,257 @@
+<section id="page-banner" class="mt-2">
+
+  <!-- Video background wrapper -->
+  <div class="video-wrapper">
+    <video
+      #bannerVideo
+      [src]="banner_video"
+      autoplay
+      muted
+      loop
+      playsinline
+      controls
+      aria-label="Intro video">
+
+      <track kind="captions"
+             srclang="en"
+             src="assets/captions/intro-video.vtt"
+             label="English captions"
+             default>
+    </video>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Content -->
+  <div class="container page-banner-cont">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="header">{{banner_heading}}</h2>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href=".">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{banner_heading}}</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Overview -->
+<section class="message_section mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="profile col-md-3">
+                <img [src]="nccLogo" (error)="OnErrorImage($event)"  alt="NCC Image" />
+            </div>
+            <div class="message col-md-9">
+                <h2 class="message-title" style="color: white;">NCC Overview</h2>
+                <p class="message-text contents"
+                    style="color: white;">
+
+                    The National Cadet Corps (NCC) is a youth organization in India that aims to instill qualities of
+                    leadership, discipline, and patriotism among the country's youth. Established on April 16, 1948,
+                    under the NCC Act, it operates under the Ministry of Defence. NCC is open to students from schools
+                    and colleges across the country, and its primary objective is to develop character, camaraderie, and
+                    a sense of service among its cadets.
+
+                    <br /><br />
+                    NCC activities encompass a wide range of programs, including drills, adventure activities, social
+                    service, and community development projects. Cadets are divided into Army, Navy, and Air Force
+                    wings, providing them with exposure to the defense forces' ethos and training methods. The
+                    organization conducts various camps, such as annual training camps, leadership camps, and
+                    specialized adventure camps, to hone the skills and capabilities of its cadets.
+
+                    <br /><br />
+                    NCC plays a crucial role in promoting national integration by fostering a spirit of unity and
+                    understanding among the diverse youth of India. It has been instrumental in producing disciplined
+                    and responsible citizens who contribute positively to society. The organization's distinctive
+                    uniform and emphasis on values make it a recognizable and respected institution in the country's
+                    educational landscape.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Overview End -->
+ 
+<!-- History Starts From Here  -->
+<div class="container">
+    <div class="section-title">
+        <br>
+        <h2>History</h2>
+        <p class="contents" style="text-align: justify; font-size: calc(15px * var(--font-scale)); line-height: 1.5; ">&emsp;The National Cadet Corps
+            (NCC) in India has a rich history that dates back to its establishment on April 16, 1948.
+            Founded under the NCC Act of 1948, its primary aim was to develop a pool of disciplined and
+            patriotic youth who could contribute to the nation's defense and serve as a reserve force. The
+            NCC's inception was influenced by the experiences of World War II, emphasizing the need for a
+            structured organization to train and mold the youth.</p>
+        <p class="contents" style="text-align: justify; font-size: calc(15px * var(--font-scale)); line-height: 1.5;">&emsp;Over the years, the NCC has
+            evolved into one of the largest youth organizations globally, engaging millions of cadets in its
+            various programs. Originally limited to the Army wing, NCC expanded to include Air Force and
+            Navy wings, broadening the scope of training and exposure for cadets. The organization has
+            actively contributed to disaster relief, social service, and community development, emphasizing
+            not just military training but also instilling values of leadership, discipline, and social
+            responsibility.</p>
+        <p class="contents" style="text-align: justify; font-size: calc(15px * var(--font-scale)); line-height: 1.5;">&emsp;NCC has played a pivotal
+            role in shaping the character of the youth, fostering a sense of national pride and unity. It
+            continues to be a vital component of India's education system, leaving a lasting impact on the
+            cadets and contributing significantly to the nation-building process. The history of NCC
+            reflects its enduring commitment to developing well-rounded individuals capable of making
+            positive contributions to society and the country at large.</p>
+        <br>
+        <hr>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row how_to_apply">
+            <div class="col-md-6 first_section">
+                <h2>Aims Of NCC</h2>
+                <span>
+                    <ul class="contents">
+                        <li>
+                            <p style=" text-align: justify;">The NCC focuses on instilling values of discipline,
+                                integrity, and responsibility, aiming to develop well-rounded individuals with strong
+                                character.</p>
+                        </li>
+                        <li>
+                            <p style=" text-align: justify;">Through various activities and camps, the NCC provides
+                                practical leadership training, enabling cadets to emerge as capable and confident
+                                leaders in diverse situations.</p>
+                        </li>
+                        <li>
+                            <p style=" text-align: justify;">NCC fosters a sense of patriotism and unity among youth,
+                                emphasizing the importance of serving the nation and contributing to its welfare.</p>
+                        </li>
+                        <li>
+                            <p style=" text-align: justify;">The organization promotes adventure activities, fostering
+                                teamwork, courage, and resilience, preparing cadets for challenges both in the military
+                                and civilian life.</p>
+                        </li>
+                        <li>
+                            <p style=" text-align: justify;">NCC engages in community service and social initiatives,
+                                encouraging cadets to actively participate in activities that contribute positively to
+                                society, reinforcing a commitment to social responsibility.</p>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+
+            <div class="col-md-6 second_section">
+                <h2>Objective Of NCC</h2>
+                <span>
+                    <ul style="padding-right: 1em;" class="contents">
+                        <li>
+                            <p style="color: wheat; text-align: justify;">NCC strives to develop character, discipline,
+                                and leadership skills among the youth.</p>
+                        </li>
+                        <li>
+                            <p style="color: white; text-align: justify;">NCC aims to promote national integration by
+                                fostering a sense of patriotism and unity.</p>
+                        </li>
+                        <li>
+                            <p style="color: wheat; text-align: justify;">The organization emphasizes social
+                                responsibility through community service and engagement.</p>
+                        </li>
+                        <li>
+                            <p style="color: white; text-align: justify;">NCC prepares cadets to be responsible and
+                                disciplined citizens, contributing positively to society.</p>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container-fluid pb-40">
+        <div class="container">
+            <div class="row how_to_apply">
+                <div class="col-md-6 second_section">
+                    <h2 class="" >Mission</h2>   
+                    <span>
+                        <p class="contents" style="color: white; text-align: justify; line-height: 1.5;font-size: calc(15px * var(--font-scale));">
+                            The National Cadet Corps (NCC) mission is to nurture character, leadership, and discipline
+                            among the youth, fostering a sense of patriotism and national integration. Committed to
+                            developing socially responsible citizens, NCC provides practical training in various
+                            activities, including adventure and community service. Through its programs, the
+                            organization aims to instill values of integrity and responsibility, preparing cadets to
+                            contribute positively to society. NCC aspires to create a pool of individuals equipped with
+                            leadership skills, ready to embrace challenges, and dedicated to serving the nation with a
+                            strong commitment to duty and a sense of pride in contributing to the welfare of the
+                            country.</p>
+                    </span>
+                </div>
+                <div class="col-md-6 first_section">
+                    <h2>Vision</h2>
+                    <span>
+                        <p class="contents" style=" text-align: justify;  line-height: 1.5; font-size: calc(15px * var(--font-scale));">
+                            The National Cadet Corps (NCC) envisions creating a dynamic youth force that embodies the
+                            ideals of character, leadership, and social responsibility. The vision is to instill a
+                            strong sense of patriotism and national pride, fostering unity and integration among the
+                            diverse youth of the nation. NCC aspires to empower young individuals with the skills and
+                            qualities needed to face the challenges of life with confidence and resilience. The
+                            organization seeks to develop a cadre of disciplined and responsible citizens, committed to
+                            contributing to the welfare of society and dedicated to upholding the values of integrity,
+                            lo (error)="OnErrorImage($event)"   yalty, and service to the nation.</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+<!-- Activities Part Strats  -->
+<section id="Section2 mt-4 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title mt-50 mb-50">
+                    <h2>Activities</h2>
+                    
+                    <div class="row">
+                        <ng-container *ngFor="let data of Activities_data">
+                            <div class="col-lg-4 col-md-6 ">
+                                <div class="Activities mt-3">
+                                    <div class="thum">
+                                        <div class="banner image"
+                                            [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+                                            <img [src]="data.Column1" (error)="OnErrorImage($event)" alt="Award">
+                                            <div class="content">
+                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cont">
+                                        <span ><i class="fa-regular fa-calendar-days"></i>{{data.web_content_date2|date:'MMMM d, y'}},</span>
+                                        <span class="venue"><i class="fa-solid fa-location-dot"></i>{{data.Venue}}</span>
+                                        <a>
+                                            <h4>{{data.Content_Title}}</h4>
+                                        </a>
+                                    </div>
+                                </div> 
+                            </div>
+                        </ng-container>
+                        <div  style="text-align: center !important;" >
+                            <div class="col-lg-12 col-sm-12 pt-3">
+                                <a routerLink="/about/activities/category/1" class="main-btn">View All</a>
+                            </div>
+                        </div>
+                    </div>
+            </div> 
+
+        </div>
+    </div> 
+    </div>
+</section> 
+
+<app-contact-us></app-contact-us>

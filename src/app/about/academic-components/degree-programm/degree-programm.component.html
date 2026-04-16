@@ -1,0 +1,354 @@
+<app-banner [banner_heading]="degree_Data[0]?.Degree_Programme_Type_Full_Name_E" *ngIf="degree_Data"
+  [banner_img]="bannerImg"></app-banner>
+<section class="gray-bg" *ngIf="degree_Data">
+  <app-overview [overview]="degree_Data[0]?.Overview"></app-overview>
+</section>
+
+<section class="pt-5 pb-5" *ngIf="degreeWiseCount">
+  <div class="container">
+    <div class="row mb-4 mt-4" style="justify-content: center;">
+      <div class="col-6 col-sm-6 col-md-3" #counter>
+        <div class="counter">
+          <div class="counter-content">
+            <span class="counter-value">{{currentCounts[0]}}+</span>
+            <p class="title">Total Students</p>
+            <!-- <div class="counter-icon">
+                      <i class="fa fa-user color-yellow"></i>
+                    </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-3" #counter>
+        <div class="counter purple">
+          <div class="counter-content">
+            <span class="counter-value">{{currentCounts[1]}}+</span>
+            <p class="title">Male</p>
+            <!-- <div class="counter-icon">
+                      <i class="fa fa-graduation-cap color-yellow"></i>
+                    </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-3" #counter>
+        <div class="counter green">
+          <div class="counter-content">
+            <span class="counter-value">{{currentCounts[2]}}+</span>
+            <p class="title">Female</p>
+            <!-- <div class="counter-icon">
+                    <i class="fa-solid fa-user-graduate color-yellow"></i>
+                  </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- subject list -->
+<section class="pt-3 pb-3 gray-bg degree-courses">
+  <div class="container">
+
+    <div class="row details-section">
+      <div>
+        <h2 class="section-title1">Our Subjects</h2>
+      </div>
+      <div class="col-md-12">
+        <mat-accordion>
+          <div class="course-buttons" *ngFor="let item of degreeProgramm_Data let i = index">
+
+            <mat-expansion-panel [expanded]="i === 0">
+              <mat-expansion-panel-header>
+                <mat-panel-title
+                  style="text-align: center; font-size: calc(18px * var(--font-scale)); font-weight: 500; justify-content: center;">
+                  {{ item.Degree_Programme_Name_E }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <div courseDescription>
+                <div class="col-md-12">
+                  <div class=" ">
+                    <div class="card-button" style="display: flex; flex-wrap: nowrap;">
+                      <div class="col-6 col-sm-6 col-md-3 card">
+                        <div class="card-header">
+                          Colleges <span></span>
+                        </div>
+                        <div class="card-body">
+                          <div class="card-name text-center"> {{item.college_count}}</div>
+
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-3 card">
+                        <div class="card-header">
+                          <span>Students</span>
+                        </div>
+                        <div class="card-body">
+                          <div class="card-name text-center">{{item.Student_Count}}</div>
+
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-3 card">
+                        <div class="card-header">
+                          Girls <span></span>
+                        </div>
+                        <div class="card-body">
+                          <div class="card-name text-center">{{item.Student_girls}}</div>
+
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-3 card">
+                        <div class="card-header">
+                          Boys <span></span>
+                        </div>
+                        <div class="card-body">
+                          <div class="card-name text-center">{{item.Student_bodys}}</div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div *ngIf="Degree_Programme_Type_Id==1" class="card-button" style="display: flex;">
+                      <div class="col-6 col-sm-6 col-md-3 card">
+                        <div class="card-header">
+                          Seat Matrix <span></span>
+                        </div>
+                        <div class="card-body">
+                          <div class="card-name text-center">
+                            <a target="_blank" [href]="UG_seat_matrix">View Details</a>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-3 card">
+                        <div class="card-header">
+                          Eligibility <span></span>
+                        </div>
+                        <div class="card-body">
+                          <div class="card-name text-center">
+                            <a target="_blank" [href]="UG_eligibility">View Details</a>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-3 card">
+                        <div class="card-header">
+                          Admision Process <span></span>
+                        </div>
+                        <div class="card-body">
+                          <div class="card-name text-center">
+                            <a target="_blank" href="about/how-to-apply">View Detail</a>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-3 card" *ngIf="item.Degree_Programme_Id==Bsc_Ag_DP_Id">
+                        <div class="card-header">
+                          Syllabus <span></span>
+                        </div>
+                        <div class="card-body">
+                          <a href="">
+                            <div class="card-name text-center"><a target="_blank" [href]="Bsc_Ag_Syllabus">Download Syllabus</a></div>
+                          </a>
+
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-sm-6 col-md-3 card" *ngIf="item.Degree_Programme_Id==BTech_Ag_Engg_DP_Id">
+                        <div class="card-header">
+                          Syllabus <span></span>
+                        </div>
+                        <div class="card-body">
+                          <a href="">
+                            <div class="card-name text-center"><a target="_blank" [href]="BTech_Ag_Engg_Syllabus">Download Syllabus</a></div>
+                          </a>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div *ngIf="Degree_Programme_Type_Id==2" class="card-button" style="display: flex;">
+                  <div class="col-6 col-sm-6 col-md-3 card">
+                    <div class="card-header">
+                      Seat Matrix <span></span>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-name text-center">
+                        <a target="_blank" [href]="PG_seat_matrix">View Details</a>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-6 col-md-3 card">
+                    <div class="card-header">
+                      Eligibility <span></span>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-name text-center">
+                        <a target="_blank" [href]="PG_eligibility">View Details</a>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-6 col-md-3 card">
+                    <div class="card-header">
+                      Admision Process <span></span>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-name text-center">
+                        <a target="_blank" href="research/how-to-apply">View Detail</a>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-3 card" *ngIf="item.Degree_Programme_Id==Msc_DP_Id">
+                    <div class="card-header">
+                     Syllabus <span></span>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-name text-center">
+                        <a target="_blank" [href]="Msc_Ag_Syllabus">Download Syllabus</a>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-3 card" *ngIf="item.Degree_Programme_Id==Msc_Ag_DP_Id">
+                    <div class="card-header">
+                     Syllabus <span></span>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-name text-center">
+                        <a target="_blank" [href]="Msc_Ag_Syllabus">Download Syllabus</a>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-3 card" *ngIf="item.Degree_Programme_Id==MTech_DP_Id">
+                    <div class="card-header">
+                     Syllabus <span></span>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-name text-center">
+                        <a target="_blank" [href]="MTech_Engg_Syllabus">Download Syllabus</a>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-3 card" *ngIf="item.Degree_Programme_Id==MBA_ABM_DP_Id">
+                    <div class="card-header">
+                     Syllabus <span></span>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-name text-center">
+                        <a target="_blank" [href]="MBA_ABM_sylabus">Download Syllabus</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div *ngIf="Degree_Programme_Type_Id==3" class="card-button" style="display: flex;">
+                  <div class="col-6 col-sm-6 col-md-3 card">
+                    <div class="card-header">
+                      Seat Matrix <span></span>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-name text-center">
+                        <a target="_blank" [href]="Phd_seat_matrix">View Details</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-3 card">
+                    <div class="card-header">
+                      Eligibility <span></span>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-name text-center">
+                        <a target="_blank" [href]="Phd_eligibility">View Details</a>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-6 col-md-3 card">
+                    <div class="card-header">
+                      Admission Process <span></span>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-name text-center">
+                        <a target="_blank" href="research/how-to-apply">View Details</a>
+                      </div>
+
+                    </div>
+                  </div>
+                
+                  <div class="col-6 col-sm-6 col-md-3 card" *ngIf="item.Degree_Programme_Id==Phd_DP_Id">
+                    <div class="card-header">
+                      Syllabus <span></span>
+                    </div>
+                    <div class="card-body">
+                      <a href="">
+                        <div class="card-name text-center"><a target="_blank" [href]="Phd_Ag_Syllabus">Download Syllabus</a></div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-3 card" *ngIf="item.Degree_Programme_Id==Phd_Ag_DP_Id">
+                    <div class="card-header">
+                      Syllabus <span></span>
+                    </div>
+                    <div class="card-body">
+                      <a href="">
+                        <div class="card-name text-center"><a target="_blank" [href]="Phd_Ag_Syllabus">Download Syllabus</a></div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-3 card" *ngIf="item.Degree_Programme_Id==Phd_Ag_Engg_DP_Id">
+                    <div class="card-header">
+                      Syllabus <span></span>
+                    </div>
+                    <div class="card-body">
+                      <a href="">
+                        <div class="card-name text-center"><a target="_blank" [href]="Phd_AgEngg_Syllabus">Download Syllabus</a></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </mat-expansion-panel>
+          </div>
+        </mat-accordion>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pt-3 pb-3" *ngIf="Degree_Programme_Type_Id!=1">
+  <div class="container">
+    <div class="row">
+      <div>
+        <h2 class="section-title1">Running Following Departments</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let item of Program_Data">
+        <div class="card-cont mb-3">
+          <div class="head">
+            <p><span style="font-size: calc(32px * var(--font-scale));"><i class="fa-solid fa-book"></i></span> </p>
+            <span class="head">{{item.Subject_Name_E}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

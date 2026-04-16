@@ -1,0 +1,35 @@
+<section id="blog" class="blog container-fluid pt-3 pb-3 ">
+  <div class="container">
+    <div *ngIf="infraList">
+      <h2 class="section-title1">{{infraList[0]?.Institution_setup_name}}</h2>
+    </div>
+    <div class="row gy-4 posts-list " *ngIf="infraList?.length !== 0; else elseblock">
+      <ng-container *ngFor="let data of infraList">
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100">
+            <div class=" post-img position-relative overflow-hidden banner1 image1"
+              [style.background-image]="'url(' + data.imageURL + ')'" *ngIf="data.imageURL">
+              <img [src]="data.imageURL" (error)="OnErrorImage($event)" alt="department awards image">
+              <div class="content">
+
+              </div>
+            </div>
+
+            <h4 class="name">
+              {{data.title}}
+            </h4>
+            <hr>
+            <div class="contents" [innerHTML]="data.description"></div>
+            <div>
+              <a [routerLink]="['/about/college-home/college',office_id,'cont','details',office_id,data.Institution_setup_type_ID,data.Institution_Setup_main_id]"
+                class="readmore "><span class="mt-3" style="margin: auto;"> View</span></a>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <ng-template #elseblock>
+      <app-no-data ></app-no-data>
+    </ng-template>
+  </div>
+</section>

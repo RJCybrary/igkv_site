@@ -1,0 +1,40 @@
+<app-activity-banner [banner_img]="bannerImageUrl"  [banner_heading]="'Event'" [catTitle1]="DepartmentFirst_Details.DepartmentName"></app-activity-banner>
+
+
+<!-- events section -->
+<section id="events" class="events pb-3 pt-3" >
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="section-title1">Events</h2>
+      <div class="row gy-4 posts-list  pb-3" *ngIf="event_data != ''">
+        <ng-container *ngFor="let data of paginatedContents">
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100">
+            <div class="post-img position-relative overflow-hidden  banner1 image1"  [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <a
+                [routerLink]="['/about/department/departmentDetail', Subject_Id, 'activities-details', data.Website_Content_ID]">
+                <img [src]="data.Column1" class="img-fluid" alt="department events image">
+              </a>
+              <div class="content1">
+          
+              </div>
+              <span class="post-date">{{data.web_content_date}}</span>
+            </div>
+            <div class="post-content d-flex flex-column">
+              <p class="contents">
+                {{data.Content_Title}}
+              </p>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </ng-container>
+      <mat-paginator [length]="event_data.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[12, 24, 36, 48, 100]"
+      (page)="onPageChange($event)"
+      aria-label="Select page">
+      </mat-paginator>
+      </div>
+    </div>
+  </section>
+  

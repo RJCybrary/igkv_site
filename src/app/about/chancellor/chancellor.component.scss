@@ -1,0 +1,191 @@
+
+
+/* chancellor page */
+.chancellor-banner {
+    position: relative;
+    height: 500px; /* Set your desired height */
+    // background: url('assets/images/imgs/rajbhavan.jpg') center/cover no-repeat; /* Set your background image */
+    color: #fcfcfc; /* Text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent overlay from overflowing content */
+  }
+  
+  .chancellor-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #10386ba1;
+    z-index: 1; /* Place the overlay above the content */
+  }
+  
+  .chancellor-heading {
+    font-size: calc(30px * var(--font-scale));
+    font-weight: 700;
+    margin-bottom: 10px;
+    z-index: 1;
+    color: #07294D;
+  }
+
+  .post-name{
+    font-size: calc(18px * var(--font-scale));
+    font-weight: 400;
+    color: #0d498a;
+  }
+  
+  .chancellor-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 1;
+    margin-bottom: -130px
+  }
+  
+  .chancellor-breadcrumb-item {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .chancellor-breadcrumb-item::after {
+    content: '>';
+    margin: 0 5px;
+  }
+  
+  .chancellor-breadcrumb-item:last-child::after {
+    content: none;
+  }
+  
+  .chancellor-head{
+    font-weight: 600;
+  }
+  
+  .vc { 
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 30px;
+  }
+  
+  .vc img {
+    
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .vc:hover img {
+    transform: scale(1.1); 
+  }
+  
+  .vc:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cv-biography {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(232, 244, 248);
+  }
+  
+  .cv-biography h2 {
+    color: #000000; 
+    font-size: 2.5em; 
+    font-weight: 700;
+    margin-bottom: 1em;
+  }
+  
+  .cv-biography p {
+    color: #666; 
+    font-size: calc(1.2em * var(--font-scale)); 
+  }
+  
+  /* banner */
+  #page-banner {
+    padding-top: 105px;
+    padding-bottom: 110px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  #page-banner:before {
+    content: "";
+    background: #07294dd0; /* Adjust the alpha value to control overlay transparency */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .page-banner-cont {
+    color: #fff;
+    position: relative;
+    z-index: 1; 
+    font-weight:700 ;
+  }
+  
+  .know-more{
+    color:white;
+    font-weight: 800;
+    background-color:#07294D;
+    border-radius: 5px;
+    padding: 0.5em;
+    border-style: none;
+    box-shadow: gray 0 2px 245px -10px;
+  }
+
+  .header{
+   font-size: calc(50px * var(--font-scale));
+   font-weight: 700;
+  }
+  
+  .breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .breadcrumb-item a {
+    color: #fff; /* Set breadcrumb text color to white */
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before{
+    color: white;
+  }
+  
+  .breadcrumb-item.active {
+    color: #ffc107; /* Set active breadcrumb text color to yellow */
+  }
+  
+
+  .color-white{
+    color: white;
+  }
+
+  .color-yellow{
+    color: yellow;
+  }
+
+  .cv-biography {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(232, 244, 248);
+  }
+  
+  .cv-biography h2 {
+    color: #000000; 
+    font-size: 2.5em; 
+    font-weight: 700;
+    margin-bottom: 1em;
+  }
+  
+  .cv-biography p {
+    color: #000000; 
+    font-size: calc(1.2em * var(--font-scale)); 
+  }

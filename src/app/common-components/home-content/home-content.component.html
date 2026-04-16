@@ -1,0 +1,161 @@
+<!--====== DEPARTMERNT PART START ======-->
+
+<!--      DEPARTMENT LIST     -->
+<!-- code is adjusted by tushil -->
+<section id="department-part" class="pt-3 pb-3  gray-bg">
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-lg-12">
+                <h2 class="section-title1">{{"Our Departments" | translate }}</h2>
+                <h1 class="section-title2">{{"Unlocking the Power of Learning" | translate}} {{departmentCount_data}}
+                    {{"Specialised Stream" | translate}} </h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+        <ng-container *ngFor="let item of displayedData; let i = index">
+            <div class="col-lg-3 col-md-4 col-sm-3 cardss" (mouseenter)="dephoverIndex = i" (mouseleave)="dephoverIndex = 0">
+                <div class="singel-department mt-30" [ngClass]="{'default-hover': dephoverIndex === i}"
+                    style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="image">
+                        <a [routerLink]="['about/department/departmentDetail', item.Subject_Id]">
+                            <img class="background_img" [src]="Department_Images[i].img" alt="Department Image">
+                            <div class="add-cart">
+                                <span><i><img [src]="bookIconImg" alt="Department Icon"></i></span>
+                                <span>
+                                    <h6>{{item.Subject_Name_E}}</h6>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        </div>
+        <div class="container pt-3" style="text-align: center !important;">
+            <div class="col-lg-12 col-sm-12">
+                <a routerLink="/about/department" class="main-btn">View More </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Constituent colleges section start-->
+<section id="department-part" class="pt-3 pb-3 " style="background-color:#fff">
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-lg-12">
+                <h2 class="section-title1">{{"Constituent Colleges" | translate}}</h2>
+                <h1 class="section-title2">{{"Our Network of Constituent" | translate}} {{countclg1}} {{"Campus"
+                    |translate}}</h1>
+                <div class="row justify-content-center">
+                    <ng-container *ngFor="let item of constituteData; let i=index">
+                        <div class="col-lg-3 col-md-4 col-sm-3 cardss" (mouseenter)="conclghoverIndex = i" (mouseleave)="conclghoverIndex = 0" *ngIf="item.College_Type_Id == 1">
+                            <div class="singel-department mt-30" [ngClass]="{'default-hover': conclghoverIndex === i}"
+                                style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;">
+                                <div class="image">
+                                    <a [routerLink]="['about/college-home/college',item.Office_Id]">
+                                        <img class="background_img" [src]="AllCollegeIcon" alt="College Icon">
+                                        <div class="add-cart">
+                                            <span><i><img [src]="bookIconImg" alt="College Icon"></i> </span>
+                                            <span>
+                                                <h6>{{item.College_Full_Name_E}}</h6>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="container pt-3" style="text-align: center !important;">
+                    <div class="col-lg-12 col-sm-12">
+                        <a routerLink="/about/college-home" class="main-btn">View More </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Affilliated colleges section start-->
+<section id="Section1" class="pt-3 pb-3  gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-title1">{{"Affiliated Colleges" | translate}}</h2>
+                <h1 class="section-title2"> {{"Experience of The" | translate}} {{countclg2}} {{"Affiliated Campus" |
+                    translate}} </h1>
+                <div class="about-cont ">
+                    <!--====== colleges PART START ======-->
+                    <div class="row justify-content-center">
+                        <ng-container *ngFor="let item of afilatedCampus; let i = index">
+                            <div class="col-lg-3 col-md-4 col-sm-4 cardss" (mouseenter)="affclghoverIndex = i" (mouseleave)="affclghoverIndex = 0" *ngIf="item.College_Type_Id == 2">
+                                <div class="singel-department mt-30" [ngClass]="{'default-hover': affclghoverIndex === i}"
+                                    style="box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;">
+                                    <div class="image">
+                                        <a [routerLink]="['about/college-home/college',item.Office_Id]">
+                                            <img class="background_img" [src]="AllCollegeIcon" alt="Affiliated College Icon">
+                                            <div class="add-cart">
+                                                <span><i><img [src]="bookIconImg" alt="Affiliated College Icon"></i> </span>
+                                                <span>
+                                                    <h6>{{item.College_Full_Name_E}}</h6>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>  
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- Affilliated colleges section end -->
+
+
+<!--====== KVK list ======-->
+
+<!-- Kvks  section start-->
+<section id="Section1" class="pt-3 pb-3 list-kvks">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-title1">{{"Krishi Vigyan Kendra" | translate}}</h2>
+                <h1 class="section-title2"> {{"Empowering Farmers, Elevating Agriculture" | translate}}</h1>
+                <div class="about-cont">
+                    <!-- ==== kvk==== -->
+                    <!-- KVK List Starts Here -->
+                  
+                    <div class="row justify-content-center">
+                        <ng-container *ngFor="let data of kvkData; let i = index">
+                            <div class="col-lg-3 col-md-4 col-sm-3 cardss text" (mouseenter)="kvkhoverIndex = i" (mouseleave)="kvkhoverIndex = 0">
+                                <a [routerLink]="['research/kvk-home/kvk', data.Office_Code]">
+                                    <div class="card" [ngClass]="{'default-hover': kvkhoverIndex === i}">
+                                        <h2>{{ data.officeName }}</h2>
+                                        <i class="fa-solid fa-building-wheat icon-hover"></i>
+                                        <h1>{{ data.districtName | titlecase }}</h1>
+                                    </div>
+                                </a>
+                            </div>
+                        </ng-container> 
+                    </div>
+                        <div class="container pt-2" style="text-align: center !important;">
+                            <div class="col-lg-12 col-sm-12">
+                                <a routerLink="/research/kvk-home" class="main-btn">{{'View more' | translate}} </a>
+                            </div>
+                        </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gray-bg" *ngIf="infraList?.length > 0">
+    <app-infrastructure-common [infrastructureList]="infraList" [office_id]="59"></app-infrastructure-common> &nbsp;<br>
+</section>

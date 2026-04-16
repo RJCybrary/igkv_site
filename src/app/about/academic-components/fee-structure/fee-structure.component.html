@@ -1,0 +1,93 @@
+<app-banner [banner_heading]="'Fee Structure'" [banner_img]="bannerImg"></app-banner>
+
+<section id="Section1" class="pt-3 pb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div>
+          <h2 class="section-title1">Fee Structure</h2>
+        </div> <!-- section title -->
+      </div> <!-- about cont -->
+
+    </div>
+    <div class="patents_category table_section  main_heading_section">
+
+
+      <section class="pb-10 gray-bg">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-12">
+              <div class="Fee_Structure_tab mt-50">
+                <ul class="nav nav-justified" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="active" id="dashboard-tab" data-bs-toggle="tab" href="#UG_Programs" role="tab"
+                      aria-controls="UG_Programs" aria-selected="true">UG Courses
+                      <span> <i class="fa fa-graduation-cap" aria-hidden="true"></i></span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="courses-tab" data-bs-toggle="tab" href="#PG_Programs" role="tab" aria-controls="PG_Programs"
+                      aria-selected="false">
+                      PG Courses <span>
+                        <i class="fa-solid fa-user-graduate"></i>
+                      </span></a>
+                  </li>
+                  <li class="nav-item fee_header">
+                    <a id="reviews-tab" data-bs-toggle="tab" href="#Phd_Programs" role="tab" aria-controls="Phd_Programs"
+                      aria-selected="false">Phd Courses <span><i class="fa fa-flask" aria-hidden="true"></i></span></a>
+                  </li>
+                </ul> <!-- nav -->
+
+
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="UG_Programs" role="tabpanel"
+                    aria-labelledby="dashboard-tab">
+
+                    <div class="Fee_Structure">
+
+                     
+
+                      <div class="fee-details">
+                        <a [href]="Ug_fee_structure_govt" target="_blank" class="btn btn-primary">
+                          UG Fee Details of Government Colleges for Session 2024-25
+                        </a>
+                        <a [href]="Ug_fee_structure_private" target="_blank" class="btn btn-secondary">
+                          UG Fee Details of Private Colleges for Session 2024-25
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="PG_Programs" role="tabpanel" aria-labelledby="courses-tab">
+
+                    <div class="Fee_Structure">
+                      <div class="fee-details">
+                        <a [href]="PG_Fee_Structure_24_25" target="_blank" class="btn btn-primary">
+                          PG Fee Details for Session 2024-25
+                        </a>                    
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="Phd_Programs" role="tabpanel" aria-labelledby="reviews-tab">
+                    <div class="Fee_Structure">
+                      <div class="fee-details">
+                        <a [href]="Phd_Fee_Structure_24_25" target="_blank" class="btn btn-primary">
+                          Phd Fee Details for Session 2024-25
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div> <!-- tab content -->
+          </div> <!-- teachers right -->
+        </div>
+      </section>
+    </div> <!-- row -->
+  </div>
+</section>
+
+
+<app-contact-us></app-contact-us>

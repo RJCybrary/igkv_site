@@ -1,0 +1,266 @@
+
+
+<app-banner [banner_heading]="DepartmentFirst_Details?.DepartmentName" [banner_img]="bannerImageUrl"></app-banner>
+
+<app-overview [overview]="DepartmentFirst_Details?.overview"></app-overview>
+
+  
+<div class="container-fluid degree-courses gray-bg pt-5 pb-5">
+    <div class="container">
+     
+      <div class="row details-section">
+        <div class="section-title">
+          <h2>Our Programmes</h2>
+      </div> 
+        <div class="col-md-12 mt-1" >
+          <mat-accordion>
+            <div class="course-buttons mt-2" style="overflow-x: auto;" *ngFor=" let item of degreeProgramm_Data let i = index">
+              <mat-expansion-panel [expanded]="i === 0" class="mat-exp" [attr.id]="'degree-panel-' + i">
+                <mat-expansion-panel-header>
+                  <mat-panel-title style="justify-content: center; font-size: calc(16px * var(--font-scale)); font-weight: bold;">
+                    {{ item.Degree_Programme_Full_Name_E }}
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+          
+                <div courseDescription>
+                  <div class="col-md-12">
+                    <div class="course-description">
+                    </div>
+          
+                    <!-- Student Details Section -->
+                    <div class="card-button" style="display: flex;">
+                      <div class="card ">
+                        <div class="card-header">Students</div>
+                        <div class="card-body">
+                          <div class="card-name text-center">{{ item.Student_Count }}</div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">Girls</div>
+                        <div class="card-body">
+                          <div class="card-name text-center">{{ item.Student_girls }}</div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">Boys</div>
+                        <div class="card-body">
+                          <div class="card-name text-center">{{ item.Student_bodys }}</div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">Colleges</div>
+                        <div class="card-body">
+                          <div class="card-name text-center">{{ item.college_count }}</div>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <!-- MSc Program Section -->
+                    <div *ngIf="msc_degree_program_id === item.Degree_Programme_Id" class="card-button" style="display: flex;">
+                      <div class="card">
+                        <div class="card-header">Fee Structure</div>
+                        <div class="card-body">
+                          <div class="card-name text-center"><a target="_blank" [href]="PG_Fee_Structure">View Pdf</a></div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">Admission Process</div>
+                        <div class="card-body">
+                          <div class="card-name text-center"><a href="about/how-to-apply">View Details</a></div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">Syllabus</div>
+                        <div class="card-body">
+                          <div class="card-name text-center">Download Syllabus</div>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <!-- PhD Program Section -->
+                    <div *ngIf="phd_degree_program_id === item.Degree_Programme_Id" class="card-button" style="display: flex;">
+                      <div class="card">
+                        <div class="card-header">Fee Structure</div>
+                        <div class="card-body">
+                          <div class="card-name text-center"><a target="_blank" [href]="Phd_Fee_Structure">View Pdf</a></div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">Admission Process</div>
+                        <div class="card-body">
+                          <div class="card-name text-center"><a href="about/how-to-apply">View Details</a></div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">Syllabus</div>
+                        <div class="card-body">
+                          <div class="card-name text-center">Download Syllabus</div>
+                        </div>
+                      </div>
+                    </div>
+          
+                  </div>
+                </div>
+              </mat-expansion-panel>
+            </div>
+          </mat-accordion>
+          
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- message section -->
+  <section class="pt-3 pb-3 message_section" *ngFor="let item of Department_Head_data">
+    <div class="container">
+        <div class="row">
+            <div class="profile col-md-3"> 
+                <img class="profile-picture"[src]="item.img2" style="min-height: 218px; min-width: 233px;" (error)="errorHandler($event)" alt="staff image"  >
+                <p style="color: white;">{{item.Employee_Name}}</p>
+                <p class="person-post" style="color: white;">{{item.Post_Name}}</p>
+            </div> 
+            <div class="message col-md-9">
+                <p class="contents scrolitem pt-3" style="line-height: 29px; letter-spacing: inherit;color: white;" >
+                  As the Head, I take full responsibility for overseeing the progress and development within our team. It is my goal to ensure that every member has the support and guidance they need to succeed. Together, we will continue to achieve excellence and meet our objectives. I am committed to fostering an environment of collaboration, growth, and innovation. Your hard work and dedication are what drive our success, and I value each contribution. Let's move forward with confidence and determination in the work ahead.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+<!-- news section -->
+<section class="gray-bg">
+  <app-home-notificaton></app-home-notificaton>
+</section>
+
+<!-- college list section -->
+<section id="Section4" class="departments pb-5 pt-5">
+    <div class="container" data-aos="fade-up">
+        <div class="row">
+            <div class="section-title mt-5">
+                <h2>Department Running on Following Colleges</h2>
+            </div> <!-- section title -->
+          </div>
+      <div class="row" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-lg-12 col-md" *ngFor="let item of Department_Details">
+            <div class="department-card d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center">
+                <h3>{{item.headOffice}}</h3>
+                <!-- <i class="fa-solid fa-building-columns" style="color: #3d7ab3; margin-left: 10px;"></i> -->
+              </div>
+              <a  [routerLink]="['/about/college-home/college/',item.headOfficeID]">
+                <h3>View Details <span><i class=" fa-solid fa-arrow-right"></i>
+                </span></h3>
+              </a>
+            </div>
+          </div>
+          
+      </div>
+    </div>
+</section>
+
+<!-- activity section -->
+<section id="Activity" class="Activity section-bg pb-3 pt-3" *ngIf="Activity_data?.length > 0 ">
+  <div class="container" data-aos="fade-up">
+          <h2 class="section-title1">Recent Activity</h2>
+
+    <div class="row gy-4  demo">
+   
+      <ng-container *ngFor="let data of Activity_data">
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div class="Activity-member">
+          <div class="member-img banner1 image1"  [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+            <img [src]="data.Column1"  alt="department activity image">
+            <div class="content">
+      
+            </div>
+          </div>
+          <div class="activities-details">
+          <div class="activities-date">
+            <p>{{data.web_content_date2|date: 'EEEE, MMMM d, y'}}</p>
+          </div>
+          <div class="title-info">
+            <h4>{{data.Content_Title}}</h4>
+          </div>
+        </div>
+        </div>
+      </div>
+    </ng-container>
+    </div>
+  <div  style="text-align: center !important;" >
+      <div class="col-lg-12 col-sm-12 pt-3">
+          <!-- <a routerLink="activities" (click)="setdetails()" class="main-btn">{{'View more' | translate}}</a> -->
+      </div>
+  </div>
+  </div>
+</section>
+
+<!-- awards section -->
+<section id="awards" class="awards container-fluid pt-3 pb-3 gray-bg"  *ngIf="award_data?.length > 0">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="section-title1">Recent Awards</h2>
+    <div class="row gy-4 posts-list " >
+      <ng-container *ngFor="let data of award_data.slice(0, 3)">
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden  banner1 image1"  [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <img [src]="data.Column1" class="img-fluid" alt="department awards image">
+            
+              <span class="post-date">{{data.web_content_date2|date:'MMMM d, y'}}</span>
+              <div class="content1">
+        
+              </div>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+              <p class="contents">
+                {{data.Content_Title}}
+              </p>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+
+<!-- events section -->
+<section id="events" class="events pb-3 pt-3" *ngIf="event_data?.length > 0" >
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="section-title1">Recent Events</h2>
+    <div class="row gy-4 posts-list  pb-3">
+      <ng-container *ngFor="let data of event_data.slice(0, 3)">
+      <div class="col-xl-4 col-md-6">
+        <div class="post-item position-relative h-100">
+          <div class="post-img position-relative overflow-hidden  banner1 image1"  [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+            <img [src]="data.Column1" class="img-fluid" alt="department events image">
+          
+            <div class="content1">
+        
+            </div>
+            <span class="post-date">{{data.web_content_date}}</span>
+          </div>
+          <div class="post-content d-flex flex-column">
+            <p class="contents">
+              {{data.Content_Title}}
+            </p>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </ng-container>
+    </div>
+  </div>
+</section>
+
+
+<section class="gray-bg" *ngIf="infra_List_data?.length > 0" >
+  <app-infrastructure-common [infrastructureList]="infra_List_data" *ngIf="infra_List_data"></app-infrastructure-common> &nbsp;<br>
+</section>
+
+

@@ -1,0 +1,15 @@
+.image img{
+    height: 3em;
+}
+
+.fa-file-pdf{
+    color: #b32b2b;
+}
+
+@media screen and (max-width: 770px) {
+   
+    .image{
+        margin-top: 3em ;
+    } 
+  
+  }

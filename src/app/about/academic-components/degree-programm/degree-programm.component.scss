@@ -1,0 +1,257 @@
+
+
+.btn-design{
+    margin: 1px !important;
+  }
+
+  .course-buttons button {
+    font-weight: 600;
+    margin: 1px;
+    display: block;
+    padding: 7px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #435585; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .course-buttons button:focus {
+    background-color: #d1ce20ea; 
+    color: rgb(68, 65, 65);
+  }
+  
+  .course-buttons{
+    display: flex;
+    flex-direction: column;
+  }
+
+   .course-details {
+      display: flex;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background-color:rgba(225, 227, 230, 0.966);
+    }
+
+    .label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .value {
+      flex-grow: 1;
+    }
+
+    .separator {
+      margin: 0 10px;
+      border-left: 1px solid #817e7e;
+      height: 20px;
+    }
+
+    .course-contain{
+        margin-top: 20px;
+    }
+
+    // - card --
+    .card {
+        width: 200px;
+        border-radius: 0px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        background-color: #fff;
+        padding: 0;
+      }
+  
+      .card-header {
+        background-color: #23638def; /* Header background color, you can change this */
+        color: #fff;
+        text-align: center;
+        border-radius: 0;
+      }
+  
+  
+      .card-name {
+        font-size: calc(18px * var(--font-scale));
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+  
+      .icon {
+        font-size: calc(40px * var(--font-scale));
+        margin-bottom: 10px;
+        text-align: center;
+      }
+  
+      .data {
+        font-size: calc(14px * var(--font-scale));
+        color: #555;
+      }
+
+    //   ----- button -------
+    .btn{
+        font-weight: 500;
+        color: rgba(37, 113, 184, 0.925);
+    }
+
+    
+// ------------- new code count ----------------
+.counter{
+  padding: 0 30px 50px;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+.counter .counter-content{
+  padding: 10px 10px 30px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+.counter .counter-content:before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #1cbefe;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+}
+.counter .counter-content:after{
+  content: "";
+  width: 60px;
+  height: 80%;
+   background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  z-index: -2;
+  transform: skewY(40deg);
+}
+.counter .counter-value{
+  display: block;
+  font-size: calc(40px * var(--font-scale));
+  font-weight: 600;
+  margin: 0 -34px 25px -30px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+.counter .counter-value:before,
+.counter .counter-value:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #0384ac;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+}
+.counter .counter-value:after{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg,transparent 49%, #067298 50%);
+  top: auto;
+  bottom: -20px;
+  -webkit-clip-path: none;
+  clip-path: none;
+}
+
+.counter .counter-value,
+.counter .title {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6); /* extra safety */
+}
+
+.counter .title{
+  font-size: calc(17px * var(--font-scale));
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #000;
+  margin: 0 0 10px 0;
+}
+.counter:hover .title{ 
+  text-shadow: 0 0 5px #000; }
+.counter .counter-icon{
+  font-size: calc(40px * var(--font-scale));
+  text-align: left;
+  margin-left: 20px;
+  transition: all 0.3s ease 0s;
+}
+.counter:hover .counter-icon{
+  transform: scale(1.2);
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.counter.purple .counter-content:before{ background: #aa468f; }
+.counter.purple .counter-content:after,
+.counter.purple .counter-value:before{ background: #7a0c65; }
+.counter.purple .counter-value:after{ background: linear-gradient(45deg,transparent 49%, #540444 50%); }
+  
+
+.counter.red .counter-content:before{ background: #f84c4c; }
+.counter.red .counter-content:after,
+.counter.red .counter-value:before{ background: #ae1412; }
+.counter.red .counter-value:after{ background: linear-gradient(45deg,transparent 49%, #770505 50%); }
+
+
+.counter.green .counter-content:before{  background: #8fbf12; }
+.counter.green .counter-content:after,
+.counter.green .counter-value:before{ background: #889539; }
+.counter.green .counter-value:after{ background: linear-gradient(45deg,transparent 49%, #4e5909 50%); }
+@media only screen and (max-width: 990px){
+  .counter{ margin-bottom: 30px; }
+}
+
+
+// +++++++++ Departments ++++++++
+
+.card-cont{
+  text-align: center;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  height: 115px;
+  width: 320px;
+  background-color: #fffffff8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head{
+font-size :19px !important;
+font-weight: 600;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: rgb(64, 62, 62);
+}
+
+.card-cont:hover{
+  transition: 500ms;
+  width:340px ;
+}
+
+
+
+@media only screen and (max-width: 678px) {
+  .counter .counter-value{
+   font-size: calc(25px * var(--font-scale));
+  }
+  .card{
+    width: 85px;
+  }
+  .card-header{
+    font-size: calc(12px * var(--font-scale));
+  }
+  .card-name a{
+    font-size: calc(14px * var(--font-scale));
+  }
+}

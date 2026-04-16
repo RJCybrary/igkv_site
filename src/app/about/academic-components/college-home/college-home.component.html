@@ -1,0 +1,191 @@
+
+<app-banner [banner_heading]="'Colleges'" [banner_img]="bannerImg" ></app-banner>
+
+
+<section id="Section1" class="pt-3 pb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+          <h2 class="section-title1">Overview</h2>
+        <!-- <div class="" *ngIf="collegeOverview_data"> -->
+          <!-- <p class="contents">{{ collegeOverview_data.Overview }}</p> -->
+          <div class="" >
+            <p class="contents"> The College of Agriculture at the university is a dynamic academic institution dedicated to advancing agricultural sciences and fostering innovation in sustainable farming practices. Offering a diverse range of undergraduate and graduate programs, the college equips students with comprehensive knowledge in agronomy, animal science, horticulture, and agribusiness. Faculty members engage in cutting-edge research, addressing contemporary challenges in food security, environmental conservation, and rural development. The college emphasizes hands-on learning through fieldwork and encourages students to participate in internships and cooperative programs with industry partners. Graduates are well-prepared to contribute to the global agricultural landscape, promoting responsible and efficient practices for a sustainable future.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--====== COUNTER PART start ======-->
+<div id="Div1" class="pt-3 pb-3 container-fluid gray-bg">
+    <div class="container">
+        <div class="container gray-bg">
+                    <h2 class="section-title1">Dashboard</h2>
+  <div class="row counter-row" style="justify-content: space-between; margin-bottom: 20px;">
+    <div class="col-6 col-sm-6 col-md-3" *ngIf="collegeTotal" #counter>
+        <div class="counter">
+          <div class="counter-icon">
+            <i class="fa-solid fa-building-columns" style="color: #ffffff;"></i>
+           </div>
+          <h3>Colleges</h3>
+          <span class="counter-value">{{ currentCounts[0] }}</span>
+        </div>
+      </div>
+    <div class="col-6 col-sm-6 col-md-3" *ngIf="departmentTotal" #counter>
+        <div class="counter">
+          <div class="counter-icon">
+            <i class="fa-solid fa-building-columns" style="color: #ffffff;"></i>
+          </div>
+          <h3>Departments</h3>
+          <span class="counter-value">{{ currentCounts[1] }}</span>
+        </div>
+      </div>
+        
+    <div class="col-6 col-sm-6 col-md-3"  #counter>
+        <div class="counter">
+          <div class="counter-icon">
+            <i class="fa-solid fa-building-columns" style="color: #ffffff;"></i>
+          </div>
+          <h3>Constituent Colleges</h3>
+          <span class="counter-value">{{currentCounts[2]}}</span>
+        </div>
+      </div>
+    <div class="col-6 col-sm-6 col-md-3"  #counter>
+        <div class="counter">
+          <div class="counter-icon">
+            <i class="fa-solid fa-building-columns" style="color: #ffffff;"></i>
+          </div>
+          <h3>Affilliated Colleges</h3>
+          <span class="counter-value">{{currentCounts[3]}}</span>
+        </div>
+      </div>
+  </div>
+        </div>
+    </div> 
+</div> 
+    
+
+<!--====== COUNTER PART ENDS ======-->
+
+<!-- Constituent colleges section start-->
+<section id="Section2" class="pt-3 pb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+          <h2 class="section-title1">Constituent Colleges</h2>
+        <div class="about-cont">
+          <section id="department-part" class="pb-120 gray-bg">
+            <div class="container">
+              <div class="row justify-content-center">
+                <ng-container *ngFor="let item of collegeList_data">
+                  <div
+                    class="col-6 col-sm-6 col-md-3"
+                    *ngIf="item.College_Type_Id == 1"
+                  >
+                    <div class="singel-department mt-30">
+                      <div class="image">
+                        <a [routerLink]="['college', item.Office_Id]">
+                          <img
+                            class="background_img"
+                            [src]="iconBackground"
+                            alt="College Background Image"
+                          />
+                          <div class="add-cart">
+                            <span
+                              ><i
+                                ><img
+                                  [src]="bookIconImg"
+                                  alt="College Book Icon"
+                              /></i>
+                            </span>
+                            <span
+                              ><h6>{{ item.College_Full_Name_E }}</h6></span
+                            >
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- singel department -->
+                  </div>
+                </ng-container>
+              </div>
+              <!-- row -->
+            </div>
+            <!-- container -->
+          </section>
+
+          <!--====== DEPARTMENT PART ENDS ======-->
+        </div>
+      </div>
+      <!-- about cont -->
+    </div>
+    <!-- row -->
+  </div>
+  <!-- container -->
+</section>
+<!-- Constituent colleges section end -->
+
+<!-- Affilliated colleges section start-->
+<section id="Section3" class="pt-3 pb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+          <h2 class="section-title1">Affilliated Colleges</h2>
+        <div class="about-cont">
+          <!--====== colleges PART START ======-->
+          <section
+            id="Section2"
+            class="pb-120 gray-bg container-fluid"
+            style="margin-bottom: 20px"
+          >
+            <div class="container">
+              <div class="row justify-content-center">
+                <ng-container *ngFor="let item of collegeList_data">
+                  <div
+                    class="col-6 col-sm-6 col-md-3"
+                    *ngIf="item.College_Type_Id == 2"
+                  >
+                    <div class="singel-department mt-30">
+                      <div class="image">
+                        <a routerLink="college">
+                          <img
+                            class="background_img"
+                            [src]="iconBackground"
+                            alt="Affiliated College Background Image"
+                          />
+                          <div class="add-cart">
+                            <span
+                              ><i
+                                ><img
+                                  [src]="bookIconImg"
+                                  alt="Affiliated College Book Icon"
+                              /></i>
+                            </span>
+                            <span
+                              ><h6>{{ item.College_Full_Name_E }}</h6></span
+                            >
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- singel department -->
+                  </div>
+                </ng-container>
+              </div>
+              <!-- row -->
+            </div>
+            <!-- container -->
+          </section>
+
+          <!--====== colleges PART ENDS ======-->
+        </div>
+      </div>
+      <!-- about cont -->
+    </div>
+    <!-- row -->
+  </div>
+  <!-- container -->
+</section>
+

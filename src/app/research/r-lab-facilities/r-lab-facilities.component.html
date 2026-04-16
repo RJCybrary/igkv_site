@@ -1,0 +1,928 @@
+<app-banner [banner_heading]="Office_Page_Data?.office_name | titlecase" *ngIf="imageUrl" [banner_img]="imageUrl"></app-banner>
+
+<div *ngIf="Office_id == 1073" class="director-Title" >
+    <div class="menu">
+        <a target="_blank" href="https://igkv.ac.in/dav/Home_Page.aspx">Digital Agri Village</a> 
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=igkv.igkvcropdoctor&pcampaignid=web_share">Crop Doctor 2.O</a>
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=igkv.e_haat&pcampaignid=web_share">e-Haat</a>
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=igkv.ekrishiyantranew&pcampaignid=web_share">e-Krishi Yantra</a>
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=igkvmis.igkv&hl=en_IN&pli=1">e-Krishi Pathshala</a>
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.igkv.admin&pcampaignid=web_share"> Sakhya</a> 
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=igkv.milletdoctor&pcampaignid=web_share"> Millet Doctor</a> 
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.igkv.rojgarapp&pcampaignid=web_share"> e-Krishi Rojgar</a>
+        <a target="_blank" href="https://igkv.ac.in/CropBreed/rice_search.aspx"> Plant Selection</a>
+    </div>
+</div>
+
+<app-overview  [overview]="Office_Page_Data?.About_Unit"></app-overview>
+
+<section class="pt-3 pb-5 message_section" >
+    <div class="container">
+        <div class="section-title" >
+            <h2>Head's Message</h2>
+        </div>
+        <div class="row">
+            <div class="profile col-md-3">
+                <img class="profile-picture" [src]="person_img"
+                    onerror="this.src=onerrorImg" alt="staff image">
+                <p class="person-name">{{person_name}}</p>
+                <p class="person-post">{{person_post}}</p>
+            </div>
+            <div class="message col-md-9">
+                <p class="contents scrolitem pt-3" style="line-height: 29px; letter-spacing: inherit;">
+                    {{Office_Page_Data?.Principal_Dean_Message}}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Facilities -->
+<section *ngIf="infraList?.length > 0">
+    <div class="container-fluid pt-3 pb-5 gray-bg">
+      <div class="container">
+        <div class="Security section-title">
+          <h2>Facilities & Infrastructure</h2>
+          <ng-container *ngFor="let data of infraList; let i = index">
+            <!-- Check if index is even or odd -->
+            <div class="row first_row big-screen" >
+              <!-- Content for EVEN rows -->
+              <div *ngIf="i % 2 === 0" class="col-md-7">
+                <h3>{{ data.institutionSetup.title }}</h3>
+                <div [innerHTML]="data.institutionSetup.description"></div>
+              </div>
+              <div *ngIf="i % 2 === 0" class="col-md-5">
+                <div class="innerrow">
+                  <div class="slider-container" *ngIf="data.institutionSetup">
+                    <img
+                      [src]="data.institutionSetup.imageList[data.currentSlide]?.imageUrl"
+                      (error)="OnErrorImage($event)"
+                      alt="Facilities images" />
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Content for ODD rows -->
+              <div *ngIf="i % 2 !== 0" class="col-md-5">
+                <div class="innerrow">
+                  <div class="slider-container" *ngIf="data.institutionSetup">
+                    <img
+                      [src]="data.institutionSetup.imageList[data.currentSlide]?.imageUrl"
+                      (error)="OnErrorImage($event)"
+                      alt="Facilities images"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="i % 2 !== 0" class="col-md-7">
+                <h3>{{ data.institutionSetup.title }}</h3>
+                <div [innerHTML]="data.institutionSetup.description"></div>
+              </div>
+            </div>
+
+            <div class="small-screen " >
+                    <div class="innerrow">
+                      <div class="slider-container " *ngIf="data.institutionSetup">
+                        <img
+                          [src]="data.institutionSetup.imageList[data.currentSlide]?.imageUrl"
+                          (error)="OnErrorImage($event)"
+                          alt="Facilities images"/>
+                      </div>
+                  </div>
+                    <h3>{{ data.institutionSetup.title }}</h3>
+                    <div [innerHTML]="data.institutionSetup.description"></div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- activity section -->
+<section id="Activity" class="Activity section-bg pb-5 pt-3" *ngIf="activities_data?.length > 0 ">
+    <div class="container" data-aos="fade-up">
+            <h2 class="section-title1">Recent Activity</h2>
+  
+      <div class="row gy-4  demo">
+     
+        <ng-container *ngFor="let data of activities_data">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="Activity-member">
+            <div class="member-img banner1 image1"  [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <img [src]="data.Column1"  alt="activity image" >
+              <div class="content">
+        
+              </div>
+            </div>
+            <div class="activities-details">
+            <div class="activities-date">
+              <p>{{data.web_content_date2|date: 'EEEE, MMMM d, y'}}</p>
+            </div>
+            <div class="title-info">
+              <h4>{{data.Content_Title}}</h4>
+            </div>
+          </div>
+          </div>
+        </div>
+      </ng-container>
+      </div>
+    <div  style="text-align: center !important;" >
+        <div class="col-lg-12 col-sm-12 pt-3">
+            <!-- <a routerLink="activities" (click)="setdetails()" class="main-btn">{{'View more' | translate}}</a> -->
+        </div>
+    </div>
+    </div>
+  </section>
+  
+  
+
+<!-- award section -->
+<section id="about-page" class="pt-3 pb-5" *ngIf="award_data?.length > 0">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            <h2 class="section-title1">Recent Awards</h2>
+          <!-- section title -->
+          <div class="about-cont">
+            <section class="portfolio" id="portfolio">
+              <div class="portfolio-grid">
+                <div class="container" style="padding: 0;">
+                  <div class="row ">
+                    <ng-container *ngFor="let data of award_data">
+                      <div class="col-lg-4 col-sm-6 col-xs-12 mb-3">
+                        <div class="card card-block">
+                          <!-- <a > -->
+                            <div class="image banner" [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+                            <img [src]="data.Column1" alt="award image" />
+                            <div class="content">
+          
+                            </div>
+                          </div>
+                            <div class="portfolio-over">
+                              <div>
+                                <p class="card-text">
+                                  {{data.web_content_date2|date:'MMMM d, y'}}
+                                </p>
+                              </div>
+                            </div>
+                          <!-- </a> -->
+                           <div class="card-title">
+                          <h4>{{data.Content_Title}}</h4>
+                        </div>
+                        </div>
+                      </div>
+                    </ng-container>
+                  </div>
+                  <!-- <div style="text-align: center !important;">
+                    <div class="col-lg-12 col-sm-12 pt-3">
+                      <a routerLink="awards"  class="main-btn">{{'View more' | translate}}</a>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- staff details for mis -->
+<section *ngIf="Office_id == 1073">
+    <div class="container-fluid mb-5 mt-4">
+        <div class="container">
+            <div class="section-title">
+                <h2>Supporting Staff</h2>
+            </div>
+    
+            <div id="testimonial-slider_1" class=" row owl-carousel mt-5 mb-5" >
+
+                <div class="col-md-4 pb-5" >
+                    <div class="testimonial">
+
+                        <div class="pic">
+                            <img [src]="onerrorImg" alt="staff image">
+                        </div>
+
+                        <h3 class="title" id="staff-kalpana-banjare" tabindex="0">  Ms. Kalpana Banjare</h3>
+                        <p class="staff-description">Kalpana Banjare is an adept Database Administrator & Program Assistant with
+                            over 11 years of experience. She excels in database management and program coordination,
+                            ensuring efficient operations.
+                        </p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Ms. Kalpana Banjare</h3>
+                                <span class="post">DBA & Program Assistant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 pb-5">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="onerrorImg" alt="staff image">
+                        </div>
+                        <h3 class="title" id="Mr_Sandeep_Khatik" tabindex="0" >Mr. Sandeep Khatik</h3>
+                        <p class="staff-description">Sandeep Khatik is a proficient Sr. Application Engineer & .NET Developer with
+                            over 11 years of experience. He demonstrates expertise in software development and engineering,
+                            contributing to innovative solutions.
+                        </p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Sandeep Khatik</h3>
+                                <span class="post"> Sr. Application Engineer & .NET Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- <div class="col-md-4 pb-5">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="onerrorImg" alt="staff image">
+                        </div>
+                        <h3 class="title" id="Ms_Neha_K_Bedi" tabindex="0" >Ms. Neha K. Bedi</h3>
+                        <p class="staff-description">
+                            Neha Bedi, a proficient Senior .NET Developer and an expert in HRMIS modules, brings vast
+                            experience in software engineering and specializes in human resource management systems.</p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Ms. Neha k. Bedi</h3>
+                                <span class="post">Sr. .NET Developer & HRMIS Module Expert</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="col-md-4 pb-5" >
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="onerrorImg" alt="staff image">
+                        </div>
+                        <h3 class="title" id="Mr_Jitendra_Sahu" tabindex="0">Mr. Jitendra Sahu</h3>
+                        <p class="staff-description">Jitendra Sahu is a skilled .NET Developer with specialized expertise in
+                            finance modules. With extensive experience in software development, he delivers tailored
+                            solutions for finance-related applications and systems.</p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Mr. Jitendra Sahu</h3>
+                                <span class="post">.NET Developer & Finance Module Expert </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="testimonial-slider_2" class=" row owl-carousel mt-5 mb-5">
+                
+    
+                 <div class="col-md-4 pb-5">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="onerrorImg" alt="staff image">
+                        </div>
+                        <h3 class="title" id="Mr_Jitendra_Chandrakar" tabindex="0">Mr. Jitendra Chandrakar</h3>
+                        <p class="staff-description">
+                            Mr. Jitendra Chandrakar is a skilled Android app developer specializing in innovative, user-friendly mobile applications.
+                            He delivers feature-rich Android solutions tailored to meet client requirements.
+                        </p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Mr. Jitendra Chandrakar</h3>
+                                <span class="post">Android Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="col-md-4 pb-5">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="onerrorImg" alt="staff image">
+                        </div>
+                        <h3 class="title" id="Mr_Suryakant_Verma" tabindex="0" >Mr. Suryakant Verma</h3>
+                        <p class="staff-description">
+                            Suryakant Verma, an experienced Senior Network Engineer, adeptly manages network
+                            infrastructures. With a wealth of knowledge in networking technologies, he ensures optimal
+                            performance and security.</p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Mr. Suryakant Verma</h3>
+                                <span class="post"> Sr. Network Engineer </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pb-5">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="onerrorImg" alt="staff image">
+                        </div>
+                        <h3 class="title" id="Mr_Ujjwal_Singh_Mourya" tabindex="0" >Mr. Ujjwal Singh Mourya</h3>
+                        <p class="staff-description">UJJwal Singh Mourya, an experienced Senior Network Engineer, adeptly oversees
+                            network administration, ensuring optimal performance and security for diverse networking
+                            platforms through infrastructure management.</p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Ujjwal Singh Mourya</h3>
+                                <span class="post"> Sr. Network Engineer </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                
+            </div>
+    
+            <div id="testimonial-slider_3" class=" row owl-carousel mt-5 mb-5">
+               
+                <div class="col-md-4 pb-5">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="onerrorImg" alt="staff image">
+                        </div>
+                        <h3 class="title" id="Mr_Rakesh_Sahu" tabindex="0" >Mr. Rakesh Sahu</h3>
+                        <p class="staff-description">
+                            Rakesh Sahu, a talented Graphics and UI/UX Designer, excels in crafting visually appealing and
+                            user-centric designs. With a keen eye for detail and creativity, he delivers engaging and
+                            intuitive user experiences.</p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Mr. Rakesh Sahu</h3>
+                                <span class="post">Graphics & UI/UX Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                   <div class="col-md-4 pb-5">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="onerrorImg" alt="staff image">
+                        </div>
+                        <h3 class="title">Mr. Saurabh Bhoi</h3>
+                        <p class="staff-description">Saurabh Bhoi is a skilled Angular developer and application engineer specializing in dynamic web applications.
+                            He delivers efficient, user-friendly solutions tailored to client needs.</p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Mr. Saurabh Bhoi</h3>
+                                <span class="post"> Angular Developer & Application Engineer </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+               <!--  <div class="col-md-4 pb-5">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="onerrorImg" alt="staff image">
+                        </div>
+                        <h3 class="title" id="Mr_Daulat_Sahu" tabindex="0">Mr. Daulat Sahu</h3>
+                        <p class="staff-description">Daulat Sahu, a proficient Angular developer, excels in building dynamic web
+                            applications. With expertise in Angular framework, he designs and implements scalable and
+                            responsive user interfaces for user experiences.</p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Mr. Daulat Sahu</h3>
+                                <span class="post"> Mean Stack Developer (Admission Module) </span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+    
+            </div>
+    
+            <div id="testimonial-slider_4" class=" row owl-carousel mt-5 mb-5">
+              
+    
+             
+                <!-- <div class="col-md-4 pb-5">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="onerrorImg" alt="staff image">
+                        </div>
+                        <h3 class="title">Mr. Ayush Chandrakar</h3>
+                        <p class="staff-description">Mr. Ayush Chandrakar is a proficient AI Developer, adept in leveraging artificial
+                            intelligence technologies to develop innovative solutions. With expertise in AI development, he
+                            creates intelligent systems.</p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Mr. Ayush Chandrakar</h3>
+                                <span class="post">AI Developer </span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- igkv r-abi -->
+<section *ngIf="Office_id==1072" >
+    <div class="container-fluid pt-3 pb-5 gray-bg">
+        <div class="container">
+            <div class="Security section-title">
+                <h2>Our Programs</h2>
+              
+                    <div class="row pb-5">
+                        <div class="col-md-3 ">
+                            <div class="img-cont">
+                                <div class="image-height">
+                                    <img src="https://igkv.ac.in/images/AngWeb/Photos/reasearch-RABI-udbhav.png" alt="Sample Image" />
+                                </div>
+                                <div class="image-des">
+                                
+                                  <p>
+                                 Udbhav - Agribusiness Incubation Programme (AIP)
+                                Grant-in-Aid Up to 25 Lakhs
+
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="img-cont">
+                                <div class="image-height"> 
+                                    <img src="https://igkv.ac.in/images/AngWeb/Photos/research-RABI-abhinav.png" alt="Sample Image" />
+                                </div>
+                                <div class="image-des">
+                                  <p>
+                                    Student Entrepreneurship Programme
+                                    Grant-in-Aid Up to 4 Lakhs
+                                    
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="img-cont">
+                                <div class="image-height"> 
+                                    <img src="" alt="Sample Image" />
+                                </div>
+                                <div class="image-des">
+                                  <p>
+                                    Udbhav - Agribusiness Incubation Programme (AIP)
+                                    Grant-in-Aid Up to 25 Lakhs
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    
+                    </div>
+           
+                <!-- <div class="row first_row" *ngIf="Abhinav[currentSlide]">
+                    <div class="col-md-5 ">
+                        <div class="innerrow">
+                            <div class="slider-container ">
+                                <img class="slider-image" [src]="Abhinav[currentSlide].src"
+                                    alt="Image {{ currentSlide + 1 }}">
+                                <div class="slider-description">{{ Abhinav[currentSlide].description }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h3>{{ Abhinav[currentSlide].description }}</h3>
+                        <ul class="contents">
+                            <li>It is an Agripreneurship Orientation Program (AOP) of IGKV R-ABI under the RKVY-RAFTAAR
+                                scheme.</li>
+                            <li>It is aimed at providing an opportunity to students/youth to work on their innovative ideas
+                                on technological solutions / processes / products / services / business platforms etc. in
+                                agriculture and allied activities.</li>
+                            <li>The incubatees will be given One months training cum hands on internship at IGKV R-ABI
+                                through / hybrid mode. They will be offered incubation space, technology support, business
+                                mentoring, networks, scientific and information resources and provide an active program for
+                                identification, creation, acceleration and translation of business ideas suitable for new
+                                venture creation.</li>
+                            <li>A stipend of Rs. 10,000/- per month will be granted under the project to these interns for
+                                one months during the hands on training period. After successful completion of the one
+                                months orientation programme, the IGKV R-ABI will facilitate incorporation of entities for
+                                all viable business ideas by the interns.</li>
+                            <li>Selected interns will be eligible to apply for Idea/Pre-Seed Stage funding of grant in aid
+                                upto Rs. 5 lakhs perstartup for converting his/her innovative idea into prototype/product.
+                                The selected interns will register his/her company before the release of the grant as per
+                                DIPP notification to get Grant in aid.</li>
+                            <li>The RIC / Incubator will not be bound to give any reason in case an application for pre seed
+                                grant is rejected.</li>
+                        </ul>
+                    </div>
+                </div> -->
+                
+                <!-- <div class="row first_row even" *ngIf="Udbhav[currentSlide]">
+                    <div class="col-md-7">
+                        <h3>{{ Udbhav[currentSlide].description }}</h3>
+                        <ul class="contents">
+                            <li>Under this program, Seed Stage Funding (SSF) as Grant in aid to Startups of RKVY-RAFTAAR
+                                scheme will be available to selected incubates of IGKV R-ABI as per guidelines. Financial
+                                assistance of maximum upto Rs. 25 lakhs will be granted to potential startups that have a
+                                minimum viable product (MVP) based on innovative
+                                solutions/processes/products/services/business model in agriculture and allied sectors. The
+                                amount of Rs. 25 lakhs is the upper limit of the seed fund assistance.</li>
+                            <li>The applicant incubatees would be provided funds as per their genuine requirements and as
+                                per appraisal/evaluation of their business plan by the RKVY-RAFTAAR Selection & Monitoring
+                                Committee (RIC) and the decision of the RIC in this regard will be final.</li>
+                            <li>The RIC will not be bound to give any reason in case an application for seed grant-in-aid
+                                rejected.</li>
+                            <li>This support will assist the incubatees to launch their products/services/business platforms
+                                etc into the market and help them to the scale-up their operational as well as to attain
+                                business viability at a faster pace.</li>
+                            <li>This support will also facilitate them to attract investments from angel/venture capitalists
+                                or taking loan from commercial banks, financial institutions for further scaling up of their
+                                business operations.</li>
+                            <li>With respect to above, a call for application is invited from students/youth of India having
+                                a minimum viable product (MVP) based on technological
+                                solutions/processes/products/services/business platforms etc. in agriculture and allied
+                                fields and wants to start an agri-business venture for Seed Stage Funding as Grant in aid to
+                                startups under RKVY-RAFTAAR scheme.</li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-md-5 ">
+                        <div class="innerrow">
+                            <div class="slider-container ">
+                                <img class="slider-image" [src]="Udbhav[currentSlide].src"
+                                    alt="Image {{ currentSlide + 1 }}">
+                                <div class="slider-description">{{ Udbhav[currentSlide].description }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+  
+    <div  class="container-fluid mb-5 mt-4">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Team</h2>
+            </div>
+    
+            <div id="testimonial-slider" class=" row owl-carousel mt-5 mb-5">
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="abhijeet" alt="staff image">
+                        </div>
+                        <h3 class="title">Abhijeet Sharma</h3>
+                        <p class="staff-description">
+                            As the Business Manager, I lead operations and partnerships at RKVY RAFTAAR Agribusiness
+                            Incubator, facilitating agripreneurship, innovation, and sustainable growth in agriculture and
+                            allied sectors.
+                        </p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Abhijeet Sharma</h3>
+                                <span class="post">Business Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="ashish" alt="staff image">
+                        </div>
+                        <h3 class="title">Ashish Verma</h3>
+                        <p class="staff-description">As Assistant Manager at IGKV R-ABI, Raipur I support operations, partnerships, and initiatives fostering agripreneurship, innovation and sustainable growth in agriculture and allied sector
+                        </p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Ashish Verma</h3>
+                                <span class="post">Assistant Manager</span>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="MriduMegha" alt="staff image">
+                        </div>
+                        <h3 class="title">Mridu Megha</h3>
+                        <p class="staff-description">As a Business Executive at RKVY RAFTAAR Agribusiness Incubator, I drive
+                            partnerships, initiatives, and operations, contributing to agripreneurship, innovation, and
+                            sustainable growth in agriculture and allied sectors.
+                        </p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Mridu Megha</h3>
+                                <span class="post"> Business Executive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-md-4 mt-5" >
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img [src]="NishiRaj" alt="staff image">
+                        </div>
+                        <h3 class="title">Ms. Nishi Raj </h3>
+                        <p class="staff-description">As a Business Executive at IGKV R-ABI, Raipur, I drive strategic partnerships, program initiatives, and operational efforts to foster agripreneurship, drive innovation, and promote sustainable growth in agriculture and allied sectors.
+                        </p>
+                        <div class="testimonial-content">
+                            <div class="testimonial-profile">
+                                <h3 class="name">Ms. Nishi Raj</h3>
+                                <span class="post"> Business Executive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <a href="https://www.igkvrabi.com/"> <span style="color: black;">IGKV R-ABI Advertisement eligibility criteria and online application link-</span>  https://igkvrabi.accubate.app/ext/form/4947/1/apply <span style="color: black;">for the post of Business Manager/COO at IGKV R-ABI on the IGKV website. The last date for submission of online applications is 14th July 2025.</span>  </a>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-2">
+                <div class="facility-item">
+                  <a
+                    href="https://igkv.ac.in/_Attachment/web/UniversityContent/pdf/Eligibility_Requirements_BM_IGKVRABI.pdf"
+                    target="_blank"
+                    class="pdf-link"
+                    matTooltip="View PDF"
+                  >
+                  <span> <i class="fa-solid fa-file-pdf fa-2xl"></i></span>
+                  </a>
+                  <br> <br>
+                  <div class="facility-description">
+                    <p>Eligibility Requirements</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="facility-item">
+                  <a
+                    href="https://igkv.ac.in/_Attachment/web/UniversityContent/pdf/RABI_Advt_English_Final_BM.pdf"
+                    target="_blank"
+                    class="pdf-link"
+                    matTooltip="View PDF"
+                  >
+                  <span> <i class="fa-solid fa-file-pdf fa-2xl"></i></span>
+                  </a>
+                  <br> <br>
+                  <div class="facility-description">
+                    <p>Advertisement for the post of Business Manager/COO at IGKV R-ABI</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <a href="https://www.igkvrabi.com/"> <span style="color: black;">Website Link -</span>  https://www.igkvrabi.com/</a>
+          </div>
+    </div>
+</section>
+
+<!-- Bio Fertilizers -->
+<section *ngIf="Office_id==1075" >
+    <div class="container-fluid pt-3 pb-5 gray-bg">
+        <div class="container">
+            <div class="Security section-title">
+                <h2>Facilities</h2>
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <div class="img-cont">
+                                <img src="https://igkv.ac.in/images/AngWeb/Photos/biofrtilizerProduction_unit_pfoto2.png" alt="Sample Image" />
+                                <div class="des">
+                                <br>
+                                  <p>
+                                    Complete Production cum Packing Unit of Liquid bio-inoculants
+
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 ">
+                            <div class="img-cont">
+                                <img src="https://igkv.ac.in/images/AngWeb/Photos/biofrtilizerProduction_unit_pfoto3.png" alt="Sample Image" />
+                                <div class="des">
+                                <br>
+                                  <p>
+                                    Heavy Duty Autoclaving Facility
+                                    
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 ">
+                            <div class="img-cont">
+                                <img src="https://igkv.ac.in/images/AngWeb/Photos/biofrtilizerProduction_unit_pfoto4.png" alt="Sample Image" />
+                                <div class="des">
+                                
+                                  <p>
+                                    Fermenters
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="facility-container pt-3 pb-5 gray-bg">
+        <div class="container">
+          <div class="facility-section section-title">
+            <h2>Important Links</h2>
+      
+            <div class="row">
+              <!-- PDF Link Item -->
+              <div class="col-md-2">
+                <div class="facility-item">
+                  <a
+                    href="https://igkv.ac.in/_Attachment/web/UniversityContent/pdf/VAMHindi.pdf"
+                    target="_blank"
+                    class="pdf-link"
+                    matTooltip="View PDF"
+                  >
+                  <span> <i class="fa-solid fa-file-pdf fa-2xl"></i></span>
+                  </a>
+                  <br> <br>
+                  <div class="facility-description">
+                    <p>वैमः उत्पादन एवं उपयोग तकनीक</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Image Item 1 -->
+              <div class="col-md-2">
+                <div class="facility-item">
+                    <a
+                    href="https://igkv.ac.in/_Attachment/web/UniversityContent/pdf/Biofertilizer-Importance.pdf"
+                    target="_blank"
+                    class="pdf-link"
+                    matTooltip="View PDF"
+                  >
+                  <span> <i class="fa-solid fa-file-pdf fa-2xl"></i></span>
+                  </a>
+                  <br> <br>
+                  <div class="facility-description">
+                    <p>जैव उर्वरक अवं बियफर्टीलिज़ेर महत्त्व अवं उपयोगिता</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Image Item 2 -->
+              <div class="col-md-2">
+                <div class="facility-item">
+                    <a
+                    href="https://igkv.ac.in/_Attachment/web/UniversityContent/pdf/JaivUrvarakApplicationMethod-PDF.pdf"
+                    target="_blank"
+                    class="pdf-link"
+                    matTooltip="View PDF"
+                  >
+                  <span> <i class="fa-solid fa-file-pdf fa-2xl"></i></span>
+                  </a>
+                  <br> <br>
+                  <div class="facility-description">
+                    <p>जैव उर्वरक का उपयोग कैसे करें</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="facility-item">
+                    <a
+                    href="https://igkv.ac.in/_Attachment/web/UniversityContent/pdf/Bioenrichment-vermicompostFinal.pdf"
+                    target="_blank"
+                    class="pdf-link"
+                    matTooltip="View PDF"
+                  >
+                  <span> <i class="fa-solid fa-file-pdf fa-2xl"></i></span>
+                  </a>
+                  <br> <br>
+                  <div class="facility-description">
+                    <p>वर्मीकम्पोस्ट का जैविक सम्वर्धन कैसे करे</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="facility-item">
+                    <a
+                    href="https://igkv.ac.in/images/AngWeb/Photos/Pricebiofertilizers.png"
+                    target="_blank"
+                    class="pdf-link"
+                    matTooltip="View PDF"
+                  >
+                  <span> <i class="fa-solid fa-file-pdf fa-2xl"></i></span>
+                  </a>
+                  <br> <br>
+                  <div class="facility-description">
+                    <p>Biofertilizer Price List</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="facility-item">
+                    <a
+                    href="https://igkv.ac.in/images/AngWeb/Photos/newProductpricelist.png"
+                    target="_blank"
+                    class="pdf-link"
+                    matTooltip="View PDF"
+                  >
+                  <span> <i class="fa-solid fa-file-pdf fa-2xl"></i></span>
+                  </a>
+                  <br> <br>
+                  <div class="facility-description">
+                    <p>New Product Price list</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="container-fluid pt-3 pb-5 gray-bg">
+        <div class="container">
+            <div class="Security section-title">
+                <h2>Products</h2>
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <div class="img-cont">
+                                <img src="https://igkv.ac.in/images/AngWeb/Photos/biofertilizerAllProd.jpg" alt="Sample Image" />
+                                <div class="des">
+                                <br>
+                                  <p>
+                                   Our Products
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<!-- testimonial -->
+<app-staff-testimonial 
+  *ngIf="Office_id == 1014 || Office_id == 1004" 
+  [unit_type]="Office_id" 
+  app-staff-testimonial>
+</app-staff-testimonial>
+
+<!-- contact us -->
+<section id="Section4" class="pt-3 pb-5" >
+    <div class="container"> 
+      <div class="row">
+        <h2 class="section-title1">Contact Us</h2>
+      </div>
+   
+      <!-- new contact us -->
+       <div class="row">
+        <div class="col-md-6">
+          <div class="contact-info">
+            <!-- Address Section -->
+            <div class="contact-card">
+      
+              <h2><i class="fa-solid fa-location-dot icon-font-size"></i> &nbsp; Address</h2>
+              <p>{{Office_Page_Data?.Unit_Address}}</p>
+            </div>
+      
+            <!-- Contact Number -->
+            <div class="contact-card">
+              <h2><i class="fa fa-phone icon-font-size " aria-hidden="true"></i>&nbsp;Contact Number</h2>
+              <p>{{Office_Page_Data?.Phone_Number}}</p>
+            </div>
+      
+            <!-- Email ID -->
+            <div class="contact-card">
+              <h2><i class="fa fa-envelope icon-font-size " aria-hidden="true"></i>&nbsp;Email ID</h2>
+              <p>{{Office_Page_Data?.Email_ID}}</p>
+            </div>
+      
+            <!-- Office Hours -->
+            <div class="contact-card">
+              <h2><i class="fa-solid fa-clock icon-font-size"></i> &nbsp;Office Time</h2>
+              <p class="text">10:00 AM to 5:00 PM <br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="map-container">
+            <iframe title="google maps for contacts"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2629.6679886860793!2d81.69424410311981!3d21.235332575024216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28c2cd61ab13f3%3A0x88aa0d80dc82ad34!2sUniversity%20Office%2C%20IGKV%20Raipur!5e0!3m2!1sen!2sin!4v1724417481982!5m2!1sen!2sin"
+              width="100%" height="625" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy"  title="ContactUs"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+       </div>  
+    </div>
+</section>
+
+
+

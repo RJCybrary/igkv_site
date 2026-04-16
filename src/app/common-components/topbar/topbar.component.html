@@ -1,0 +1,1391 @@
+
+<!-- Topbar -->
+<nav class="sticky-top" *ngIf="menutype" >
+    <!-- top menu  big screen-->
+    <nav class="navbar navbar-expand-lg topbar-menu-1 bgMainMenu" style="background-color: #0b4464;z-index: 1000;" data-bs-theme="dark"  >
+                <div class="container">
+                    <div class="collapse" style="display: block;" >
+                        <ul class="navbar-nav" style="display: block;">
+                            <li><a class="nav-link topnav" routerLink="NIRF">{{'NIRF' | translate  }}</a>
+                            </li>
+                            <li><a class="nav-link topnav" aria-label="Go to Student Corner page is loaded" routerLink="about/student">{{'Student Corner' | translate  }}</a>
+                            </li>
+                            <li> <a class="nav-link topnav" [routerLink]="['about/news',0]">{{'News & Notifications' | translate }}</a></li>
+                            <li class="nav-item dropdown position-static">
+                                <a class="nav-link dropdown-toggle" id="dropdownPublicationMenu" role="button" routerLink="about/publication-home"
+                                    data-mdb-toggle="dropdown" style="color: #fff;" aria-expanded="false">{{'Publications' | translate}}
+                                </a>
+                                <!-- Dropdown menu -->
+                                <div class="dropdown-menu drop_down_option " aria-labelledby="dropdownPublicationMenu">
+                                    <div class="mega-menu-container1">
+                                        <div class="container">
+                                            <div class="row link_list">
+                                                <div class="col-sm-12">
+                                                    <div role="list" class="publication-list">
+                                                        <h1><a [routerLink]="['research/publication',0,1]" >{{'Books & Magazines' | translate }}</a></h1>
+                                                        <h1><a [routerLink]="['research/publication',0,3]">{{'Publications' | translate}}</a></h1>
+                                                        <h1><a [routerLink]="['research/publication',0,4]">{{'Journals' | translate}}</a></h1>
+                                                        <h1><a [routerLink]="['research/publication','',5]">{{'Research Paper' | translate}}</a></h1>
+                                                        <h1><a [routerLink]="['research/publication',0,'newsletter']">{{'IGKV Newsletter' | translate}}</a></h1>
+                                                        <h1> <a href="https://igkv.ac.in/_Attachment/__impfix/IGKVataglance2024.pdf" target="_blank">{{'IGKV At a Glance' | translate }}</a></h1>
+                                                    </div>
+
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li><a class="nav-link topnav" target="_blank"
+                                    href="https://igkv.ac.in//Establishment/Estb_Egreivance_Igmis_Complain_Registration_Form.aspx">{{'Helpdesk'
+                                    | translate }}</a>
+                            </li>
+                            <li><a class="nav-link topnav"
+                                routerLink="contact">{{'Contact US'
+                                | translate }}</a>
+                        </li>
+
+               
+
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" id="dropdownLoginMenu" role="button" data-mdb-toggle="dropdown"
+                            style="color: #fff;" aria-expanded="false">{{'Login' | translate }}
+                        </a>
+                        <!-- Dropdown menu -->
+                        <div class="dropdown-menu drop_down_option " aria-labelledby="dropdownLoginMenu">
+                            <div class="mega-menu-container1">
+                                <div class="container">
+                                    <div class="row link_list">
+                                        <div class="col-sm-12">
+                                            <ul>
+
+                                                <h1><a href="https://igkv.ac.in/web/AuthenticationStudent.aspx"
+                                                        target="_blank">{{'Student Login' | translate }}</a></h1>
+                                                <h1><a href="https://igkv.ac.in/web/AuthenticationEmloyee.aspx"
+                                                        target="_blank">{{'Employee Login' | translate }}</a></h1>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- change font -->
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle"  id="dropdownContrastMenu" role="button" data-mdb-toggle="dropdown"
+                            style="color: #fff; font-size: 20px;" aria-expanded="false"> 
+                            <img src="assets/accessibility-svgrepo-com.svg" alt="Accessibility icon" width="25" height="">
+                             <!-- <i class="fa-solid fa-universal-access" style=" font-size: 26px;"></i> -->
+                        </a>
+                        <!-- Dropdown menu -->
+                        <div class="dropdown-menu drop_down_option " aria-labelledby="dropdownContrastMenu">
+                            <div class="mega-menu-container2">
+                                <div class="container">
+                                    <div class="row link_list">
+                                        <div class="col-sm-12">
+                                            <div class="row  size " style="display: inline;">
+                                                <h1 class="text-dark">Color Contras</h1> 
+                                                
+                                                <button class="A-btn" style="background-color: #e39643; color: white;" mat-stroked-button (click)="toggleClass('invert-colors')">Invert Colors</button>
+                                                <button class="A-btn"mat-stroked-button style="background-color: #0d0d0d; color: white;" (click)="toggleClass('high-contrast')">High Contrast</button>
+                                                <button class="A-btn"mat-stroked-button style="background-color: #0ad2dc; color: white;" (click)="toggleClass('high-saturation')">High Saturation</button>
+                                                <button class="A-btn"mat-stroked-button style="background-color: #9a9591; color: white;"  (click)="toggleClass('low-saturation')">Low Saturation</button>
+                                                <button class="A-btn" mat-stroked-button (click)="resetFilters()">Reset</button>
+                                            </div>
+                                                <div class="row  size mt-5 pt-3 " style="display: contents;">
+                                                    <h1 class="text-dark">Font Size</h1>
+                                                    <a>  <button mat-mini-fab color="primary" class="" (click)="decreaseFont()" aria-label="Decrease Font Size"> A-</button></a>
+                                                    <a><button mat-mini-fab class="" color="primary" (click)="resetFont()" aria-label="Reset Font Size"> A</button></a>
+                                                    <a> <button mat-mini-fab class="" color="primary" (click)="increaseFont()" aria-label="Increase Font Size"> A+</button></a>
+                                                </div>
+                                                <div class="row  size mt-5 pt-3 " style="display: contents;">
+                                                    <h1 class="text-dark">Big Cursor</h1>
+                                                      <a> <button  mat-mini-fab color="primary" (click)="toggleBigCursor()" aria-label="Toggle Big Cursor">  <i class="fa-regular fa-hand-pointer"></i></button></a>
+                                                </div>   
+                                                <div class="row  size mt-5 pt-3 " style="display: contents;">
+                                                    <h1 class="text-dark">Hide Image</h1>
+                                                      <a> <button  mat-raised-button  color="basic" style="color:#000" aria-label="Hide Images" (click)="toggleImages()" matBadge="✔">Hide</button></a>
+                                                </div>
+                                                <div class="row  size mt-5 pt-3 " style="display: contents;">
+                                                    <h1 class="text-dark">Download Screen Reader</h1>
+                                                      <a href="https://www.nvaccess.org/download/"><button mat-icon-button  aria-label="Download Screen Reader"><i class="fa fa-download" aria-hidden="true"></i></button></a>
+                                                </div>      
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+               
+                 
+                <li class="nav-item dropdown position-static">
+                    <a class="nav-link dropdown-toggle" id="dropdownLanguageMenu" role="button" data-mdb-toggle="dropdown"
+                        style="color: #fff;" aria-expanded="false">
+                        <img src="assets/language-svgrepo-com .svg" alt="Language icon" width="24" height="24">
+
+                    </a>
+                    <!-- Dropdown menu -->
+                    <div class="dropdown-menu drop_down_option " aria-labelledby="dropdownLanguageMenu">
+                        <div class="mega-menu-container1">
+                            <div class="container">
+                                <div class="row link_list">
+                                    <div class="col-sm-12">
+                                        <ul style="cursor: pointer;">
+                                            <h1><a (click)="onLanguageSelect('hn')">{{'Hindi' | translate }}</a></h1>
+                                            <h1><a (click)="onLanguageSelect('en')">{{'English' | translate }}</a></h1>
+                                            <h1><a (click)="onLanguageSelect('uz')">{{'Uzbek' | translate }}</a></h1>
+                                            <h1><a (click)="onLanguageSelect('ru')">{{'Russian' | translate }}</a></h1>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                </ul>
+
+                    </div>
+        </div>
+    </nav>
+
+    <!-- top menu for small screen -->
+              <ul id="subMenu2">
+                    <li><a routerLink="NIRF">{{'NIRF' | translate }}</a></li>
+                    <!-- <li><a routerLink="about/student">{{'Student Corner' | translate }}</a></li> -->
+                    <li><a [routerLink]="['about/news',0]">{{'News' | translate}}</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{'Login' | translate }}
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://igkv.ac.in/web/AuthenticationStudent.aspx"
+                            target="_blank">{{'Student Login' | translate }}</a></li>
+                        <li><a class="dropdown-item" href="https://igkv.ac.in/web/AuthenticationEmloyee.aspx"
+                            target="_blank">{{'Employee Login' | translate }}</a></li>
+                        </ul>
+                    </li>
+                   
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/language-svgrepo-com .svg" alt="Language icon" width="24" height="24">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" (click)="switchLanguage('en')">
+                               English
+                            </a></li>
+                            <li><a class="dropdown-item" (click)="switchLanguage('hn')">
+                                Hindi
+                            </a></li>
+                             <li><a class="dropdown-item" (click)="switchLanguage('uz')">
+                                Uzbek
+                            </a></li>
+                             <li><a class="dropdown-item" (click)="switchLanguage('ru')">
+                                Russian
+                            </a></li>
+                        </ul>
+                    </li> -->
+                    
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownAccessibility" role="button" data-bs-toggle="dropdown"
+                            style="color: #fff; font-size: 20px;" aria-expanded="false">
+                            <img src="assets//accessibility-svgrepo-com.svg" alt="Accessibility icon" width="25" height="">
+                        </a>
+                        <!-- Dropdown menu -->
+                        <div class="dropdown-menu p-3" aria-labelledby="navbarDropdownAccessibility">
+                            <h1 class="text-dark">Color Contrast</h1>
+                            <button class="A-btn btn" style="background-color: #e39643; color: white;" (click)="toggleClass('invert-colors')">Invert Colors</button>
+                            <button class="A-btn btn" style="background-color: #0d0d0d; color: white;" (click)="toggleClass('high-contrast')">High Contrast</button>
+                            <button class="A-btn btn" style="background-color: #0ad2dc; color: white;" (click)="toggleClass('high-saturation')">High Saturation</button>
+                            <button class="A-btn btn" style="background-color: #9a9591; color: white;" (click)="toggleClass('low-saturation')">Low Saturation</button>
+                            <button class="A-btn btn" (click)="resetFilters()">Reset</button>
+                    
+                            <hr>
+                    
+                            <h1 class="text-dark">Font Size</h1>
+                            <button mat-mini-fab class="btn btn-primary" aria-label="Decrease Font Size" (click)="decreaseFont()">A-</button>
+                            <button mat-mini-fab class="btn btn-primary" aria-label="Reset Font Size" (click)="resetFont()">A</button>
+                            <button mat-mini-fab class="btn btn-primary" aria-label="Increase Font Size" (click)="increaseFont()">A+</button>
+
+                            <hr>
+
+                            <h1 class="text-dark">Big Cursor</h1>
+                            <a> <button  mat-mini-fab color="primary" (click)="toggleBigCursor()" aria-label="Toggle Big Cursor">  <i class="fa-regular fa-hand-pointer"></i></button></a>
+
+                            <hr>
+
+                            <h1 class="text-dark">Hide Image</h1>
+                            <a> <button  mat-raised-button  aria-label="Hide Images" color="basic" style="color:#000" (click)="toggleImages()"  matBadge="✔">Hide</button></a>
+                        </div>
+                    </li>
+                    <li><a (click)="openSearchPopup()"><i class="fa-solid fa-magnifying-glass" style="font-size: calc(12px * var(--font-scale));"></i></a></li>
+                  
+                    
+    </ul>
+
+    <!-- Main menu -->
+    <nav #mainMenu [ngClass]="{'scrolled-navbar': isScrolled && isHomePage}"
+        class="navbar bgMainMenu navbar-expand-lg navbar-light mega-menu">
+        <div class="container-fluid">
+
+            <!-- image and logo  -->
+            <div class="row logo-image">
+                <div class="col-md-10">
+                    <a class routerLink="">
+                        <img [src]="getTopbarLogo(isScrolled && isHomePage)" alt="Logo">
+                    </a>
+                </div>
+
+            </div>
+
+
+                    <!-- Sub menu for big screen -->
+                    <div class="collapse bgMainMenu2 navbar-collapse" [ngClass]="{'scrolled-navbar2': isScrolled && isHomePage}" id="navbarExample4">
+                        <!-- Left links -->
+                        <ul class="navbar-nav  ms-auto ">
+                            <li class="nav-item">
+                                <a  routerLink="." class="nav-link" aria-label="Home"><i class="fa-solid fa-house fa-lg" ></i></a>
+                            </li>
+    
+                            <!-- Navbar dropdown -->
+                            <li class="nav-item dropdown position-static"  [ngClass]="{'hover-disabled': !showHover}">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownAbout" role="button"
+                                    data-mdb-toggle="dropdown" aria-expanded="false">{{'About' | translate  }}
+                                </a>
+                                <!-- Dropdown menu -->
+                                <div class="dropdown-menu drop_down_option w-100 mt-0 " aria-labelledby="navbarDropdownAbout" 
+                                    style="border-top-left-radius: 0; border-top-right-radius: 0;">
+                                    <div class="mega-menu-container">
+                                        <div class="container">
+                                            <div class="row link_list">
+                                                <div class="col-sm-3 col-xs-12 " style="width: 20%;">
+                                                    <ul>
+                                                        <h3>{{'IGKV In Focus' | translate }}</h3>
+                                                        <a routerLink="about/about-overview">
+                                                            <li><span>{{'Overview' | translate }}</span></li>
+                                                        </a>
+                                                        <a routerLink="about/Chancellor">
+                                                            <li><span>{{'Chancellor' | translate }}</span></li>
+                                                        </a>
+                                                        <a routerLink="about/vice-chancellor">
+                                                            <li><span>{{'Desk Of Vice Chancellor' | translate }}</span></li>
+                                                        </a>
+                                                       
+                                                        <a [routerLink]="['about/Administrative',1]">
+                                                            <li><span>{{'Board of Management' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/Administrative',3]">
+                                                            <li><span>{{'Administrative Council' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/Administrative',2]">
+                                                            <li><span>{{'Academic Council' | translate  }}</span></li>
+                                                        </a>
+                                                        <a routerLink="about/who-is-who/members-list/1">
+                                                            <li><span>{{'Who is Who' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/staff',0]">
+                                                            <li><span>{{'Directory Search' | translate }}</span></li>
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-2 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'organization' | translate }}</h3>
+                                                      
+                                                        <a [routerLink]="['about/Offices',1]">
+                                                            <li><span>{{'VC Secretariat' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/Offices',2]">
+                                                            <li><span>{{'Registrar Office' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/Offices',3]">
+                                                            <li><span>{{'Comptroller Office' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/Offices',5]">
+                                                            <li><span>{{'Medical Unit' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/guest-house']">
+                                                            <li><span>{{'Guest House' | translate}}</span></li>
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class=" col-sm-2 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'Awards & Achievements' | translate }}</h3>
+                                                        <a [routerLink]="['about/awards-achieve',25]">
+                                                            <li><span>{{'National Awards' | translate}}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/awards-achieve',26]">
+                                                            <li><span>{{'Student Awards' | translate}}</span></li>
+                                                        </a> 
+                                                        <a [routerLink]="['about/awards-achieve',30]">
+                                                            <li><span>{{'Sports Awards' | translate}}</span></li>
+                                                        </a> 
+                                                        <a [routerLink]="['about/awards-achieve',31]">
+                                                            <li><span>{{'Cultural Awards' | translate}}</span></li>
+                                                        </a>    
+                                                        <a [routerLink]="['about/awards-achieve',27]">
+                                                            <li><span>{{'IGKV Appreciation' | translate}}</span></li>
+                                                        </a>
+                                                    <a [routerLink]="['about/igkv-achievement']">
+                                                            <li><span>{{'IGKV 5 Year Achievements' | translate}}</span></li>
+                                                        </a>
+    
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-2 col-xs-12">
+                                                    <!-- <ul>
+                                                        <h3>{{'Social Media'  }}</h3>
+                                                        <a href="https://www.facebook.com/igkvkisan">
+                                                            <li><span>{{'Facebook'  }}</span></li>
+                                                        </a>
+                                                        <a
+                                                            href="https://www.youtube.com/playlist?list=UUkzs-8I9dPquYO_e4MEno9A">
+                                                            <li><span>{{'Youtube'  }}</span></li>
+                                                        </a>
+                                                        <a href="https://www.instagram.com/igkv_kisan/">
+                                                            <li><span>{{'Instagram'  }}</span></li>
+                                                        </a>
+                                                        <a href="https://twitter.com/igkv_kisan">
+                                                            <li><span>{{'Twitter'  }}</span></li>
+                                                        </a>
+                                                    </ul> -->
+                                                    
+                                                    <ul>
+                                                        <h3>{{'Activities & Events'| translate}}</h3>
+                                                        <a [routerLink]="['about/activities',28]">
+                                                            <li><span>{{'Upcoming events' | translate}}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/activities','all']">
+                                                            <li><span>{{'All Activities' | translate}}</span></li>
+                                                        </a>
+                                                    </ul>
+                                                    <ul>
+                                                        <h3>{{"Important Links" | translate}}</h3>
+                                                        <a href="https://igkv.ac.in/jai/jaihome.aspx" target="_blank">
+                                                            <li><span>{{'Journal of Agricultural Issues' | translate}}</span></li>
+                                                        </a>
+                                                        <a routerLink="NIRF">
+                                                            <li><span>{{'NIRF' | translate}}</span></li>
+                                                        </a>
+                                                        <a routerLink="UGC-HEI">
+                                                            <li><span>{{'UGC HEI' | translate}}</span></li>
+                                                        </a>
+                                                        <a routerLink="research/adhar-varification">
+                                                            <li><span>{{'Adhaar Card Varification Guidlines' | translate}}</span></li>
+                                                        </a>
+                                                        <!-- <a href="https://igkv.ac.in/dav/Project_Page.aspx" target="_blank" >
+                                                            <li><span>{{'Digital Agri Village' | translate }}</span></li>
+                                                        </a> -->
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-3 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'Others' | translate }}</h3>
+                                                        <a href="https://igkv.ac.in/_Attachment/__impfix/IGKVProfile2024-25.pdf" target="_blank">
+                                                            <li><span>{{'IGKV Profile' | translate }}</span>
+                                                            </li>
+                                                        </a>
+                                                        <a routerLink="about/univ-act">
+                                                            <li><span>{{'University  Act and Statutes' | translate }}</span>
+                                                            </li>
+                                                        </a>
+                                                        <a [routerLink]="['about/other-news',19]">
+                                                            <li><span>{{'University Service Regulations' | translate }}</span>
+                                                            </li>
+                                                        </a>
+                                                        <a [routerLink]="['about/other-news',18]">
+                                                            <li><span>{{'Seniority List' | translate  }}</span></li>
+                                                        </a>
+                                                        <a href="https://igkv.ac.in/_Attachment/web/books/4/" target="_blank">
+                                                            <li><span>{{'IGKV Coffee Table Book(अग्रसर)' | translate  }}</span></li>
+                                                        </a>
+                                                        <h3>{{'Gallery' | translate }}</h3>
+                                                        <a [routerLink]="['about/gallery',0]">
+                                                            <li><span>{{'Photo Gallery' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/video-gallery',0]">
+                                                            <li><span>{{'Video Gallery' | translate }}</span></li>
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown position-static" [ngClass]="{'hover-disabled': !showHover}">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownAcademic" role="button" data-mdb-toggle="dropdown"
+                                    aria-expanded="false">{{'Academic' | translate }}
+                                </a>
+                                <!-- Dropdown menu -->
+                                <div class="dropdown-menu drop_down_option w-100 mt-0 " aria-labelledby="navbarDropdownAcademic"
+                                    style="border-top-left-radius: 0; border-top-right-radius: 0;">
+                                    <div class="mega-menu-container">
+                                        <div class="container">
+                                            <div class="row link_list">
+                                                <div class="col-sm-3 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'Overview' | translate }}</h3>
+                                                        <a [routerLink]="['research/director',111]">
+                                                            <li><span>{{'Directorate of Instruction' | translate  }}</span>
+                                                            </li>
+                                                        </a>
+                                                        <!-- <a routerLink="about/faculty">
+                                                                        <li><span>Faculty</span></li>
+                                                                    </a> -->
+                                                        <a routerLink="about/college-home">
+                                                            <li><span>{{'Colleges' | translate }}</span></li>
+                                                        </a>
+                                                        <a routerLink="about/department">
+                                                            <li><span>{{'Departments' | translate }}</span></li>
+                                                        </a>
+                                                        
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-2 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'Faculty' |translate }}</h3>
+                                                        <a [routerLink]="['about/faculty',1]">
+                                                            <li><span>{{'Agriculture' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/faculty',2]">
+                                                            <li><span>{{'Agriculture Engineering' | translate  }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/faculty',3]">
+                                                            <li><span>{{'Horticulture' | translate }}</span></li>
+                                                        </a>
+    
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-1 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'Degree' | translate }}</h3>
+                                                        <a [routerLink]="['about/program',1]">
+                                                            <li><span>{{'UG' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/program',2]">
+                                                            <li><span>{{'PG' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/program',3]">
+                                                            <li><span>{{'Ph.D' | translate }}</span></li>
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-2 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'Admission'| translate }}</h3>
+                                                        <a routerLink="about/how-to-apply">
+                                                            <li><span>{{'Apply' | translate }}</span></li>
+                                                        </a>
+                                                        <a routerLink="about/fee-structure">
+                                                            <li><span>{{'Fee Structure' | translate  }}</span></li>
+                                                        </a>
+                                                        <!-- <a routerLink="about/admission-overview">
+                                                            <li><span>{{'Admission Broucher'  }}</span></li>
+                                                        </a>
+                                                        <a routerLink="about/admission-overview">
+                                                            <li><span>{{'Refund Policy'  }}</span></li>
+                                                        </a> -->
+                                                        <a routerLink="about/faq">
+                                                            <li><span>{{'FAQs' | translate }}</span></li>
+                                                        </a>
+                                                        <a routerLink="about/how-to-apply">
+                                                            <li><span>{{'Admission Procedure' | translate }}</span></li>
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-2 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'Rules & Regulation'| translate }}</h3>
+                                                        <!-- <a href="https://igkv.ac.in/__imp/Academic%20Regulations%20for%20phd%20degree.pdf" target="_blank">
+                                                            <li><span>{{'PHD-Regulations' | translate }}</span></li>
+                                                        </a> -->
+                                                        <a href="https://igkv.ac.in/_Attachment/web/news_notificaiton/2019/0/3/Circular%20&%20Notification_8313_1308_20210805013731_1_287593ce.pdf" target="_blank">
+                                                            <li><span>{{'PhD-Regulations' | translate }}</span></li>
+                                                        </a>
+                                                        <a href="https://igkv.ac.in/_Attachment/web/news_notificaiton/2019/0/3/Circular%20&%20Notification_8313_1308_20210805013731_1_287593ce.pdf" target="_blank">
+                                                            <li><span>{{'PG-Regulations' | translate }}</span></li>
+                                                        </a>
+                                                        <a href="https://igkv.ac.in/_Attachment/web/news_notificaiton/2019/0/3/Circular%20&%20Notification_8313_1308_20210805013731_0_287593ce.pdf" target="_blank">
+                                                            <li><span>{{'UG-Regulations' | translate }}</span></li>
+                                                        </a>
+                                                      
+                                                        <a href="https://igkv.ac.in/_Attachment/web/news_notificaiton/2024/0/3/Circular%20&%20Notification_500_5453_20240913011752_0_d667253c.pdf" target="_blank">
+                                                            <li><span>{{'Academic Calendar' | translate  }}</span></li>
+                                                        </a>
+                                                        <a routerLink="about/faq">
+                                                            <li><span>{{'Thesis Guideline' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['about/other-news',70]">
+                                                            <li><span>{{'New Education Policy 2020' | translate }}</span></li>
+                                                        </a>
+                                                       
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-2 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'E-Certificate'| translate }}</h3>
+                                                        <a href="https://nad.digilocker.gov.in/" target="_blank">
+                                                            <li><span>{{'Digilocker (NAD)' | translate }}</span></li>
+                                                        </a>
+                                                        <a href="https://igkv.ac.in/blockchain/blockHome.aspx" target="_blank">
+                                                            <li><span>{{'Shrinkhala' | translate }}</span></li>
+                                                        </a> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown position-static" [ngClass]="{'hover-disabled': !showHover}">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownResearch" role="button" data-mdb-toggle="dropdown"
+                                    aria-expanded="false">{{'Research' | translate}}
+                                </a>
+                                <!-- Dropdown menu -->
+                                <div class="dropdown-menu drop_down_option w-100 mt-0 " aria-labelledby="navbarDropdownResearch"
+                                    style="border-top-left-radius: 0; border-top-right-radius: 0; ">
+                                    <div class="mega-menu-container">
+                                        <div class="container">
+                                            <div class="row link_list">
+                                                <div class="col-sm-3 col-xs-12" style="width: 20%;">
+                                                    <ul>
+                                                        <h3>{{'Overview' | translate }}</h3>
+                                                        <a [routerLink]="['research/director',100]">
+                                                            <li><span>{{'Directorate of Research Services'  | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/farm-Research',1]">
+                                                            <li><span>{{'Research Stations' | translate }}</span></li>
+                                                        </a>
+                                                        <a routerLink="research/sponcerd-project">
+                                                                <li><span> {{"Projects" | translate }}</span></li>
+                                                            </a>
+                                                            <a href="https://igkv.ac.in/xenom/index.aspx" target="_blank">
+                                                                <li><span>{{'LMTdb' | translate}}</span></li>
+                                                            </a>
+                                                    </ul>
+    
+                                                    <ul>
+                                                        <h3>{{'Technology' | translate }}</h3>
+                                                        <a routerLink="research/patent">
+                                                            <li><span>{{"Patents" | translate }}</span></li>
+                                                        </a>
+                                                        <a routerLink="research/Copy">
+                                                            <li><span>{{"Copyright" | translate }}</span></li>
+                                                        </a>
+                                                        <a routerLink="research/varietyReleased">
+                                                            <li><span>{{'Variety released' | translate }}</span></li>
+                                                        </a>
+                                                        <a routerLink="research/Technologies-Developed">
+                                                            <li><span>{{'Technology Developed' | translate  }}</span></li>
+                                                        </a>
+                                                        <!-- <a routerLink="research/err404">
+                                                            <li><span>{{'Copyright'  }}</span></li>
+                                                        </a> -->
+                                                    </ul>
+                                                </div>  
+                                            
+    
+                                                <div class="col-sm-2 col-xs-12">
+                                                    
+                                                    <ul>
+                                                        <h3>{{'Publication' | translate}}</h3>
+    
+                                                        <a [routerLink]="['research/drs-publication',1]">
+                                                            <li><span>{{'Books & Magazines' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/drs-publication',3]">
+                                                            <li><span>{{'Publications' | translate  }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/drs-publication',4]">
+                                                            <li><span>{{'Journals' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/drs-publication',5]">
+                                                            <li><span>{{'Research Paper' | translate}}</span></li>
+                                                        </a>
+                                                       
+                                                    </ul>
+                                                   
+    
+                                                </div>
+                                                <div class="col-sm-3 col-xs-12">
+    
+                                                    <ul>
+                                                        <h3>{{'Laboratories And Facilities' | translate }}</h3>
+                                                         
+                                                        <!-- <a [routerLink]="['research/lab&Facilities',1073]">
+                                                            <li><span>{{'CBPS' | translate}}</span></li>
+                                                        </a> -->
+                                                        <a [routerLink]="['research/lab&Facilities',1073]">
+                                                            <li><span>{{'Knowledge & Technology Resource Centre' | translate}}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/lab&Facilities',1070]">
+                                                            <li><span>{{'R.H. Richharia Lab' | translate}}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/lab&Facilities',1072]">
+                                                            <li><span>{{'IGKV RABI' | translate}}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/lab&Facilities',1014]">
+                                                            <li><span>{{'Tissue Culture Lab' | translate}}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/lab&Facilities',1004]">
+                                                            <li><span>{{'Bio Control Lab' | translate}}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/lab&Facilities',1071]">
+                                                            <li><span>{{'Mushroom Spawan Lab' | translate}}</span></li>
+                                                        </a>
+                                                        <a routerLink="research/phytosanitary-lab">
+                                                            <li><span>{{'Phytosanitary Lab' | translate}}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/lab&Facilities',1075]">
+                                                            <li><span>{{'Bio-fertilizer Production and Training Unit' | translate}}</span></li>
+                                                        </a>
+                                                    </ul>
+    
+                                                </div>
+    
+                                                <div class="col-sm-3 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'Centre of Excellence' |translate }}</h3>
+                                                        <!-- <a [routerLink]="['research/coa',1009]">
+                                                            <li><span>{{'Agro Industrial Biotechnology' | translate }}</span></li>
+                                                        </a> -->
+                                                        <a [routerLink]="['research/coa',1012]">
+                                                            <li><span>{{'Non Timber Forest Produce & Medical And Aromatic Plants' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/coa',1010]">
+                                                            <li><span>{{'Protective Cultivation & Precision Farming' | translate }}</span></li>
+                                                        </a>
+                                                    </ul>
+                                                    <ul>
+                                                        <h3>{{'Collaborations' |translate }}</h3>
+                                                        <a [routerLink]="['about/other-news',57]">
+                                                            <li><span>{{'MOUs' | translate }}</span></li>
+                                                        </a>
+                                                        <!-- <a routerLink="research/industry-connect">
+                                                            <li><span>{{"Industry Connect"  }}</span></li>
+                                                        </a> -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown position-static" [ngClass]="{'hover-disabled': !showHover}">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownExtensions" role="button" data-mdb-toggle="dropdown"
+                                    aria-expanded="false">{{'Extensions' | translate}}
+                                </a>
+                                <!-- Dropdown menu -->
+                                <div class="dropdown-menu drop_down_option w-100 mt-0 " aria-labelledby="navbarDropdownExtensions"
+                                    style="border-top-left-radius: 0; border-top-right-radius: 0;">
+                                    <div class="mega-menu-container">
+                                        <div class="container">
+                                            <div class="row link_list">
+                                                <div class="col-sm-3 col-xs-12" >
+                                                    <ul>
+                                                        <h3>{{'Overview' | translate }}</h3>
+                                                        <a [routerLink]="['research/director',101]">
+                                                            <li><span>{{'Directorate of Extension Services' | translate }}</span></li>
+                                                        </a>
+                                                        <a routerLink="research/kvk-home">
+                                                            <li><span>{{'Krishi Vigyan Kendra (KVKs)' | translate}}</span></li>
+                                                        </a>
+                                                    </ul>
+                                                </div>
+    
+    
+                                                <div class="col-sm-2 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'Activities' | translate }}</h3>
+                                                        <a routerLink="research/atic">
+                                                            <li><span>{{'ATIC' | translate }}</span></li>
+                                                        </a>
+                                                        <a routerLink="research/kisan-mela">
+                                                            <li><span>{{'Kisan Mela' | translate}}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/training',15]">
+                                                            <li><span>{{'Training' | translate}}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/fld',13]">
+                                                            <li><span>{{'FLD' | translate}}</span></li>
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-2 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'Publications' | translate }}</h3>
+                                                        <a [routerLink]="['research/des-publication',1]">
+                                                            <li><span>{{'Books & Magazines' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/des-publication',3]">
+                                                            <li><span>{{"Publications" | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/des-publication',4]">
+                                                            <li><span>{{'Journals' | translate }}</span></li>
+                                                            <!-- <li><span>Newsletter</span></li> -->
+                                                        </a>
+                                                        <a [routerLink]="['research/des-publication',5]">
+                                                            <li><span>{{'Research Paper' | translate}}</span></li>
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-2 col-xs-12">
+                                                    <ul>
+                                                        <h3>{{'Mobile Apps' | translate }}</h3>
+                                                        <a [routerLink]="['research/Mobile-apps',1]">
+                                                            <li><span>{{"Crop Doctor" | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/Mobile-apps',3]">
+                                                            <li><span>{{'e-HAAT' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/Mobile-apps',4]">
+                                                            <li><span>{{"e-Krishi Yantra" | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/Mobile-apps',5]">
+                                                            <li><span>{{'e-Krishi Rojgar' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/Mobile-apps',6]">
+                                                            <li><span>{{'Millet Doctor' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/Mobile-apps',7]">
+                                                            <li><span>{{'e-Krishi Pathshala' | translate }}</span></li>
+                                                        </a>
+                                                        <a [routerLink]="['research/Mobile-apps',2]">
+                                                            <li><span>{{'Sankhya' | translate }}</span></li>
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown position-static" [ngClass]="{'hover-disabled': !showHover}">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownStudentWelfare" role="button" data-mdb-toggle="dropdown"
+                                    aria-expanded="false">{{'Student Welfare' | translate}}
+                                </a>
+                                <!-- Dropdown menu -->
+                                <div class="dropdown-menu drop_down_option w-100 mt-0 " aria-labelledby="navbarDropdownStudentWelfare"
+                                    style="border-top-left-radius: 0; border-top-right-radius: 0;">
+                                    <div class="mega-menu-container">
+                                        <div class="container ">
+                                            <div class="row link_list">
+                                                <div class="col-sm-3 col-xs-12" style="width: 18%;">
+                                                    <ul>
+                                                        <h3>{{'Life At IGKV' |translate  }}</h3>
+                                                        <a [routerLink]="['research/director',57]">
+                                                            <li><span>{{'Dean Student Walfare' | translate}}</span></li>
+                                                        </a>
+    
+                                                        <a routerLink="research/sports-overview">
+                                                            <li><span>{{'Sports' | translate}}</span></li>
+                                                        </a>
+                                                        <!-- <a routerLink="research/">
+                                                                        <li><span>Student Counselling</span></li>
+                                                                    </a> -->
+                                                <a routerLink="research/facilities-infrastructure">
+                                                    <li><span>{{'Facilities & Infrastructures' | translate}}</span></li>
+                                                </a>
+                                                <a routerLink="research/public-service">
+                                                    <li><span>{{'Public Services' | translate}}</span></li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-12">
+                                            <ul>
+                                                <h3>{{'Activities' | translate}}</h3>
+
+                                                <a routerLink="research/art-culture">
+                                                    <li><span>{{'Art & Culture' | translate}}</span></li>
+                                                </a>
+                                                <a routerLink="research/ncc-overview">
+                                                    <li><span>{{'NCC'| translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/nss-overview">
+                                                    <li><span>{{'NSS' | translate }}</span></li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-12">
+                                            <ul>
+                                                <h3>{{'Housing & Residental' | translate }}</h3>
+                                                <a routerLink="research/accommodation-overview">
+                                                    <li><span>{{'Accommodation' | translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/girls-hostel-overview">
+                                                    <li><span>{{'Girls Hostel' | translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/boys-hostel-overview">
+                                                    <li><span>{{'Boys Hostel' | translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/safety-security">
+                                                    <li><span>{{'Safety & Security' | translate }}</span></li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-12">
+                                            <ul>
+                                                <h3>{{'Nehru Library' | translate }}</h3>
+                                                <a routerLink="research/library-overview">
+                                                    <li><span>{{'Overview' | translate }}</span></li>
+                                                </a>
+
+                                            </ul>
+                                            <ul>
+                                                <h3>{{'Alumni & Placement' | translate}}</h3>
+                                                <a href="https://igkv.ac.in/alumni/alumnihomepage.aspx" target="_blank">
+                                                    <li><span>{{'Alumni Portal'| translate }}</span></li>
+                                                </a>
+                                                <a >
+                                                    <li><span>{{'Placement Portal' | translate }}</span></li>
+                                                </a>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown position-static" [ngClass]="{'hover-disabled': !showHover}">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownFarm" role="button" data-mdb-toggle="dropdown"
+                            aria-expanded="false">{{'Farm' | translate}}
+                        </a>
+                        <!-- Dropdown menu -->
+                        <div class="dropdown-menu drop_down_option w-100 mt-0 " aria-labelledby="navbarDropdownFarm"
+                            style="border-top-left-radius: 0; border-top-right-radius: 0;">
+                            <div class="mega-menu-container">
+                                <div class="container">
+                                    <div class="row link_list">
+                                        <div class="col-sm-2 col-xs-12">
+                                            <ul>
+                                                <h3>{{'Overview' | translate }}</h3>
+                                                <a [routerLink]="['research/director',112]">
+                                                    <li><span>{{'Director Farm' | translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/succesStory">
+                                                    <li><span>{{'Success Story' | translate }}</span></li>
+                                                </a>
+                                                <a href="https://igkv.ac.in/smartkisan/Auth/loginpage.aspx"
+                                                    target="_blank">
+                                                    <li><span>{{'Smart Kisan' | translate }}</span></li>
+                                                </a>
+                                                <a [routerLink]="['research/farm-Research',2]">
+                                                    <li><span>{{'Farms' | translate }}</span></li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-12">
+                                            <ul>
+
+                                                <h3>{{'Farming' | translate}}</h3>
+                                                <a [routerLink]="['research/farming',1]">
+                                                    <li><span>{{'Poultry' | translate }}</span></li>
+                                                </a>
+                                                <a [routerLink]="['research/farming',2]">
+                                                    <li><span>{{'Bee Keeping' | translate }}</span></li>
+                                                </a>
+                                                <a [routerLink]="['research/farming',3]">
+                                                    <li><span>{{'Fisheries' | translate }}</span></li>
+                                                </a>
+                                                <!-- <a [routerLink]="['research/farming',4]">
+                                                    <li><span>{{'Lakh' | translate }}</span></li>
+                                                </a> -->
+                                                <!-- <a [routerLink]="['research/farming',5]">
+                                                    <li><span>{{'Marigold' | translate }}</span></li>
+                                                </a> -->
+                                                <a [routerLink]="['research/farming',6]">
+                                                    <li><span>{{'Quail' | translate }}</span></li>
+                                                </a>
+
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-2 col-xs-12">
+                                            <ul>
+                                                <a [routerLink]="['research/farming',7]">
+                                                    <li><span>{{"Goatry" | translate }}</span></li>
+                                                </a>
+                                                <a [routerLink]="['research/farming',8]">
+                                                    <li><span>{{'Color Fish Farm' | translate }}</span></li>
+                                                </a>
+                                                <a [routerLink]="['research/farming',9]">
+                                                    <li><span>{{'Kadaknath' | translate }}</span></li>
+                                                </a>
+                                                <a [routerLink]="['research/farming',10]">
+                                                    <li><span>{{'Nursery' | translate }}</span></li>
+                                                </a>
+                                                <a [routerLink]="['research/farming',11]">
+                                                    <li><span>{{'Dairy' | translate }}</span></li>
+                                                </a>
+                                                <a [routerLink]="['research/farming',12]">
+                                                    <li><span>{{'Duckery' | translate }}</span></li>
+                                                </a>
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://igkv.ac.in/recruitmenthome.aspx"
+                            target="_blank">{{'Recruitment' | translate }}</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a  class="nav-link" href="https://igkv.ac.in/counselinghomenew.aspx"
+                            target="_blank">{{'Admission' | translate }}</a>
+                    </li> -->
+
+                    <li class="nav-item position-relative">
+                        <span class="new-badge">NEW</span>
+                    
+                        <a class="nav-link" href="https://igkv.ac.in/counselinghomenew.aspx" target="_blank">
+                            {{'Admission' | translate }}
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a  class="nav-link" href="https://igkv.ac.in/Convocation11"
+                            target="_blank">{{'Convocation' | translate }}</a>
+                           
+                            
+                    </li>
+                    <li class="nav-item dropdown position-static" [ngClass]="{'hover-disabled': !showHover}">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownInternational" role="button" data-mdb-toggle="dropdown"
+                            aria-expanded="false">{{'International' | translate }}
+                        </a>
+                        <!-- Dropdown menu -->
+                        <div class="dropdown-menu drop_down_option w-100 mt-0 " aria-labelledby="navbarDropdownInternational"
+                            style="border-top-left-radius: 0; border-top-right-radius: 0;">
+                            <div class="mega-menu-container">
+                                <div class="container">
+                                    <div class="row link_list" style="justify-content: left;">
+                                        <div class="col-sm-3 col-xs-12">
+                                            <ul>
+                                                <h3> {{'Admissions' | translate }}</h3>
+                                                <a routerLink="research/international-overview">
+                                                    <li><span>{{'Why Choose IGKV' | translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/international-admission">
+                                                    <li><span>{{'Admission Process' | translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/how-to-apply">
+                                                    <li><span>{{'How to apply' | translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/programfee">
+                                                    <li><span>{{'Programme Fee' | translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/admission-rule">
+                                                    <li><span>{{'Admission Rules' | translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/Payement-procedure">
+                                                    <li><span>{{'Payment Procedure' | translate }}</span></li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3 col-xs-12">
+                                            <ul>
+                                                <h3>{{'Student Information' | translate }}</h3>
+                                                <a routerLink="research/Pre-arrival">
+                                                    <li><span>{{'Pre-Arrival Information' | translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/Post-arrival">
+                                                    <li><span>{{'Post-Arrival Information'| translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/visa-guidlines">
+                                                    <li><span>{{'Guidelines for Visa and FRO/FRRO' | translate }}</span>
+                                                    </li>
+                                                </a>
+                                                <a routerLink="research/Examination">
+                                                    <li><span>{{'Examination Instructions' | translate }}</span></li>
+                                                </a>
+                                                <a>
+                                                    <li><span>{{'Hostel Rules Manual' | translate }}</span></li>
+                                                </a>
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3 col-xs-12">
+                                            <ul>
+                                                <h3>{{'Study Abroad' | translate }}</h3>
+                                                <a routerLink="research/abroad-overview">
+                                                    <li><span>{{'Overview' | translate }}</span></li>
+                                                </a>
+                                                <a routerLink="research/Programs">
+                                                    <li><span>{{'Programs' | translate }}</span></li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <a class="search" [ngClass]="{'scrolled': isScrolled && isHomePage}"
+                style="position: absolute !important; left: 90%; cursor: pointer;">
+                <a (click)="openSearchPopup()"><i class="fa-solid fa-magnifying-glass"></i>{{'Search' | translate}}</a>
+            </a>
+        </div>
+
+    </nav>
+    <!--  menu for small screen -->
+    <nav class="navbar smMainMenu sticky-top navbar-expand-lg bg-body-tertiary" id="subMenu">
+        <div class="container-fluid" style="flex-direction: row-reverse;flex-wrap: nowrap">
+            <div class="row logo-image">
+                <div class="col-md-10">
+                    <a class routerLink=".">
+                        <img [src]="getTopbarLogo(false)" alt="Logo" class="responsive-img">
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="background:aliceblue;box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;" id="navbarNavSm">
+                    <li class="nav-item dropdown">
+                        <a routerLink="." class="nav-link"><i style="color: #000;"
+                                class="fa-solid fa-house fa-lg"></i></a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{'About' | translate }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li id="menu">{{'IGKV In Focus' | translate }}</li>
+                            <li><a class="dropdown-item" routerLink="about/about-overview">{{'Overview' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="about/Chancellor">{{'Chancellor' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="about/vice-chancellor">{{'Desk Of Vice Chancellor' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/Administrative',1]">{{'Board of Management' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/Administrative',3]">{{'Administrative Council' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/Administrative',2]">{{'Academic Council' | translate }}</a>
+                            <li><a class="dropdown-item" routerLink="about/who-is-who/members-list/1">{{'Who is Who' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/staff',0]">{{'Directory Search' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'organization' | translate }}</li>
+                            <li><a class="dropdown-item" [routerLink]="['about/Offices',1]">{{'VC Secretariat' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/Offices',2]">{{'Registrar Office' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/Offices',3]">{{'Comptroller Office' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/Offices',5]">{{'Medical Unit' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/guest-house']">{{'Guest House' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Awards & Achievements' | translate }}</li>
+                            <li><a class="dropdown-item" [routerLink]="['about/awards-achieve',25]">{{'National Awards' | translate}}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/awards-achieve',26]">{{'Student Awards' | translate}}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/awards-achieve',30]">{{'Sports Awards' | translate}}</a>
+                            <li><a class="dropdown-item" [routerLink]="['about/awards-achieve',31]">{{'Cultural Awards' | translate}}</a>
+                            <li><a class="dropdown-item" [routerLink]="['about/awards-achieve',27]">{{'IGKV Appreciation' | translate}}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+
+                            <li id="menu">{{'Activities & Events'| translate}}</li>
+                            <li><a class="dropdown-item" [routerLink]="['about/activities',28]">{{'Upcoming events' | translate}}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/activities','all']">{{'All Activities' | translate}}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+
+                            <li id="menu">{{"Important Links" | translate}}</li>
+                            <li><a class="dropdown-item" href="https://igkv.ac.in/jai/jaihome.aspx" target="_blank">{{'Journal of Agricultural Issues' | translate}}</a></li>
+                            <li><a class="dropdown-item" routerLink="NIRF">{{'NIRF' | translate}}</a></li>
+                            <li><a class="dropdown-item" routerLink="UGC-HEI">{{'UGC HEI' | translate}}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/adhar-varification">{{'Adhaar Varification' | translate}}</a></li>
+                            <!-- <li><a class="dropdown-item" href="https://igkv.ac.in/dav/Project_Page.aspx" target="_blank">{{'Digital Agri Village' | translate}}</a></li> -->
+                            <li><hr class="dropdown-divider"></li>
+
+
+                            <li id="menu">{{'Others' | translate}}</li>
+                            <li><a class="dropdown-item" href="https://igkv.ac.in/_Attachment/__impfix/IGKVProfile2024-25.pdf" target="_blank">{{'IGKV Profile' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="about/univ-act">{{'University Act and Statutes' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/other-news',19]">{{'University Service Regulations' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/other-news',18]">{{'Seniority List' | translate }}</a></li>
+                            <li><a class="dropdown-item" href="https://igkv.ac.in/_Attachment/web/books/4/" target="_blank">{{'IGKV Coffee Table Book(अग्रसर)' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/gallery',0]">{{'Photo Gallery' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/video-gallery',0]">{{'Video Gallery' | translate }}</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{'Academic' | translate }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li id="menu">{{'Overview' | translate }}</li>
+                            <li><a class="dropdown-item" [routerLink]="['research/director',111]">{{'Directorate of Instruction' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="about/college-home">{{'Colleges' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="about/department">{{'Departments' | translate }}</a></li>
+                            <li><a class="dropdown-item" href="https://igkv.ac.in/blockchain/blockHome.aspx" target="_blank">{{'Shrinkhala'| translate}}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Faculty' |translate }}</li>
+                            <li><a class="dropdown-item" [routerLink]="['about/faculty',1]">{{'Agriculture' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/faculty',2]">{{'Agriculture Engineering' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/faculty',3]">{{'Horticulture' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Degree' | translate }}</li>
+                            <li><a class="dropdown-item" [routerLink]="['about/program',1]">{{'UG' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/program',2]">{{'PG' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/program',3]">{{'Ph.D' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Admission'| translate }}</li>
+                            <li><a class="dropdown-item" routerLink="about/how-to-apply">{{'Apply' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="about/fee-structure">{{'Fee Structure' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="about/faq">{{'FAQs' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="about/admission-overview">{{'Admission Procedure' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Rules & Regulation'| translate }}</li>
+                            <li><a class="dropdown-item" href="https://igkv.ac.in/__imp/Academic%20Regulations%20for%20phd%20degree.pdf"
+                                target="_blank">{{'PHD-Regulations'| translate}}</a></li>
+                            <li><a class="dropdown-item" href="https://igkv.ac.in/__imp/Academic%20Regulations%20for%20master%20degree.pdf"
+                                target="_blank">{{'PG-Regulations' | translate }}</a></li>
+                            <li><a class="dropdown-item" href="https://igkv.ac.in/__imp/Academic%20Regulations%20for%20bachelor%20degree.pdf"
+                                target="_blank">{{'UG-Regulations' | translate }}</a></li>
+                            <li><a class="dropdown-item" href="https://igkv.ac.in/__imp/ACD_%20Calender_2016_17.pdf"
+                                target="_blank">{{'Academic Calendar' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="about/faq">{{'Thesis Guideline' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['about/other-news',70]">{{'New Education Policy 2020' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{'Research' | translate}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li id="menu">{{'Overview'}}</li>
+                            <li><a class="dropdown-item" [routerLink]="['research/director',100]">{{'Directorate of Research Services' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farm-Research',1]">{{'Research Stations' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/sponcerd-project">{{"Projects" | translate }}</a></li>
+                            <li><a class="dropdown-item" href="https://igkv.ac.in/xenom/index.aspx" target="_blank">{{'LMTdb' | translate}}</a></li>
+                            <li> <hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Technology' | translate }}</li>
+                            <li><a class="dropdown-item" routerLink="research/patent">{{"Patents" | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/Copy">{{"Copyright" | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/varietyReleased">{{'Variety released' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/Technologies-Developed">{{'Technology Developed' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Publication' | translate}}</li>
+                            <li><a class="dropdown-item" [routerLink]="['research/drs-publication',1]">{{'Books & Magazines' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/drs-publication',3]">{{'Publications' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/drs-publication',4]">{{'Journals' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/drs-publication',5]">{{'Research Paper' | translate}}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+
+                            <li id="menu">{{'Laboratories And Facilities' | translate }}</li>
+                            <!-- <li><a class="dropdown-item" [routerLink]="['research/lab&Facilities',1073]">{{'CBPS' | translate}}</a></li> -->
+                            <li><a class="dropdown-item" [routerLink]="['research/lab&Facilities',1073]">{{'Knowledge & Technology Resource Centre' | translate}}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/lab&Facilities',1070]">{{'R.H. Richharia Lab' | translate}}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/lab&Facilities',1072]">{{'IGKV R-ABI' | translate}}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/lab&Facilities',1014]">{{'Tissue Culture Lab' | translate}}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/lab&Facilities',1004]">{{'Bio Control Lab' | translate}}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/lab&Facilities',1071]">{{'Mushroom Spawan Lab' | translate}}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/phytosanitary-lab">{{'Phytosanitary Lab' | translate}}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/lab&Facilities',1075]">{{'Bio-fertilizer Production and Training Unit' | translate}}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Centre of Excellence' | translate}}</li>
+                            <!-- <li><a class="dropdown-item" [routerLink]="['research/coa',1009]">{{'Agro Industrial Biotechnology' | translate }}</a></li> -->
+                            <li><a class="dropdown-item" [routerLink]="['research/coa',1012]">{{'Non Timber Forest Produce & Medical And AromaticPlants' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/coa',1010]">{{'Protective Cultivation & Precision Farming' | translate}}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Collaborations' | translate }}</li>
+                            <li><a class="dropdown-item" [routerLink]="['about/other-news',57]">{{'MOUs' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{'Extensions' | translate}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li id="menu">{{'Overview' | translate }}</li>
+                            <li><a class="dropdown-item" [routerLink]="['research/director',101]">{{'Directorate of Extension Services' | translate}}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/kvk-home">{{'Krishi Vigyan Kendra (KVKs)' | translate}}</a>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Activities' | translate }}</li>
+                            <li><a class="dropdown-item" routerLink="research/atic">{{'ATIC' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/kisan-mela">{{'Kisan Mela' | translate}}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/fld',15]">{{'Training' | translate}}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/fld',13]">{{'FLD' | translate}}</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li id="menu">{{'Publications' | translate }}</li>
+                            <li><a class="dropdown-item" [routerLink]="['research/des-publication',1]">{{'Books & Magazines' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/des-publication',3]">{{"Publications" | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/des-publication',4]">{{'Journals' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/des-publication',5]">{{'Research Paper' | translate }}</a></li>
+
+                            <li id="menu">{{'Mobile Apps' | translate }}</li>
+                            <li><a class="dropdown-item" [routerLink]="['research/Mobile-apps',1]">{{"Crop Doctor" | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/Mobile-apps',3]">{{'e-HAAT' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/Mobile-apps',4]">{{"e-Krishi Yantra" | translate }}</a>
+                            <li><a class="dropdown-item" [routerLink]="['research/Mobile-apps',5]">{{'e-Krishi Rojgar' | translate }}</a>
+                            <li><a class="dropdown-item" [routerLink]="['research/Mobile-apps',6]">{{'Millet Doctor' | translate }}</a>
+                            <li><a class="dropdown-item" [routerLink]="['research/Mobile-apps',7]">{{'e-Krishi Pathshala' | translate }}</a>
+                            <li><a class="dropdown-item" [routerLink]="['research/Mobile-apps',2]">{{'Sankhya' | translate }}</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{'Student Welfare' | translate}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li id="menu">{{'Life At IGKV' | translate }}</li>
+                            <li><a class="dropdown-item" [routerLink]="['research/director',57]">{{'Dean Student Walfare' | translate}}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/sports-overview">{{'Sports' | translate}}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/facilities-infrastructure">{{'Facilities & Infrastructures' | translate}}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/public-service">{{'Public Services' | translate}}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li>{{'Activities' | translate}}</li>
+                            <li id="menu"><a class="dropdown-item" routerLink="research/art-culture">{{'Art & Culture' | translate}}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/ncc-overview">{{'NCC'| translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/nss-overview">{{'NSS' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Housing & Residental' | translate }}</li>
+                            <li><a class="dropdown-item" routerLink="research/accommodation-overview">{{'Accommodation' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/girls-hostel-overview">{{'Girls Hostel' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/boys-hostel-overview">{{'Boys Hostel' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/safety-security">{{'Safety & Security' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Nehru Library' | translate }}</li>
+                            <li><a class="dropdown-item" routerLink="research/library-overview">{{'Overview' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Alumni & Placement' | translate}}</li>
+                            <li><a class="dropdown-item" href="https://igkv.ac.in/alumni/alumnihomepage.aspx" target="_blank">{{'Alumni Portal'| translate }}</a></li>
+                            <li><a class="dropdown-item" target="_blank">{{'Placement Portal' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{'Farm' | translate}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li id="menu">{{'Overview' | translate }}</li>
+                            <li><a class="dropdown-item" [routerLink]="['research/director',112]">{{'Director Farm' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/succesStory">{{'Success Story' | translate }}</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="https://igkv.ac.in/smartkisan/Auth/loginpage.aspx">{{'Smart Kisan' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farm-Research',2]" >{{'Farms' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Farming'}}</li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farming',1]">{{'Poultry' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farming',2]">{{'Bee Keeping' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farming',3]">{{'Fisheries' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farming',4]">{{'Lakh' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farming',5]">{{'Marigold' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farming',6]">{{'Quail' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farming',7]">{{'Goatry' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farming',8]">{{'Color Fish Farm' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farming',9]">{{'Kadaknath' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farming',10]">{{'Nursery' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farming',11]">{{'Dairy' | translate }}</a></li>
+                            <li><a class="dropdown-item" [routerLink]="['research/farming',12]">{{'Duckery' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+                  
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="https://igkv.ac.in/recruitmenthome.aspx"
+                        target="_blank" role="button"
+                            aria-expanded="false">
+                            {{'Recruitment' | translate }}
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link" href="https://igkv.ac.in/counselinghomenew.aspx"
+                        target="_blank" role="button"
+                            aria-expanded="false">
+                            {{'Admission' | translate }}
+                        </a>
+                    </li> -->
+                    <li class="nav-item dropdown position-relative">
+                        <span class="new-badge">NEW</span>
+                    
+                        <a class="nav-link" href="https://igkv.ac.in/counselinghomenew.aspx" target="_blank" role="button"
+                            aria-expanded="false">
+                            {{'Admission' | translate }}
+                        </a>
+                    </li>      
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="https://igkv.ac.in/Convocation11"
+                        target="_blank" role="button"
+                            aria-expanded="false">
+                            {{'Convocation' | translate }}
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{'International' | translate}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li id="menu">{{'Admissions' | translate }}</li>
+                            <li><a class="dropdown-item" routerLink="research/international-overview">{{'Why Choose IGKV' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/international-admission">{{'Admission Process' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/how-to-apply">{{'How to apply' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/programfee">{{'Programme Fee' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/admission-rule">{{'Admission Rules' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/Payement-procedure">{{'Payment Procedure' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Student Information' | translate }}</li>
+                            <li><a class="dropdown-item" routerLink="research/Pre-arrival">{{'Pre-Arrival Information' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/Post-arrival">{{'Post-Arrival Information'| translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/visa-guidlines">{{'Guidelines for Visa and FRO/FRRO' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/Examination">{{'Examination Instructions' | translate }}</a></li>
+                            <li><a class="dropdown-item" >{{'Hostel Rules Manual' | translate }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li id="menu">{{'Study Abroad' | translate }}</li>
+                            <li><a class="dropdown-item" routerLink="research/abroad-overview">{{'Overview' | translate }}</a></li>
+                            <li><a class="dropdown-item" routerLink="research/Programs">{{'Programs' | translate }}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- <a class="search" [ngClass]="{'scrolled': isScrolled && isHomePage}"
+            style="position: absolute !important; left: 90%; cursor: pointer;">
+            <a (click)="openSearchPopup()"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </a> -->
+        </div>
+    </nav>
+</nav>

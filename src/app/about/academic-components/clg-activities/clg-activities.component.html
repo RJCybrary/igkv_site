@@ -1,0 +1,55 @@
+<section id="about-page" class="pt-3 pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-title1">Recent Activities</h2>
+                <!-- section title -->
+                <div class="about-cont mt-3" *ngIf="activity_details != ''">
+                    <div class="row">
+                        <ng-container *ngFor="let data of activity_details.slice(0,3)">
+                            <div class="col-md-4 mb-4">
+                                <div class="activity-container">
+                                    <!-- <a [routerLink]="['cont/activities-details',data.Website_Content_ID]">
+                                        <img class="activity-img" [src]="data.Column1" (error)="onErrorImage($event)"
+                                            [alt]="data.Content_Title ? data.Content_Title : 'activity image'">
+                                    </a>
+                                    <div class="activity-description">
+                                        <p>{{data.Content_Title}}</p>
+                                    </div> -->
+
+                                    <a [routerLink]="['cont/activities-details', data.Website_Content_ID]">
+                                        <!-- Use figure for semantic grouping -->
+                                        <figure>
+                                            <!-- Use meaningful alt text -->
+                                            <img class="activity-img" [src]="data.Column1"
+                                                (error)="onErrorImage($event)"
+                                                [alt]="data.Content_Title ? data.Content_Title : 'activity image'">
+                                            <!-- Caption tied to image -->
+                                            <figcaption class="activity-description">
+                                                <p>{{ data.Content_Title }}</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+
+                                    <div class="calendar-icon" aria-hidden="true">
+                                        <i class="fa-solid fa-calendar-days" style="color: #07294d;"></i>
+                                    </div>
+                                    <div class="calendar-date">
+                                        <span>{{data.web_content_date}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-container>
+
+                    </div>
+                    <div class="container pt-3" style="text-align: center !important;">
+                        <div class="col-lg-12 col-sm-12">
+                            <a routerLink="cont/activities-list" class="main-btn">{{'View more' | translate}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>

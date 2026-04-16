@@ -1,0 +1,319 @@
+<!-- Banner Starts  -->
+<app-banner [banner_heading]="'Sports'" [banner_img]="bannerImg"></app-banner>
+
+
+
+<!-- Banner Ends  -->
+<section  class="pt-3 pb-3 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                    <h2 class="section-title1">Overview</h2>
+                <div class="about-cont">
+                    <p class="contents">
+
+                        Sports in college are an integral part of holistic education, fostering physical fitness,
+                        teamwork, and leadership skills. Colleges offer diverse sports programs encompassing traditional
+                        and modern activities. Participation in sports promotes a healthy lifestyle, mental well-being,
+                        and stress relief, contributing to overall student welfare. It builds camaraderie and a sense of
+                        belonging among students through team sports and competitive events. Colleges often have
+                        state-of-the-art sports facilities, including gyms, fields, and courts, encouraging both
+                        recreational and competitive engagement.
+                    </p>
+                    <p class="contents">Sports also teach valuable life lessons such as discipline, time management, and resilience.
+                        Through coaching and organized competitions, students develop critical skills applicable beyond
+                        the sports arena. Colleges may host intercollegiate tournaments, providing a platform for
+                        showcasing talent and fostering healthy competition among institutions.</p>
+                    <p class="contents">Additionally, sports scholarships create opportunities for talented athletes to pursue higher
+                        education. College sports contribute to a vibrant campus culture, encouraging school spirit and
+                        a sense of pride. Extracurricular sports activities, clubs, and events enhance the overall
+                        college experience, promoting a well-rounded education that goes beyond academics. Overall,
+                        sports in college play a pivotal role in shaping students' character, instilling values, and
+                        fostering a positive and dynamic campus environment.</p>
+
+                </div>
+            </div> 
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Highlights start -->
+<section  class=" gray-bg pb-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title mt-50">
+                    <h2>Highlights</h2>
+                </div> 
+
+<div class="row">
+    <ng-container *ngFor="let data of Activities_data">
+        <div class="col-lg-4 col-md-6 ">
+            <div class="Activities mt-3">
+                <div class="thum">
+                    <div class="banner image"
+                        [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+                        <img [src]="data.Column1" (error)="OnErrorImage($event)" alt="activities image">
+                        <div class="content">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="cont">
+                    <span id="date"><i class="fa-regular fa-calendar-days"></i>{{data.web_content_date2|date:'MMMM d, y'}},</span>
+                    <span class="venue"><i class="fa-solid fa-location-dot"></i>{{data.Venue}}</span>
+                    <a>
+                        <h4>{{data.Content_Title}}</h4>
+                    </a>
+
+                        <!-- <div class="col-lg-12 col-sm-12 view-button">
+                                <a routerLink="/about/activities-details/{{data.Website_Content_ID}}"
+                                class="main-btn">
+                                View 
+                            </a>
+                        <a (click)="setdetails()" *ngIf="!showCategory" routerLink="/about/activities-details/{{data.Website_Content_ID}}"
+                            class="main-btn">
+                            View 
+                        </a>
+                        </div> -->
+                </div>
+            </div> 
+        </div>
+    </ng-container>
+    <div  style="text-align: center !important;" >
+        <div class="col-lg-12 col-sm-12 pt-3">
+            <a routerLink="/about/activities/category/10" class="main-btn">View All</a>
+        </div>
+    </div>
+</div>
+              
+
+            </div> 
+
+        </div> 
+
+    </div> 
+</section>
+<!-- Highlights end -->
+
+<!-- sports wards -->
+<section  class=" gray-bg pb-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title mt-50">
+                    <h2>Awards</h2>
+                </div> 
+
+<div class="row">
+    <ng-container *ngFor="let data of Award_data">
+        <div class="col-lg-4 col-md-6 ">
+            <div class="Activities mt-3">
+                <div class="thum">
+                    <div class="banner image"
+                        [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+                        <img [src]="data.Column1" (error)="OnErrorImage($event)" alt=" awards image">
+                        <div class="content">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="cont">
+                    <span id="date"><i class="fa-regular fa-calendar-days"></i>{{data.web_content_date2|date:'MMMM d, y'}}</span>,
+                    <span id="venue"><i class="fa-solid fa-location-dot"></i>{{data.Venue}}</span>
+                    <a>
+                        <h4>{{data.Content_Title}}</h4>
+                    </a>
+
+                        <!-- <div class="col-lg-12 col-sm-12 view-button">
+                                <a routerLink="/about/activities-details/{{data.Website_Content_ID}}"
+                                class="main-btn">
+                                View 
+                            </a>
+                        <a (click)="setdetails()" *ngIf="!showCategory" routerLink="/about/activities-details/{{data.Website_Content_ID}}"
+                            class="main-btn">
+                            View 
+                        </a>
+                        </div> -->
+                </div>
+            </div> 
+        </div>
+    </ng-container>
+    <div  style="text-align: center !important;" >
+        <div class="col-lg-12 col-sm-12 pt-3">
+            <a routerLink="/about/activities/category/30" class="main-btn">View All</a>
+        </div>
+    </div>
+</div>
+              
+
+            </div> 
+
+        </div> 
+
+    </div> 
+</section>
+<!-- sports wards -->
+
+<!-- Facilities section start-->
+<section id="category-3" class="category-2-items pt-10 pb-80 mt-5">
+    <!-- Overview section start-->
+    <section id="Section2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title mt-10">
+                        <h2>Sports Facilities & Infrastructures</h2>
+                        <div class="about-cont ">
+
+                            <div class="sports_details even">
+
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="row">
+                                            <h3>Football Grounds</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <p>The IGKV football grounds epitomize a haven for sporting excellence and
+                                                camaraderie, providing a dynamic space where athletes hone their skills
+                                                and forge lifelong memories. With meticulously maintained pitches and
+                                                state-of-the-art facilities, the grounds offer an immersive sporting
+                                                experience for players of all levels. From thrilling matches under the
+                                                floodlights to spirited training sessions under the sun, the football
+                                                grounds resonate with the echoes of passion and determination. With a
+                                                rich tradition of nurturing talent and fostering teamwork, IGKV's
+                                                football grounds serve as a vibrant hub for athletic prowess and
+                                                sporting spirit. Whether it's the exhilaration of a winning goal or the
+                                                camaraderie of shared victories, the football grounds at IGKV stand as a
+                                                testament to the institution's commitment to excellence in sports and
+                                                recreation. </p>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="slider-container" *ngIf="Football_Grounds[currentSlide]">
+                                            <img class="slider-image" [src]="Football_Grounds[currentSlide].src"
+                                                alt="Image {{ currentSlide + 1 }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sports_details">
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="slider-container" *ngIf="Badminton_Court[currentSlide]">
+                                            <img class="slider-image" [src]="Badminton_Court[currentSlide].src"
+                                                alt="Image {{ currentSlide + 1 }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="row">
+                                            <h3>Badminton Court</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <p>Step onto our meticulously maintained badminton court, where every smash,
+                                                drop shot, and rally takes center stage. Designed to international
+                                                standards, our court provides the perfect setting for players of all
+                                                levels to showcase their skills and passion for the sport. With its
+                                                premium-quality flooring and ample lighting, our facility ensures
+                                                optimal playing conditions, allowing you to unleash your full potential
+                                                with every stroke. Whether you're a casual player looking for a friendly
+                                                match or a seasoned competitor honing your craft, our badminton court
+                                                offers the ideal environment for you to enjoy the thrill of the game.
+                                                Join us and experience the exhilaration of badminton in a welcoming and
+                                                vibrant atmosphere that inspires excellence and camaraderie. </p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="sports_details even">
+
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="row">
+                                            <h3>Cricket Grounds</h3>
+                                            <hr>
+                                        </div>
+                                        <div>
+                                            <p>Nestled within picturesque surroundings, our cricket ground stands as a
+                                                beacon for enthusiasts, offering an unparalleled venue for the timeless
+                                                sport of cricket. With meticulously maintained pitches and lush green
+                                                outfield, our grounds provide the perfect canvas for thrilling matches
+                                                and unforgettable moments. From the crack of the bat to the roar of the
+                                                crowd, every game unfolds in an atmosphere charged with excitement and
+                                                camaraderie. Whether you're a seasoned player or a budding talent, our
+                                                facilities cater to all levels, fostering a spirit of competition and
+                                                sportsmanship. Join us on the hallowed turf and experience the joy of
+                                                cricket in its purest form, where passion meets precision and dreams
+                                                take flight amidst the sound of leather on willow.
+
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="slider-container" *ngIf="Cricket_Grounds[currentSlide]">
+                                            <img class="slider-image" [src]="Cricket_Grounds[currentSlide].src"
+                                                alt="Image {{ currentSlide + 1 }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sports_details">
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="slider-container" *ngIf="Billiard[currentSlide]">
+                                            <img class="slider-image" [src]="Billiard[currentSlide].src"
+                                                alt="Image {{ currentSlide + 1 }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="row">
+                                            <h3>Billiard</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <p>Embark on an adventure into the world of sports with our diverse range of
+                                                games and activities. From the strategic brilliance of chess to the
+                                                fast-paced excitement of table tennis, our facility offers something for
+                                                every enthusiast. Engage in friendly matches or hone your skills through
+                                                regular practice sessions, all within a welcoming and inclusive
+                                                environment. Experience the thrill of victory and the camaraderie of
+                                                competition as you challenge yourself and others in games like
+                                                volleyball, basketball, and badminton. With top-notch equipment and
+                                                expert guidance, our facility is the perfect destination for individuals
+                                                and groups alike to enjoy the excitement and adrenaline rush of various
+                                                sports and recreational activities. Join us and discover the joy of play
+                                                in all its forms, where every game brings new opportunities for fun and
+                                                fulfillment.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- section title -->
+                </div> <!-- about cont -->
+
+            </div> <!-- row -->
+
+        </div> <!-- container -->
+    </section>
+    <!-- Overview section end-->
+</section>
+<!-- Facilities section ends-->

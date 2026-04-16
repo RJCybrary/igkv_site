@@ -1,0 +1,56 @@
+ <app-banner [banner_heading]="'Laboratories & Facilities'"
+    [banner_img]="bannerImg"></app-banner>
+
+
+    <section id="Section1" class="pt-3 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title1">Labs & Facilities</h2>
+                </div> <!-- about cont -->
+
+            </div> <!-- row -->
+
+        </div> <!-- container -->
+    </section>
+
+
+    <div class="container-fluid pb-5" >
+        <div class="container">
+            <div class="row security">
+                <div class="col-md-3 first_row">
+                    <a [routerLink]="['lab&Facilities/',1070]">
+                        <div class="card">
+                            <img [src]="RRL" alt="lab image">
+                            <h5>R.H. Richharia Laboratory</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 first_row">
+                    <a [routerLink]="['lab&Facilities/',1014]">
+                    <div class="card">
+                        <img [src]="TCL" alt="lab image">
+                        <h5>
+                            Tissue Culture Lab</h5>
+                    </div>
+                    </a>
+                </div>
+                <div class="col-md-3 first_row">
+                    <a routerLink="phytosanitary-lab">
+                    <div class="card">
+                        <img [src]="PhytodanitaryLab" alt="lab image" />
+                        <h5>Phytosanitary Lab</h5>
+                    </div>
+                    </a>
+                </div>
+                <div class="col-md-3 first_row">
+                    <a [routerLink]="['lab&Facilities/',1071]">
+                    <div class="card even">
+                        <img [src]="MushroomLab" alt="lab image">
+                        <h5>Mushroom Spawn Lab</h5>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>

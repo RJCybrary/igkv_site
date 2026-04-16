@@ -1,0 +1,163 @@
+<section id="news-part" class="pt-3 pb-3 " style="background-color: rgb(244, 248, 252);"  *ngIf="Event_data">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div>
+                    <h2 class="section-title1">{{"Our Events" | translate}}</h2>
+                    <h1 class="section-title2">{{"Latest Events" | translate}}</h1>
+                </div> 
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-lg-7 ">
+                <div class="single-events box-shadow1">
+                    <!-- new code -->
+                    <div id="carouselExampleCaptions1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button *ngFor="let data of Event_data; let i = index" type="button" aria-label="next slide"
+                                [attr.data-bs-target]="'#carouselExampleCaptions1'" [attr.data-bs-slide-to]="i"
+                                [class.active]="i === 0" [attr.aria-label]="'Slide ' + (i + 1)">
+                            </button>
+                        </div>
+                        <section class="banner">
+                            <div class="carousel-inner">
+                                <div class="carousel-item igkv-slider-style1"
+                                    *ngFor="let data of Event_data; let i = index" [class.active]="i === 0">
+                                    <div class="slider-container">
+                                         <a (click)="setdetails()"  [routerLink]="['about/activities-details',data?.Website_Content_ID]">
+                                        <img src="{{ data?.Column1 }}" alt="banner image"> 
+                                         </a>
+                                    </div>
+                                    <div class="carousel-caption ">
+                                        <h4>{{ data?.Content_Title }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+            <!-- singel news -->
+
+            <div class="col-lg-5 sm-screen">
+                <div class="single-events news-list" >
+                    <div class="row box-shadow2">
+                        <div class="col-sm-4 images ">
+                            <div class="news-thum">
+                                <div class="image1 banner1" [style.background-image]="'url(' + Event_data[0]?.Column1 + ')'"  >
+                                    <img [src]="Event_data[0]?.Column1" alt="Event Image" (click)="scrollToSlide(0)">
+                                    <div class="content1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="news-cont-sub  ">
+                                <a>
+                                    <h4>{{Event_data[0]?.Content_Title}}</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- row -->
+                </div>
+                <div class="single-events news-list ">
+                    <div class="row box-shadow2">
+                        <div class="col-sm-4 images">
+                            <div class="news-thum  ">
+                                <div class="image1 banner1" [style.background-image]="'url(' + Event_data[1]?.Column1 + ')'"  >
+                                    <img [src]="Event_data[1]?.Column1" alt="Event Image" (click)="scrollToSlide(1)">
+                                    <div class="content1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="news-cont-sub">
+                                <a>
+                                    <h4>{{Event_data[1]?.Content_Title}}</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- singel news -->
+                <div class="single-events news-list">
+                    <div class="row box-shadow2">
+                        <div class="col-sm-4 images">
+                            <div class="news-thum  ">
+                                <div class="image1 banner1" [style.background-image]="'url(' + Event_data[2]?.Column1 + ')'"  >
+                                    <img [src]="Event_data[2]?.Column1" alt="Event Image" (click)="scrollToSlide(2)">
+                                    <div class="content1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="news-cont-sub  ">
+                                <a>
+                                    <h4>{{Event_data[2]?.Content_Title}}</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- row -->
+                </div>
+                <div class="single-events news-list " style="margin-bottom: 0;">
+                    <div class="row box-shadow2">
+                        <div class="col-sm-4 images">
+                            <div class="news-thum  ">
+                                <div class="image1 banner1" [style.background-image]="'url(' + Event_data[3]?.Column1 + ')'" >
+                                    <img [src]="Event_data[3]?.Column1" alt="Event Image" (click)="scrollToSlide(3)">
+                                    <div class="content1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="news-cont-sub  ">
+                                <a>
+                                    <h4 >{{Event_data[3]?.Content_Title}}</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-events news-list pt-3" style="margin-bottom: 0;">
+                    <div class="row box-shadow2">
+                        <div class="col-sm-4 images">
+                            <div class="news-thum  ">
+                                <div class="image1 banner1" [style.background-image]="'url(' + Event_data[4]?.Column1 + ')'" >
+                                    <img [src]="Event_data[4]?.Column1" alt="Event Image" (click)="scrollToSlide(4)">
+                                    <div class="content1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="news-cont-sub  ">
+                                <a>
+                                    <h4>{{Event_data[4]?.Content_Title}}</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-3" style="text-align: center !important;">
+            <div class="col-lg-12 col-sm-12">
+                <a [routerLink]="['/about/activities/category',24]" class="main-btn">{{'View more' | translate}} </a>
+            </div>
+        </div>
+    </div>
+</section>

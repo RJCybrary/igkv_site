@@ -1,0 +1,410 @@
+/*================  Girls Hostle CSS Starts =========== */
+
+.banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  margin-top: 2em;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 41, 77, 0.5);
+  margin-top: 2em;
+}
+
+
+
+/*gallery section css start*/
+
+
+.gallery_section .gallery-image img {
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.gallery_section .img-box {
+  box-sizing: content-box;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+}
+
+.gallery_section .caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery_section .caption p {
+  color: white;
+}
+
+.gallery_section .transparent-box {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.gallery_section .img-box:hover img {
+  transform: scale(1.1);
+}
+
+.gallery_section .img-box:hover .transparent-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gallery_section .img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.gallery_section .img-box:hover {
+  cursor: pointer;
+}
+
+.gallery_section .caption>p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.gallery_section .opacity-low {
+  opacity: 0.5;
+}
+
+/*gallery section css end*/
+
+
+
+
+.girls_hostel .first_row {
+
+  box-shadow: skyblue 0 2px 4px 0px;
+  margin-bottom: 6.5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding: 1em;
+
+}
+
+.girls_hostel h2 {
+  font-weight: 600;
+  font-size: 1.8em;
+}
+
+.girls_hostel p {
+  font-weight: 500;
+}
+
+.girls_hostel img {
+  padding: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0.9); /* Initial scale to create a zoom effect */
+  transform: scale(0.9);
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Zoom Out #1 */
+
+.girls_hostel img:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.girls_hostel .innerrow .image_section {
+  overflow: hidden;
+}
+
+.girls_hostel {
+  margin: 5px;
+}
+
+.girls_hostel p {
+  text-align: center;
+  // padding: 1em;
+  font-weight: 500;
+  padding-top: 0;
+}
+
+.girls_hostel h2 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.girls_hostel .first_row .infrastructure-card {
+  margin-top: 1.2em;
+  color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+.girls_hostel_List ul {
+  margin: 1.2em;
+}
+
+
+
+.girls_hostel .first_row .infrastructure-card .first_section {
+  box-shadow: skyblue 0 2px 4px 0px;
+  height: 40%;
+  width: auto;
+  color: #ffc600;
+  background-color: #07294B;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-size: calc(13px* var(--font-scale));
+  margin: 0.5em;
+
+}
+
+
+.girls_hostel .first_row .infrastructure-card .second_section {
+  box-shadow: skyblue 0 2px 4px 0px;
+  height: 40%;
+  width: auto;
+  color: #ffc600;
+  background-color: #07294B;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-size: calc(13px* var(--font-scale));
+  margin: 0.5em;
+
+}
+
+.girls_hostel .first_row .infrastructure-card .third_section {
+  box-shadow: skyblue 0 2px 4px 0px;
+  height: 40%;
+  width: auto;
+  color: #ffc600;
+  background-color: #07294B;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-size: calc(13px* var(--font-scale));
+  margin: 0.5em;
+}
+
+
+// Image slider css 
+
+/* image-slider.component.css */
+.slider-container {
+  position: relative;
+  height:25rem !important;
+  width: 100% !important;
+  overflow: hidden;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  // object-fit: cover; /* This property ensures that the image covers the container without stretching */
+  // cursor: pointer;
+}
+
+.slider-description {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  // background-color: rgba(0, 0, 0, 0.5);
+  color: #07294B;
+  font-weight: 600;
+  // padding: 10px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  /* Set width to 100% for responsiveness */
+  max-width: 100%;
+  /* Set maximum width to 100% */
+  overflow: hidden;
+  /* Hide overflow to prevent distortion */
+}
+
+.slider-image {
+  width: 100%;
+  /* Set maximum width to 100% */
+  height: auto;
+  /* Let the height adjust proportionally */
+  display: block;
+  /* Ensure the image is displayed as a block element */
+  margin: 0 auto;
+  /* Center the image horizontally */
+}
+
+// Highlights 
+
+.lab_infrastructure h2 {
+  font-weight: 600;
+  font-size: 1.8em;
+}
+
+.lab_infrastructure p {
+  font-weight: 500;
+}
+
+/*.lab_infrastructure {
+  overflow: hidden;
+}*/
+
+
+.lab_infrastructure img {
+  padding: 0;
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+
+}
+
+/* Zoom Out #1 */
+
+.lab_infrastructure img:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.lab_infrastructure .innerrow .image_section {
+  overflow: hidden;
+}
+
+.lab_infrastructure {
+  margin: 5px;
+}
+
+.lab_infrastructure .innerrow {
+
+  background-color: #fff;
+  text-align: center;
+  margin-top: 10%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  height: auto;
+}
+
+.lab_infrastructure p {
+  text-align: justify;
+  padding: 1em;
+  font-weight: 500;
+  padding-top: 0;
+}
+
+.lab_infrastructure h2 {
+  margin: 0.4em;
+}
+
+.lab_infrastructure h4 {
+  padding: 0.5em;
+  font-weight: 600;
+}
+
+/* lab abd infrastructure end */
+
+
+@media (max-width: 767px) {
+  .first_row {
+    flex-direction: column;
+  }
+
+  .first_row .col-md-5 {
+    order: 2; /* Move the image column below the content column */
+  }
+}
+
+@media (min-width: 768px) {
+  .first_row {
+    // display: flex;
+    align-items: flex-start; /* Align items to the top of the flex container */
+  }
+
+  .first_row .col-md-5 {
+    order: 1; /* Change the order of the columns to move the image column first */
+  }
+}
+
+
+
+
+.warden-container {
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.warden-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.warden-card:hover {
+  transform: translateY(-5px);
+}
+
+.warden-photo {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.warden-info {
+  padding: 20px;
+}
+
+.warden-name {
+  font-size: calc(16px * var(--font-scale));
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+.warden-role {
+  font-size: calc(14px * var(--font-scale));
+  color: #595959; /* WCAG AA safe on white */
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.warden-hostel,
+.warden-contact,
+.warden-email {
+  font-size: calc(14px * var(--font-scale));
+  color: #555;
+  margin: 5px 0;
+  font-weight: 200;
+}

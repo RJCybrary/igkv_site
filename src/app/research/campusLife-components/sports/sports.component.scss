@@ -1,0 +1,402 @@
+/* lab abd infrastructure start */
+
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    margin-top: 2em;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 41, 77, 0.5);
+    margin-top: 2em;
+  }
+
+
+
+
+
+/* =============Sports CSS STARTS ===========  */
+
+
+.Sports-overview {
+    margin-top: 20px;
+    height: 13em;
+    text-align: center;
+    background-color: #fcfcfc;
+}
+
+.sports_details {
+    // margin-top: 3%;
+    padding: 2%;
+    box-shadow: gray 0 0px 15px -7px;
+    background-color: #E0E8F2;
+    margin: 5em 0 5em 0;
+
+}
+
+.sports_details h3 {
+    font-weight: 600;
+    font-size: calc(20px * var(--font-scale));
+    // margin-top: 2em;
+}
+
+.sports_details p {
+    font-size: calc(15px * var(--font-scale));
+}
+
+.sports_details img {
+    height: 220px;
+}
+
+.Sports-overview h1 {
+    font-size: xx-large;
+    font-weight: 900;
+    border-bottom: 4px solid #07294d;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    margin: 20px;
+    line-height: 3;
+}
+
+.Sports-overview span {
+    text-align: justify;
+}
+
+.sports_facilities {
+    text-align: center;
+}
+
+.sports_facilities h1 {
+    text-align: center;
+}
+
+
+.sports_facilities h1 {
+    font-size: xx-large;
+    font-weight: 900;
+    border-bottom: 4px solid #07294d;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    margin: 20px;
+    line-height: 3;
+}
+
+.sports_cards a {
+    text-decoration: none;
+}
+
+.sports_gallery {
+    margin: 5px;
+}
+
+.sports_gallery img {
+    height: 40vh;
+    width: auto;
+    transition: all 0.5s ease;
+}
+
+.sports_gallery img:hover {
+    transform: scale(0.9);
+}
+
+.overview {
+    margin-top: 2em;
+}
+
+
+.Sports_Achievement .first_col .img_card {
+    box-shadow: skyblue 0 0px 2px 1px;
+}
+
+/*Cariusel Starts*/
+
+/* Slider */
+.game_energy {
+    margin: 1em;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: 13em;
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/*Carousel Ends*/
+
+
+.category-2-items .singel-items .items-image img {
+    /* width: 100%; */
+    height: 8em;
+    border-radius: 5px;
+}
+
+// Slider CSS 
+
+/* image-slider.component.css */
+.slider-container {
+    position: relative;
+    height: 17em !important;
+    overflow: hidden;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    // object-fit: cover; /* This property ensures that the image covers the container without stretching */
+    cursor: pointer;
+}
+
+.slider-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+@media (max-width: 448px) {
+    .sports_details h3{
+      margin-top: 0.5em;
+      text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sports_details.even .row {
+        flex-direction: column-reverse; /* Reverse the order of columns on smaller screens */
+        margin-top: 1.2em;
+    }
+
+    .sports_details.even .col-md-4 {
+        order: 2; /* Move the image column to the bottom */
+    }
+
+    .sports_details.even .col-md-8 {
+        order: 1; /* Move the content column to the top */
+    }
+
+    .sports_details h3{
+        text-align: center;
+    }
+
+}
+
+
+.innerrow p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: calc(14px * var(--font-scale));
+}
+
+
+.Activities .thum .image{
+    overflow: hidden;
+    height: 12em;
+    text-align: center;
+    background-color: #000;
+  }
+  
+  .Activities .thum .image img{
+    height: 12em;
+    width: auto;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+  }
+  
+  
+  .Activities img{
+    transition: all 0.4s linear;
+  
+  }
+  
+  .Activities img:hover{
+    transform: scale(1.1);
+  }
+  
+  .Activities .cont {
+    padding: 0.8em;
+  }
+  
+  
+  .Activities .cont .venu{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  
+  }
+  
+  
+  
+  .Activities .cont h4 {
+    font-weight: 600;
+    font-size: calc(14px * var(--font-scale));
+    padding-top: 0.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-align: left;
+    
+  }
+  
+  .Activities .cont span {
+    font-size: calc(13px * var(--font-scale));
+    color: #000;
+    display: flex;
+    font-weight: 500;
+    padding-top: 0.3em;
+  }
+  
+  .Activities .cont i {
+    margin-right: 0.3em;
+    color: #07294d;
+  }
+  
+  .Activities {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
+  }
+  
+  .Activities .image {
+    text-align: center;
+    background: #000;
+  }
+
+  .Activities .cont .view-button {
+    justify-content: center;
+    display: flex;
+  }
+
+  

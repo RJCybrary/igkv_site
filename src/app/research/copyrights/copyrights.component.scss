@@ -1,0 +1,64 @@
+
+/* Patents_category */
+
+
+
+
+.table_section th,
+.table_section td {
+    border: 1px solid black;
+}
+
+table tr th{
+  background-color: rgba(20, 111, 197, 0.959);
+  color: white;
+}
+
+/* Patents_category css end */
+
+/* patents category tab css start */
+
+.patents_category_tab {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 5%;
+   
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  /* Ensures the table is scrollable on smaller screens */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
+  width: 100%;
+}
+
+table {
+  width: 100%; /* Ensures table takes full width of container */
+  min-width: 800px; /* Prevents shrinking below readable size */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .filter-field {
+    width: 100%; /* Full-width filter field for mobile screens */
+  }
+  table {
+    min-width: 600px; /* Smaller minimum width for tablets and phones */
+  }
+  mat-paginator {
+    font-size: calc(12px * var(--font-scale)); /* Adjust paginator font size for readability */
+  }
+}

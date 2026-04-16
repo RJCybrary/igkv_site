@@ -1,0 +1,74 @@
+
+
+.notification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-notifications {
+    margin-bottom: 20px;
+  }
+  
+  .notification {
+    padding: 10px;
+    margin-bottom: 20px;
+    // border: 1px solid #ccc; /* Add border to main notifications */
+    // border-radius: 8px;
+  }
+
+  .notification .title{
+    color: #000;
+    padding-bottom: 0.5em;
+  }
+  
+  .notification .Readmore{
+    font-weight: 500;
+  justify-content: end;
+  display: flex;
+  cursor: pointer;
+  }
+
+  .notification .sub-title{
+    color: #000;
+    font-size: calc(13px * var(--font-scale));
+
+
+  }
+
+  .header span {
+    display: block;
+    font-size: calc(14px * var(--font-scale));
+  }
+
+  .header .date{
+    color:#07294d ;
+  }
+
+
+  
+  .sub-notifications {
+    margin-top: 10px;
+  }
+
+  .sub-notifications ul{
+    list-style: none ;
+  }
+
+
+  .sub-notifications h5{
+    font-weight: 600;
+    color: #1a1ab7;
+    font-size: calc(13px* var(--font-scale));
+    
+  }
+  
+  .sub-notification {
+    /* Remove border from sub-notifications */
+    padding: 0 ;
+    margin-bottom: 10px;
+  }
+  
+  .sub-notification:not(:last-child) {
+    border-bottom: 1px solid #ccc; /* Add horizontal line between sub-notifications */
+  }

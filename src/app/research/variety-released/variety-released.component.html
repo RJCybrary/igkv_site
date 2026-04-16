@@ -1,0 +1,163 @@
+<app-banner [banner_heading]="'Varieties Released'"
+    [banner_img]="bannerImg"></app-banner>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+    <div class="row">
+      <!-- Select Crop Section -->
+      <div class="col-lg-5 col-md-6 col-6">
+        <section class="Allnews mt-3">
+          <label for="cropSelect">Select Crop</label>
+          <div class="Allnews-search-section">
+            <select
+              id="cropSelect"
+              class="Allnews-search-input form-select"
+              [(ngModel)]="selectedCrop"
+              (change)="getVarityById()">
+              <option value="" disabled>-- Select Crop --</option>
+              <option *ngFor="let office of crop_Data" [value]="office.Crop_id">{{ office.name }}</option>
+            </select>
+          </div>
+        </section>
+      </div>
+      
+      
+
+      <!-- Select Variety Section -->
+      <div class="col-lg-5 col-md-6 col-6">
+        <section class="Allnews mt-3">
+          <label for="varietySelect">Select Variety</label>
+          <div class="Allnews-search-section">
+            <select
+              id="varietySelect"
+              class="Allnews-search-input form-select"
+              [(ngModel)]="selectedVeraiety2"
+              (change)="getVarityById()">
+              <option value="" disabled>-- Select Crop --</option>
+              <option  *ngFor="let office of Variety_list" [value]="office.Variety_ID">{{ office.Variety_Name }}</option>
+            </select>
+          </div>
+        </section>
+      </div>
+
+      <!-- Clear Button -->
+      <div class="col-lg-2 col-md-12 col-sm-2 text-center" style="align-items: center;display: flex;">
+        <button class="Allnews-search-button btn btn-primary w-100" (click)="clearSelections()">
+          Clear<span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-6">
+      <div class="dash-card">
+        <h2>{{Crop_data?.total_crop}}</h2>
+        <p>Crops</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-6">
+      <div class="dash-card">
+        <h2>{{variety_data?.total_vareity}}</h2>
+        <p>Varieties</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container mt-3 pb-3">
+    <div class="row">
+      <mat-accordion  class="mt-5">
+            <ng-container *ngFor="let data of paginatedContents; let i = index">
+                <mat-expansion-panel [expanded]="i === 0"  style="margin-bottom: 6px; margin-top: 2px;">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{ data.Variety_Name }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+          
+            
+                <div class="row mt-3">
+                  <div class="col-md-4 mt-3">
+                    <div class="slider-container" style="  border: 2px solid rgba(241, 124, 14, 0.993); " > 
+                      <img
+                        class="slider-image img-fluid"
+                        [src]="data.Variety_Image_URL1"
+                        (error)="onErrorImage($event)"
+                        alt="{{ data.Variety_Name }}"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <table class="mb-2" style="overflow-x: scroll;">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+        
+                            <tr>
+                                <td data-label="Name">Evolution Year</td>
+                                <td data-label="Value">{{data.Evolution_Year}}</td>
+                            </tr>
+                            <tr>
+                              
+                                <td data-label="Name">Variety</td>
+                                <td data-label="Value">{{data.Variety_Name}}</td>
+                            </tr>
+
+                            <tr>
+                              
+                                <td data-label="Name">Evolution Date</td>
+                                <td data-label="Value">{{(data.Evolution_Date | date: 'dd-MMM-yyyy')}}</td>
+                            </tr>
+                            <tr>
+                                
+                                <td data-label="Name">Publish Date</td>
+                                <td data-label="Value">{{(data.web_content_date2 | date: 'dd-MMM-yyyy')}}</td>
+                            </tr>
+        
+                            <tr>
+                               
+                                <td data-label="Name">Description</td>
+                                <td data-label="Value">{{data.Veriety_Description}}</td>
+                            </tr>
+                            <tr>
+                             
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+
+            </mat-expansion-panel>
+        </ng-container>
+    </mat-accordion>
+    <mat-paginator *ngIf="filteredContents" [length]="filteredContents.length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[5,10, 20, 30, 50, 100]"
+    (page)="onPageChange($event)"
+    aria-label="Select page">
+    </mat-paginator>
+    </div>
+</div>
+

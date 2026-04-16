@@ -1,0 +1,37 @@
+
+
+<section id="kvkAwards" class="kvkAwards section-bg pb-3 pt-3 gray-bg" *ngIf="award_data != ''">
+    <div class="container" data-aos="fade-up">
+            <h2 class="section-title1">Awards</h2>
+  
+      <div class="row gy-4 pb-3 demo">
+        <!-- kvkAwards 1 -->
+        <ng-container *ngFor="let data of paginatedContents" >
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="kvkAwards-member">
+            <div class="member-img banner1 image1"  [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+              <a [routerLink]="['/research/kvk-home/kvk', kvk_id, 'cont', 'activities-details', data.Website_Content_ID]">
+              <img [src]="data.Column1" class="img-fluid" alt="kvk award image" >
+              </a>
+            <div class="content1">
+        
+            </div>
+            </div>
+            <div class="member-info">
+              <h4>{{data.Content_Title}}</h4>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <mat-paginator [length]="award_data.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[12, 24, 36, 48, 100]"
+      (page)="onPageChange($event)"
+      aria-label="Select page">
+      </mat-paginator>
+      </div>
+     
+     
+    </div>
+  </section>
+  

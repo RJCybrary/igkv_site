@@ -1,0 +1,165 @@
+/* navbar */
+.navbar {
+    background-color: transparent;
+    /* Set background color to transparent */
+    justify-content: center;
+    /* Center align menu items */
+    padding: 0;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+
+}
+
+.navbar .collapse {
+    justify-content: end;
+}
+
+.navbar .collapse .fa-house {
+    //   color: #fff;
+    padding-right: 0.5em;
+}
+
+
+
+
+.navbar .navbar-nav {
+    justify-content: flex-end;
+}
+
+.navbar .nav-item {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+
+
+.navbar .nav-item a.nav-link {
+    color: #181717;
+    /* Set text color to white */
+    position: relative;
+    font-weight: 500;
+    font-size: calc(14px * var(--font-scale));
+}
+
+.navbar .nav-item a.nav-link:hover {
+    fill: #E4B316;
+    position: relative;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.navbar .nav-item a.dropdown-toggle :hover {
+    color: #E4B316;
+    fill: #E4B316;
+    position: relative;
+}
+
+
+.navbar .nav-item:hover .nav-link:after {
+    /*content: "";
+        display: block;
+        height: 1px;
+    background: orange;
+        position: absolute;*/
+
+    bottom: 0;
+    left: 0;
+    color: #E4B316;
+    fill: #E4B316;
+    right: 0;
+}
+
+
+
+.navbar-brand span {
+
+    font-size: calc(35px * var(--font-scale));
+    color: #006b4f;
+    font-weight: 600;
+    margin-left: 10px;
+    padding-top: 10em !important;
+    margin-top: 10em !important;
+}
+
+
+.kvk-head {
+    margin-top: 20px;
+    font-size: calc(30px * var(--font-scale));
+    color: #006b4f;
+    font-weight: 600;
+    margin-left: 10px;
+    padding-bottom: 0px;
+}
+
+.image-row .image-containers {
+
+    height: 17em;
+    justify-content: center;
+    display: flex;
+}
+
+.image-row .image-containers img {
+    height: 100%;
+}
+
+
+
+/* media query for smaller screen */
+
+
+@media (max-width: 769px) {
+
+    .kvk-head {
+        font-size: medium;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+
+    #subMenu .name {
+        width: 85%;
+    }
+
+
+}
+
+
+@media screen and (max-width: 1300px) {
+
+    #mainMenu {
+        display: none;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        /* Ensure the collapsed navbar appears above other content */
+        width: 100%;
+        background-color: white;
+    }
+
+}
+
+@media screen and (min-width: 1300px) {
+
+    #subMenu {
+        display: none;
+    }
+
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+        background-color: transparent;
+        padding-top: 0%;
+    }
+}

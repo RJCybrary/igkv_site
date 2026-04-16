@@ -1,0 +1,193 @@
+/* =============Public Facilities CSS STARTS ===========  */
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    margin-top: 2em;
+  }
+  
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 41, 77, 0.5);
+    margin-top: 2em;
+  }
+
+
+.nss_part .first_section {
+    background-color: #ffffff;
+    height: 20em;
+}
+
+.nss_part .first_section h3 {
+    color: black;
+    margin: 1rem;
+}
+
+.nss_part .first_section p {
+    height: 15em;
+    color: black;
+    text-align: justify;
+    margin-top: 40px;
+    margin: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-container img {
+    height: auto;
+    width: 100%;
+}
+
+// Slider css
+.sports_details {
+    margin-bottom: 5%;
+    margin-top: 3%;
+    padding: 2%;
+    box-shadow: gray 0 0px 28px -18px;
+    background-color: #E0E8F2;
+}
+
+.sports_details h3 {
+    font-weight: 600;
+    font-size: calc(20px * var(--font-scale));
+    text-align: center;
+    margin-top: 1em; /* Added margin top for smaller screens */
+}
+
+.sports_details p {
+    font-size: calc(15px * var(--font-scale));
+}
+
+.sports_details img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Ensure aspect ratio is maintained */
+}
+/* image-slider.component.css */
+.slider-container {
+    position: relative;
+    height: 20em !important;
+    width: 25em !important;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    // object-fit: cover; /* This property ensures that the image covers the container without stretching */
+    cursor: pointer;
+  }
+  
+  .slider-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0.8;
+  }
+  
+  .slider-container {
+    position: relative;
+    width: 100%;
+    /* Set width to 100% for responsiveness */
+    max-width: 100%;
+    /* Set maximum width to 100% */
+    overflow: hidden;
+    /* Hide overflow to prevent distortion */
+  }
+  
+  .slider-image {
+    width: 100%;
+    /* Set maximum width to 100% */
+    height: auto;
+    /* Let the height adjust proportionally */
+    display: block;
+    /* Ensure the image is displayed as a block element */
+    margin: 0 auto;
+    /* Center the image horizontally */
+  }
+  
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+    .ncc-first-gallery .div1 img,
+    .ncc-first-gallery .div2 img,
+    .ncc-first-gallery .div3 img,
+    .ncc-first-gallery .div4 img,
+    .ncc-second-gallery .div1 img,
+    .ncc-second-gallery .div2 img,
+    .ncc-second-gallery .div3 img,
+    .ncc-second-gallery .div4 img {
+        height: auto;
+        width: 100%;
+    }
+
+    .slider-container {
+        width: 100%;
+    }
+
+    .slider-image {
+        max-height: fit-content;
+    }
+
+    .Awareness_Programs {
+        margin-top: 3em;
+    }
+
+    .sports_details h3 {
+        margin-top: 1em;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 448px) {
+    .sports_details h3{
+      margin-top: 0.5em;
+      text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sports_details.even .row {
+        flex-direction: column-reverse; /* Reverse the order of columns on smaller screens */
+        margin-top: 0.7em;
+    }
+
+    .sports_details.even .col-md-4 {
+        order: 2; /* Move the image column to the bottom */
+    }
+
+    .sports_details.even .col-md-8 {
+        order: 1; /* Move the content column to the top */
+    }
+
+    .sports_details h3{
+        text-align: center;
+    }
+
+}
+
+

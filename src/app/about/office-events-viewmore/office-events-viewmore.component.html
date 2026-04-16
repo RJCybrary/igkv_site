@@ -1,0 +1,44 @@
+
+<app-activity-banner [banner_img]="imageUrl"  [banner_heading]="banner_heading" [catTitle1]="office_name"></app-activity-banner>
+
+<section id="blog" class="blog gray-bg pt-3 pb-3">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="section-title1">Events</h2>
+        <app-pagination
+       [currentPages]="currentPages"
+        [totalrecords]="totalrecords"
+       (rowsPerPageChanged)="onRowsPerPageChanged($event)"
+         (pageChanged)="onPageChanged($event)"
+         (searchCriteria)="onSearchCriteriaReceived($event)"> 
+      <div class="row gy-4 posts-list " *ngIf="Office_Event_Data?.length !== 0 ; else elseblock "  >
+         
+        <ng-container *ngFor="let data of Office_Event_Data">
+          <div class="col-xl-4 col-md-6">
+            <div class="post-item position-relative h-100">
+  
+              <div class="post-img position-relative overflow-hidden banner1 image1" [style.background-image]="'url(' + data.Column1 + ')'" *ngIf="data.Column1">
+                <img [src]="data.Column1" class="img-fluid" alt="office events image">
+                <div class="content1">
+          
+                </div>
+                
+                <span class="post-date">{{data.web_content_date2|date:'MMM d, y'}}</span>
+              </div>
+              <div class="post-content d-flex flex-column">
+                <h4>
+                  {{data.Content_Title}}
+                </h4>
+              </div>
+              <hr>
+              <a (click)="setdetails()" [routerLink]="['/about/activities-details',data.Website_Content_ID]" class="readmore "><span>Read
+                  More&nbsp;<i class="fa-solid fa-arrow-right"></i></span></a>
+            </div>
+          </div>
+        </ng-container>
+      </div>  
+      <ng-template #elseblock>
+        <app-no-data></app-no-data>
+     </ng-template> 
+    </app-pagination>
+    </div>
+  </section>

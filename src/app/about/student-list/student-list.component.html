@@ -1,0 +1,25 @@
+
+<div class="container">
+    <div class="table-container">
+        <h2>Student Information</h2>
+      
+        <!-- Table -->
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Degree Program</th>
+              <th>Subject</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Use Angular ngFor to loop through student_data -->
+            <tr *ngFor="let item of student_data">
+              <td>{{item.Student_name}}</td>
+              <td>{{item.Degree_Programme_Name_E}}</td>
+              <td>{{item.Subject_Name_E}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</div>

@@ -1,0 +1,104 @@
+.activity-container {
+  position: relative;
+  width: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  padding: 0;
+  color: #fff;
+  height: 37em;
+}
+
+.activity-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+
+.activity-container:hover .activity-img {
+  transform: scale(1.2);
+}
+
+.activity-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color:white;
+  color: #000000;
+  padding: 5px;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+  
+  .activity-container:hover .activity-description {
+    opacity: 1;
+  }
+
+
+  .activity-container p {
+    font-weight: 400;
+    color: #030303;
+    margin-bottom: 0;
+	  font-size: calc(14px * var(--font-scale));
+    font-weight: 600;
+   
+  }
+  
+  
+  .calendar-icon {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    color: #fff;
+    font-size: calc(24px * var(--font-scale));
+  }
+  
+  .calendar-date {
+    position: absolute;
+    top: 2px;
+    right: 24px;
+	color:#fff;
+	background-color:#0000009c;
+	padding: 0.4em;
+	border-radius: 0.5em;
+  }
+  
+
+  .calendar-date span {
+	font-size: calc(10px * var(--font-scale));
+
+  }
+  
+  .activity-container-new {
+    position: relative;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 18em;
+    overflow: hidden;
+    padding: 0;
+	// margin: 3px;
+  }
+  
+  .activity-container-new p {
+    font-weight: 600;
+   color: #000000;
+   line-height: 1.4;
+   margin-bottom: 0;
+   text-align: left;
+   font-size: calc(14px * var(--font-scale));
+
+  }
+  
+  .activity-container-new:hover .activity-img {
+    transform: scale(1.2);
+  }
+  
+.act{
+  padding: 0.5em;
+}
+
+
+

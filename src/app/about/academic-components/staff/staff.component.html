@@ -1,0 +1,153 @@
+<div class="loader-container" *ngIf="loading">
+    <div class="loaders"></div>
+    <p></p>
+  </div>
+
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" [ngStyle]="{'background-image': 'url(' + imageUrl + ')'}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-banner-cont">
+                    <h2 class="header">Officer & Staff</h2> 
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a >Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Officer & Staff</li>
+                        </ol>
+                    </nav>
+                </div>  
+            </div>
+        </div> 
+    </div> 
+</section>
+
+
+<section class="container-fluid faculty" *ngIf="isshowUnLink">
+    <div class="container">
+
+        <div class="faculty-search-section">
+         <!-- this code for serch employee  by name with search button  -->
+          <!-- <div class="faculty-search-group">
+            <label for="office">Search by Name </label>
+            <form [formGroup]="searchForm" (ngSubmit)="getdata()" style="display: flex; ">
+              <mat-form-field appearance="fill">
+                <mat-label>Search by Name </mat-label>
+                <input matInput formControlName="Emp_FName_E" placeholder="Type Name">
+              </mat-form-field>
+              <button mat-mini-fab type="submit" style="padding: 5px; margin: 5px;" color="primary"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+          </div> -->
+
+          <div class="faculty-search-group">
+            <label for="office">Search by Employee ID & Name </label>
+            <mat-form-field class="example-full-width">
+              <mat-label>Search Employee </mat-label>
+              <input
+                type="text"
+                matInput
+                [formControl]="empControl"
+                [matAutocomplete]="autoEmp"
+                appearance="outline"
+              />
+              <mat-autocomplete
+                #autoEmp="matAutocomplete"
+                [displayWith]="displayEmpName"
+                (optionSelected)="onEmpSelected($event)"
+                autoActiveFirstOption
+              >
+                <mat-option *ngFor="let emp of filteredEmpList" [value]="emp">
+                  {{ emp.Emp_FName_E }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+
+            <div class="faculty-search-group">
+                <label for="office">Search by Designation</label>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Select Designation</mat-label>
+                  <input
+                    type="text"
+                    matInput
+                    [formControl]="postControl"
+                    [matAutocomplete]="autoPost"
+                    appearance="outline"
+                  />
+                  <mat-autocomplete
+                    #autoPost="matAutocomplete"
+                    [displayWith]="displayPostName"
+                    (optionSelected)="onPostSelected($event)"
+                    autoActiveFirstOption
+                  >
+                    <mat-option *ngFor="let post of filteredPostList" [value]="post">
+                      {{ post.Post_Name }}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+
+         
+              <div class="faculty-search-group">
+                <label for="office">Search by Office</label>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Select Office</mat-label>
+                  <input
+                    type="text"
+                    matInput
+                    [formControl]="officeControl"
+                    [matAutocomplete]="autoOffice"
+                    appearance="outline"
+                  />
+                  <mat-autocomplete
+                    #autoOffice="matAutocomplete"
+                    [displayWith]="displayOfficeName"
+                    (optionSelected)="onOfficeSelected($event)"
+                    autoActiveFirstOption
+                  >
+                    <mat-option *ngFor="let office of filteredOfficeList" [value]="office">
+                        {{ office.Office_Name }}
+                      </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+            <button class="faculty-search-button mt-5" (click)="refreshPage()" aria-label="Clear Search">Clear  <span></span></button>
+        </div>
+    </div>
+</section>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12 mb-3" *ngFor="let item of paginatedContents">
+            <div class="employee-card" style="max-height: 169px;  min-height: 169px; ">
+                <div class="profile-img">
+                    <img src="{{item.img_url}}" (error)="onErrorImage($event)" alt="Employee Image">
+                </div>
+                <div class="employee-info">
+                    <p class="employee-name">{{item.Employee_Name}}</p>
+                    <p class="employee-post">{{item.Post_Name}}</p> 
+                    <span class="employee-office">{{item.Office_Name}}</span> <br>
+                    <a *ngIf="isshowUnLink" [routerLink]="['/about/staff/0/employeeProfile',item.Emp_id]">View More</a>
+                    <a *ngIf="!isshowUnLink" [routerLink]="['employeeProfile',item.Emp_id]" style="cursor: pointer;">View More</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="container">
+          <div class="row" >
+            <div class="pagination-controls pb-3">
+              <button  mat-flat-button color="primary" (click)="changePage('previous')" [disabled]="currentPages <= 1">Previous</button>
+              &nbsp; <span>Page {{ currentPages }}</span> &nbsp;
+              <button mat-flat-button color="primary" (click)="changePage('next')" >Next</button>
+            </div>
+
+            <!-- button with disable logic -->
+            <!-- <div class="pagination-controls pb-3">
+              <button  mat-flat-button color="primary" (click)="changePage('previous')" [disabled]="currentPages <= 1">Previous</button>
+              &nbsp; <span>Page {{ currentPages }}</span> &nbsp;
+              <button mat-flat-button color="primary" (click)="changePage('next')" [disabled]="currentPages * 30 >= totalRecords">Next</button>
+            </div> -->
+          </div>
+         </div>
+    </div>
+</div>
+

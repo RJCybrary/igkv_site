@@ -1,0 +1,65 @@
+header {
+    background-color: #00539C;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  .year-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .year-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00539C;
+    padding-bottom: 5px;
+  }
+
+  .report-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .report-list li {
+    margin-bottom: 10px;
+  }
+
+  .report-list a {
+    text-decoration: none;
+    color: #00539C;
+    font-weight: 500;
+  }
+
+  .report-list a:hover {
+    text-decoration: underline;
+  }
+
+  li i{
+    font-size: 28px;
+  }
+
+  @media (max-width: 600px) {
+    header {
+      font-size: 24px;
+    }
+
+    .year-title {
+      font-size: 18px;
+    }
+
+
+}

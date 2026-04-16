@@ -1,0 +1,53 @@
+
+
+<section class="gray-bg pt-3 pb-3">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-7">
+        <div class="row">
+          <div class="col-lg-12 kvk-overview">
+              <h2 class="section-title1">Overview</h2>
+              <p class="contents"> {{kvkoverview.About_Unit}}</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="slider-container">
+          <img class="slider-image" [src]="kvkoverview?.Unit_Image_URL" alt="slider image">        
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+ <br> <br> 
+
+<section id="featured" class="featured pt-3 Scrollstyle1"  >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="icon-box">
+            <i class="bi bi-card-checklist"></i>
+            <h3 class="section-title3"><a >Our History </a></h3>
+            <p class="contents">{{kvkoverview.History_Unit}}</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="icon-box1">
+            <i class="bi bi-bar-chart"></i>
+            <h3 class="section-title3"><a>Our Mission</a></h3>
+            <p class="contents">{{kvkoverview.Mission_Unit}}</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <i class="bi bi-binoculars"></i>
+            <h3 class="section-title3"><a >Our Vision</a></h3>
+            <p class="contents">{{kvkoverview.Vision_Unit}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</section>

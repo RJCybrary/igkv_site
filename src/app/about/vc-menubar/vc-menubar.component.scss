@@ -1,0 +1,120 @@
+// ====== Menu Button =======
+
+#toggleBtn {
+cursor: pointer;
+color: #fff;
+font-size: calc(17px * var(--font-scale));
+}
+
+.menu1{
+  position: sticky;
+  top: 114px;
+  z-index:6;
+}
+
+#menu ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+#menu ul li {
+  padding: 0;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+#menu li {
+margin-bottom: 5px;
+} 
+
+#menu a {
+display: block;
+text-decoration: none;
+color: #121212;
+padding: 2px;
+font-weight: 600;
+font-size: calc(12px * var(--font-scale));
+font-family: "Oswald", sans-serif;
+font-optical-sizing: auto;
+font-style: normal;
+}
+
+#menu a:hover {
+background-color: #e9e7ff;
+  color: #121212;
+cursor: pointer;
+}
+
+#menu a.active {
+background-color: #5a4fdc;
+color: #070707f3;
+}
+
+.menu-link.active {
+background-color: #5a4fdc;
+color: #fff;
+}
+
+#toggleBtnLeft{
+  cursor: pointer;
+}
+
+#toggleBtnRight{
+  cursor: pointer;
+}
+
+.vc-menu button{
+background-color: transparent;
+border:none;
+}
+
+.submenu{
+  padding-top: 0.5em;
+  
+}
+
+.vc-menu{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ranking {
+  // animation: blink 1s infinite, colorChange 3s infinite;
+ color: #ffffff;
+  font-weight: 600;
+}
+
+.custom-hr {
+  margin: -1px 0; /* Adjust vertical spacing (top and bottom) */
+  border: none; /* Remove default border */
+  border-top: 1px solid #4d4b4b; /* Add a thin line */
+  width: 100%; /* Ensure the line spans the container */
+}
+
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes colorChange {
+  0% { color: #383535; }  
+  50% { color: #ff3c00; }
+  100% { color: #522626; } 
+}
+
+@media screen and (min-width:1000px) {
+  .vc-menu{
+    margin-top: 2.5em;
+  }
+}
+
+@media only screen and (max-width:600px){
+
+  .menu1{
+    top: 101px;
+  }
+
+}
+

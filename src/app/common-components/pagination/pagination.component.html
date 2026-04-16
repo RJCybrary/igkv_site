@@ -1,0 +1,29 @@
+<div class="faculty-search-group mb-3">
+  <!-- Search Form -->
+  <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="search-form">
+    <mat-form-field appearance="fill" class="search-input">
+      <mat-label>Search</mat-label>
+      <input matInput formControlName="Content_Title" placeholder="Search here...">
+    </mat-form-field>
+    <div class="search-buttons">
+      <button mat-mini-fab type="submit" color="primary" class="search-button"  aria-label="Search activities">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button mat-mini-fab type="button" color="warn" class="clear-button"  aria-label="Clear search" (click)="onClear()">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+  </form>
+</div>
+
+
+  <div class="content-area">
+    <ng-content></ng-content>
+  </div>
+
+  
+<mat-paginator  aria-label="Pagination controls" class="mt-5" [length]="totalrecords"
+               [pageSizeOptions]="[9, 15, 30, 60]"
+               (page)="onPageChange($event)">
+</mat-paginator>
+

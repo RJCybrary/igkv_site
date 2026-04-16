@@ -1,0 +1,38 @@
+.rout{
+    width: 280px;
+}
+
+.subhead{
+    border-top: solid #07294d;
+    padding: 10px;
+    background-color: #fcfcfc;
+    border-left: solid rgb(202, 200, 200) 1px;
+    border-right: solid rgb(202, 200, 200) 1px;
+    h3{
+        font-weight: 500;
+    }
+}
+
+// ===============  payment steps ===========
+
+.payment-steps {
+    display: flex;
+    flex-direction: column; /* Display steps vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.step {
+    width: 100%; /* Set width to full width */
+    max-width: 400px; /* Limit maximum width */
+    margin-bottom: 20px; /* Bottom margin between steps */
+    text-align: center; /* Center step content */
+}
+
+.step-icon {
+    font-size: calc(48px * var(--font-scale));
+    margin-bottom: 20px;
+}
+
+.step p {
+    font-size: calc(18px * var(--font-scale));
+}

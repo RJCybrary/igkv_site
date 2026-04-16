@@ -1,0 +1,477 @@
+<app-banner [banner_heading]="'Awareness Program Details'" [banner_img]="bannerImg"></app-banner>
+
+  <section id="Section2 mt-4 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title mt-50 mb-50">
+                    <h2>Awareness Programs</h2>
+                    <!-- <div class="about-cont">
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{environment_day[currentSlide].title}}</h3>
+                                        <p>{{environment_day[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{environment_day[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="environment_day[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="world_bicycle_day[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{world_bicycle_day[currentSlide].title}}</h3>
+                                        <p>{{world_bicycle_day[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{world_bicycle_day[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{yoga_awareness[currentSlide].title}}</h3>
+                                        <p>{{yoga_awareness[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{yoga_awareness[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="yoga_awareness[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="world_tobacco_day[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{world_tobacco_day[currentSlide].title}}</h3>
+                                        <p>{{world_tobacco_day[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{world_tobacco_day[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{Vaccination_Camp[currentSlide].title}}</h3>
+                                        <p>{{Vaccination_Camp[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{Vaccination_Camp[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="Vaccination_Camp[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="hareli_tihaar[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{hareli_tihaar[currentSlide].title}}</h3>
+                                        <p>{{hareli_tihaar[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{hareli_tihaar[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{har_ghar_tiranga[currentSlide].title}}</h3>
+                                        <p>{{har_ghar_tiranga[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{har_ghar_tiranga[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="har_ghar_tiranga[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="independence_day[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{independence_day[currentSlide].title}}</h3>
+                                        <p>{{independence_day[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{independence_day[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{blood_donation_camp[currentSlide].title}}</h3>
+                                        <p>{{blood_donation_camp[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{blood_donation_camp[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="blood_donation_camp[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="world_heart_day[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{world_heart_day[currentSlide].title}}</h3>
+                                        <p>{{world_heart_day[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{world_heart_day[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{swachchh_bharat_abhiyaan[currentSlide].title}}</h3>
+                                        <p>{{swachchh_bharat_abhiyaan[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{swachchh_bharat_abhiyaan[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="swachchh_bharat_abhiyaan[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="adventure_camp[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{adventure_camp[currentSlide].title}}</h3>
+                                        <p>{{adventure_camp[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{adventure_camp[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{rashtriya_ekta_diwas[currentSlide].title}}</h3>
+                                        <p>{{rashtriya_ekta_diwas[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{rashtriya_ekta_diwas[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="rashtriya_ekta_diwas[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="nss_volunteer_competition[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{nss_volunteer_competition[currentSlide].title}}</h3>
+                                        <p>{{nss_volunteer_competition[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{nss_volunteer_competition[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{constitution_day[currentSlide].title}}</h3>
+                                        <p>{{constitution_day[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{constitution_day[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="constitution_day[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="internation_womens_day[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{internation_womens_day[currentSlide].title}}</h3>
+                                        <p>{{internation_womens_day[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{internation_womens_day[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sports_details">
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <h3>{{pravaasi_bhartiya_diwas[currentSlide].title}}</h3>
+                                        <p>{{pravaasi_bhartiya_diwas[currentSlide].date}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {{pravaasi_bhartiya_diwas[currentSlide].about}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="slider-container ">
+                                        <img class="slider-image" [src]="pravaasi_bhartiya_diwas[currentSlide].src"
+                                            alt="Image {{ currentSlide + 1 }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>   -->
+               
+                    <div class="about-cont">
+                        <!-- Iterating over paginated contents -->
+                        <div class="sports_details" *ngFor="let item of paginatedContents">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <div class="row">
+                                <h3>{{ item.title }}</h3>
+                                <p>{{ item.date }}</p>
+                                <hr>
+                              </div>
+                              <div>
+                                <p>{{ item.about }}</p>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="slider-container">
+                                <img class="slider-image" [src]="item.src" alt="Image {{ item.title }}">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <!-- Pagination controls -->
+                        <mat-paginator [length]="allContents.length"
+                                       [pageSizeOptions]="[5, 8, 10, 25, 100]"
+                                       (page)="onPageChange($event)"
+                                       aria-label="Select page">
+                        </mat-paginator>
+                      </div>
+                      
+                        
+            </div> 
+
+        </div> 
+
+    </div> 
+    </div>
+</section> 
+

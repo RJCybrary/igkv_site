@@ -1,0 +1,710 @@
+/*Central Research Laboratories And Facilities css start*/
+
+.overview .overview_text p {
+  font-size: large;
+}
+
+
+.Facilities .innerrow {
+  margin-top: 0.4em;
+  border-radius: 10px;
+}
+
+
+.Facilities .innerrow .image_section {
+  border-radius: 0.45em;
+}
+
+.Facilities h2 {
+  margin-top: 0;
+  color: #07294d;
+}
+
+
+
+/* lab abd infrastructure start */
+
+.lab_infrastructure .first_row{
+  margin-top: 10em;
+}
+
+.lab_infrastructure h2 {
+  font-weight: 600;
+  font-size: 1.8em;
+}
+
+.lab_infrastructure p {
+  font-weight: 500;
+}
+
+/*.lab_infrastructure {
+    overflow: hidden;
+}*/
+
+
+.lab_infrastructure img {
+  padding: 0;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+
+}
+
+/* Zoom Out #1 */
+
+.lab_infrastructure img:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.lab_infrastructure .innerrow .image_section {
+  overflow: hidden;
+}
+
+.lab_infrastructure {
+  margin: 5px;
+}
+
+.lab_infrastructure .innerrow {
+
+  background-color: #fff;
+  text-align: center;
+  margin-top: 10%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.lab_infrastructure p {
+  text-align: justify;
+  padding: 1em;
+  font-weight: 500;
+  padding-top: 0;
+}
+
+.lab_infrastructure h2 {
+  margin: 0.4em;
+}
+
+
+/* lab abd infrastructure end */
+
+
+/* lab abd infrastructure end */
+
+.library-overview {
+
+  height: 300px;
+  text-align: center;
+  background-color: #E0E8F2;
+}
+
+
+.library-overview h1 {
+  font-size: xx-large;
+  font-weight: 900;
+}
+
+.library-overview span {
+  text-align: justify;
+}
+
+.infrastructure {
+  text-align: center;
+}
+
+.infrastructure h1 {
+  text-align: center;
+}
+
+.gallery .first_row {
+  margin: 5px;
+}
+
+.gallery .second_row {
+  margin: 5px;
+}
+
+.gallery .first_row .first_field img {
+  height: 40vh;
+  width: auto;
+}
+
+.gallery .first_row .second_field img {
+  height: 40vh;
+  width: auto;
+}
+
+.gallery .first_row .third_field img {
+  height: 40vh;
+  width: auto;
+}
+
+
+
+.gallery .second_row .first_field img {
+  height: 40vh;
+  width: auto;
+}
+
+.gallery .second_row .second_field img {
+  height: 40vh;
+  width: auto;
+}
+
+.gallery .second_row .third_field img {
+  height: 40vh;
+  width: auto;
+}
+
+
+.Facilities_List .infrastructure-card {
+  margin-top: 1.2em;
+  color: black;
+}
+
+
+.Facilities_List ul {
+  margin: 1.2em;
+}
+
+
+
+.Facilities_List .infrastructure-card .first_section {
+  box-shadow: skyblue 0 2px 4px 0px;
+  height: 40%;
+  width: auto;
+  color: #ffc600;
+  background-color: #2e7d32;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-size: calc(13px* var(--font-scale));
+  margin: 0.5em;
+
+}
+
+
+.Facilities_List .infrastructure-card .second_section {
+  box-shadow: skyblue 0 2px 4px 0px;
+  height: 40%;
+  width: auto;
+  color: #ffc600;
+  background-color: #2e7d32;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-size: calc(13px* var(--font-scale));
+  margin: 0.5em;
+}
+
+.Facilities_List .infrastructure-card .third_section {
+  box-shadow: skyblue 0 2px 4px 0px;
+  height: 40%;
+  width: auto;
+  color: #ffc600;
+  background-color: #2e7d32;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-size: calc(13px* var(--font-scale));
+  margin: 0.5em;
+}
+
+
+.lab_infrastructure .first_row {
+
+  box-shadow: skyblue 0 2px 50px -10px;
+  margin-top: 1em;
+  margin-bottom: 6em;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+
+.lab_infrastructure .second_row {
+
+  box-shadow: skyblue 0 2px 50px -10px;
+  margin-top: 1em;
+  margin-bottom: 6em;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.lab_infrastructure .third_row {
+
+  box-shadow: skyblue 0 2px 50px -10px;
+  margin-top: 1em;
+  margin-bottom: 6em;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+
+/*================ Library CSS Ends =========== */
+
+/*gallery section css start*/
+
+
+
+
+.gallery_section .gallery-image img {
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: 18em;
+  cursor: pointer;
+}
+
+.gallery_section .img-box {
+  box-sizing: content-box;
+  width: 100%;
+  margin: 10px;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+  cursor: pointer;
+}
+
+.gallery_section .caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery_section .caption p {
+  color: white;
+  font-weight: 400;
+  font-size: medium;
+}
+
+.gallery_section .transparent-box {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.gallery_section .img-box:hover img {
+  transform: scale(1.1);
+}
+
+.gallery_section .img-box:hover .transparent-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gallery_section .img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.gallery_section .img-box:hover {
+  cursor: pointer;
+}
+
+.gallery_section .caption>p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.gallery_section .opacity-low {
+  opacity: 1;
+}
+
+/*gallery section css end*/
+
+
+//  ------ card ------
+.card-library {
+  width: 162px;
+  height: 186px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-out;
+}
+
+.card-library:hover {
+  transform: scale(1.05);
+  border: 2px solid #07294B;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-decoration: none;
+  color: #07294B;
+  text-align: center;
+}
+
+.name {
+  font-size: calc(18px * var(--font-scale));
+  font-weight: bold;
+  margin: 10px;
+  color: #07294d;
+  // margin: 10px 0;
+}
+
+.more-btn {
+  background-color: #ffffff;
+  color: #413e3e;
+  border: none;
+  padding: 5px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  border: solid 0.3px;
+  border-color: rgb(190, 187, 187);
+}
+
+.more-btn:hover {
+  background-color: #2980b9;
+  color: white;
+}
+
+.align-div {
+  justify-content: space-between;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .align-div {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// Dean Message CSS Starts
+
+/* dean msg css start  */
+.message_section {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #07294d;
+  background-size: cover;
+  background-position: center;
+  padding-top:25px;
+  padding-bottom: 10px;
+  filter: brightness(1);
+}
+
+.message_section .profile {
+  text-align: center;
+  /* margin-right: 20px; */
+}
+
+.message_section .profile-picture {
+  height: 9em;
+  width: 9em;
+  border-radius: 50%;
+  /* border-color: #fff; */
+  border: solid white 3px;
+}
+
+.message_section .dean-name {
+  font-weight: bold;
+  margin: 5px 0;
+  color: #fff;
+  padding-top: 0.2em;
+  font-size: calc(25px * var(--font-scale));
+  margin-top: 20px;
+}
+
+.message_section .designation {
+  font-size: calc(16px * var(--font-scale));
+  color: #fcfcfc;
+  margin-top: 15px;
+}
+
+.message_section .message {
+  // /max-width: 600px;/
+  text-align: left;
+}
+
+.message_section .message-title {
+  font-size: calc(28px * var(--font-scale));
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.message_section .message-text {
+  font-size: calc(18px * var(--font-scale));
+  line-height: 1.5;
+  text-align: justify;
+  padding-bottom: 3%;
+  margin-top: 1em;
+}
+
+.button-70 {
+  /* Add styles for your new custom button here */
+  background-color: #ffc600;
+  color: #07294d;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: large;
+
+}
+
+// Dean Message Ends 
+
+// Award CSS Starts 
+
+
+.portfolio .card-block {
+  margin: 1em 0em 1em 1em !important;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.3);
+
+
+}
+
+.portfolio {
+  padding-bottom: 0;
+}
+
+.portfolio h2 {
+  color: #199EB8;
+  margin-bottom: 25px;
+}
+
+.portfolio-grid {
+  margin-top: 65px;
+  // cursor: pointer;
+}
+
+.portfolio-grid .row {
+  margin: 0;
+}
+
+.portfolio-grid .row>div {
+  padding: 0;
+}
+
+.portfolio-grid .row>div .card img {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-grid .row>div .card .portfolio-over {
+  position: absolute;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 115, 136, 0.67);
+  top: 0;
+  left: 0;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.portfolio-grid .row>div .card .portfolio-over>div {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.portfolio-grid .card-title {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5%;
+  color: #fff;
+  font-size: calc(30px * var(--font-scale));
+  margin-left: 3.9%;
+  background: #1c5d6d;
+  text-align: center;
+  height: 3.5em;
+
+
+}
+
+.portfolio-grid .card-title h3 {
+  font-weight: 500;
+  margin: 0.5em;
+  line-height: 1.3;
+}
+
+.portfolio-grid .row>div .card .portfolio-over .card-text {
+  color: #fff;
+  opacity: 0.75;
+  padding: 0 45px;
+  font-weight: 500;
+}
+
+.portfolio-grid .row>div .card:hover .portfolio-over {
+  opacity: 1;
+  visibility: visible;
+}
+
+// Awards CSS Ends Here 
+
+
+// Contact Us Css Starts 
+.contact-us {
+  display: flex;
+}
+
+/* Styles for indoor image part */
+.contact-us .indoor_img_part {
+  position: relative;
+}
+
+.contact-us .indoor_img_part img {
+  height: 15em;
+  width: 25em;
+  background: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  // position: relative;
+  margin-left: 35%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  z-index: 2;
+  transition: transform 0.3s ease; 
+}
+
+.contact-us .indoor_img_part img:hover {
+  transform: scale(1.1); /* Zoom-in effect on hover */
+}
+
+/* Styles for indoor overview content */
+.contact-us .indoor_overview_content {
+  margin-left: 9%;
+  text-align: left;
+}
+
+.contact-us .indoor_overview_content h4 {
+  // margin-left: 9%;
+  color: #07294d; 
+  text-align: left;
+  font-weight: 500;
+  font-size: calc(16px * var(--font-scale));
+}
+
+.contact-us .indoor_overview_content .indoor_overview_list{
+  list-style-type: none;
+  height: auto;
+  width: 100%;
+}
+
+.contact-us .indoor_overview_content .indoor_overview_list p{
+  line-height: 2em;
+  font-size: calc(15px * var(--font-scale));
+  font-weight: 400;
+  text-align: justify;
+}
+
+/* Styles for indoor part */
+.contact-us .indoor_part {
+  background-color: #E0E8F2;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-us .indoor_part h3 {
+  background-color: #E0E8F2;
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: calc(20px * var(--font-scale));
+}
+
+@media only screen and (max-width:1200px){
+  .contact-us {
+    display: flex;
+    margin:0;
+    padding:0;
+  }
+  
+  .contact-us .indoor_img_part img {
+    margin-left:3em ;
+    padding: 0;
+  }
+  }
+
+  @media only screen and (max-width:780px){
+    .contact-us {
+      display: flex;
+      margin:0;
+      padding:0;
+    }
+    
+    .contact-us .indoor_img_part img {
+      margin-left:2em ;
+      padding: 0;
+    }
+    }
+  
+@media only screen and (max-width:550px){
+.contact-us {
+  text-align: center ;
+  justify-content: center;
+  display: block;
+  margin:0;
+  padding:0;
+}
+
+.contact-us .indoor_img_part{
+  height: auto;
+  width: auto;
+}
+
+.contact-us .indoor_part{
+  height: auto;
+  width: auto;
+}
+
+.contact-us .indoor_img_part img {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: auto;
+}
+
+}
+// Contact us Ends 
+
+
+// LightBox Starts 
+
+img {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .second_row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .Facilities_Part,
+  .image_section {
+    width: 100%;
+  }
+}

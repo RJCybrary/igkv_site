@@ -1,0 +1,166 @@
+
+.portfolio .card-block {
+    margin-right: 2em ;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .portfolio {
+    padding-bottom: 0;
+  }
+  
+  .portfolio h2 {
+    color: #199EB8;
+    margin-bottom: 25px;
+  }
+  
+  .portfolio-grid {
+    cursor: pointer;
+  }
+  
+  .portfolio-grid .row {
+    margin: 0;
+  }
+  
+  .portfolio-grid .row>div {
+    padding: 0;
+  }
+  
+ 
+  
+  .portfolio-grid .row>div .card .portfolio-over {
+    position: absolute;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    background: rgb(15 46 129 / 67%);
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 4;
+  }
+  
+  .portfolio-grid .row>div .card .portfolio-over>div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .portfolio-grid .card-title {
+    
+    display: flex;
+    justify-content: center;
+    color: #000000;
+    font-size: calc(14px * var(--font-scale));
+    background: rgb(255, 255, 255);
+    cursor: default;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    padding: 0.2em 0;
+    margin-bottom: 0;
+    color: #fff;
+    text-align: center;
+    background-color: #16628f;
+  
+  }
+
+  .portfolio-grid .card .image{
+    height: 15em;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .portfolio-grid .card .image img{
+    height: 100%;
+  }
+
+  .portfolio-grid .card-title h4{
+ 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    /* font-weight: normal; */
+    margin-bottom: 0;
+    padding: 0 0.2em;
+    font-size: calc(14px * var(--font-scale));
+  }
+  
+  .portfolio-grid .row>div .card .portfolio-over .card-text {
+    color: #fff;
+    opacity: 0.8;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .portfolio-grid .row>div .card:hover .portfolio-over {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* awards css end */
+
+
+  
+/* background images blured css */
+.banner2 {
+  display: flex;
+  // height: 14em;
+  justify-content: center;
+  position: relative;
+}
+
+.banner2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  // background-image: url('assets/images/bg_img.jpg'); /* Use the blurred image as the background */
+  background-size: cover;
+  filter: blur(3px);
+  /* Adjust the blur intensity as needed */
+}
+
+.banner2 img {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  /* Ensure the image is above the blurred background */
+}
+
+@media (max-width: 576px) {
+  .carousel-inner .carousel-item {
+    height: 250px; /* Further reduce height for very small screens */
+  }
+
+  .carousel-inner .carousel-item img {
+    object-fit: cover; /* Ensure image covers the space while maintaining aspect ratio */
+  }
+
+  .carousel-caption {
+    font-size: calc(12px * var(--font-scale));
+    bottom: 2rem;
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Adjustments for ultra-small screens */
+@media (max-width: 400px) {
+  .carousel-inner .carousel-item {
+    height: 200px;
+  }
+
+  .carousel-caption h2 {
+    font-size: calc(1rem * var(--font-scale));
+  }
+}
