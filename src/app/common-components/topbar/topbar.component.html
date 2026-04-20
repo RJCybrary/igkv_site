@@ -127,16 +127,16 @@
 
                     </a>
                     <!-- Dropdown menu -->
-                    <div class="dropdown-menu drop_down_option " aria-labelledby="dropdownLanguageMenu">
+                    <div class="dropdown-menu drop_down_option " aria-labelledby="dropdownLanguageMenu" data-no-dynamic-translate>
                         <div class="mega-menu-container1">
                             <div class="container">
                                 <div class="row link_list">
                                     <div class="col-sm-12">
                                         <ul style="cursor: pointer;">
-                                            <h1><a (click)="onLanguageSelect('hn')">{{'Hindi' | translate }}</a></h1>
-                                            <h1><a (click)="onLanguageSelect('en')">{{'English' | translate }}</a></h1>
-                                            <h1><a (click)="onLanguageSelect('uz')">{{'Uzbek' | translate }}</a></h1>
-                                            <h1><a (click)="onLanguageSelect('ru')">{{'Russian' | translate }}</a></h1>
+                                            <h1><a (click)="onLanguageSelect('hn')" lang="hi">हिंदी</a></h1>
+                                            <h1><a (click)="onLanguageSelect('en')" lang="en">English</a></h1>
+                                            <h1><a (click)="onLanguageSelect('uz')" lang="uz">Oʻzbekcha</a></h1>
+                                            <h1><a (click)="onLanguageSelect('ru')" lang="ru">Русский</a></h1>
                                         </ul>
                                     </div>
                                 </div>
@@ -172,17 +172,17 @@
                             <img src="assets/language-svgrepo-com .svg" alt="Language icon" width="24" height="24">
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                            <li><a class="dropdown-item" (click)="switchLanguage('en')">
+                            <li><a class="dropdown-item" (click)="switchLanguage('en')" lang="en">
                                English
                             </a></li>
-                            <li><a class="dropdown-item" (click)="switchLanguage('hn')">
-                                Hindi
+                            <li><a class="dropdown-item" (click)="switchLanguage('hn')" lang="hi">
+                                हिंदी
                             </a></li>
-                             <li><a class="dropdown-item" (click)="switchLanguage('uz')">
-                                Uzbek
+                             <li><a class="dropdown-item" (click)="switchLanguage('uz')" lang="uz">
+                                Oʻzbekcha
                             </a></li>
-                             <li><a class="dropdown-item" (click)="switchLanguage('ru')">
-                                Russian
+                             <li><a class="dropdown-item" (click)="switchLanguage('ru')" lang="ru">
+                                Русский
                             </a></li>
                         </ul>
                     </li> -->

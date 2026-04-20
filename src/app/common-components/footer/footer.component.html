@@ -69,6 +69,13 @@
     </div>
   </div>
 
+  <div class="footer-disclaimer" *ngIf="showFooter" role="note" [attr.aria-label]="'Disclaimer heading' | translate">
+    <div class="container py-3">
+      <p class="footer-disclaimer__title mb-2">{{ 'Disclaimer heading' | translate }}</p>
+      <p class="footer-disclaimer__body mb-0">{{ 'Disclaimer body' | translate }}</p>
+    </div>
+  </div>
+
   <div class="container py-4">
     <div class="copyright">
        <strong><span></span></strong>Designed, Developed & Hosted By: National Informatics Centre Chhattisgarh State Centre, Raipur © 2013 The contents are owned by IGKV, Raipur
@@ -155,6 +162,13 @@
         </div>
        </div>
       </div>
+    </div>
+  </div>
+
+  <div class="footer-disclaimer" role="note" [attr.aria-label]="'Disclaimer heading' | translate">
+    <div class="container py-3">
+      <p class="footer-disclaimer__title mb-2">{{ 'Disclaimer heading' | translate }}</p>
+      <p class="footer-disclaimer__body mb-0">{{ 'Disclaimer body' | translate }}</p>
     </div>
   </div>
 

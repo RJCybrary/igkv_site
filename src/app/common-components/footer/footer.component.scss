@@ -66,6 +66,25 @@
   background: #153f58eb;
 }
 
+.footer-disclaimer {
+  background: #124565;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-disclaimer__title {
+  font-size: calc(14px * var(--font-scale));
+  font-weight: 700;
+  color: rgba(252, 169, 15, 0.973);
+  margin: 0;
+}
+
+.footer-disclaimer__body {
+  font-size: calc(12px * var(--font-scale));
+  line-height: 1.55;
+  color: #e9ecec;
+  margin: 0;
+}
+
 .footer .footer-top .footer-contact {
   margin-bottom: 10px;
 }

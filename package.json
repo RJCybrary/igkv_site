@@ -6,11 +6,12 @@
     "ng": "ng",
     "start_web": "ng serve --host 0.0.0.0 --port 6200 --project web-portal",
     "build": "ng build --base-href /site/ --deploy-url /site/",
+    "deploy:github": "ng deploy web-portal",
+    "deploy:github:root": "ng deploy web-portal --configuration=root",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "dependencies": {
-
     "@angular/animations": "19.2.15",
     "@angular/cdk": "19.2.15",
     "@angular/common": "19.2.15",
@@ -21,11 +22,10 @@
     "@angular/platform-browser": "19.2.15",
     "@angular/platform-browser-dynamic": "19.2.15",
     "@angular/router": "19.2.15",
-
     "@fontsource/montserrat": "^5.1.0",
     "@fontsource/roboto": "^5.1.0",
     "@fortawesome/fontawesome-free": "^6.7.2",
-   "@ng-bootstrap/ng-bootstrap": "^18.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^18.0.0",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
     "@popperjs/core": "^2.11.8",
@@ -35,25 +35,23 @@
     "or": "^0.2.0",
     "rxjs": "~7.8.1",
     "tslib": "^2.6.2",
-   "zone.js": "~0.15.0"
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "19.2.15",
     "@angular/cli": "19.2.15",
     "@angular/compiler-cli": "19.2.15",
     "@angular/localize": "19.2.15",
-
     "@types/file-saver": "^2.0.7",
     "@types/jasmine": "~5.1.0",
     "@types/jquery": "^3.5.29",
-
+    "angular-cli-ghpages": "^3.0.2",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.4",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.1",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-
     "typescript": "~5.6.3"
   }
 }

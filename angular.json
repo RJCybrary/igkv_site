@@ -118,6 +118,20 @@
             "scripts": ["./node_modules/jquery/dist/jquery.min.js",
             "./node_modules/bootstrap/dist/js/bootstrap.js"]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "buildTarget": "web-portal:build:production",
+            "dir": "dist/web-portal",
+            "branch": "gh-pages",
+            "baseHref": "/igkv_site/"
+          },
+          "configurations": {
+            "root": {
+              "baseHref": "/"
+            }
+          }
         }
       }
     }
