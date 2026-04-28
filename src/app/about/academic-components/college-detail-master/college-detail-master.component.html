@@ -327,18 +327,31 @@
   <app-clg-banner *ngIf="homeslider" [clgbanner]="homeslider"></app-clg-banner>
 
   <div id="Overview"></div>
-  <div *ngIf="College_Detail" class="container-fluid pt-3 pb-3">
+  <div *ngIf="College_Detail || shouldShowOverviewPdfCard" class="container-fluid pt-3 pb-3">
     <div class="container">
       <div class="row">
         <div class="col-md-7">
           <div class="row">
             <div class="col-lg-12 clg-overview">
               <h2 class="section-title1">Overview</h2>
-              <p class="contents"> {{College_Detail.About_Unit}}</p>
+              <div class="contents" [innerHTML]="overviewContent"></div>
+              <div *ngIf="shouldShowOverviewPdfCard" class="overview-pdf-card mt-3">
+                <div class="pdf-card-content">
+                  <div class="pdf-meta">
+                    <!-- <span class="pdf-badge">PDF</span> -->
+                    <h3 class="pdf-title">Information Brochure</h3>
+                    <p class="pdf-subtitle">Click to view more to know more about the college</p>
+                  </div>
+                  <a class="pdf-view-btn" [href]="overviewPdfUrl" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    View More
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5" *ngIf="College_Detail">
           <div class="slider-container pt-3">
 
             <img class="slider-image" aria-hidden="true" [src]="College_Detail?.Unit_Image_URL"

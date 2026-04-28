@@ -18,7 +18,8 @@ export class DataService {
   }
 
   postapi<T = any>(functionname: string, data: any): Observable<T> {
-    return this.http.post<T>(this.configurl + functionname, data);
+    const payload = data == null ? {} : data;
+    return this.http.post<T>(this.configurl + functionname, payload);
   }
 
   putapi<T = any>(functionname: string, data: any): Observable<T> {

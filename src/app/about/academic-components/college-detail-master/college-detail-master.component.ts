@@ -11,6 +11,11 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./college-detail-master.component.scss']
 })
 export class CollegeDetailMasterComponent {
+  readonly overviewPdfByCollegeId: Record<string, string> = {
+    '59': 'https://igkv.ac.in/__Notics/2026-27/10/2026-04-22/18063__20260422122136.pdf',
+    '116': 'https://igkv.ac.in/__Notics/2026-27/10/2026-04-22/18064__20260422123504.pdf'
+  };
+  readonly fallbackOverviewText = 'College details are being updated. Please check back shortly.';
   infra_type: any;
   College_Head_detail: any;
   setData:any;
@@ -268,6 +273,18 @@ private scrollToFragment() {
 subMenuSelected(isTrue: boolean){
   this.showSubContent=isTrue;
  
+}
+
+get shouldShowOverviewPdfCard(): boolean {
+  return !!this.overviewPdfUrl;
+}
+
+get overviewPdfUrl(): string {
+  return this.overviewPdfByCollegeId[String(this.Office_Id)] || '';
+}
+
+get overviewContent(): string {
+  return this.College_Detail?.About_Unit || this.fallbackOverviewText;
 }
 
 }
